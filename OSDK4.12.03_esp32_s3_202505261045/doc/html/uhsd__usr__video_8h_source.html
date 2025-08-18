@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_usr_video.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__usr__video_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uhsd_usr_video.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __UHSD_USR_VIDEO_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __UHSD_USR_VIDEO_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="uhsd__types_8h.html">uhsd_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    UH_USR_VIDEO_DEFINITION_UNKONOW = -1,    <span class="comment">/*未知清晰度*/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    UH_USR_VIDEO_DEFINITION_FL = 0,          <span class="comment">/*fluency，流畅*/</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    UH_USR_VIDEO_DEFINITION_SD = 1,          <span class="comment">/*standard definition，标清*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    UH_USR_VIDEO_DEFINITION_HD = 2,          <span class="comment">/*high definition，高清（单清晰度设备默认）*/</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    UH_USR_VIDEO__DEFINITION_ONLY_AUDIO = 3, <span class="comment">/*onlyaudio，纯音频*/</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>} uhsd_usr_video_definiton_e;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    UH_AUDIO_SAMPLE_RATE_UNSUPPORTED = 0, <span class="comment">/* Unsupported*/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    UH_AUDIO_SAMPLE_RATE_8000 = 8000,     <span class="comment">/* 8K samplerate*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    UH_AUDIO_SAMPLE_RATE_12000 = 12000,   <span class="comment">/* 12K samplerate*/</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    UH_AUDIO_SAMPLE_RATE_11025 = 11025,   <span class="comment">/* 11.025K samplerate*/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UH_AUDIO_SAMPLE_RATE_16000 = 16000,   <span class="comment">/* 16K samplerate*/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    UH_AUDIO_SAMPLE_RATE_22050 = 22050,   <span class="comment">/* 22.050K samplerate*/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UH_AUDIO_SAMPLE_RATE_24000 = 24000,   <span class="comment">/* 24K samplerate*/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UH_AUDIO_SAMPLE_RATE_32000 = 32000,   <span class="comment">/* 32K samplerate*/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    UH_AUDIO_SAMPLE_RATE_44100 = 44100,   <span class="comment">/* 44.1K samplerate*/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UH_AUDIO_SAMPLE_RATE_48000 = 48000,   <span class="comment">/* 48K samplerate*/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UH_AUDIO_SAMPLE_RATE_64000 = 64000,   <span class="comment">/* 64K samplerate*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    UH_AUDIO_SAMPLE_RATE_96000 = 96000,   <span class="comment">/* 96K samplerate*/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UH_AUDIO_SAMPLE_RATE_BUTT,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} uhsd_audio_sample_rate_e;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    UH_AV_STREAM_TYPR_NONE = 0,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    UH_AV_STREAM_TYPR_H264 = 1, <span class="comment">// h264 video</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    UH_AV_STREAM_TYPR_H265,     <span class="comment">// h265 video</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    UH_AV_STREAM_TYPR_AAC,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    UH_AV_STREAM_TYPR_OPUS, <span class="comment">// 360 dishi-no_support</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    UH_AV_STREAM_TYPR_PCM,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    UH_AV_STREAM_TYPR_G711_U,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    UH_AV_STREAM_TYPR_G711_A,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    UH_AV_STREAM_TYPR_G726,  <span class="comment">// 360 dishi-no_support</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    UH_AV_STREAM_TYPR_MJPEG, <span class="comment">// mjpeg video</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} uhsd_usr_video_stream_type_e;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structuhsd__usr__video__frame__info__t.html">   51</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    uhsd_usr_video_stream_type_e stream_type; <span class="comment">//音视频流类型</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    uhsd_u8 *frame_data;                      <span class="comment">//音视频数据</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    uhsd_s32 frame_data_len;                  <span class="comment">//数据长度</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    uhsd_u64 pts;                             <span class="comment">// 0时区秒数，单位ms</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    uhsd_u64 dts;                             <span class="comment">// 0时区秒数，单位ms，同pts</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    uhsd_s32 is_key_frame;                    <span class="comment">//是否是关键帧</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    uhsd_s32 channel_id;                      <span class="comment">//流通道标识。默认从1开始</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <a class="code hl_struct" href="structuhsd__usr__video__frame__info__t.html">uhsd_usr_video_frame_info_t</a>;</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structuhsd__usr__audio__frame__info__t.html">   62</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// audio</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    uhsd_usr_video_stream_type_e stream_type;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    uhsd_audio_sample_rate_e sample_rate;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    uhsd_s32 bit_width;      <span class="comment">//位宽 8bit, 16bit, 24bit</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    uhsd_s32 audio_channels; <span class="comment">// 1 单通道 2 双通道</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <a class="code hl_struct" href="structuhsd__usr__audio__frame__info__t.html">uhsd_usr_audio_frame_info_t</a>;</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UH_PLAY_TYPE_MONITOR = 0, <span class="comment">// 实时监控</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    UH_PLAY_TYPE_RECORD,      <span class="comment">// 本地录像</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    UH_PLAY_TYPE_CLOUD,       <span class="comment">// 云存</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} uhsd_usr_video_paly_type_e;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    PLAY_ERR_GET_AURH_INFO_ERR = -100,       <span class="comment">// 获取设备认证信息错误</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    PLAY_ERR_GET_SECRET_KEY_INFO_ERR,        <span class="comment">// 获取设备加密key错误</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    PLAY_ERR_360_LSNVD_INIT_ERR,             <span class="comment">// 360_LSNVD_INIT_ERR</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    PLAY_ERR_360_SET_LLTYPE_ERR,             <span class="comment">//设置设备sn使用的长连接类型错误</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    PLAY_ERR_360_LSNVD_PRECONNECT_ERR,       <span class="comment">// p2p预连接错误</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    PLAY_ERR_360_LSNVD_HANDSHAKE_ERR,        <span class="comment">// p2p连接握手错误</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    PLAY_ERR_360_LSNVD_UPDATE_SECRETKEY_ERR, <span class="comment">//设置加密key错误</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    PLAY_ERR_360_LSNVD_CREATE_SESSION_ERR,   <span class="comment">//创建播放实例错误</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    PLAY_ERR_360_DATA_CALLBACK_SWITCH_ERR,   <span class="comment">//开启码流数据回调错误</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    PLAY_ERR_360_TRANSFER_TOKEN_ERR,         <span class="comment">//设置验证设备token</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    PLAY_ERR_360_CONNECT_ERR,                <span class="comment">//连接错误</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} uhsd_usr_video_paly_opt_e;</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="};">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structuhsd__usr__video__paly__opt__t.html">   92</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    uhsd_char deviceId[32];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    uhsd_usr_video_paly_type_e paly_type; <span class="comment">//操作视频类型</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uhsd_s32 status;                      <span class="comment">// 0:停止、暂停 1:播放/恢复播放</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uhsd_s32 channel_id;                  <span class="comment">//视频流通道号，默认从1开始</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>} <a class="code hl_struct" href="structuhsd__usr__video__paly__opt__t.html">uhsd_usr_video_paly_opt_t</a>;</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="};">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structuhsd__usr__video__raw__avFrame.html">  100</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    uhsd_u32 width;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    uhsd_u32 height;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    uhsd_u32 format;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    uhsd_u32 pitchs[4];</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    uhsd_u32 offsets[4];</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    uhsd_u64 modifiers[4];</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    uhsd_s32 prime_fds[4];</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    uhsd_u32 nb_planes;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <a class="code hl_struct" href="structuhsd__usr__video__raw__avFrame.html">uhsd_usr_video_raw_avFrame</a>;</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">typedef</span> uhsd_s32 (*uhsd_usr_video_decode_stream_cb)(<a class="code hl_struct" href="structuhsd__usr__video__raw__avFrame.html">uhsd_usr_video_raw_avFrame</a> *raw_video_data);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">typedef</span> uhsd_s32 (*uhsd_usr_video_stream_cb)(<a class="code hl_struct" href="structuhsd__usr__video__frame__info__t.html">uhsd_usr_video_frame_info_t</a> *video_info);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">typedef</span> uhsd_s32 (*uhsd_usr_audio_stream_cb)(<a class="code hl_struct" href="structuhsd__usr__video__frame__info__t.html">uhsd_usr_video_frame_info_t</a> *audio_info, <a class="code hl_struct" href="structuhsd__usr__audio__frame__info__t.html">uhsd_usr_audio_frame_info_t</a> *audio_code_info);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">typedef</span> uhsd_s32 (*uhsd_usr_video_play_operation_cb)(<a class="code hl_struct" href="structuhsd__usr__video__paly__opt__t.html">uhsd_usr_video_paly_opt_t</a> *play_info, uhsd_usr_video_paly_opt_e err);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="};">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="structuhsd__usr__video__params__t.html">  140</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>{</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    uhsd_char appId[65];</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    uhsd_char appKey[65];</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    uhsd_char appVersion[32];</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    uhsd_char clientId[65];</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    uhsd_char access_token[65];</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    uhsd_char ca_path[128]; <span class="comment">// CA证书路径</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    uhsd_char cache_path[128];</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    uhsd_usr_video_stream_cb video_stream_cb;           <span class="comment">//未解码数据（h264/h265）视频数据回调</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    uhsd_usr_video_decode_stream_cb decode_stream_cb;   <span class="comment">//解码后原生数据回调</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    uhsd_usr_audio_stream_cb audio_stream_cb;           <span class="comment">// pcm音频数据回调</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    uhsd_usr_video_play_operation_cb play_operation_cb; <span class="comment">//播放停止操作结果回调</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>} <a class="code hl_struct" href="structuhsd__usr__video__params__t.html">uhsd_usr_video_params_t</a>;</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>UHSD_API uhsd_s32 uhsd_usr_video_init(<a class="code hl_struct" href="structuhsd__usr__video__params__t.html">uhsd_usr_video_params_t</a> param);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>UHSD_API uhsd_s32 uhsd_usr_video_update_token(uhsd_char *token);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>UHSD_API uhsd_s32 uhsd_usr_video_play_operation(<a class="code hl_struct" href="structuhsd__usr__video__paly__opt__t.html">uhsd_usr_video_paly_opt_t</a> *play_info);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>UHSD_API uhsd_s32 uhsd_usr_video_pause_operation(<a class="code hl_struct" href="structuhsd__usr__video__paly__opt__t.html">uhsd_usr_video_paly_opt_t</a> *play_info);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>UHSD_API uhsd_s32 uhsd_usr_video_change_definition(uhsd_char *deviceId, uhsd_usr_video_definiton_e definition, uhsd_s32 channel_id);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>UHSD_API uhsd_s32 uhsd_usr_video_start_rtc(<a class="code hl_struct" href="structuhsd__usr__audio__frame__info__t.html">uhsd_usr_audio_frame_info_t</a> *audio_config_info);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>UHSD_API uhsd_s32 uhsd_usr_video_stop_rtc(uhsd_void);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>UHSD_API uhsd_s32 uhsd_usr_video_send_rtc_data(<a class="code hl_struct" href="structuhsd__usr__video__frame__info__t.html">uhsd_usr_video_frame_info_t</a> *audio_info, <a class="code hl_struct" href="structuhsd__usr__audio__frame__info__t.html">uhsd_usr_audio_frame_info_t</a> *audio_code_info);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructuhsd__usr__audio__frame__info__t_html"><div class="ttname"><a href="structuhsd__usr__audio__frame__info__t.html">uhsd_usr_audio_frame_info_t</a></div><div class="ttdef"><b>Definition</b> uhsd_usr_video.h:63</div></div>
+<div class="ttc" id="astructuhsd__usr__video__frame__info__t_html"><div class="ttname"><a href="structuhsd__usr__video__frame__info__t.html">uhsd_usr_video_frame_info_t</a></div><div class="ttdef"><b>Definition</b> uhsd_usr_video.h:52</div></div>
+<div class="ttc" id="astructuhsd__usr__video__paly__opt__t_html"><div class="ttname"><a href="structuhsd__usr__video__paly__opt__t.html">uhsd_usr_video_paly_opt_t</a></div><div class="ttdef"><b>Definition</b> uhsd_usr_video.h:93</div></div>
+<div class="ttc" id="astructuhsd__usr__video__params__t_html"><div class="ttname"><a href="structuhsd__usr__video__params__t.html">uhsd_usr_video_params_t</a></div><div class="ttdef"><b>Definition</b> uhsd_usr_video.h:141</div></div>
+<div class="ttc" id="astructuhsd__usr__video__raw__avFrame_html"><div class="ttname"><a href="structuhsd__usr__video__raw__avFrame.html">uhsd_usr_video_raw_avFrame</a></div><div class="ttdef"><b>Definition</b> uhsd_usr_video.h:101</div></div>
+<div class="ttc" id="auhsd__types_8h_html"><div class="ttname"><a href="uhsd__types_8h.html">uhsd_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><b>uhsd_usr_video.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

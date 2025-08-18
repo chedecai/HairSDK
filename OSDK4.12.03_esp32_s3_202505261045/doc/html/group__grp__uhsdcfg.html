@@ -1,0 +1,890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 设备配置功能接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhsdcfg.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">设备配置功能接口</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SDR/L设备配置功能  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uhsd__cfg_8h" id="r_uhsd__cfg_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd__cfg_8h.html">uhsd_cfg.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__dev__config__wifi__info__st.html">uhsd_dev_config_wifi_info_st</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__dev__config__wifi__scan__info__st.html">uhsd_dev_config_wifi_scan_info_st</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__dev__cfg__info.html">uhsd_dev_cfg_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备配网信息通用结构体 字符串默认 UTF-8 格式  <a href="structuhsd__dev__cfg__info.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga18331f0b1c657190dc1077067c4294bd" id="r_ga18331f0b1c657190dc1077067c4294bd"><td class="memItemLeft" align="right" valign="top"><a id="ga18331f0b1c657190dc1077067c4294bd" name="ga18331f0b1c657190dc1077067c4294bd"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_dev_config_wifimgr_scan_cb_func</b>) (<a class="el" href="structuhsd__dev__config__wifi__scan__info__st.html">uhsd_dev_config_wifi_scan_info_st</a> *ap_list, uhsd_s32 ap_num)</td></tr>
+<tr class="separator:ga18331f0b1c657190dc1077067c4294bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1844e2bcda78a9fd1cc00210880c0bae" id="r_ga1844e2bcda78a9fd1cc00210880c0bae"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga1844e2bcda78a9fd1cc00210880c0bae">uhsd_dev_direct_bind_process_notify_cb</a>) (<a class="el" href="group__grp__uhsdcfg.html#ga3395512f723f41f63b42444e794c00bc">uhsd_dev_direct_bind_process_state_e</a> state, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga1844e2bcda78a9fd1cc00210880c0bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">新直连绑定过程状态通知回调函数定义  <br /></td></tr>
+<tr class="separator:ga1844e2bcda78a9fd1cc00210880c0bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5ceb2e64f7baf6d568b08845a969b8f" id="r_gaf5ceb2e64f7baf6d568b08845a969b8f"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gaf5ceb2e64f7baf6d568b08845a969b8f">uhsd_dev_direct_bind_verify_req_notify_cb</a>) (<a class="el" href="group__grp__uhsdcfg.html#ga9992ea144f189b249b178ce50c2f5ab5">uhsd_dev_direct_bind_verify_method_e</a> method, uhsd_char *code, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gaf5ceb2e64f7baf6d568b08845a969b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">新直连绑定验证请求通知回调函数定义  <br /></td></tr>
+<tr class="separator:gaf5ceb2e64f7baf6d568b08845a969b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafeb72bb7ae31410beb83bcf4eaf428d5" id="r_gafeb72bb7ae31410beb83bcf4eaf428d5"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gafeb72bb7ae31410beb83bcf4eaf428d5">uhsd_dev_direct_bind_result_notify_cb</a>) (uhsd_s32 result, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gafeb72bb7ae31410beb83bcf4eaf428d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">新直连绑定结果通知回调函数定义  <br /></td></tr>
+<tr class="separator:gafeb72bb7ae31410beb83bcf4eaf428d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8b5b195f8bb20e67c259ad5df486bb0" id="r_gab8b5b195f8bb20e67c259ad5df486bb0"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0">uhsd_dev_cfg_status_notify</a>) (<a class="el" href="group__grp__uhsdcfg.html#ga5a395f85015b74317e527c9506222dd9">UHSD_DEV_CFG_STATUS_E</a> status, void *osdk_data, void *devapp_data)</td></tr>
+<tr class="memdesc:gab8b5b195f8bb20e67c259ad5df486bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">配网状态回调函数指针  <br /></td></tr>
+<tr class="separator:gab8b5b195f8bb20e67c259ad5df486bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga3395512f723f41f63b42444e794c00bc" id="r_ga3395512f723f41f63b42444e794c00bc"><td class="memItemLeft" align="right" valign="top"><a id="ga3395512f723f41f63b42444e794c00bc" name="ga3395512f723f41f63b42444e794c00bc"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga3395512f723f41f63b42444e794c00bc">uhsd_dev_direct_bind_process_state_e</a> { <br />
+&#160;&#160;<b>UHSD_DEV_DIRECT_BIND_STATE_STOP</b>
+, <b>UHSD_DEV_DIRECT_BIND_STATE_STARTING</b>
+, <b>UHSD_DEV_DIRECT_BIND_STATE_WAITING_BIND_INFO</b>
+, <b>UHSD_DEV_DIRECT_BIND_STATE_VERIFYING</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_DIRECT_BIND_STATE_BINDING</b>
+, <b>UHSD_DEV_DIRECT_BIND_STATE_FINISH</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3395512f723f41f63b42444e794c00bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">新直连绑定过程状态枚举定义 <br /></td></tr>
+<tr class="separator:ga3395512f723f41f63b42444e794c00bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9992ea144f189b249b178ce50c2f5ab5" id="r_ga9992ea144f189b249b178ce50c2f5ab5"><td class="memItemLeft" align="right" valign="top"><a id="ga9992ea144f189b249b178ce50c2f5ab5" name="ga9992ea144f189b249b178ce50c2f5ab5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga9992ea144f189b249b178ce50c2f5ab5">uhsd_dev_direct_bind_verify_method_e</a> { <b>UHSD_DEV_DIRECT_BIND_VERIFY_METHOD_CODE</b>
+, <b>UHSD_DEV_DIRECT_BIND_VERIFY_METHOD_KEY</b>
+ }</td></tr>
+<tr class="memdesc:ga9992ea144f189b249b178ce50c2f5ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">新直连绑定验证方式枚举定义 <br /></td></tr>
+<tr class="separator:ga9992ea144f189b249b178ce50c2f5ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10b4a43d24a973cee21689888b62a528" id="r_ga10b4a43d24a973cee21689888b62a528"><td class="memItemLeft" align="right" valign="top"><a id="ga10b4a43d24a973cee21689888b62a528" name="ga10b4a43d24a973cee21689888b62a528"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga10b4a43d24a973cee21689888b62a528">UHSD_DEVAPP_WIFI_STATUS_E</a> { <br />
+&#160;&#160;<b>UHSD_WIFI_NORMAL</b> = 1000
+, <b>UHSD_WIFI_NOROUTE</b> = 1001
+, <b>UHSD_WIFI_ERRCFG</b> = 1002
+, <b>UHSD_WIFI_FUDCFGINFO</b> = 1003
+, <br />
+&#160;&#160;<b>UHSD_WIFI_NOIP</b> = 1005
+, <b>UHSD_WIFI_GENERAL</b> = 1007
+, <b>UHSD_WIFI_WEAKSIGNAL</b> = 1008
+<br />
+ }</td></tr>
+<tr class="memdesc:ga10b4a43d24a973cee21689888b62a528"><td class="mdescLeft">&#160;</td><td class="mdescRight">wifi连接状态故障码枚举 <br /></td></tr>
+<tr class="separator:ga10b4a43d24a973cee21689888b62a528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a395f85015b74317e527c9506222dd9" id="r_ga5a395f85015b74317e527c9506222dd9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga5a395f85015b74317e527c9506222dd9">UHSD_DEV_CFG_STATUS_E</a> { <b>UHSD_DEV_CFG_STATUS_DFT</b> = 0
+, <a class="el" href="group__grp__uhsdcfg.html#gga5a395f85015b74317e527c9506222dd9a10a6726f475956b5c0c412705f312e48">UHSD_DEV_WIFI_CFG_INFO_GET</a>
+, <a class="el" href="group__grp__uhsdcfg.html#gga5a395f85015b74317e527c9506222dd9af5b6484f82700d73ddb0ef0a88bbc683">UHSD_DEV_CFG_INFO_SET</a>
+, <a class="el" href="group__grp__uhsdcfg.html#gga5a395f85015b74317e527c9506222dd9a8dee905f1f790e79046debe0d99e2455">UHSD_DEV_WIFI_STATUS_GET</a>
+ }</td></tr>
+<tr class="memdesc:ga5a395f85015b74317e527c9506222dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备配网状态通枚举  <a href="group__grp__uhsdcfg.html#ga5a395f85015b74317e527c9506222dd9">更多...</a><br /></td></tr>
+<tr class="separator:ga5a395f85015b74317e527c9506222dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga1b0d767e07b22792e2d5842841411dc5" id="r_ga1b0d767e07b22792e2d5842841411dc5"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga1b0d767e07b22792e2d5842841411dc5">uhsd_dev_config_start</a> (uhsd_u8 trigger_type)</td></tr>
+<tr class="memdesc:ga1b0d767e07b22792e2d5842841411dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置启动  <br /></td></tr>
+<tr class="separator:ga1b0d767e07b22792e2d5842841411dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0af958d5a23bc2505cbf362567e5e5d3" id="r_ga0af958d5a23bc2505cbf362567e5e5d3"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga0af958d5a23bc2505cbf362567e5e5d3">uhsd_dev_config_stop</a> (uhsd_u8 trigger_type)</td></tr>
+<tr class="memdesc:ga0af958d5a23bc2505cbf362567e5e5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置停止  <br /></td></tr>
+<tr class="separator:ga0af958d5a23bc2505cbf362567e5e5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45ca408765966f79b171f45656a3da97" id="r_ga45ca408765966f79b171f45656a3da97"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga45ca408765966f79b171f45656a3da97">uhsd_dev_config_status_get</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga45ca408765966f79b171f45656a3da97"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置状态获取接口  <br /></td></tr>
+<tr class="separator:ga45ca408765966f79b171f45656a3da97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84eec95f5b6ea665d917f30a2c44a47f" id="r_ga84eec95f5b6ea665d917f30a2c44a47f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga84eec95f5b6ea665d917f30a2c44a47f">uhsd_dev_config_is_exist</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga84eec95f5b6ea665d917f30a2c44a47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否含有配置信息  <br /></td></tr>
+<tr class="separator:ga84eec95f5b6ea665d917f30a2c44a47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fbd4f07bc9a311e647bf6055571ea32" id="r_ga9fbd4f07bc9a311e647bf6055571ea32"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga9fbd4f07bc9a311e647bf6055571ea32">uhsd_dev_config_ssid_clear</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga9fbd4f07bc9a311e647bf6055571ea32"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除配置信息ssid  <br /></td></tr>
+<tr class="separator:ga9fbd4f07bc9a311e647bf6055571ea32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa91b753d290eb1bbcc683f20771e78fb" id="r_gaa91b753d290eb1bbcc683f20771e78fb"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gaa91b753d290eb1bbcc683f20771e78fb">uhsd_dev_config_open_bind_win</a> (uhsd_void)</td></tr>
+<tr class="memdesc:gaa91b753d290eb1bbcc683f20771e78fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启绑定时间窗  <br /></td></tr>
+<tr class="separator:gaa91b753d290eb1bbcc683f20771e78fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78d17086ccdfd51ea43e57ad0461d4b0" id="r_ga78d17086ccdfd51ea43e57ad0461d4b0"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_dev_bind_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga78d17086ccdfd51ea43e57ad0461d4b0">uhsd_dev_bind_status_get</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga78d17086ccdfd51ea43e57ad0461d4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定主设备状态获取  <br /></td></tr>
+<tr class="separator:ga78d17086ccdfd51ea43e57ad0461d4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32ca3d7ea8ac2f881da7a5a3d04018ee" id="r_ga32ca3d7ea8ac2f881da7a5a3d04018ee"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga32ca3d7ea8ac2f881da7a5a3d04018ee">uhsd_dev_config_reconn_wifi_router</a> (const uhsd_u8 *bssid, const uhsd_s16 bssid_len, const uhsd_char *ssid, const uhsd_char *pwd)</td></tr>
+<tr class="memdesc:ga32ca3d7ea8ac2f881da7a5a3d04018ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备APP控制OSDK 重新连接路由器，用于[二次配网]需求  <br /></td></tr>
+<tr class="separator:ga32ca3d7ea8ac2f881da7a5a3d04018ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6cdd1398cd99fa4b017793ea03001feb" id="r_ga6cdd1398cd99fa4b017793ea03001feb"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga6cdd1398cd99fa4b017793ea03001feb">uhsd_dev_config_wifi_info_set</a> (<a class="el" href="structuhsd__dev__config__wifi__info__st.html">uhsd_dev_config_wifi_info_st</a> *usr_config_info)</td></tr>
+<tr class="memdesc:ga6cdd1398cd99fa4b017793ea03001feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户设置配置信息,调用此接口前必须先调用进配置接口  <br /></td></tr>
+<tr class="separator:ga6cdd1398cd99fa4b017793ea03001feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec439afda0ce41c33ed77d7fbe729a7b" id="r_gaec439afda0ce41c33ed77d7fbe729a7b"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gaec439afda0ce41c33ed77d7fbe729a7b">uhsd_dev_config_start_wifi_scan</a> (uhsd_dev_config_wifimgr_scan_cb_func scan_cb, uhsd_s32 ap_num)</td></tr>
+<tr class="memdesc:gaec439afda0ce41c33ed77d7fbe729a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户打开wifi扫描，并返回扫描到的wifi信息  <br /></td></tr>
+<tr class="separator:gaec439afda0ce41c33ed77d7fbe729a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1878ab6e16bdc3ce18d2f54231cce83" id="r_gac1878ab6e16bdc3ce18d2f54231cce83"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gac1878ab6e16bdc3ce18d2f54231cce83">uhsd_dev_direct_bind_verify_result_set</a> (uhsd_bool is_success)</td></tr>
+<tr class="memdesc:gac1878ab6e16bdc3ce18d2f54231cce83"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置新直连绑定验证结果  <br /></td></tr>
+<tr class="separator:gac1878ab6e16bdc3ce18d2f54231cce83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff93d0369dd76e7f80b03fd5525bbcdf" id="r_gaff93d0369dd76e7f80b03fd5525bbcdf"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#gaff93d0369dd76e7f80b03fd5525bbcdf">uhsd_dev_direct_bind_start</a> (<a class="el" href="group__grp__uhsdcfg.html#ga9992ea144f189b249b178ce50c2f5ab5">uhsd_dev_direct_bind_verify_method_e</a> method, <a class="el" href="group__grp__uhsdcfg.html#ga1844e2bcda78a9fd1cc00210880c0bae">uhsd_dev_direct_bind_process_notify_cb</a> process_cb, <a class="el" href="group__grp__uhsdcfg.html#gaf5ceb2e64f7baf6d568b08845a969b8f">uhsd_dev_direct_bind_verify_req_notify_cb</a> verify_req_cb, <a class="el" href="group__grp__uhsdcfg.html#gafeb72bb7ae31410beb83bcf4eaf428d5">uhsd_dev_direct_bind_result_notify_cb</a> result_cb, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gaff93d0369dd76e7f80b03fd5525bbcdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动新直连绑定  <br /></td></tr>
+<tr class="separator:gaff93d0369dd76e7f80b03fd5525bbcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ab2fe1c6ade4382867e8652aa45e375" id="r_ga2ab2fe1c6ade4382867e8652aa45e375"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga2ab2fe1c6ade4382867e8652aa45e375">uhsd_dev_direct_bind_stop</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga2ab2fe1c6ade4382867e8652aa45e375"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止新直连绑定  <br /></td></tr>
+<tr class="separator:ga2ab2fe1c6ade4382867e8652aa45e375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20142d2395f4de97123ace268dc57702" id="r_ga20142d2395f4de97123ace268dc57702"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga20142d2395f4de97123ace268dc57702">uhsd_dev_config_status_register</a> (<a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0">uhsd_dev_cfg_status_notify</a> cfg_status_cb)</td></tr>
+<tr class="memdesc:ga20142d2395f4de97123ace268dc57702"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备配网状态通知注册。  <br /></td></tr>
+<tr class="separator:ga20142d2395f4de97123ace268dc57702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b3bbdea23c218bf0db5ae61a1aabcc3" id="r_ga9b3bbdea23c218bf0db5ae61a1aabcc3"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdcfg.html#ga9b3bbdea23c218bf0db5ae61a1aabcc3">uhsd_dev_wifi_status_report</a> (<a class="el" href="group__grp__uhsdcfg.html#ga10b4a43d24a973cee21689888b62a528">UHSD_DEVAPP_WIFI_STATUS_E</a> status)</td></tr>
+<tr class="memdesc:ga9b3bbdea23c218bf0db5ae61a1aabcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备APP通知配网结果状态  <br /></td></tr>
+<tr class="separator:ga9b3bbdea23c218bf0db5ae61a1aabcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>SDR/L设备配置功能 </p>
+<dl class="section author"><dt>作者</dt><dd>hudx (<a href="#" onclick="location.href='mai'+'lto:'+'hud'+'in'+'gxu'+'an'+'.xi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">hudin<span class="obfuscator">.nosp@m.</span>gxua<span class="obfuscator">.nosp@m.</span>n.xia<span class="obfuscator">.nosp@m.</span>n@ha<span class="obfuscator">.nosp@m.</span>ier.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd>
+<dd>
+jiashouqiang(<a href="#" onclick="location.href='mai'+'lto:'+'jia'+'sh'+'ouq'+'ia'+'ng@'+'ha'+'ier'+'.c'+'om'; return false;">jiash<span class="obfuscator">.nosp@m.</span>ouqi<span class="obfuscator">.nosp@m.</span>ang@h<span class="obfuscator">.nosp@m.</span>aier<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-08-12</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>设备APP必须注册设备后，才可使用配置功能。 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gab8b5b195f8bb20e67c259ad5df486bb0" name="gab8b5b195f8bb20e67c259ad5df486bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab8b5b195f8bb20e67c259ad5df486bb0">&#9670;&#160;</a></span>uhsd_dev_cfg_status_notify</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_dev_cfg_status_notify) (<a class="el" href="group__grp__uhsdcfg.html#ga5a395f85015b74317e527c9506222dd9">UHSD_DEV_CFG_STATUS_E</a> status, void *osdk_data, void *devapp_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配网状态回调函数指针 </p>
+<p>设备APP实现此接口并通过 <a class="el" href="group__grp__uhsdcfg.html#ga20142d2395f4de97123ace268dc57702">uhsd_dev_config_status_register</a> 接口注册至SmartDevice。 当对应事件触发时，通过此回调接口通知设备APP </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>设备配网状态 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">osdkdata</td><td>对应'设备配网状态'osdk通知给设备APP的参数 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">devapp_data</td><td>对应'设备配网状态'设备APP需要返回给osdk的参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1844e2bcda78a9fd1cc00210880c0bae" name="ga1844e2bcda78a9fd1cc00210880c0bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1844e2bcda78a9fd1cc00210880c0bae">&#9670;&#160;</a></span>uhsd_dev_direct_bind_process_notify_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_dev_direct_bind_process_notify_cb) (<a class="el" href="group__grp__uhsdcfg.html#ga3395512f723f41f63b42444e794c00bc">uhsd_dev_direct_bind_process_state_e</a> state, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>新直连绑定过程状态通知回调函数定义 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>绑定过程状态 </td></tr>
+    <tr><td class="paramname">user_data</td><td>用户数据</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>开发者只有在启动新直连绑定时，设置该回调函数，才能收到绑定过程状态通知。 该回调函数在绑定过程中会被多次调用，开发者可以根据状态进行相应的处理。 </dd></dl>
+
+</div>
+</div>
+<a id="gafeb72bb7ae31410beb83bcf4eaf428d5" name="gafeb72bb7ae31410beb83bcf4eaf428d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafeb72bb7ae31410beb83bcf4eaf428d5">&#9670;&#160;</a></span>uhsd_dev_direct_bind_result_notify_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_dev_direct_bind_result_notify_cb) (uhsd_s32 result, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>新直连绑定结果通知回调函数定义 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>绑定结果， 0表示成功，&lt; 0 表示失败 </td></tr>
+    <tr><td class="paramname">user_data</td><td>用户数据</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>开发者只有在启动新直连绑定时，设置该回调函数，才能收到绑定结果通知。</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>该回调函数在绑定完成后会被调用一次，开发者可以根据结果进行相应的处理。 </dd></dl>
+
+</div>
+</div>
+<a id="gaf5ceb2e64f7baf6d568b08845a969b8f" name="gaf5ceb2e64f7baf6d568b08845a969b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5ceb2e64f7baf6d568b08845a969b8f">&#9670;&#160;</a></span>uhsd_dev_direct_bind_verify_req_notify_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_dev_direct_bind_verify_req_notify_cb) (<a class="el" href="group__grp__uhsdcfg.html#ga9992ea144f189b249b178ce50c2f5ab5">uhsd_dev_direct_bind_verify_method_e</a> method, uhsd_char *code, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>新直连绑定验证请求通知回调函数定义 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>绑定验证方式 </td></tr>
+    <tr><td class="paramname">code</td><td>绑定验证码，当method为UHSD_DEV_DIRECT_BIND_VERIFY_METHOD_CODE时该参数才有效。 当method为UHSD_DEV_DIRECT_BIND_VERIFY_METHOD_KEY时该参数为NULL。 </td></tr>
+    <tr><td class="paramname">user_data</td><td>用户数据</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>1. 开发者只有在启动新直连绑定时，必须设置该回调函数。<ol type="1">
+<li>开发者收到该回调通知后，启动验证功能，将验证结果通过uhsd_dev_direct_bind_verify_result_set设置给SDK. </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga5a395f85015b74317e527c9506222dd9" name="ga5a395f85015b74317e527c9506222dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a395f85015b74317e527c9506222dd9">&#9670;&#160;</a></span>UHSD_DEV_CFG_STATUS_E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__grp__uhsdcfg.html#ga5a395f85015b74317e527c9506222dd9">UHSD_DEV_CFG_STATUS_E</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备配网状态通枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga5a395f85015b74317e527c9506222dd9a10a6726f475956b5c0c412705f312e48" name="gga5a395f85015b74317e527c9506222dd9a10a6726f475956b5c0c412705f312e48"></a>UHSD_DEV_WIFI_CFG_INFO_GET&#160;</td><td class="fielddoc"><p>osdk查询配网信息 </p>
+<ol type="1">
+<li>uSDK通过WiFi小循环查询配网信息的时候，OSDK通过此接口向设备app查询WiFi配网信息</li>
+<li>设备app需要提供当前连接的路由器SSID和密码</li>
+<li>配网信息通过回调函数 <a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0" title="配网状态回调函数指针">uhsd_dev_cfg_status_notify()</a> 中的 devapp_data 参数进行回传, 传参类型为: <a class="el" href="structuhsd__dev__cfg__info.html" title="设备配网信息通用结构体 字符串默认 UTF-8 格式">uhsd_dev_cfg_info</a> </li>
+</ol>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5a395f85015b74317e527c9506222dd9af5b6484f82700d73ddb0ef0a88bbc683" name="gga5a395f85015b74317e527c9506222dd9af5b6484f82700d73ddb0ef0a88bbc683"></a>UHSD_DEV_CFG_INFO_SET&#160;</td><td class="fielddoc"><p>osdk接收到配网信息 </p>
+<ol type="1">
+<li>当OSDK通过BLE接收到wifi配网信息以后通知设备app ，设备app自行完成wifi联网</li>
+<li>配网信息通过回调函数 <a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0" title="配网状态回调函数指针">uhsd_dev_cfg_status_notify()</a> 中的 osdk_data 参数进行输入, 传参类型为: <a class="el" href="structuhsd__dev__cfg__info.html" title="设备配网信息通用结构体 字符串默认 UTF-8 格式">uhsd_dev_cfg_info</a> </li>
+</ol>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5a395f85015b74317e527c9506222dd9a8dee905f1f790e79046debe0d99e2455" name="gga5a395f85015b74317e527c9506222dd9a8dee905f1f790e79046debe0d99e2455"></a>UHSD_DEV_WIFI_STATUS_GET&#160;</td><td class="fielddoc"><p>osdk查询故障码 </p>
+<p>设备APP通过 uhsd_dev_wifi_status_report 接口上报当前wifi连接状态对应的故障码 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga78d17086ccdfd51ea43e57ad0461d4b0" name="ga78d17086ccdfd51ea43e57ad0461d4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78d17086ccdfd51ea43e57ad0461d4b0">&#9670;&#160;</a></span>uhsd_dev_bind_status_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_dev_bind_status_t uhsd_dev_bind_status_get </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定主设备状态获取 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>绑定状态，值为UHSD_LOCAL_BIND_STATUS_UNBIND 或 UHSD_LOCAL_BIND_STATUS_BINDED</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>1. 本接口获取的是flash中本地存储的设备绑定状态；<ol type="1">
+<li>本接口目前仅支持主设备的绑定状态获取； </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<a id="ga84eec95f5b6ea665d917f30a2c44a47f" name="ga84eec95f5b6ea665d917f30a2c44a47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84eec95f5b6ea665d917f30a2c44a47f">&#9670;&#160;</a></span>uhsd_dev_config_is_exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_bool uhsd_dev_config_is_exist </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否含有配置信息 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ture</td><td>有配置信息，false，无配置信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa91b753d290eb1bbcc683f20771e78fb" name="gaa91b753d290eb1bbcc683f20771e78fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa91b753d290eb1bbcc683f20771e78fb">&#9670;&#160;</a></span>uhsd_dev_config_open_bind_win()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_open_bind_win </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启绑定时间窗 </p>
+<p>当设备APP不使用海尔自动绑定功能（已嵌入到配置接口中）时， 需要调用此接口进行开启绑定时间窗操作。 使用场景：</p><ol type="1">
+<li>用户侧绑定。</li>
+<li>蜂窝类设备绑定。</li>
+</ol>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>开启成功。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>此种绑定方式，为手机主动绑定行为，SmartDevice无事件通知设备APP。 </dd></dl>
+
+</div>
+</div>
+<a id="ga32ca3d7ea8ac2f881da7a5a3d04018ee" name="ga32ca3d7ea8ac2f881da7a5a3d04018ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32ca3d7ea8ac2f881da7a5a3d04018ee">&#9670;&#160;</a></span>uhsd_dev_config_reconn_wifi_router()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_reconn_wifi_router </td>
+          <td>(</td>
+          <td class="paramtype">const uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>bssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_s16&#160;</td>
+          <td class="paramname"><em>bssid_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>pwd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备APP控制OSDK 重新连接路由器，用于[二次配网]需求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bssid</td><td>站点mac </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bssid_len</td><td>bssid长度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ssid</td><td>wifi标识 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwd</td><td>wifi密码</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0: 成功；&lt; 0：失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga9fbd4f07bc9a311e647bf6055571ea32" name="ga9fbd4f07bc9a311e647bf6055571ea32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fbd4f07bc9a311e647bf6055571ea32">&#9670;&#160;</a></span>uhsd_dev_config_ssid_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_ssid_clear </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除配置信息ssid </p>
+<dl class="section return"><dt>返回</dt><dd>0:成功； 其他:失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga1b0d767e07b22792e2d5842841411dc5" name="ga1b0d767e07b22792e2d5842841411dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b0d767e07b22792e2d5842841411dc5">&#9670;&#160;</a></span>uhsd_dev_config_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_start </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8&#160;</td>
+          <td class="paramname"><em>trigger_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置启动 </p>
+<p>开始配置，具体使用的配置模式（如smartlink或者smartap4.0、Mesh入网、BLE入网）由SDK配置决定，具体应从整体的配置文件进行定义。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trigger_type</td><td>0 &ndash; epp trigger(E++触发) 1 &ndash; user app trigger </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>配置是否正常开启 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">others</td><td>失败 错误码 <a class="el" href="uhsd__error_8h.html">uhsd_error.h</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>此接口不仅仅包括配置WiFi能力，还需要支持BLE/Mesh入网能力。 针对于配对业务，需要设计单独的接口进行支撑，此接口不包含此部分功能。 </dd></dl>
+
+</div>
+</div>
+<a id="gaec439afda0ce41c33ed77d7fbe729a7b" name="gaec439afda0ce41c33ed77d7fbe729a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec439afda0ce41c33ed77d7fbe729a7b">&#9670;&#160;</a></span>uhsd_dev_config_start_wifi_scan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_start_wifi_scan </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_dev_config_wifimgr_scan_cb_func&#160;</td>
+          <td class="paramname"><em>scan_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>ap_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用户打开wifi扫描，并返回扫描到的wifi信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[IN]scan_cb:扫描结束的回调，</td><td></td></tr>
+    <tr><td class="paramname">[IN]ap_num:、表示用户期望的扫描数,根据设备的资源设置，建议不大于32</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32,成功返回0，失败返回其它值， 若不支持用户直接配置，则返回失败 返回非0时不会填充或改变输入参数 </dd></dl>
+
+</div>
+</div>
+<a id="ga45ca408765966f79b171f45656a3da97" name="ga45ca408765966f79b171f45656a3da97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45ca408765966f79b171f45656a3da97">&#9670;&#160;</a></span>uhsd_dev_config_status_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_status_get </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置状态获取接口 </p>
+<dl class="section return"><dt>返回</dt><dd>配置状态, 异常为负值，正常值参考 UHSD_DEV_STATUS_E </dd></dl>
+
+</div>
+</div>
+<a id="ga20142d2395f4de97123ace268dc57702" name="ga20142d2395f4de97123ace268dc57702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20142d2395f4de97123ace268dc57702">&#9670;&#160;</a></span>uhsd_dev_config_status_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_status_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0">uhsd_dev_cfg_status_notify</a>&#160;</td>
+          <td class="paramname"><em>cfg_status_cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备配网状态通知注册。 </p>
+<p>设备APP调用此接口，注册设备配网状态回调，用来获取设备状态变更通知。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg_status_cb</td><td><a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0">uhsd_dev_cfg_status_notify</a> 用户实现函数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>用户自定义数据。会通过 <a class="el" href="group__grp__uhsdcfg.html#gab8b5b195f8bb20e67c259ad5df486bb0">uhsd_dev_cfg_status_notify</a> 接口返回。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 注册结果。 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功。 </td></tr>
+    <tr><td class="paramname">others</td><td>失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0af958d5a23bc2505cbf362567e5e5d3" name="ga0af958d5a23bc2505cbf362567e5e5d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0af958d5a23bc2505cbf362567e5e5d3">&#9670;&#160;</a></span>uhsd_dev_config_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_stop </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8&#160;</td>
+          <td class="paramname"><em>trigger_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置停止 </p>
+<p>配置过程中，用户可以主动停止配置服务。 </p><dl class="section return"><dt>返回</dt><dd>配置是否停止成功 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">others</td><td>失败 <a class="el" href="uhsd__error_8h.html">uhsd_error.h</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6cdd1398cd99fa4b017793ea03001feb" name="ga6cdd1398cd99fa4b017793ea03001feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6cdd1398cd99fa4b017793ea03001feb">&#9670;&#160;</a></span>uhsd_dev_config_wifi_info_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_config_wifi_info_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__config__wifi__info__st.html">uhsd_dev_config_wifi_info_st</a> *&#160;</td>
+          <td class="paramname"><em>usr_config_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用户设置配置信息,调用此接口前必须先调用进配置接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[IN]usr_config_info</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32,成功返回0，失败返回其它值， 若不支持用户直接配置，则返回失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaff93d0369dd76e7f80b03fd5525bbcdf" name="gaff93d0369dd76e7f80b03fd5525bbcdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff93d0369dd76e7f80b03fd5525bbcdf">&#9670;&#160;</a></span>uhsd_dev_direct_bind_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_direct_bind_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#ga9992ea144f189b249b178ce50c2f5ab5">uhsd_dev_direct_bind_verify_method_e</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#ga1844e2bcda78a9fd1cc00210880c0bae">uhsd_dev_direct_bind_process_notify_cb</a>&#160;</td>
+          <td class="paramname"><em>process_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#gaf5ceb2e64f7baf6d568b08845a969b8f">uhsd_dev_direct_bind_verify_req_notify_cb</a>&#160;</td>
+          <td class="paramname"><em>verify_req_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#gafeb72bb7ae31410beb83bcf4eaf428d5">uhsd_dev_direct_bind_result_notify_cb</a>&#160;</td>
+          <td class="paramname"><em>result_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动新直连绑定 </p>
+<p>*</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>绑定验证方式 </td></tr>
+    <tr><td class="paramname">process_cb</td><td>绑定过程状态通知回调函数, 如果开发者不关心绑定过程状态，可以设置为NULL </td></tr>
+    <tr><td class="paramname">verify_req_cb</td><td>绑定验证请求通知回调函数， 该回调函数必须设置，开发者收到该回调通知后， 启动验证功能，将验证结果通过uhsd_dev_direct_bind_verify_result_set设置给SDK. </td></tr>
+    <tr><td class="paramname">result_cb</td><td>绑定结果通知回调函数，该回调函数必须设置，开发者可以根据结果进行相应的处理。 </td></tr>
+    <tr><td class="paramname">user_data</td><td>用户数据，开发者可以在回调函数中使用该参数传递用户数据，process_cb、verify_req_cb、result_cb 回调函数中都会通知该参数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 成功，&lt; 0 失败</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>1. 新直连功能与softAP配置绑定功能互斥，不能同时使用。<ol type="1">
+<li>新直连绑定功能与BLE配置绑定功能互斥，不能同时使用。</li>
+<li>新直连绑定服务默认超时为30分钟，超时后SDK会自动停止绑定服务，触发结果回调通知。 </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<a id="ga2ab2fe1c6ade4382867e8652aa45e375" name="ga2ab2fe1c6ade4382867e8652aa45e375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ab2fe1c6ade4382867e8652aa45e375">&#9670;&#160;</a></span>uhsd_dev_direct_bind_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_direct_bind_stop </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止新直连绑定 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">无</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 成功，&lt; 0 失败</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>1. 新直连绑定完成后，SDK会自动停止绑定服务，触发结果回调通知。设备APP不需要再次调用该接口。<ol type="1">
+<li>新直连绑定过程中，如果设备APP需要停止绑定服务，可以调用该接口。 </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<a id="gac1878ab6e16bdc3ce18d2f54231cce83" name="gac1878ab6e16bdc3ce18d2f54231cce83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1878ab6e16bdc3ce18d2f54231cce83">&#9670;&#160;</a></span>uhsd_dev_direct_bind_verify_result_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_direct_bind_verify_result_set </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_bool&#160;</td>
+          <td class="paramname"><em>is_success</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置新直连绑定验证结果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_success</td><td>绑定结果，UHOS_TRUE表示成功，UHOS_FALSE表示失败</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 成功，&lt; 0 失败</dd></dl>
+<dl class="section note"><dt>注解</dt><dd>1. 开发者收到uhsd_dev_direct_bind_verify_req_notify_cb回调通知后， 启动验证功能，将验证结果通过该接口设置给SDK，SDK会根据结果进行相应的处理。</dd></dl>
+<ol type="1">
+<li>该接口只有启动新直连绑定时才有效，其他情况下调用该接口返回失败。 </li>
+</ol>
+
+</div>
+</div>
+<a id="ga9b3bbdea23c218bf0db5ae61a1aabcc3" name="ga9b3bbdea23c218bf0db5ae61a1aabcc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b3bbdea23c218bf0db5ae61a1aabcc3">&#9670;&#160;</a></span>uhsd_dev_wifi_status_report()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_wifi_status_report </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdcfg.html#ga10b4a43d24a973cee21689888b62a528">UHSD_DEVAPP_WIFI_STATUS_E</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设备APP通知配网结果状态 </p>
+<p>设备APP调用此接口，将wifi配网状态通知给osdk。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>wifi连接状态故障码。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功。 </td></tr>
+    <tr><td class="paramname">others</td><td>失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

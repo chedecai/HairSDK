@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 第一部分： 基础信息</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">第一部分： 基础信息</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a>name: sample # &lt;必选项&gt; 包名称 （符合C语言变量命名规则），长度少于等于64字节 version: master # &lt;必选项&gt; 组件版本号 description: 组件模板 # &lt;必选项&gt; 建议至少20字以上 type: components # &lt;必选项&gt; 组件类型，为：solution, kernel, hardware, components</p>
+<p>tag: '' # &lt;必选项&gt; 标签,组件分类，为：common, interface, protocol, language, sdk 缺省值： '' keywords: # &lt;可选项&gt; 关键词，会影响到组件被搜索的效果，合理的关键词很重要</p><ul>
+<li>syslog license: Apache license v2.0 # &lt;可选项&gt; 源代码的许可证，要确保所有代码、文件的许可证不冲突。如：MIT，Apache license v2.0，BSD</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+第二部分：依赖信息</h1>
+<h1><a class="anchor" id="autotoc_md2"></a>
+指定该组件依赖的组件及版本，版本支持条件比较，支持：&gt;=v1.0, &gt;v1.0, ==v1.0, &lt;=v1.0, &lt;v1.0, v1.0</h1>
+<h1><a class="anchor" id="autotoc_md3"></a>
+未指定条件时，默认为 ==，如 v1.0 与 ==v1.0</h1>
+<p>depends: # &lt;可选项&gt; 该组件依赖其他的组件，合理的依赖才能保证组件能编译、使用</p><ul>
+<li>init: master</li>
+<li>utils: master ? &lt;CONFIG_DEBUG&gt;</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+第四部分：编译连接信息</h2>
+<p>build_config: # &lt;可选项&gt; 编译配置项 </p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+internal_include:                    # &lt;可选项&gt; 编译时，影响编译器的-I 参数 ,组件内有效</h1>
+<p>include: # &lt;可选项&gt; 编译时，影响编译器的-I 参数 ,全局有效</p><ul>
+<li>include/inc</li>
+<li>include <br  />
+</li>
+<li>src/hal</li>
+</ul>
+<p>internal_cflag: # &lt;可选项&gt; C 编译器所需要要的编译参数，组件内部</p><ul>
+<li>xxx</li>
+<li>xx1 cflag_mask: true # &lt;可选项&gt;屏蔽全局 cflags 值：true/false cflag: # &lt;可选项&gt; C 编译器所需要要的编译参数</li>
+<li>-march=armv8-m.main+dsp -mthumb -mcmse -mfloat-abi=soft -D__thumb2__ -g -gdwarf-3 -Os</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+cxxflag:                                # &lt;可选项&gt; CXX 编译器所需要要的编译参数</h1>
+<h1><a class="anchor" id="autotoc_md7"></a>
+- -mcpu=cortex-m4 -mthumb</h1>
+<h1><a class="anchor" id="autotoc_md8"></a>
+- -mfpu=fpv4-sp-d16</h1>
+<h1><a class="anchor" id="autotoc_md9"></a>
+- -mfloat-abi=hard</h1>
+<h1><a class="anchor" id="autotoc_md10"></a>
+asmflag:                                # &lt;可选项&gt; 汇编器所需要要参数</h1>
+<h1><a class="anchor" id="autotoc_md11"></a>
+- -mcpu=cortex-m4 -mthumb</h1>
+<h1><a class="anchor" id="autotoc_md12"></a>
+- -mfpu=fpv4-sp-d16</h1>
+<h1><a class="anchor" id="autotoc_md13"></a>
+- -mfloat-abi=hard  # MCU_FLAGS</h1>
+<h1><a class="anchor" id="autotoc_md14"></a>
+define:                                  # &lt;可选项&gt; 宏定义, 增加编译器的-D 选项,如：</h1>
+<h1><a class="anchor" id="autotoc_md15"></a>
+&lt;strong&gt;UH_RTOS&lt;/strong&gt;: 1                        #   -DXXX=1</h1>
+<h1><a class="anchor" id="autotoc_md16"></a>
+_NO_DEFINITIONS_IN_HEADER_FILES: 1                     #   -DAAA</h1>
+<h1><a class="anchor" id="autotoc_md17"></a>
+libflag:                                 # &lt;可选项&gt; 库标志</h1>
+<h1><a class="anchor" id="autotoc_md18"></a>
+- -Wl,–start-group ${HR3010SDK_DIR}/component/common/bluetooth/realtek/sdk/board/amebaz2/lib/btgap.a -Wl,–end-group</h1>
+<h1><a class="anchor" id="autotoc_md19"></a>
+- -Wl,–start-group ${HR3010SDK_DIR}/component/soc/realtek/8710c/fwlib/lib/lib/hal_pmc.a -Wl,–end-group</h1>
+<h1><a class="anchor" id="autotoc_md20"></a>
+libs:                                    # &lt;可选项&gt; 该组件中支持的二进制静态库,如：libxxx.a, libyyy.a</h1>
+<h1><a class="anchor" id="autotoc_md21"></a>
+- libxxx.a</h1>
+<h1><a class="anchor" id="autotoc_md22"></a>
+- libyyy.a</h1>
+<h1><a class="anchor" id="autotoc_md23"></a>
+libpath:                                 # &lt;可选项&gt; 指定静态库所在的路径（相对于该组件路径）</h1>
+<h1><a class="anchor" id="autotoc_md24"></a>
+- ''</h1>
+<h1><a class="anchor" id="autotoc_md25"></a>
+ldflag:                                  # &lt;可选项&gt; 链接标志</h1>
+<h1><a class="anchor" id="autotoc_md26"></a>
+- -Os -march=armv8-m.main+dsp -mthumb</h1>
+<h1><a class="anchor" id="autotoc_md27"></a>
+ldfile: tools/rtl8710c_ram_uhomeos.ld    # &lt;可选项&gt; 链接文件</h1>
+<p>source_file: # &lt;可选项&gt; 指定参与编译的源代码文件，支持通配符，采用相对路径 normal:</p><ul>
+<li>src/board_startup.c #- src/sdk/*.c # 例：组件 src/sdk 目录下所有的扩展名为 c 的源代码文件 #sram: # sram区文件 #eram: ''</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md28"></a>
+第五部分：配置信息</h2>
+<p>def_config: # 组件的可配置项 CONFIG_DEBUG: y </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

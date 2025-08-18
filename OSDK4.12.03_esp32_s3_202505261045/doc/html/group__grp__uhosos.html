@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 操作系统适配接口定义</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhosos.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">操作系统适配接口定义</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__mutex_8h" id="r_uh__mutex_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__mutex_8h.html">uh_mutex.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__osal_8h" id="r_uh__osal_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__osal_8h.html">uh_osal.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__semaphore_8h" id="r_uh__semaphore_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__semaphore_8h.html">uh_semaphore.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__thread_8h" id="r_uh__thread_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__thread_8h.html">uh_thread.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__time_8h" id="r_uh__time_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__time_8h.html">uh_time.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__thread__attr.html">uhos_thread_attr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定线程的属性。  <a href="structuhos__thread__attr.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__tm.html">uhos_tm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__timespec.html">uhos_timespec</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__timeval.html">uhos_timeval</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__timezone.html">uhos_timezone</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:gaf2235ca79da3e5a73aeb574cc445a901" id="r_gaf2235ca79da3e5a73aeb574cc445a901"><td class="memItemLeft" align="right" valign="top"><a id="gaf2235ca79da3e5a73aeb574cc445a901" name="gaf2235ca79da3e5a73aeb574cc445a901"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_MUTEX_WAIT_FOREVER</b>&#160;&#160;&#160;0xfffffffful</td></tr>
+<tr class="separator:gaf2235ca79da3e5a73aeb574cc445a901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e71fd08554c6ac5e64f5fd20dbbd086" id="r_ga0e71fd08554c6ac5e64f5fd20dbbd086"><td class="memItemLeft" align="right" valign="top"><a id="ga0e71fd08554c6ac5e64f5fd20dbbd086" name="ga0e71fd08554c6ac5e64f5fd20dbbd086"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_MUTEX_WAIT_NONE</b>&#160;&#160;&#160;0u</td></tr>
+<tr class="separator:ga0e71fd08554c6ac5e64f5fd20dbbd086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga088b9ad1a88f98ffd33b923e0e01d246" id="r_ga088b9ad1a88f98ffd33b923e0e01d246"><td class="memItemLeft" align="right" valign="top"><a id="ga088b9ad1a88f98ffd33b923e0e01d246" name="ga088b9ad1a88f98ffd33b923e0e01d246"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_TEST_SEM</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga088b9ad1a88f98ffd33b923e0e01d246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00af11774fbd53caaa0003dfc09ce10d" id="r_ga00af11774fbd53caaa0003dfc09ce10d"><td class="memItemLeft" align="right" valign="top"><a id="ga00af11774fbd53caaa0003dfc09ce10d" name="ga00af11774fbd53caaa0003dfc09ce10d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_WAIT_FOREVER</b>&#160;&#160;&#160;0xfffffffful</td></tr>
+<tr class="separator:ga00af11774fbd53caaa0003dfc09ce10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b7d60e4733017702f2c936c33f188b8" id="r_ga1b7d60e4733017702f2c936c33f188b8"><td class="memItemLeft" align="right" valign="top"><a id="ga1b7d60e4733017702f2c936c33f188b8" name="ga1b7d60e4733017702f2c936c33f188b8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_WAIT_NONE</b>&#160;&#160;&#160;0u</td></tr>
+<tr class="separator:ga1b7d60e4733017702f2c936c33f188b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga329e9a7c1929dada90a264d039a9e035" id="r_ga329e9a7c1929dada90a264d039a9e035"><td class="memItemLeft" align="right" valign="top"><a id="ga329e9a7c1929dada90a264d039a9e035" name="ga329e9a7c1929dada90a264d039a9e035"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_TIME_OUT</b>&#160;&#160;&#160;110</td></tr>
+<tr class="separator:ga329e9a7c1929dada90a264d039a9e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf15e6d0153db0dcdca7b2c1b34144aa1" id="r_gaf15e6d0153db0dcdca7b2c1b34144aa1"><td class="memItemLeft" align="right" valign="top"><a id="gaf15e6d0153db0dcdca7b2c1b34144aa1" name="gaf15e6d0153db0dcdca7b2c1b34144aa1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_MILLISECOND</b>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:gaf15e6d0153db0dcdca7b2c1b34144aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeef40d3fecdec58e4c8c0a51cc41a563" id="r_gaeef40d3fecdec58e4c8c0a51cc41a563"><td class="memItemLeft" align="right" valign="top"><a id="gaeef40d3fecdec58e4c8c0a51cc41a563" name="gaeef40d3fecdec58e4c8c0a51cc41a563"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_SECOND</b>&#160;&#160;&#160;(1000 * (TIME_MILLISECOND))</td></tr>
+<tr class="separator:gaeef40d3fecdec58e4c8c0a51cc41a563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69475c50be8454c72c570b417481e3bf" id="r_ga69475c50be8454c72c570b417481e3bf"><td class="memItemLeft" align="right" valign="top"><a id="ga69475c50be8454c72c570b417481e3bf" name="ga69475c50be8454c72c570b417481e3bf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_MINUTE</b>&#160;&#160;&#160;(60 * (TIME_SECOND))</td></tr>
+<tr class="separator:ga69475c50be8454c72c570b417481e3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9c9fb0c7a92ef260a68e01f766ee930" id="r_gaf9c9fb0c7a92ef260a68e01f766ee930"><td class="memItemLeft" align="right" valign="top"><a id="gaf9c9fb0c7a92ef260a68e01f766ee930" name="gaf9c9fb0c7a92ef260a68e01f766ee930"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_HOUR</b>&#160;&#160;&#160;(60 * (TIME_MINUTE))</td></tr>
+<tr class="separator:gaf9c9fb0c7a92ef260a68e01f766ee930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga355f58732ee98ceafe794b26f1a2fdda" id="r_ga355f58732ee98ceafe794b26f1a2fdda"><td class="memItemLeft" align="right" valign="top"><a id="ga355f58732ee98ceafe794b26f1a2fdda" name="ga355f58732ee98ceafe794b26f1a2fdda"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_DAY</b>&#160;&#160;&#160;(24 * (TIME_HOUR))</td></tr>
+<tr class="separator:ga355f58732ee98ceafe794b26f1a2fdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc22ab01ad31ee9dfebcfcb61faaa63a" id="r_gafc22ab01ad31ee9dfebcfcb61faaa63a"><td class="memItemLeft" align="right" valign="top"><a id="gafc22ab01ad31ee9dfebcfcb61faaa63a" name="gafc22ab01ad31ee9dfebcfcb61faaa63a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MILLISECONDS_PER_SECOND</b>&#160;&#160;&#160;(1000L)</td></tr>
+<tr class="separator:gafc22ab01ad31ee9dfebcfcb61faaa63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a708413d6171e7d86056793abe2cd1a" id="r_ga8a708413d6171e7d86056793abe2cd1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga8a708413d6171e7d86056793abe2cd1a">MICROSECONDS_PER_SECOND</a>&#160;&#160;&#160;(1000000LL)</td></tr>
+<tr class="separator:ga8a708413d6171e7d86056793abe2cd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5df38c677104658963501aa1e2a88e60" id="r_ga5df38c677104658963501aa1e2a88e60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga5df38c677104658963501aa1e2a88e60">NANOSECONDS_PER_SECOND</a>&#160;&#160;&#160;(1000000000LL)</td></tr>
+<tr class="separator:ga5df38c677104658963501aa1e2a88e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b132977d764d8c1f5423f724ff682f6" id="r_ga3b132977d764d8c1f5423f724ff682f6"><td class="memItemLeft" align="right" valign="top"><a id="ga3b132977d764d8c1f5423f724ff682f6" name="ga3b132977d764d8c1f5423f724ff682f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_NO_WAIT</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga3b132977d764d8c1f5423f724ff682f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8721afb8a32509bf789deed38c0f2f3a" id="r_ga8721afb8a32509bf789deed38c0f2f3a"><td class="memItemLeft" align="right" valign="top"><a id="ga8721afb8a32509bf789deed38c0f2f3a" name="ga8721afb8a32509bf789deed38c0f2f3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_WAIT_FOREVER</b>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="separator:ga8721afb8a32509bf789deed38c0f2f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23531de2a3434fabce7c32dd47216bcd" id="r_ga23531de2a3434fabce7c32dd47216bcd"><td class="memItemLeft" align="right" valign="top"><a id="ga23531de2a3434fabce7c32dd47216bcd" name="ga23531de2a3434fabce7c32dd47216bcd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIME_MAX_PROCESS_ONCE</b>&#160;&#160;&#160;(1000)</td></tr>
+<tr class="separator:ga23531de2a3434fabce7c32dd47216bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga5a6db3b35f15688ae569874a2d85ad60" id="r_ga5a6db3b35f15688ae569874a2d85ad60"><td class="memItemLeft" align="right" valign="top"><a id="ga5a6db3b35f15688ae569874a2d85ad60" name="ga5a6db3b35f15688ae569874a2d85ad60"></a>
+typedef struct uhos_mutex_s *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_mutex_t</b></td></tr>
+<tr class="separator:ga5a6db3b35f15688ae569874a2d85ad60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13d70bca09b71d2f95e7e70f0216dbc6" id="r_ga13d70bca09b71d2f95e7e70f0216dbc6"><td class="memItemLeft" align="right" valign="top"><a id="ga13d70bca09b71d2f95e7e70f0216dbc6" name="ga13d70bca09b71d2f95e7e70f0216dbc6"></a>
+typedef struct uhos_sem_s *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_sem_t</b></td></tr>
+<tr class="separator:ga13d70bca09b71d2f95e7e70f0216dbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a9d76e34ac1cae53f245dd01e7c8d94" id="r_ga7a9d76e34ac1cae53f245dd01e7c8d94"><td class="memItemLeft" align="right" valign="top"><a id="ga7a9d76e34ac1cae53f245dd01e7c8d94" name="ga7a9d76e34ac1cae53f245dd01e7c8d94"></a>
+typedef struct uhos_thread_s *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_thread_t</b></td></tr>
+<tr class="separator:ga7a9d76e34ac1cae53f245dd01e7c8d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b6eddf9f15be5ca59830aad461f53ff" id="r_ga3b6eddf9f15be5ca59830aad461f53ff"><td class="memItemLeft" align="right" valign="top"><a id="ga3b6eddf9f15be5ca59830aad461f53ff" name="ga3b6eddf9f15be5ca59830aad461f53ff"></a>
+typedef struct <a class="el" href="structuhos__thread__attr.html">uhos_thread_attr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_thread_attr_t</b></td></tr>
+<tr class="memdesc:ga3b6eddf9f15be5ca59830aad461f53ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定线程的属性。 <br /></td></tr>
+<tr class="separator:ga3b6eddf9f15be5ca59830aad461f53ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07186c0b04fd8b41d61b22342243ed16" id="r_ga07186c0b04fd8b41d61b22342243ed16"><td class="memItemLeft" align="right" valign="top"><a id="ga07186c0b04fd8b41d61b22342243ed16" name="ga07186c0b04fd8b41d61b22342243ed16"></a>
+typedef uhos_u64&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_time_t</b></td></tr>
+<tr class="separator:ga07186c0b04fd8b41d61b22342243ed16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga0d17329aae4e476597e1e90ed0dc8056" id="r_ga0d17329aae4e476597e1e90ed0dc8056"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga0d17329aae4e476597e1e90ed0dc8056">uhos_mutex_create</a> (uhos_mutex_t *mutex)</td></tr>
+<tr class="memdesc:ga0d17329aae4e476597e1e90ed0dc8056"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并初始化互斥对象  <br /></td></tr>
+<tr class="separator:ga0d17329aae4e476597e1e90ed0dc8056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga728aa1a3059f1d6fb72040f2adf3209d" id="r_ga728aa1a3059f1d6fb72040f2adf3209d"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga728aa1a3059f1d6fb72040f2adf3209d">uhos_mutex_delete</a> (uhos_mutex_t mutex)</td></tr>
+<tr class="memdesc:ga728aa1a3059f1d6fb72040f2adf3209d"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除由 uhos_mutex_creat 创建的互斥体  <br /></td></tr>
+<tr class="separator:ga728aa1a3059f1d6fb72040f2adf3209d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30fea212f29559382b336278b9061a28" id="r_ga30fea212f29559382b336278b9061a28"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga30fea212f29559382b336278b9061a28">uhos_mutex_wait</a> (uhos_mutex_t mutex, uhos_u32 millisec)</td></tr>
+<tr class="memdesc:ga30fea212f29559382b336278b9061a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待直到互斥体变得可用。  <br /></td></tr>
+<tr class="separator:ga30fea212f29559382b336278b9061a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa63ed1e91eed3b80b1868ac0be6d7d02" id="r_gaa63ed1e91eed3b80b1868ac0be6d7d02"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#gaa63ed1e91eed3b80b1868ac0be6d7d02">uhos_mutex_release</a> (uhos_mutex_t mutex)</td></tr>
+<tr class="memdesc:gaa63ed1e91eed3b80b1868ac0be6d7d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放由 uhos_mutex_wait 获得的互斥体  <br /></td></tr>
+<tr class="separator:gaa63ed1e91eed3b80b1868ac0be6d7d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41a8c7c0172a652cd92af4d0283b327b" id="r_ga41a8c7c0172a652cd92af4d0283b327b"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga41a8c7c0172a652cd92af4d0283b327b">uhos_sem_create</a> (uhos_sem_t *sem, uhos_u32 initial_count)</td></tr>
+<tr class="memdesc:ga41a8c7c0172a652cd92af4d0283b327b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并初始化用于管理资源的信号量对象  <br /></td></tr>
+<tr class="separator:ga41a8c7c0172a652cd92af4d0283b327b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cda613d02737c28897a6d3087ce1906" id="r_ga8cda613d02737c28897a6d3087ce1906"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga8cda613d02737c28897a6d3087ce1906">uhos_sem_delete</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga8cda613d02737c28897a6d3087ce1906"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除由 uhos_sem_creat 创建的信号量  <br /></td></tr>
+<tr class="separator:ga8cda613d02737c28897a6d3087ce1906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62fa2f3059ad233411deae9bc2ff04a7" id="r_ga62fa2f3059ad233411deae9bc2ff04a7"><td class="memItemLeft" align="right" valign="top">uhos_u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga62fa2f3059ad233411deae9bc2ff04a7">uhos_sem_count</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga62fa2f3059ad233411deae9bc2ff04a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量对象的可用标记数  <br /></td></tr>
+<tr class="separator:ga62fa2f3059ad233411deae9bc2ff04a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60d272853054d4bf768e940faf0a2ae1" id="r_ga60d272853054d4bf768e940faf0a2ae1"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga60d272853054d4bf768e940faf0a2ae1">uhos_sem_wait</a> (uhos_sem_t sem, uhos_u32 millisec)</td></tr>
+<tr class="separator:ga60d272853054d4bf768e940faf0a2ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89347f3f0d8a57098a82c51cfcad4c2d" id="r_ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga89347f3f0d8a57098a82c51cfcad4c2d">uhos_sem_release</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放信号量令牌 uhos_sem_wait  <br /></td></tr>
+<tr class="separator:ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf63c024ef733b495f374c8a37eac3a1" id="r_gabf63c024ef733b495f374c8a37eac3a1"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#gabf63c024ef733b495f374c8a37eac3a1">uhos_thread_create</a> (uhos_thread_t *thread, void *(*startroutine)(void *), void *arg, const <a class="el" href="group__grp__uhosos.html#ga3b6eddf9f15be5ca59830aad461f53ff">uhos_thread_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gabf63c024ef733b495f374c8a37eac3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程创建.  <br /></td></tr>
+<tr class="separator:gabf63c024ef733b495f374c8a37eac3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4de18c19c577f1c8caf68f460e4c997" id="r_gaf4de18c19c577f1c8caf68f460e4c997"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#gaf4de18c19c577f1c8caf68f460e4c997">uhos_thread_delete</a> (uhos_thread_t thread)</td></tr>
+<tr class="memdesc:gaf4de18c19c577f1c8caf68f460e4c997"><td class="mdescLeft">&#160;</td><td class="mdescRight">终止线程的执行并将其从活动线程中删除  <br /></td></tr>
+<tr class="separator:gaf4de18c19c577f1c8caf68f460e4c997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab13263696b2c3231eb23199a48758be1" id="r_gab13263696b2c3231eb23199a48758be1"><td class="memItemLeft" align="right" valign="top">uhos_thread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#gab13263696b2c3231eb23199a48758be1">uhos_thread_getid</a> (void)</td></tr>
+<tr class="memdesc:gab13263696b2c3231eb23199a48758be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前运行线程的线程ID  <br /></td></tr>
+<tr class="separator:gab13263696b2c3231eb23199a48758be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f6a7c253b3d9be0dc41b09addbe124f" id="r_ga9f6a7c253b3d9be0dc41b09addbe124f"><td class="memItemLeft" align="right" valign="top">uhos_u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga9f6a7c253b3d9be0dc41b09addbe124f">uhos_thread_gettid</a> (void)</td></tr>
+<tr class="memdesc:ga9f6a7c253b3d9be0dc41b09addbe124f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前线程的tid  <br /></td></tr>
+<tr class="separator:ga9f6a7c253b3d9be0dc41b09addbe124f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga584127b87b412c962bbb1d528d243624" id="r_ga584127b87b412c962bbb1d528d243624"><td class="memItemLeft" align="right" valign="top">const uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga584127b87b412c962bbb1d528d243624">uhos_thread_get_name</a> (uhos_thread_t thread)</td></tr>
+<tr class="memdesc:ga584127b87b412c962bbb1d528d243624"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取内核及其接口中可见的线程名称  <br /></td></tr>
+<tr class="separator:ga584127b87b412c962bbb1d528d243624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9abb6906e9e26077fa57cb04a42b8d9a" id="r_ga9abb6906e9e26077fa57cb04a42b8d9a"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga9abb6906e9e26077fa57cb04a42b8d9a">uhos_thread_sleep</a> (uhos_u32 milliseconds)</td></tr>
+<tr class="memdesc:ga9abb6906e9e26077fa57cb04a42b8d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">导致调用线程暂停执行，直到指定的实时秒数  <br /></td></tr>
+<tr class="separator:ga9abb6906e9e26077fa57cb04a42b8d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab102471d72f61e49065f955a0ff4f7d5" id="r_gab102471d72f61e49065f955a0ff4f7d5"><td class="memItemLeft" align="right" valign="top"><a id="gab102471d72f61e49065f955a0ff4f7d5" name="gab102471d72f61e49065f955a0ff4f7d5"></a>
+uhos_time_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_time</b> (uhos_time_t *in_time)</td></tr>
+<tr class="separator:gab102471d72f61e49065f955a0ff4f7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5747c5e360965b02c3f43b1f39b1f24a" id="r_ga5747c5e360965b02c3f43b1f39b1f24a"><td class="memItemLeft" align="right" valign="top"><a id="ga5747c5e360965b02c3f43b1f39b1f24a" name="ga5747c5e360965b02c3f43b1f39b1f24a"></a>
+struct <a class="el" href="structuhos__tm.html">uhos_tm</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_gmtime</b> (const uhos_time_t *in_time)</td></tr>
+<tr class="separator:ga5747c5e360965b02c3f43b1f39b1f24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6da1c160b527da4e2097a9c437ea6118" id="r_ga6da1c160b527da4e2097a9c437ea6118"><td class="memItemLeft" align="right" valign="top"><a id="ga6da1c160b527da4e2097a9c437ea6118" name="ga6da1c160b527da4e2097a9c437ea6118"></a>
+struct <a class="el" href="structuhos__tm.html">uhos_tm</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_localtime</b> (const uhos_time_t *in_time)</td></tr>
+<tr class="separator:ga6da1c160b527da4e2097a9c437ea6118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga922d950769463714212debd3f089c364" id="r_ga922d950769463714212debd3f089c364"><td class="memItemLeft" align="right" valign="top"><a id="ga922d950769463714212debd3f089c364" name="ga922d950769463714212debd3f089c364"></a>
+uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_gettimeofday</b> (struct <a class="el" href="structuhos__timeval.html">uhos_timeval</a> *tv, struct <a class="el" href="structuhos__timezone.html">uhos_timezone</a> *tz)</td></tr>
+<tr class="separator:ga922d950769463714212debd3f089c364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade480959f043a7a6fb2f634c11068352" id="r_gade480959f043a7a6fb2f634c11068352"><td class="memItemLeft" align="right" valign="top">uhos_u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#gade480959f043a7a6fb2f634c11068352">uhos_current_time_get</a> (void)</td></tr>
+<tr class="memdesc:gade480959f043a7a6fb2f634c11068352"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前硬件启动后的计数毫秒数， 此数值在启动后持续增长，不受授时等操作影响  <br /></td></tr>
+<tr class="separator:gade480959f043a7a6fb2f634c11068352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ga8a708413d6171e7d86056793abe2cd1a" name="ga8a708413d6171e7d86056793abe2cd1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a708413d6171e7d86056793abe2cd1a">&#9670;&#160;</a></span>MICROSECONDS_PER_SECOND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSECONDS_PER_SECOND&#160;&#160;&#160;(1000000LL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Microseconds per second. </p>
+
+</div>
+</div>
+<a id="ga5df38c677104658963501aa1e2a88e60" name="ga5df38c677104658963501aa1e2a88e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5df38c677104658963501aa1e2a88e60">&#9670;&#160;</a></span>NANOSECONDS_PER_SECOND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOSECONDS_PER_SECOND&#160;&#160;&#160;(1000000000LL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nanoseconds per second. </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gade480959f043a7a6fb2f634c11068352" name="gade480959f043a7a6fb2f634c11068352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade480959f043a7a6fb2f634c11068352">&#9670;&#160;</a></span>uhos_current_time_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_u32 uhos_current_time_get </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>当前硬件启动后的计数毫秒数， 此数值在启动后持续增长，不受授时等操作影响 </p>
+<dl class="section return"><dt>返回</dt><dd>自启动的毫秒数 </dd></dl>
+
+</div>
+</div>
+<a id="ga0d17329aae4e476597e1e90ed0dc8056" name="ga0d17329aae4e476597e1e90ed0dc8056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d17329aae4e476597e1e90ed0dc8056">&#9670;&#160;</a></span>uhos_mutex_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_mutex_create </td>
+          <td>(</td>
+          <td class="paramtype">uhos_mutex_t *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建并初始化互斥对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">mutex</td><td>供其他函数参考的互斥 ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga728aa1a3059f1d6fb72040f2adf3209d" name="ga728aa1a3059f1d6fb72040f2adf3209d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga728aa1a3059f1d6fb72040f2adf3209d">&#9670;&#160;</a></span>uhos_mutex_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_mutex_delete </td>
+          <td>(</td>
+          <td class="paramtype">uhos_mutex_t&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除由 uhos_mutex_creat 创建的互斥体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>uhos_mutex_creat获得的互斥体ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaa63ed1e91eed3b80b1868ac0be6d7d02" name="gaa63ed1e91eed3b80b1868ac0be6d7d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa63ed1e91eed3b80b1868ac0be6d7d02">&#9670;&#160;</a></span>uhos_mutex_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_mutex_release </td>
+          <td>(</td>
+          <td class="paramtype">uhos_mutex_t&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放由 uhos_mutex_wait 获得的互斥体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>uhos_mutex_creat获得的互斥体ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga30fea212f29559382b336278b9061a28" name="ga30fea212f29559382b336278b9061a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30fea212f29559382b336278b9061a28">&#9670;&#160;</a></span>uhos_mutex_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_mutex_wait </td>
+          <td>(</td>
+          <td class="paramtype">uhos_mutex_t&#160;</td>
+          <td class="paramname"><em>mutex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待直到互斥体变得可用。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>uhos_mutex_creat获得的互斥体ID. </td></tr>
+    <tr><td class="paramname">millisec</td><td>超时值 or UHOS_MUTEX_WAIT_FOREVER 没有超时的情况 UHOS_MUTEX_WAIT_NONE 非阻塞情况 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga62fa2f3059ad233411deae9bc2ff04a7" name="ga62fa2f3059ad233411deae9bc2ff04a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62fa2f3059ad233411deae9bc2ff04a7">&#9670;&#160;</a></span>uhos_sem_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_u32 uhos_sem_count </td>
+          <td>(</td>
+          <td class="paramtype">uhos_sem_t&#160;</td>
+          <td class="paramname"><em>sem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>信号量对象的可用标记数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td>uhos_sem_creat 引用的信号量对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_u32 可用标记数量 </dd></dl>
+
+</div>
+</div>
+<a id="ga41a8c7c0172a652cd92af4d0283b327b" name="ga41a8c7c0172a652cd92af4d0283b327b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41a8c7c0172a652cd92af4d0283b327b">&#9670;&#160;</a></span>uhos_sem_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_sem_create </td>
+          <td>(</td>
+          <td class="paramtype">uhos_sem_t *&#160;</td>
+          <td class="paramname"><em>sem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>initial_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建并初始化用于管理资源的信号量对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td>信号量ID供其他函数参考 </td></tr>
+    <tr><td class="paramname">initial_count</td><td>可用标记的初始数量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 : 成功 !0: 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga8cda613d02737c28897a6d3087ce1906" name="ga8cda613d02737c28897a6d3087ce1906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8cda613d02737c28897a6d3087ce1906">&#9670;&#160;</a></span>uhos_sem_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_sem_delete </td>
+          <td>(</td>
+          <td class="paramtype">uhos_sem_t&#160;</td>
+          <td class="paramname"><em>sem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除由 uhos_sem_creat 创建的信号量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 : 成功 !0: 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga89347f3f0d8a57098a82c51cfcad4c2d" name="ga89347f3f0d8a57098a82c51cfcad4c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89347f3f0d8a57098a82c51cfcad4c2d">&#9670;&#160;</a></span>uhos_sem_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_sem_release </td>
+          <td>(</td>
+          <td class="paramtype">uhos_sem_t&#160;</td>
+          <td class="paramname"><em>sem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放信号量令牌 uhos_sem_wait </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td>uhos_sem_creat 引用的信号量对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 : 成功 -1: 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga60d272853054d4bf768e940faf0a2ae1" name="ga60d272853054d4bf768e940faf0a2ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60d272853054d4bf768e940faf0a2ae1">&#9670;&#160;</a></span>uhos_sem_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_sem_wait </td>
+          <td>(</td>
+          <td class="paramtype">uhos_sem_t&#160;</td>
+          <td class="paramname"><em>sem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>millisec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td>uhos_sem_creat 引用的信号量对象 </td></tr>
+    <tr><td class="paramname">millisec</td><td>超时值 or 0xffffffff 在没有超时的情况下 0 如果是非阻塞的情况 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 : 成功 -1: 失败 110: 超时 </dd></dl>
+
+</div>
+</div>
+<a id="gabf63c024ef733b495f374c8a37eac3a1" name="gabf63c024ef733b495f374c8a37eac3a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf63c024ef733b495f374c8a37eac3a1">&#9670;&#160;</a></span>uhos_thread_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_thread_create </td>
+          <td>(</td>
+          <td class="paramtype">uhos_thread_t *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *(*)(void *)&#160;</td>
+          <td class="paramname"><em>startroutine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__grp__uhosos.html#ga3b6eddf9f15be5ca59830aad461f53ff">uhos_thread_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>线程创建. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>供其他函数参考的线程ID </td></tr>
+    <tr><td class="paramname">startroutine</td><td>线程函数 </td></tr>
+    <tr><td class="paramname">arg</td><td>作为启动传递给线程函数的指针 argument. </td></tr>
+    <tr><td class="paramname">attr</td><td>线程属性; NULL: 默认值. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaf4de18c19c577f1c8caf68f460e4c997" name="gaf4de18c19c577f1c8caf68f460e4c997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4de18c19c577f1c8caf68f460e4c997">&#9670;&#160;</a></span>uhos_thread_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_thread_delete </td>
+          <td>(</td>
+          <td class="paramtype">uhos_thread_t&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>终止线程的执行并将其从活动线程中删除 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>通过uhos_thread_create或uhos_thread_getid获取线程ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga584127b87b412c962bbb1d528d243624" name="ga584127b87b412c962bbb1d528d243624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga584127b87b412c962bbb1d528d243624">&#9670;&#160;</a></span>uhos_thread_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uhos_char * uhos_thread_get_name </td>
+          <td>(</td>
+          <td class="paramtype">uhos_thread_t&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取内核及其接口中可见的线程名称 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">thread</td><td></td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">namebuf</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buflen</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>thread name </dd></dl>
+
+</div>
+</div>
+<a id="gab13263696b2c3231eb23199a48758be1" name="gab13263696b2c3231eb23199a48758be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab13263696b2c3231eb23199a48758be1">&#9670;&#160;</a></span>uhos_thread_getid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_thread_t uhos_thread_getid </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回当前运行线程的线程ID </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_thread_t 线程ID </dd></dl>
+
+</div>
+</div>
+<a id="ga9f6a7c253b3d9be0dc41b09addbe124f" name="ga9f6a7c253b3d9be0dc41b09addbe124f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f6a7c253b3d9be0dc41b09addbe124f">&#9670;&#160;</a></span>uhos_thread_gettid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_u64 uhos_thread_gettid </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回当前线程的tid </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_u64 </dd></dl>
+
+</div>
+</div>
+<a id="ga9abb6906e9e26077fa57cb04a42b8d9a" name="ga9abb6906e9e26077fa57cb04a42b8d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9abb6906e9e26077fa57cb04a42b8d9a">&#9670;&#160;</a></span>uhos_thread_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_thread_sleep </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>milliseconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导致调用线程暂停执行，直到指定的实时秒数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">milliseconds</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 0 成功 !0 失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

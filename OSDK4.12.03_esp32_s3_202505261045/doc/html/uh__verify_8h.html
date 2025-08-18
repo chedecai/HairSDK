@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_verify.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__verify_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uh_verify.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhosse.html">安全适配接口定义</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uh__types_8h_source.html">uh_types.h</a>&quot;</code><br />
+</div>
+<p><a href="uh__verify_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga2ed0463ae1c6da408fd6d55234e88588" id="r_ga2ed0463ae1c6da408fd6d55234e88588"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> { <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588add81d12cfc44db5597a146933747144c">UHOS_MD_NONE</a> = 0
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a50560b1c7e37e45e2a159aa6ffdec73d">UHOS_MD_MD2</a> = 1
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a49fd798e2b6c4f60e89347b2b7a24272">UHOS_MD_MD4</a> = 2
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a540eb61d3dbdb69c54c06795db795a3f">UHOS_MD_MD5</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a1ab75f2e25f1691c5647a487189ed2bb">UHOS_MD_SHA1</a> = 4
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588abbbbdfeab2316ac8b93a5adf97b267ad">UHOS_MD_SHA224</a> = 5
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a46135f62121bf972e17d236eb4212d16">UHOS_MD_SHA256</a> = 6
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588aa18325222e683853c5a088e893d824ea">UHOS_MD_SHA384</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588adeab3ffc066cb61db9a3ac848441945a">UHOS_MD_SHA512</a> = 8
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a10ba103cc04a2e0d69f602763903b4c2">UHOS_MD_RIPEMD160</a> = 9
+<br />
+ }</td></tr>
+<tr class="separator:ga2ed0463ae1c6da408fd6d55234e88588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga7fe07f026cfabc759190b0c85f81d308" id="r_ga7fe07f026cfabc759190b0c85f81d308"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga7fe07f026cfabc759190b0c85f81d308">uhos_md_init</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type)</td></tr>
+<tr class="memdesc:ga7fe07f026cfabc759190b0c85f81d308"><td class="mdescLeft">&#160;</td><td class="mdescRight">md初始化。  <br /></td></tr>
+<tr class="separator:ga7fe07f026cfabc759190b0c85f81d308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03903120da7b020fd04ac8ab5a90dcb2" id="r_ga03903120da7b020fd04ac8ab5a90dcb2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga03903120da7b020fd04ac8ab5a90dcb2">uhos_md_update</a> (uhos_void *md_ctx, uhos_u8 *buf, uhos_size_t len)</td></tr>
+<tr class="memdesc:ga03903120da7b020fd04ac8ab5a90dcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据算法类型加密数据段，数据可以分段式加密。  <br /></td></tr>
+<tr class="separator:ga03903120da7b020fd04ac8ab5a90dcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac031c05e0afdbabbad05d6fde60d9558" id="r_gac031c05e0afdbabbad05d6fde60d9558"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gac031c05e0afdbabbad05d6fde60d9558">uhos_md_get_size</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type)</td></tr>
+<tr class="memdesc:gac031c05e0afdbabbad05d6fde60d9558"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据加密算法获取加密后的数据长度。  <br /></td></tr>
+<tr class="separator:gac031c05e0afdbabbad05d6fde60d9558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaaf137a5c650b2992940199c9c6b0908" id="r_gaaaf137a5c650b2992940199c9c6b0908"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gaaaf137a5c650b2992940199c9c6b0908">uhos_md_finish</a> (uhos_void *md_ctx, uhos_u8 *output)</td></tr>
+<tr class="memdesc:gaaaf137a5c650b2992940199c9c6b0908"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放md句柄并输出加密后的数据。  <br /></td></tr>
+<tr class="separator:gaaaf137a5c650b2992940199c9c6b0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3928dc3fb06119ee25aef8de0790fa4f" id="r_ga3928dc3fb06119ee25aef8de0790fa4f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga3928dc3fb06119ee25aef8de0790fa4f">uhos_md_hmac</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type, const uhos_u8 *key, uhos_size_t keylen, const uhos_u8 *input, uhos_size_t ilen, uhos_u8 *output)</td></tr>
+<tr class="memdesc:ga3928dc3fb06119ee25aef8de0790fa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算通用HMAC  <br /></td></tr>
+<tr class="separator:ga3928dc3fb06119ee25aef8de0790fa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'lia'+'or'+'uxi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">liaor<span class="obfuscator">.nosp@m.</span>uxia<span class="obfuscator">.nosp@m.</span>n@hai<span class="obfuscator">.nosp@m.</span>er.c<span class="obfuscator">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-03-08</dd></dl>
+<dl class="section user"><dt>History:</dt><dd><table class="doxtable">
+<tr>
+<th>Date </th><th>version </th><th>Author </th><th>Description </th></tr>
+<tr>
+<td>2023-03-08 </td><td>1.0 </td><td>liaoruxian </td><td>init version </td></tr>
+</table>
+</dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_c08025a56e219fa437080e0b74eb5eb3.html">AL_SE</a></li><li class="navelem"><a class="el" href="uh__verify_8h.html">uh_verify.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

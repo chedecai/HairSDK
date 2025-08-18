@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 消息推送接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhsdmsgpush.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">消息推送接口</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>消息推送功能接口  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uhsd__msgpush_8h" id="r_uhsd__msgpush_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd__msgpush_8h.html">uhsd_msgpush.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__msgpush__voice__param__t.html">uhsd_msgpush_voice_param_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga68506fffc9c27e29e7be2ff1b46d8093" id="r_ga68506fffc9c27e29e7be2ff1b46d8093"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga68506fffc9c27e29e7be2ff1b46d8093">UHSD_MSGPUSH_STYLE_VOICE</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:ga68506fffc9c27e29e7be2ff1b46d8093"><td class="mdescLeft">&#160;</td><td class="mdescRight">style  <br /></td></tr>
+<tr class="separator:ga68506fffc9c27e29e7be2ff1b46d8093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga343e528fdd928091fcde5e311f693c79" id="r_ga343e528fdd928091fcde5e311f693c79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga343e528fdd928091fcde5e311f693c79">UHSD_MSGPUSH_STYLE_ACTION</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga343e528fdd928091fcde5e311f693c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0aba59ced106e146ae41f04771163e48" id="r_ga0aba59ced106e146ae41f04771163e48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga0aba59ced106e146ae41f04771163e48">UHSD_MSGPUSH_STYLE_DIALOG</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:ga0aba59ced106e146ae41f04771163e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba5d7bdf8e0dadb60a470f3784fac9ea" id="r_gaba5d7bdf8e0dadb60a470f3784fac9ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#gaba5d7bdf8e0dadb60a470f3784fac9ea">UHSD_MSGPUSH_ACTION_TYPE_DELIVERDATA</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:gaba5d7bdf8e0dadb60a470f3784fac9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">actionType  <br /></td></tr>
+<tr class="separator:gaba5d7bdf8e0dadb60a470f3784fac9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gab042d626662afbd4957b612726c9c886" id="r_gab042d626662afbd4957b612726c9c886"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#gab042d626662afbd4957b612726c9c886">uhsd_msgpush_register_msg_ack_cb</a>) (uhsd_u8 *dev_id, uhsd_s32 sn, uhsd_s8 *dev_pushid, const uhsd_s8 *code)</td></tr>
+<tr class="memdesc:gab042d626662afbd4957b612726c9c886"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册消息回调  <br /></td></tr>
+<tr class="separator:gab042d626662afbd4957b612726c9c886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0d0f3e2c493111d3958ec9b6b670a20" id="r_gab0d0f3e2c493111d3958ec9b6b670a20"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#gab0d0f3e2c493111d3958ec9b6b670a20">uhsd_msgpush_unregister_msg_ack_cb</a>) (uhsd_u8 *dev_id, uhsd_s32 sn, uhsd_s8 *dev_pushid, const uhsd_s8 *code)</td></tr>
+<tr class="memdesc:gab0d0f3e2c493111d3958ec9b6b670a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销消息推送 回调  <br /></td></tr>
+<tr class="separator:gab0d0f3e2c493111d3958ec9b6b670a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54787c7a5f4da6191c8b6257af51923c" id="r_ga54787c7a5f4da6191c8b6257af51923c"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga54787c7a5f4da6191c8b6257af51923c">uhsd_msgpush_msg_receive_cb</a>) (uhsd_s8 *server_pushid, uhsd_s8 *dev_pushid, uhsd_s8 *msgid, uhsd_s8 *data)</td></tr>
+<tr class="memdesc:ga54787c7a5f4da6191c8b6257af51923c"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息推送下发回调  <br /></td></tr>
+<tr class="separator:ga54787c7a5f4da6191c8b6257af51923c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gae13d4eb1f7b976ec906dd01161392798" id="r_gae13d4eb1f7b976ec906dd01161392798"><td class="memItemLeft" align="right" valign="top"><a id="gae13d4eb1f7b976ec906dd01161392798" name="gae13d4eb1f7b976ec906dd01161392798"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#gae13d4eb1f7b976ec906dd01161392798">message_status_e</a> { <br />
+&#160;&#160;<b>UHSD_MSGPUSH_STATUS_DELIVERED</b> = 1
+, <b>UHSD_MSGPUSH_STATUS_READ</b>
+, <b>UHSD_MSGPUSH_STATUS_FAILED</b>
+, <b>UHSD_MSGPUSH_STATUS_DONE</b>
+, <br />
+&#160;&#160;<b>UHSD_MSGPUSH_STATUS_ACCEPTED</b>
+, <b>UHSD_MSGPUSH_STATUS_CLICKED</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:gae13d4eb1f7b976ec906dd01161392798"><td class="mdescLeft">&#160;</td><td class="mdescRight">message status <br /></td></tr>
+<tr class="separator:gae13d4eb1f7b976ec906dd01161392798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga6d996d913baee5bbbaade2acccdc0073" id="r_ga6d996d913baee5bbbaade2acccdc0073"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga6d996d913baee5bbbaade2acccdc0073">uhsd_msgpush_register_callback</a> (<a class="el" href="group__grp__uhsdmsgpush.html#gab042d626662afbd4957b612726c9c886">uhsd_msgpush_register_msg_ack_cb</a> register_msg_ack_cb, <a class="el" href="group__grp__uhsdmsgpush.html#ga54787c7a5f4da6191c8b6257af51923c">uhsd_msgpush_msg_receive_cb</a> msg_receive_cb, <a class="el" href="group__grp__uhsdmsgpush.html#gab0d0f3e2c493111d3958ec9b6b670a20">uhsd_msgpush_unregister_msg_ack_cb</a> unregister_msg_ack_cb)</td></tr>
+<tr class="memdesc:ga6d996d913baee5bbbaade2acccdc0073"><td class="mdescLeft">&#160;</td><td class="mdescRight">回调接口注册 需要注册回调函数后才能使用消息服务  <br /></td></tr>
+<tr class="separator:ga6d996d913baee5bbbaade2acccdc0073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga491d2a2fc4c0b2b83edbfd00b39e00a8" id="r_ga491d2a2fc4c0b2b83edbfd00b39e00a8"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga491d2a2fc4c0b2b83edbfd00b39e00a8">uhsd_msgpush_register_msg</a> (uhsd_u8 *dev_id, <a class="el" href="structuhsd__msgpush__voice__param__t.html">uhsd_msgpush_voice_param_t</a> *msg_param)</td></tr>
+<tr class="memdesc:ga491d2a2fc4c0b2b83edbfd00b39e00a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册消息 需要注册消息后才能使用消息服务  <br /></td></tr>
+<tr class="separator:ga491d2a2fc4c0b2b83edbfd00b39e00a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8011ec8986831f1c59aaa9d78cdd5325" id="r_ga8011ec8986831f1c59aaa9d78cdd5325"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#ga8011ec8986831f1c59aaa9d78cdd5325">uhsd_msgpush_unregister_msg</a> (uhsd_u8 *dev_id, const uhsd_s8 *dev_pushid, uhsd_s32 sn)</td></tr>
+<tr class="memdesc:ga8011ec8986831f1c59aaa9d78cdd5325"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 消息推送 服务  <br /></td></tr>
+<tr class="separator:ga8011ec8986831f1c59aaa9d78cdd5325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3905e78711e40845c57b06bc56c4cbc" id="r_gad3905e78711e40845c57b06bc56c4cbc"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdmsgpush.html#gad3905e78711e40845c57b06bc56c4cbc">uhsd_msgpush_report_msg_status</a> (uhsd_u8 *dev_id, const uhsd_s8 *dev_pushid, const uhsd_s8 *server_pushid, const uhsd_s8 *msgid, uhsd_s32 status, uhsd_s8 *time)</td></tr>
+<tr class="memdesc:gad3905e78711e40845c57b06bc56c4cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">播放语音后，调用该接口上报已读状态  <br /></td></tr>
+<tr class="separator:gad3905e78711e40845c57b06bc56c4cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>消息推送功能接口 </p>
+<dl class="section author"><dt>作者</dt><dd>hudx (<a href="#" onclick="location.href='mai'+'lto:'+'hud'+'in'+'gxu'+'an'+'.xi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">hudin<span class="obfuscator">.nosp@m.</span>gxua<span class="obfuscator">.nosp@m.</span>n.xia<span class="obfuscator">.nosp@m.</span>n@ha<span class="obfuscator">.nosp@m.</span>ier.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-08-27</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="gaba5d7bdf8e0dadb60a470f3784fac9ea" name="gaba5d7bdf8e0dadb60a470f3784fac9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba5d7bdf8e0dadb60a470f3784fac9ea">&#9670;&#160;</a></span>UHSD_MSGPUSH_ACTION_TYPE_DELIVERDATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_MSGPUSH_ACTION_TYPE_DELIVERDATA&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>actionType </p>
+<p>deliverData 512 </p>
+
+</div>
+</div>
+<a id="ga343e528fdd928091fcde5e311f693c79" name="ga343e528fdd928091fcde5e311f693c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga343e528fdd928091fcde5e311f693c79">&#9670;&#160;</a></span>UHSD_MSGPUSH_STYLE_ACTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_MSGPUSH_STYLE_ACTION&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>action </p>
+
+</div>
+</div>
+<a id="ga0aba59ced106e146ae41f04771163e48" name="ga0aba59ced106e146ae41f04771163e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0aba59ced106e146ae41f04771163e48">&#9670;&#160;</a></span>UHSD_MSGPUSH_STYLE_DIALOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_MSGPUSH_STYLE_DIALOG&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>voice and action </p>
+
+</div>
+</div>
+<a id="ga68506fffc9c27e29e7be2ff1b46d8093" name="ga68506fffc9c27e29e7be2ff1b46d8093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68506fffc9c27e29e7be2ff1b46d8093">&#9670;&#160;</a></span>UHSD_MSGPUSH_STYLE_VOICE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_MSGPUSH_STYLE_VOICE&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>style </p>
+<p>voice </p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga54787c7a5f4da6191c8b6257af51923c" name="ga54787c7a5f4da6191c8b6257af51923c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54787c7a5f4da6191c8b6257af51923c">&#9670;&#160;</a></span>uhsd_msgpush_msg_receive_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_msgpush_msg_receive_cb) (uhsd_s8 *server_pushid, uhsd_s8 *dev_pushid, uhsd_s8 *msgid, uhsd_s8 *data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息推送下发回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_pushid</td><td>消息客户端标识 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_pushid</td><td>消息中心标识 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>数据内容 [json格式] 具体的格式需要与推送方协调. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0, 失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<a id="gab042d626662afbd4957b612726c9c886" name="gab042d626662afbd4957b612726c9c886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab042d626662afbd4957b612726c9c886">&#9670;&#160;</a></span>uhsd_msgpush_register_msg_ack_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_msgpush_register_msg_ack_cb) (uhsd_u8 *dev_id, uhsd_s32 sn, uhsd_s8 *dev_pushid, const uhsd_s8 *code)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册消息回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_id</td><td>设备ID（DeviceID） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_pushid</td><td>消息客户端标识. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sn</td><td>应与注册时的sn相同，注册消息标识。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>错误码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<a id="gab0d0f3e2c493111d3958ec9b6b670a20" name="gab0d0f3e2c493111d3958ec9b6b670a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0d0f3e2c493111d3958ec9b6b670a20">&#9670;&#160;</a></span>uhsd_msgpush_unregister_msg_ack_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_msgpush_unregister_msg_ack_cb) (uhsd_u8 *dev_id, uhsd_s32 sn, uhsd_s8 *dev_pushid, const uhsd_s8 *code)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注销消息推送 回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_id</td><td>设备ID（D e v ice ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_pushid</td><td>消息客户端标识. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sn</td><td>与注销时的sn相同，注销消息标识。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>错误码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga6d996d913baee5bbbaade2acccdc0073" name="ga6d996d913baee5bbbaade2acccdc0073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d996d913baee5bbbaade2acccdc0073">&#9670;&#160;</a></span>uhsd_msgpush_register_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_msgpush_register_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdmsgpush.html#gab042d626662afbd4957b612726c9c886">uhsd_msgpush_register_msg_ack_cb</a>&#160;</td>
+          <td class="paramname"><em>register_msg_ack_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdmsgpush.html#ga54787c7a5f4da6191c8b6257af51923c">uhsd_msgpush_msg_receive_cb</a>&#160;</td>
+          <td class="paramname"><em>msg_receive_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsdmsgpush.html#gab0d0f3e2c493111d3958ec9b6b670a20">uhsd_msgpush_unregister_msg_ack_cb</a>&#160;</td>
+          <td class="paramname"><em>unregister_msg_ack_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回调接口注册 需要注册回调函数后才能使用消息服务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uhsd_msgpush_register_msg_ack_cb</td><td>注册消息应答接口 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uhsd_msgpush_msg_receive_cb</td><td>消息推送接口 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uhsd_msgpush_unregister_msg_ack_cb</td><td>注销 应答接口， 返回注销的结果。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<a id="ga491d2a2fc4c0b2b83edbfd00b39e00a8" name="ga491d2a2fc4c0b2b83edbfd00b39e00a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga491d2a2fc4c0b2b83edbfd00b39e00a8">&#9670;&#160;</a></span>uhsd_msgpush_register_msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_msgpush_register_msg </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>dev_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__msgpush__voice__param__t.html">uhsd_msgpush_voice_param_t</a> *&#160;</td>
+          <td class="paramname"><em>msg_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册消息 需要注册消息后才能使用消息服务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_id</td><td>设备ID（DeviceID） @msg_param ---&mdash;@style 消息交互方式 (notification 、toast 、dialog、voice、action) 目前支持 voice、action。 仅 voice -&mdash; 1 仅 action -&mdash; 2 voice + action ----&mdash; 3 ---&mdash;@action 如果style中支持action交互方式， action功能开启。 目前支持 deliverData deliverData ------&mdash; 1 ---&mdash;@timezone 时区. eg: Asia/Shanghai ---&mdash;@language 语言. eg: zh-cn ---&mdash;@sn 是消息业务用的，是用户生成的, 标识用户的这次业务, 与应答时候的sn一致。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<a id="gad3905e78711e40845c57b06bc56c4cbc" name="gad3905e78711e40845c57b06bc56c4cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3905e78711e40845c57b06bc56c4cbc">&#9670;&#160;</a></span>uhsd_msgpush_report_msg_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_msgpush_report_msg_status </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>dev_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_s8 *&#160;</td>
+          <td class="paramname"><em>dev_pushid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_s8 *&#160;</td>
+          <td class="paramname"><em>server_pushid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_s8 *&#160;</td>
+          <td class="paramname"><em>msgid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s8 *&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>播放语音后，调用该接口上报已读状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_id</td><td>设备ID（DeviceID） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_pushid</td><td>消息推送的 端的标识。 对应注册消息推送功能返回的pushid。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_pushid</td><td>消息标识，从平台推送的消息体中获取 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msgid</td><td>消息标识，从平台推送的消息体中获取 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>状态类型 deliver-&mdash;1，read-&mdash;2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>yyyy-MM-dd HH:mm:SS 格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+<a id="ga8011ec8986831f1c59aaa9d78cdd5325" name="ga8011ec8986831f1c59aaa9d78cdd5325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8011ec8986831f1c59aaa9d78cdd5325">&#9670;&#160;</a></span>uhsd_msgpush_unregister_msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_msgpush_unregister_msg </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>dev_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_s8 *&#160;</td>
+          <td class="paramname"><em>dev_pushid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>sn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注销 消息推送 服务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_id</td><td>设备ID（DeviceID） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dev_pushid</td><td>消息推送的 端的标识。 对应注册消息推送功能返回的pushid。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sn</td><td>是消息业务用的，是用户生成的, 标识用户的这次业务, 与应答时候的sn一致。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回&lt;0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

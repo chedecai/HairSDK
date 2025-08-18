@@ -1,0 +1,1017 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: C库适配接口定义</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhoslibc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">C库适配接口定义</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__libc_8h" id="r_uh__libc_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__libc_8h.html">uh_libc.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__libc__mem_8h" id="r_uh__libc__mem_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__libc__mem_8h.html">uh_libc_mem.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__libc__str_8h" id="r_uh__libc__str_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__libc__str_8h.html">uh_libc_str.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__random_8h" id="r_uh__random_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__random_8h.html">uh_random.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gac45240727f0d1ecbfea1262db74931db" id="r_gac45240727f0d1ecbfea1262db74931db"><td class="memItemLeft" align="right" valign="top">uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gac45240727f0d1ecbfea1262db74931db">uhos_libc_malloc</a> (uhos_size_t size)</td></tr>
+<tr class="memdesc:gac45240727f0d1ecbfea1262db74931db"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配一块size字节大小的内存  <br /></td></tr>
+<tr class="separator:gac45240727f0d1ecbfea1262db74931db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea19f2731478a650d215ddd9b80a80e2" id="r_gaea19f2731478a650d215ddd9b80a80e2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gaea19f2731478a650d215ddd9b80a80e2">uhos_libc_free</a> (uhos_void *ptr)</td></tr>
+<tr class="memdesc:gaea19f2731478a650d215ddd9b80a80e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放分配的内存块  <br /></td></tr>
+<tr class="separator:gaea19f2731478a650d215ddd9b80a80e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacf23fbebe3c65b697ab6517cc1d34d7" id="r_gaacf23fbebe3c65b697ab6517cc1d34d7"><td class="memItemLeft" align="right" valign="top"><a id="gaacf23fbebe3c65b697ab6517cc1d34d7" name="gaacf23fbebe3c65b697ab6517cc1d34d7"></a>
+UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_zalloc</b> (uhos_size_t size)</td></tr>
+<tr class="separator:gaacf23fbebe3c65b697ab6517cc1d34d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09d36a77cd6e02c87ccce8477e7cb735" id="r_ga09d36a77cd6e02c87ccce8477e7cb735"><td class="memItemLeft" align="right" valign="top"><a id="ga09d36a77cd6e02c87ccce8477e7cb735" name="ga09d36a77cd6e02c87ccce8477e7cb735"></a>
+UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_calloc</b> (uhos_size_t nmemb, uhos_size_t size)</td></tr>
+<tr class="separator:ga09d36a77cd6e02c87ccce8477e7cb735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18eb910a4944836e1b9c3597000ad5ae" id="r_ga18eb910a4944836e1b9c3597000ad5ae"><td class="memItemLeft" align="right" valign="top"><a id="ga18eb910a4944836e1b9c3597000ad5ae" name="ga18eb910a4944836e1b9c3597000ad5ae"></a>
+UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_realloc</b> (uhos_void *ptr, uhos_size_t size)</td></tr>
+<tr class="separator:ga18eb910a4944836e1b9c3597000ad5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec392eccf8341ebe66d758d1bf96bbaa" id="r_gaec392eccf8341ebe66d758d1bf96bbaa"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gaec392eccf8341ebe66d758d1bf96bbaa">uhos_libc_memcpy</a> (uhos_void *dest, const void *src, uhos_size_t n)</td></tr>
+<tr class="memdesc:gaec392eccf8341ebe66d758d1bf96bbaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">从存储区 src 复制 n 个字节到存储区 dest.  <br /></td></tr>
+<tr class="separator:gaec392eccf8341ebe66d758d1bf96bbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16c43a37aa0ad6929e50a949ed7d5940" id="r_ga16c43a37aa0ad6929e50a949ed7d5940"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga16c43a37aa0ad6929e50a949ed7d5940">uhos_libc_memset</a> (uhos_void *s, uhos_s32 c, uhos_size_t n)</td></tr>
+<tr class="memdesc:ga16c43a37aa0ad6929e50a949ed7d5940"><td class="mdescLeft">&#160;</td><td class="mdescRight">复制字符 c（一个无符号字符）到参数 s 所指向的字符串的前 n 个字符  <br /></td></tr>
+<tr class="separator:ga16c43a37aa0ad6929e50a949ed7d5940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81fe1c55827a892a6e082fa80501707f" id="r_ga81fe1c55827a892a6e082fa80501707f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga81fe1c55827a892a6e082fa80501707f">uhos_libc_memcmp</a> (const uhos_void *s1, const uhos_void *s2, uhos_size_t n)</td></tr>
+<tr class="memdesc:ga81fe1c55827a892a6e082fa80501707f"><td class="mdescLeft">&#160;</td><td class="mdescRight">从存储区 s2 复制 n 个字节到存储区 s1  <br /></td></tr>
+<tr class="separator:ga81fe1c55827a892a6e082fa80501707f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca25ef261506c2b95326bf8e5a164dac" id="r_gaca25ef261506c2b95326bf8e5a164dac"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gaca25ef261506c2b95326bf8e5a164dac">uhos_libc_memmove</a> (uhos_void *dest, const void *src, uhos_size_t n)</td></tr>
+<tr class="memdesc:gaca25ef261506c2b95326bf8e5a164dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 str2 复制 n 个字符到 str1，但是在重叠内存块这方面，memmove() 是比 memcpy() 更安全的方法。区域可以有重叠的  <br /></td></tr>
+<tr class="separator:gaca25ef261506c2b95326bf8e5a164dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac16d4b7c78b382c6fef6c493296268c3" id="r_gac16d4b7c78b382c6fef6c493296268c3"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gac16d4b7c78b382c6fef6c493296268c3">uhos_libc_atoi</a> (const uhos_char *nptr)</td></tr>
+<tr class="memdesc:gac16d4b7c78b382c6fef6c493296268c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转为整数  <br /></td></tr>
+<tr class="separator:gac16d4b7c78b382c6fef6c493296268c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fdb39b4bc1e1525cc11e38180caa32a" id="r_ga5fdb39b4bc1e1525cc11e38180caa32a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga5fdb39b4bc1e1525cc11e38180caa32a">uhos_libc_atoll</a> (const uhos_char *nptr)</td></tr>
+<tr class="memdesc:ga5fdb39b4bc1e1525cc11e38180caa32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转为long long  <br /></td></tr>
+<tr class="separator:ga5fdb39b4bc1e1525cc11e38180caa32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32529036b52e1bd0ea9b5886eda866d9" id="r_ga32529036b52e1bd0ea9b5886eda866d9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga32529036b52e1bd0ea9b5886eda866d9">uhos_libc_strlen</a> (const uhos_char *s)</td></tr>
+<tr class="memdesc:ga32529036b52e1bd0ea9b5886eda866d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算字符串长度  <br /></td></tr>
+<tr class="separator:ga32529036b52e1bd0ea9b5886eda866d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2dc6f573ece4f62040c14ac34ed7797a" id="r_ga2dc6f573ece4f62040c14ac34ed7797a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga2dc6f573ece4f62040c14ac34ed7797a">uhos_libc_strchr</a> (const uhos_char *s, int c)</td></tr>
+<tr class="memdesc:ga2dc6f573ece4f62040c14ac34ed7797a"><td class="mdescLeft">&#160;</td><td class="mdescRight">在字符串中查找特定字符.  <br /></td></tr>
+<tr class="separator:ga2dc6f573ece4f62040c14ac34ed7797a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga552770c234ee9df2c414b410cb9097d2" id="r_ga552770c234ee9df2c414b410cb9097d2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga552770c234ee9df2c414b410cb9097d2">uhos_libc_strrchr</a> (const uhos_char *s, int c)</td></tr>
+<tr class="memdesc:ga552770c234ee9df2c414b410cb9097d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">在字符串中查找最后一次出现的特定字符  <br /></td></tr>
+<tr class="separator:ga552770c234ee9df2c414b410cb9097d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09e01d2683744420054f47fefbb69d7a" id="r_ga09e01d2683744420054f47fefbb69d7a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga09e01d2683744420054f47fefbb69d7a">uhos_libc_strstr</a> (const uhos_char *haystack, const uhos_char *needle)</td></tr>
+<tr class="memdesc:ga09e01d2683744420054f47fefbb69d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">在字符串中查找第一次出现特定字符串的位置，不包含终止符 '\0'  <br /></td></tr>
+<tr class="separator:ga09e01d2683744420054f47fefbb69d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8953685f2d1f97c4ac02c42bfc897c22" id="r_ga8953685f2d1f97c4ac02c42bfc897c22"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga8953685f2d1f97c4ac02c42bfc897c22">uhos_libc_strcpy</a> (uhos_char *dest, const uhos_char *src)</td></tr>
+<tr class="memdesc:ga8953685f2d1f97c4ac02c42bfc897c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 src 所指向的字符串复制到 dest  <br /></td></tr>
+<tr class="separator:ga8953685f2d1f97c4ac02c42bfc897c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62c55bd30552e615e924c33b8be9df95" id="r_ga62c55bd30552e615e924c33b8be9df95"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga62c55bd30552e615e924c33b8be9df95">uhos_libc_strncpy</a> (uhos_char *dest, const uhos_char *src, uhos_size_t n)</td></tr>
+<tr class="memdesc:ga62c55bd30552e615e924c33b8be9df95"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 src 所指向的字符串复制到 dest，最多复制 n 个字符。当 src 的长度小于 n 时，dest 的剩余部分将用空字节填充  <br /></td></tr>
+<tr class="separator:ga62c55bd30552e615e924c33b8be9df95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d79fb4ea131c93615a74e2db4cd0030" id="r_ga9d79fb4ea131c93615a74e2db4cd0030"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga9d79fb4ea131c93615a74e2db4cd0030">uhos_libc_strcmp</a> (const uhos_char *s1, const uhos_char *s2)</td></tr>
+<tr class="memdesc:ga9d79fb4ea131c93615a74e2db4cd0030"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 s1 所指向的字符串和 s2 所指向的字符串进行比较  <br /></td></tr>
+<tr class="separator:ga9d79fb4ea131c93615a74e2db4cd0030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga296432e4582d31382b77ecbc4da0a967" id="r_ga296432e4582d31382b77ecbc4da0a967"><td class="memItemLeft" align="right" valign="top"><a id="ga296432e4582d31382b77ecbc4da0a967" name="ga296432e4582d31382b77ecbc4da0a967"></a>
+UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_strncmp</b> (const uhos_char *s1, const uhos_char *s2, uhos_size_t n)</td></tr>
+<tr class="separator:ga296432e4582d31382b77ecbc4da0a967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5aad4473dac5fe968eb92b5f83429124" id="r_ga5aad4473dac5fe968eb92b5f83429124"><td class="memItemLeft" align="right" valign="top"><a id="ga5aad4473dac5fe968eb92b5f83429124" name="ga5aad4473dac5fe968eb92b5f83429124"></a>
+UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_strcasecmp</b> (const uhos_char *s1, const uhos_char *s2)</td></tr>
+<tr class="separator:ga5aad4473dac5fe968eb92b5f83429124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd519d0c9e97d364a5be05a210da166c" id="r_gacd519d0c9e97d364a5be05a210da166c"><td class="memItemLeft" align="right" valign="top"><a id="gacd519d0c9e97d364a5be05a210da166c" name="gacd519d0c9e97d364a5be05a210da166c"></a>
+UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_strncasecmp</b> (const uhos_char *s1, const uhos_char *s2, uhos_size_t n)</td></tr>
+<tr class="separator:gacd519d0c9e97d364a5be05a210da166c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ae897753099d9adc1ce61e7cc6dd180" id="r_ga6ae897753099d9adc1ce61e7cc6dd180"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga6ae897753099d9adc1ce61e7cc6dd180">uhos_libc_strcat</a> (uhos_char *dest, const uhos_char *src)</td></tr>
+<tr class="memdesc:ga6ae897753099d9adc1ce61e7cc6dd180"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 src 所指向的字符串追加到 dest 所指向的字符串的结尾  <br /></td></tr>
+<tr class="separator:ga6ae897753099d9adc1ce61e7cc6dd180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1609418b1f9f77c45b1047785913228d" id="r_ga1609418b1f9f77c45b1047785913228d"><td class="memItemLeft" align="right" valign="top"><a id="ga1609418b1f9f77c45b1047785913228d" name="ga1609418b1f9f77c45b1047785913228d"></a>
+UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_strncat</b> (uhos_char *dest, const uhos_char *src, uhos_size_t n)</td></tr>
+<tr class="separator:ga1609418b1f9f77c45b1047785913228d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22ce0722449cf2cfecb621e3bb76cc58" id="r_ga22ce0722449cf2cfecb621e3bb76cc58"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga22ce0722449cf2cfecb621e3bb76cc58">uhos_libc_strtok</a> (uhos_char *str, const uhos_char *delim)</td></tr>
+<tr class="memdesc:ga22ce0722449cf2cfecb621e3bb76cc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">分解字符串 str 为一组字符串，delim 为分隔符  <br /></td></tr>
+<tr class="separator:ga22ce0722449cf2cfecb621e3bb76cc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab87d71810f61daa57b393c62b7e6f952" id="r_gab87d71810f61daa57b393c62b7e6f952"><td class="memItemLeft" align="right" valign="top"><a id="gab87d71810f61daa57b393c62b7e6f952" name="gab87d71810f61daa57b393c62b7e6f952"></a>
+UHSD_API uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_libc_strtok_r</b> (uhos_char *str, const uhos_char *delim, uhos_char **saveptr)</td></tr>
+<tr class="separator:gab87d71810f61daa57b393c62b7e6f952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26a11cae9d4b10bac0d30cadc20261bc" id="r_ga26a11cae9d4b10bac0d30cadc20261bc"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga26a11cae9d4b10bac0d30cadc20261bc">uhos_libc_snprintf</a> (uhos_char *str, uhos_size_t size, const uhos_char *format,...)</td></tr>
+<tr class="memdesc:ga26a11cae9d4b10bac0d30cadc20261bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">将可变参数按照format的格式转化为字符串  <br /></td></tr>
+<tr class="separator:ga26a11cae9d4b10bac0d30cadc20261bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3b849a779db36f2a21d03f50f9ec0be" id="r_gab3b849a779db36f2a21d03f50f9ec0be"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#gab3b849a779db36f2a21d03f50f9ec0be">uhos_libc_sprintf</a> (uhos_char *str, const uhos_char *format,...)</td></tr>
+<tr class="memdesc:gab3b849a779db36f2a21d03f50f9ec0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送格式化输出到 str 所指向的字符串  <br /></td></tr>
+<tr class="separator:gab3b849a779db36f2a21d03f50f9ec0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga882e8ba4e58854dcf3674c3db389a33f" id="r_ga882e8ba4e58854dcf3674c3db389a33f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga882e8ba4e58854dcf3674c3db389a33f">uhos_libc_sscanf</a> (const uhos_char *str, const uhos_char *format,...)</td></tr>
+<tr class="memdesc:ga882e8ba4e58854dcf3674c3db389a33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取格式化的字符串中的数据  <br /></td></tr>
+<tr class="separator:ga882e8ba4e58854dcf3674c3db389a33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga823651bbd47098f702697f500b28dff7" id="r_ga823651bbd47098f702697f500b28dff7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoslibc.html#ga823651bbd47098f702697f500b28dff7">uhos_random_generate</a> (uhos_u8 *output, uhos_u32 output_len)</td></tr>
+<tr class="memdesc:ga823651bbd47098f702697f500b28dff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成随机数据, 如无硬件随机数，可直接使用参考代码  <br /></td></tr>
+<tr class="separator:ga823651bbd47098f702697f500b28dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">函数说明</h2>
+<a id="gac16d4b7c78b382c6fef6c493296268c3" name="gac16d4b7c78b382c6fef6c493296268c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac16d4b7c78b382c6fef6c493296268c3">&#9670;&#160;</a></span>uhos_libc_atoi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_atoi </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>nptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将字符串转为整数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>字符串指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 整数值 </dd></dl>
+
+</div>
+</div>
+<a id="ga5fdb39b4bc1e1525cc11e38180caa32a" name="ga5fdb39b4bc1e1525cc11e38180caa32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fdb39b4bc1e1525cc11e38180caa32a">&#9670;&#160;</a></span>uhos_libc_atoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s64 uhos_libc_atoll </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>nptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将字符串转为long long </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s64 </dd></dl>
+
+</div>
+</div>
+<a id="gaea19f2731478a650d215ddd9b80a80e2" name="gaea19f2731478a650d215ddd9b80a80e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea19f2731478a650d215ddd9b80a80e2">&#9670;&#160;</a></span>uhos_libc_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void uhos_libc_free </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放分配的内存块 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>指向分配内存块的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac45240727f0d1ecbfea1262db74931db" name="gac45240727f0d1ecbfea1262db74931db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac45240727f0d1ecbfea1262db74931db">&#9670;&#160;</a></span>uhos_libc_malloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void * uhos_libc_malloc </td>
+          <td>(</td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分配一块size字节大小的内存 </p>
+<p>分配一块size字节大小的内存，并清零</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>分配内存块的大小（字节） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功，返回分配的内存块指针 失败，返回空指针 </dd></dl>
+
+</div>
+</div>
+<a id="ga81fe1c55827a892a6e082fa80501707f" name="ga81fe1c55827a892a6e082fa80501707f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81fe1c55827a892a6e082fa80501707f">&#9670;&#160;</a></span>uhos_libc_memcmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_memcmp </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_void *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_void *&#160;</td>
+          <td class="paramname"><em>s2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从存储区 s2 复制 n 个字节到存储区 s1 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>指向用于存储复制内容的目标数组，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">s2</td><td>指向要复制的数据源，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">n</td><td>要被复制的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 返回一个指向目标存储区 s1 的指针 </dd></dl>
+
+</div>
+</div>
+<a id="gaec392eccf8341ebe66d758d1bf96bbaa" name="gaec392eccf8341ebe66d758d1bf96bbaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec392eccf8341ebe66d758d1bf96bbaa">&#9670;&#160;</a></span>uhos_libc_memcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void * uhos_libc_memcpy </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从存储区 src 复制 n 个字节到存储区 dest. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>指向用于存储复制内容的目标数组，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">src</td><td>指向要复制的数据源，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">n</td><td>要被复制的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_void* 返回一个指向目标存储区 dest 的指针 </dd></dl>
+
+</div>
+</div>
+<a id="gaca25ef261506c2b95326bf8e5a164dac" name="gaca25ef261506c2b95326bf8e5a164dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca25ef261506c2b95326bf8e5a164dac">&#9670;&#160;</a></span>uhos_libc_memmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void * uhos_libc_memmove </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 str2 复制 n 个字符到 str1，但是在重叠内存块这方面，memmove() 是比 memcpy() 更安全的方法。区域可以有重叠的 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>指向用于存储复制内容的目标数组，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">src</td><td>指向要复制的数据源，类型强制转换为 void* 指针 </td></tr>
+    <tr><td class="paramname">n</td><td>要被复制的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_void* 返回一个指向目标存储区 dest 的指针 </dd></dl>
+
+</div>
+</div>
+<a id="ga16c43a37aa0ad6929e50a949ed7d5940" name="ga16c43a37aa0ad6929e50a949ed7d5940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16c43a37aa0ad6929e50a949ed7d5940">&#9670;&#160;</a></span>uhos_libc_memset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void * uhos_libc_memset </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>复制字符 c（一个无符号字符）到参数 s 所指向的字符串的前 n 个字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>指向要填充的内存块 </td></tr>
+    <tr><td class="paramname">c</td><td>要被设置的值 </td></tr>
+    <tr><td class="paramname">n</td><td>要被设置为该值的字符数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_void* 返回一个指向存储区s的指针 </dd></dl>
+
+</div>
+</div>
+<a id="ga26a11cae9d4b10bac0d30cadc20261bc" name="ga26a11cae9d4b10bac0d30cadc20261bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26a11cae9d4b10bac0d30cadc20261bc">&#9670;&#160;</a></span>uhos_libc_snprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_snprintf </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将可变参数按照format的格式转化为字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>转换后字符串 </td></tr>
+    <tr><td class="paramname">size</td><td>str最大长度 </td></tr>
+    <tr><td class="paramname">format</td><td>转换格式 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 </dd></dl>
+
+</div>
+</div>
+<a id="gab3b849a779db36f2a21d03f50f9ec0be" name="gab3b849a779db36f2a21d03f50f9ec0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3b849a779db36f2a21d03f50f9ec0be">&#9670;&#160;</a></span>uhos_libc_sprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_sprintf </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送格式化输出到 str 所指向的字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>字符串 </td></tr>
+    <tr><td class="paramname">format</td><td>格式 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga882e8ba4e58854dcf3674c3db389a33f" name="ga882e8ba4e58854dcf3674c3db389a33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga882e8ba4e58854dcf3674c3db389a33f">&#9670;&#160;</a></span>uhos_libc_sscanf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_sscanf </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取格式化的字符串中的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>原始数据 </td></tr>
+    <tr><td class="paramname">format</td><td>格式 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga6ae897753099d9adc1ce61e7cc6dd180" name="ga6ae897753099d9adc1ce61e7cc6dd180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ae897753099d9adc1ce61e7cc6dd180">&#9670;&#160;</a></span>uhos_libc_strcat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strcat </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把 src 所指向的字符串追加到 dest 所指向的字符串的结尾 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>指向目标数组，该数组包含了一个 C 字符串，且足够容纳追加后的字符串 </td></tr>
+    <tr><td class="paramname">src</td><td>指向要追加的字符串，该字符串不会覆盖目标字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回一个指向最终的目标字符串 dest 的指针. </dd></dl>
+
+</div>
+</div>
+<a id="ga2dc6f573ece4f62040c14ac34ed7797a" name="ga2dc6f573ece4f62040c14ac34ed7797a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2dc6f573ece4f62040c14ac34ed7797a">&#9670;&#160;</a></span>uhos_libc_strchr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strchr </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在字符串中查找特定字符. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>字符串指针 </td></tr>
+    <tr><td class="paramname">c</td><td>字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回第一次匹配字符的指针，不匹配，返回空 字符串结尾的空字符'\0'也视为 s 的一部分 </dd></dl>
+
+</div>
+</div>
+<a id="ga9d79fb4ea131c93615a74e2db4cd0030" name="ga9d79fb4ea131c93615a74e2db4cd0030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d79fb4ea131c93615a74e2db4cd0030">&#9670;&#160;</a></span>uhos_libc_strcmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_libc_strcmp </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把 s1 所指向的字符串和 s2 所指向的字符串进行比较 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s1</td><td>要进行比较的第一个字符串 </td></tr>
+    <tr><td class="paramname">s2</td><td>要进行比较的第二个字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32* 如果返回值小于 0，则表示 str1 小于 str2 如果返回值大于 0，则表示 str1 大于 str2 如果返回值等于 0，则表示 str1 等于 str2 </dd></dl>
+
+</div>
+</div>
+<a id="ga8953685f2d1f97c4ac02c42bfc897c22" name="ga8953685f2d1f97c4ac02c42bfc897c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8953685f2d1f97c4ac02c42bfc897c22">&#9670;&#160;</a></span>uhos_libc_strcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strcpy </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把 src 所指向的字符串复制到 dest </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>指向用于存储复制内容的目标数组 </td></tr>
+    <tr><td class="paramname">src</td><td>要复制的字符串. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回一个指向最终的目标字符串 dest 的指针 </dd></dl>
+
+</div>
+</div>
+<a id="ga32529036b52e1bd0ea9b5886eda866d9" name="ga32529036b52e1bd0ea9b5886eda866d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32529036b52e1bd0ea9b5886eda866d9">&#9670;&#160;</a></span>uhos_libc_strlen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_size_t uhos_libc_strlen </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算字符串长度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>字符串指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_size_t 字符串长度 </dd></dl>
+
+</div>
+</div>
+<a id="ga62c55bd30552e615e924c33b8be9df95" name="ga62c55bd30552e615e924c33b8be9df95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62c55bd30552e615e924c33b8be9df95">&#9670;&#160;</a></span>uhos_libc_strncpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strncpy </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把 src 所指向的字符串复制到 dest，最多复制 n 个字符。当 src 的长度小于 n 时，dest 的剩余部分将用空字节填充 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>指向用于存储复制内容的目标数组. </td></tr>
+    <tr><td class="paramname">src</td><td>要复制的字符串. </td></tr>
+    <tr><td class="paramname">n</td><td>要从源中复制的字符数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回最终复制的字符串 </dd></dl>
+
+</div>
+</div>
+<a id="ga552770c234ee9df2c414b410cb9097d2" name="ga552770c234ee9df2c414b410cb9097d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga552770c234ee9df2c414b410cb9097d2">&#9670;&#160;</a></span>uhos_libc_strrchr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strrchr </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在字符串中查找最后一次出现的特定字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>字符串指针 </td></tr>
+    <tr><td class="paramname">c</td><td>字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回最后一次匹配字符的指针，不匹配，返回空 字符串结尾的空字符'\0'也视为 s 的一部分 </dd></dl>
+
+</div>
+</div>
+<a id="ga09e01d2683744420054f47fefbb69d7a" name="ga09e01d2683744420054f47fefbb69d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga09e01d2683744420054f47fefbb69d7a">&#9670;&#160;</a></span>uhos_libc_strstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strstr </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在字符串中查找第一次出现特定字符串的位置，不包含终止符 '\0' </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>要被检索的字符串 </td></tr>
+    <tr><td class="paramname">needle</td><td>要搜索的小字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回在 haystack 中第一次出现 needle 字符串的位置，如果未找到则返回空 </dd></dl>
+
+</div>
+</div>
+<a id="ga22ce0722449cf2cfecb621e3bb76cc58" name="ga22ce0722449cf2cfecb621e3bb76cc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22ce0722449cf2cfecb621e3bb76cc58">&#9670;&#160;</a></span>uhos_libc_strtok()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_char * uhos_libc_strtok </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>delim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>分解字符串 str 为一组字符串，delim 为分隔符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>要被分解成一组小字符串的字符串 </td></tr>
+    <tr><td class="paramname">delim</td><td>包含分隔符的 C 字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针. </dd></dl>
+
+</div>
+</div>
+<a id="ga823651bbd47098f702697f500b28dff7" name="ga823651bbd47098f702697f500b28dff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga823651bbd47098f702697f500b28dff7">&#9670;&#160;</a></span>uhos_random_generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uhos_random_generate </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>output_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成随机数据, 如无硬件随机数，可直接使用参考代码 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>输出的随机数据。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_len</td><td>输出缓存的大小。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

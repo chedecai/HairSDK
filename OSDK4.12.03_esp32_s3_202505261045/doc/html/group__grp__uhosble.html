@@ -1,0 +1,2154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: BLE协议栈适配接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhosble.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">BLE协议栈适配接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__ble_8h" id="r_uh__ble_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__ble_8h.html">uh_ble.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__adv__param.html">uhos_ble_gap_adv_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__conn__param.html">uhos_ble_gap_conn_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__connect.html">uhos_ble_gap_connect</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__disconnect.html">uhos_ble_gap_disconnect</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__connect__update.html">uhos_ble_gap_connect_update</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__adv__report.html">uhos_ble_gap_adv_report</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gap__evt__param.html">uhos_ble_gap_evt_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__write.html">uhos_ble_gatts_write</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__read.html">uhos_ble_gatts_read</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__evt__param.html">uhos_ble_gatts_evt_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__char__desc__ext__prop.html">uhos_ble_gatts_char_desc_ext_prop</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__char__desc__user__desc.html">uhos_ble_gatts_char_desc_user_desc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__char__desc__cpf.html">uhos_ble_gatts_char_desc_cpf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__char__desc__db.html">uhos_ble_gatts_char_desc_db</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__char__db.html">uhos_ble_gatts_char_db</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__srv__db.html">uhos_ble_gatts_srv_db</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gatts__db.html">uhos_ble_gatts_db</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__prim__srv__disc__rsp.html">uhos_ble_gattc_prim_srv_disc_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__char__disc__rsp.html">uhos_ble_gattc_char_disc_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__clt__cfg__desc__disc__rsp.html">uhos_ble_gattc_clt_cfg_desc_disc_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__char__desc__disc__rsp.html">uhos_ble_gattc_char_desc_disc_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__write__rsp.html">uhos_ble_gattc_write_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__read__char__value__rsp.html">uhos_ble_gattc_read_char_value_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__read__using__uuid__rsp.html">uhos_ble_gattc_read_using_uuid_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__read__char__value__by__uuid__rsp.html">uhos_ble_gattc_read_char_value_by_uuid_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__common__rsp.html">uhos_ble_gattc_common_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__notification__or__indication.html">uhos_ble_gattc_notification_or_indication</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__mtu__rsp.html">uhos_ble_gattc_mtu_rsp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ble__gattc__evt__param.html">uhos_ble_gattc_evt_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBLE_xE7_x9A_x84UUID_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">BLE的UUID描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE5_xB9_xBF_xE6_x92_xAD_xE5_x8F_x82_xE6_x95_xB0_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">广播参数描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE6_x89_xAB_xE6_x8F_x8F_xE5_x8F_x82_xE6_x95_xB0_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">扫描参数描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE8_xBF_x9E_xE6_x8E_xA5_xE5_x8F_x82_xE6_x95_xB0_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">连接参数描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE8_xBF_x9E_xE6_x8E_xA5_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">连接描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE6_x96_xAD_xE8_xBF_x9E_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">断连描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE8_xBF_x9E_xE6_x8E_xA5_xE6_x9B_xB4_xE6_x96_xB0_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">连接更新描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE4_xB8_x8A_xE6_x8A_xA5_xE7_x9A_x84_xE5_xB9_xBF_xE6_x92_xAD_xE6_x95_xB0_xE6_x8D_xAE_xE6_xc797cc82449a2e5a64598aeaf9973d4b.html">上报的广播数据描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGAP_xE5_xB1_x82_xE5_x9B_x9E_xE8_xB0_x83_xE4_xBA_x8B_xE4_xBB_xB6_xE7_x9A_x84_xE5_x8F_x82_xE266ca929e7e7629b9c0dcdffceb62712.html">GAP层回调事件的参数结构定义</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE5_x86_x99_xE6_x95_xB0_xE6_x8D_xAE_xE7_x9A_x84_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x1cb8e67b0df3eae03aac48bab556c393.html">写数据的描述结构；该结构描述了写数据相关事件回调函数的参数结构，写数据事件有：</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE8_xAF_xBB_xE6_x95_xB0_xE6_x8D_xAE_xE7_x9A_x84_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_xdd982073179f22daf24b2bff290c7216.html">读数据的描述结构；该结构描述了读数据相关事件回调函数的参数结构，读数据事件有：</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82server_xE7_xAB_xAF_xE6_x9C_x8D_xE5_x8A_xA1_xE5_xB1_x9E_xE6_x80_xA7_xE4_xBAcbeef1f5c1776386de2e33a90f88cd48.html">GATT层server端服务属性事件回调参数描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE7_x89_xB9_xE5_xBE_x81_xE5_x80_xBC_xE7_x9A_x84_xE6_x89_xA9_xE5_xB1_x95_xE6_x8F_x8F_xE8_x4d808188d92151c17e5b2964ea0c941a.html">特征值的扩展描述符结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE7_x89_xB9_xE5_xBE_x81_xE5_x80_xBC_xE7_x9A_x84_xE7_x94_xA8_xE6_x88_xB7_xE6_x8F_x8F_xE8_x62134c28e6c06944fbbb4abf6858c0b9.html">特征值的用户描述符结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xE7_x89_xB9_xE5_xBE_x81_xE5_x80_xBC_xE6_xA0_xBC_xE5_xBC_x8F_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xAC_xA6.html">特征值格式描述符</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82Server_xE7_xAB_xAF_xE7_x89_xB9_xE5_xBE_x81_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xAC356358c9da18c7b3e66451bd55208da0.html">GATT层Server端特征描述符数据库结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82Server_xE7_xAB_xAF_xE7_x9A_x84_xE7_x89_xB9_xE5_xBE_x81_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">GATT层Server端的特征描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82Server_xE7_xAB_xAF_xE7_x9A_x84_xE6_x9C_x8D_xE5_x8A_xA1_xE6_x8F_x8F_xE8_xBF_xB0_xE7_xBB_x93_xE6_x9E_x84.html">GATT层Server端的服务描述结构</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82Server_xE7_xAB_xAF_xE7_x9A_x84_xE6_x9C_x8D_xE5_x8A_xA1_xE6_x9E_xB6_xE6_x9E7fd2164588f55ea8dd960aa97a2af48d.html">GATT层Server端的服务架构数据库定义</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82_xE6_x9C_x8D_xE5_x8A_xA1_xE5_x8F_xA5_xE6_x9F_x84_xE8_x8C_x83_xE5_x9B_xB4_xE5_xAE_x9A_xE4_xB9_x89.html">GATT层服务句柄范围定义</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__PRIMARY__SERVICE__DISCOVER__RESP.html">UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__CHAR__DISCOVER__RESP.html">UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__CHAR__DESC__DISCOVER__RESP.html">UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__READ__CHAR__VALUE__RESP.html">UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__READ__USING__UUID__RESP.html">UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__PRIMARY__SERVICE__DISCOVER__DONE.html">UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_DONE</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__NOTIFICATION.html">UHOS_BLE_GATTC_EVT_NOTIFICATION</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUHOS__BLE__GATTC__EVT__MTU.html">UHOS_BLE_GATTC_EVT_MTU</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGATT_xE5_xB1_x82Client_xE7_xAB_xAF_xE4_xBA_x8B_xE4_xBB_xB6_xE5_x9B_x9E_xE8_xB0_x83_xE5_x8F_x82_xE6_x95_xB0.html">GATT层Client端事件回调参数</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga24be532c5e77815943a620067436fb04" id="r_ga24be532c5e77815943a620067436fb04"><td class="memItemLeft" align="right" valign="top"><a id="ga24be532c5e77815943a620067436fb04" name="ga24be532c5e77815943a620067436fb04"></a>
+typedef uhos_u8&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_addr_t</b>[6]</td></tr>
+<tr class="separator:ga24be532c5e77815943a620067436fb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab20b7a47f3325ebca30270859c81b1d5" id="r_gab20b7a47f3325ebca30270859c81b1d5"><td class="memItemLeft" align="right" valign="top"><a id="gab20b7a47f3325ebca30270859c81b1d5" name="gab20b7a47f3325ebca30270859c81b1d5"></a>
+typedef struct <a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_uuid_t</b></td></tr>
+<tr class="separator:gab20b7a47f3325ebca30270859c81b1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e8a56c27f652050afad88e612398f1d" id="r_ga0e8a56c27f652050afad88e612398f1d"><td class="memItemLeft" align="right" valign="top"><a id="ga0e8a56c27f652050afad88e612398f1d" name="ga0e8a56c27f652050afad88e612398f1d"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__adv__param.html">uhos_ble_gap_adv_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_adv_param_t</b></td></tr>
+<tr class="separator:ga0e8a56c27f652050afad88e612398f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf79e6f65229fb1017376bf6146e66e1" id="r_gadf79e6f65229fb1017376bf6146e66e1"><td class="memItemLeft" align="right" valign="top"><a id="gadf79e6f65229fb1017376bf6146e66e1" name="gadf79e6f65229fb1017376bf6146e66e1"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_scan_param_t</b></td></tr>
+<tr class="separator:gadf79e6f65229fb1017376bf6146e66e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaadb457467fc46a4751d1c4afc5e0ca96" id="r_gaadb457467fc46a4751d1c4afc5e0ca96"><td class="memItemLeft" align="right" valign="top"><a id="gaadb457467fc46a4751d1c4afc5e0ca96" name="gaadb457467fc46a4751d1c4afc5e0ca96"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__conn__param.html">uhos_ble_gap_conn_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_conn_param_t</b></td></tr>
+<tr class="separator:gaadb457467fc46a4751d1c4afc5e0ca96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fa281fc7e6e1822492142a63fb6c49b" id="r_ga1fa281fc7e6e1822492142a63fb6c49b"><td class="memItemLeft" align="right" valign="top"><a id="ga1fa281fc7e6e1822492142a63fb6c49b" name="ga1fa281fc7e6e1822492142a63fb6c49b"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__connect.html">uhos_ble_gap_connect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_connect_t</b></td></tr>
+<tr class="separator:ga1fa281fc7e6e1822492142a63fb6c49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7497493f942c345bd97da1ebd6f35972" id="r_ga7497493f942c345bd97da1ebd6f35972"><td class="memItemLeft" align="right" valign="top"><a id="ga7497493f942c345bd97da1ebd6f35972" name="ga7497493f942c345bd97da1ebd6f35972"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__disconnect.html">uhos_ble_gap_disconnect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_disconnect_t</b></td></tr>
+<tr class="separator:ga7497493f942c345bd97da1ebd6f35972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8dac6b4ea232afe3a74968bd54933e9d" id="r_ga8dac6b4ea232afe3a74968bd54933e9d"><td class="memItemLeft" align="right" valign="top"><a id="ga8dac6b4ea232afe3a74968bd54933e9d" name="ga8dac6b4ea232afe3a74968bd54933e9d"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__connect__update.html">uhos_ble_gap_connect_update</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_connect_update_t</b></td></tr>
+<tr class="separator:ga8dac6b4ea232afe3a74968bd54933e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53a73bf277e3432562bac467dfbc1842" id="r_ga53a73bf277e3432562bac467dfbc1842"><td class="memItemLeft" align="right" valign="top"><a id="ga53a73bf277e3432562bac467dfbc1842" name="ga53a73bf277e3432562bac467dfbc1842"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__adv__report.html">uhos_ble_gap_adv_report</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_adv_report_t</b></td></tr>
+<tr class="separator:ga53a73bf277e3432562bac467dfbc1842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga527e6c13f3fddb09e51c77e88a020589" id="r_ga527e6c13f3fddb09e51c77e88a020589"><td class="memItemLeft" align="right" valign="top"><a id="ga527e6c13f3fddb09e51c77e88a020589" name="ga527e6c13f3fddb09e51c77e88a020589"></a>
+typedef struct <a class="el" href="structuhos__ble__gap__evt__param.html">uhos_ble_gap_evt_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_evt_param_t</b></td></tr>
+<tr class="separator:ga527e6c13f3fddb09e51c77e88a020589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40b548543a3d5d2b7c094a2d889f54d1" id="r_ga40b548543a3d5d2b7c094a2d889f54d1"><td class="memItemLeft" align="right" valign="top"><a id="ga40b548543a3d5d2b7c094a2d889f54d1" name="ga40b548543a3d5d2b7c094a2d889f54d1"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_cb_t</b>) (uhos_ble_gap_evt_t evt, <a class="el" href="structuhos__ble__gap__evt__param.html">uhos_ble_gap_evt_param_t</a> *param)</td></tr>
+<tr class="memdesc:ga40b548543a3d5d2b7c094a2d889f54d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP层用户回调函数定义 <br /></td></tr>
+<tr class="separator:ga40b548543a3d5d2b7c094a2d889f54d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d8e51fdc1ca2c548427008fcda22300" id="r_ga6d8e51fdc1ca2c548427008fcda22300"><td class="memItemLeft" align="right" valign="top"><a id="ga6d8e51fdc1ca2c548427008fcda22300" name="ga6d8e51fdc1ca2c548427008fcda22300"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>destroy_func_t</b>) (void *user_data)</td></tr>
+<tr class="memdesc:ga6d8e51fdc1ca2c548427008fcda22300"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP层用户注册free函数原型 <br /></td></tr>
+<tr class="separator:ga6d8e51fdc1ca2c548427008fcda22300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7f7064fee190a939366e250840946fa" id="r_gae7f7064fee190a939366e250840946fa"><td class="memItemLeft" align="right" valign="top"><a id="gae7f7064fee190a939366e250840946fa" name="gae7f7064fee190a939366e250840946fa"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__write.html">uhos_ble_gatts_write</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_write_t</b></td></tr>
+<tr class="separator:gae7f7064fee190a939366e250840946fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21d727a0203bcbd36d1decb3fc2dbc5d" id="r_ga21d727a0203bcbd36d1decb3fc2dbc5d"><td class="memItemLeft" align="right" valign="top"><a id="ga21d727a0203bcbd36d1decb3fc2dbc5d" name="ga21d727a0203bcbd36d1decb3fc2dbc5d"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__read.html">uhos_ble_gatts_read</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_read_t</b></td></tr>
+<tr class="separator:ga21d727a0203bcbd36d1decb3fc2dbc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb46219bd6ffaa76abd9be0060d1d918" id="r_gafb46219bd6ffaa76abd9be0060d1d918"><td class="memItemLeft" align="right" valign="top"><a id="gafb46219bd6ffaa76abd9be0060d1d918" name="gafb46219bd6ffaa76abd9be0060d1d918"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__evt__param.html">uhos_ble_gatts_evt_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_evt_param_t</b></td></tr>
+<tr class="separator:gafb46219bd6ffaa76abd9be0060d1d918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1764b107139c98f4908eab155949c809" id="r_ga1764b107139c98f4908eab155949c809"><td class="memItemLeft" align="right" valign="top"><a id="ga1764b107139c98f4908eab155949c809" name="ga1764b107139c98f4908eab155949c809"></a>
+typedef uhos_ble_status_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_cb_t</b>) (uhos_ble_gatts_evt_t evt, <a class="el" href="structuhos__ble__gatts__evt__param.html">uhos_ble_gatts_evt_param_t</a> *param)</td></tr>
+<tr class="memdesc:ga1764b107139c98f4908eab155949c809"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT层Server端的事件回调函数定义 <br /></td></tr>
+<tr class="separator:ga1764b107139c98f4908eab155949c809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30214d50dc8b4282fdfeedfccb1579d7" id="r_ga30214d50dc8b4282fdfeedfccb1579d7"><td class="memItemLeft" align="right" valign="top"><a id="ga30214d50dc8b4282fdfeedfccb1579d7" name="ga30214d50dc8b4282fdfeedfccb1579d7"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__char__desc__ext__prop.html">uhos_ble_gatts_char_desc_ext_prop</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_desc_ext_prop_t</b></td></tr>
+<tr class="separator:ga30214d50dc8b4282fdfeedfccb1579d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe1fedfae63c8373d1b47f23c7d60963" id="r_gafe1fedfae63c8373d1b47f23c7d60963"><td class="memItemLeft" align="right" valign="top"><a id="gafe1fedfae63c8373d1b47f23c7d60963" name="gafe1fedfae63c8373d1b47f23c7d60963"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__char__desc__user__desc.html">uhos_ble_gatts_char_desc_user_desc</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_desc_user_desc_t</b></td></tr>
+<tr class="separator:gafe1fedfae63c8373d1b47f23c7d60963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae94538912e283db191253b2e53d075e3" id="r_gae94538912e283db191253b2e53d075e3"><td class="memItemLeft" align="right" valign="top"><a id="gae94538912e283db191253b2e53d075e3" name="gae94538912e283db191253b2e53d075e3"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__char__desc__cpf.html">uhos_ble_gatts_char_desc_cpf</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_desc_cpf_t</b></td></tr>
+<tr class="separator:gae94538912e283db191253b2e53d075e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4963bd5c69fcda9f5919465d078ca182" id="r_ga4963bd5c69fcda9f5919465d078ca182"><td class="memItemLeft" align="right" valign="top"><a id="ga4963bd5c69fcda9f5919465d078ca182" name="ga4963bd5c69fcda9f5919465d078ca182"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__char__desc__db.html">uhos_ble_gatts_char_desc_db</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_desc_db_t</b></td></tr>
+<tr class="separator:ga4963bd5c69fcda9f5919465d078ca182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89f4dcc18e9249d4c264d1da5049cf69" id="r_ga89f4dcc18e9249d4c264d1da5049cf69"><td class="memItemLeft" align="right" valign="top"><a id="ga89f4dcc18e9249d4c264d1da5049cf69" name="ga89f4dcc18e9249d4c264d1da5049cf69"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__char__db.html">uhos_ble_gatts_char_db</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_db_t</b></td></tr>
+<tr class="separator:ga89f4dcc18e9249d4c264d1da5049cf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a001a3e6d90ffa0bb9536e126cb9f72" id="r_ga5a001a3e6d90ffa0bb9536e126cb9f72"><td class="memItemLeft" align="right" valign="top"><a id="ga5a001a3e6d90ffa0bb9536e126cb9f72" name="ga5a001a3e6d90ffa0bb9536e126cb9f72"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__srv__db.html">uhos_ble_gatts_srv_db</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_srv_db_t</b></td></tr>
+<tr class="separator:ga5a001a3e6d90ffa0bb9536e126cb9f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8efefa3c7e969fea2262aaf7b8ea09a" id="r_gae8efefa3c7e969fea2262aaf7b8ea09a"><td class="memItemLeft" align="right" valign="top"><a id="gae8efefa3c7e969fea2262aaf7b8ea09a" name="gae8efefa3c7e969fea2262aaf7b8ea09a"></a>
+typedef struct <a class="el" href="structuhos__ble__gatts__db.html">uhos_ble_gatts_db</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_db_t</b></td></tr>
+<tr class="separator:gae8efefa3c7e969fea2262aaf7b8ea09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6cbf350661193a162d3e5dc0ab12c73b" id="r_ga6cbf350661193a162d3e5dc0ab12c73b"><td class="memItemLeft" align="right" valign="top"><a id="ga6cbf350661193a162d3e5dc0ab12c73b" name="ga6cbf350661193a162d3e5dc0ab12c73b"></a>
+typedef struct <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_handle_range_t</b></td></tr>
+<tr class="separator:ga6cbf350661193a162d3e5dc0ab12c73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga672e05e8a03d7e2e5e46f2d1a491dc8f" id="r_ga672e05e8a03d7e2e5e46f2d1a491dc8f"><td class="memItemLeft" align="right" valign="top"><a id="ga672e05e8a03d7e2e5e46f2d1a491dc8f" name="ga672e05e8a03d7e2e5e46f2d1a491dc8f"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__prim__srv__disc__rsp.html">uhos_ble_gattc_prim_srv_disc_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_prim_srv_disc_rsp_t</b></td></tr>
+<tr class="separator:ga672e05e8a03d7e2e5e46f2d1a491dc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf86470666b6b168172911868a13f6150" id="r_gaf86470666b6b168172911868a13f6150"><td class="memItemLeft" align="right" valign="top"><a id="gaf86470666b6b168172911868a13f6150" name="gaf86470666b6b168172911868a13f6150"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__char__disc__rsp.html">uhos_ble_gattc_char_disc_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_char_disc_rsp_t</b></td></tr>
+<tr class="separator:gaf86470666b6b168172911868a13f6150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf45f1b2e29aacb16a43a2f125a61629" id="r_gacf45f1b2e29aacb16a43a2f125a61629"><td class="memItemLeft" align="right" valign="top"><a id="gacf45f1b2e29aacb16a43a2f125a61629" name="gacf45f1b2e29aacb16a43a2f125a61629"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__clt__cfg__desc__disc__rsp.html">uhos_ble_gattc_clt_cfg_desc_disc_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_clt_cfg_desc_disc_rsp_t</b></td></tr>
+<tr class="separator:gacf45f1b2e29aacb16a43a2f125a61629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3fd59a7cb37fe0431e5421e53818fe3" id="r_gad3fd59a7cb37fe0431e5421e53818fe3"><td class="memItemLeft" align="right" valign="top"><a id="gad3fd59a7cb37fe0431e5421e53818fe3" name="gad3fd59a7cb37fe0431e5421e53818fe3"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__char__desc__disc__rsp.html">uhos_ble_gattc_char_desc_disc_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_char_desc_disc_rsp_t</b></td></tr>
+<tr class="separator:gad3fd59a7cb37fe0431e5421e53818fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f187c0142e8274c3f4ce9671b737dba" id="r_ga7f187c0142e8274c3f4ce9671b737dba"><td class="memItemLeft" align="right" valign="top"><a id="ga7f187c0142e8274c3f4ce9671b737dba" name="ga7f187c0142e8274c3f4ce9671b737dba"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__write__rsp.html">uhos_ble_gattc_write_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_write_rsp_t</b></td></tr>
+<tr class="separator:ga7f187c0142e8274c3f4ce9671b737dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd2e64099a4f855fa3421d788f1fe238" id="r_gacd2e64099a4f855fa3421d788f1fe238"><td class="memItemLeft" align="right" valign="top"><a id="gacd2e64099a4f855fa3421d788f1fe238" name="gacd2e64099a4f855fa3421d788f1fe238"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__read__char__value__rsp.html">uhos_ble_gattc_read_char_value_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_read_char_value_rsp_t</b></td></tr>
+<tr class="separator:gacd2e64099a4f855fa3421d788f1fe238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cdbb7e292e97a3aae1a8ee9b8f5a964" id="r_ga1cdbb7e292e97a3aae1a8ee9b8f5a964"><td class="memItemLeft" align="right" valign="top"><a id="ga1cdbb7e292e97a3aae1a8ee9b8f5a964" name="ga1cdbb7e292e97a3aae1a8ee9b8f5a964"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__read__using__uuid__rsp.html">uhos_ble_gattc_read_using_uuid_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_read_using_uuid_rsp_t</b></td></tr>
+<tr class="separator:ga1cdbb7e292e97a3aae1a8ee9b8f5a964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf56d416eb04ce5a99394c65983b2fcb7" id="r_gaf56d416eb04ce5a99394c65983b2fcb7"><td class="memItemLeft" align="right" valign="top"><a id="gaf56d416eb04ce5a99394c65983b2fcb7" name="gaf56d416eb04ce5a99394c65983b2fcb7"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__read__char__value__by__uuid__rsp.html">uhos_ble_gattc_read_char_value_by_uuid_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_read_char_value_by_uuid_rsp_t</b></td></tr>
+<tr class="separator:gaf56d416eb04ce5a99394c65983b2fcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6bd571441d81fe12d9f958bda41b744" id="r_gac6bd571441d81fe12d9f958bda41b744"><td class="memItemLeft" align="right" valign="top"><a id="gac6bd571441d81fe12d9f958bda41b744" name="gac6bd571441d81fe12d9f958bda41b744"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__common__rsp.html">uhos_ble_gattc_common_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_common_rsp_t</b></td></tr>
+<tr class="separator:gac6bd571441d81fe12d9f958bda41b744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11bc83f4f7c17d8aeba3da6f3738bb31" id="r_ga11bc83f4f7c17d8aeba3da6f3738bb31"><td class="memItemLeft" align="right" valign="top"><a id="ga11bc83f4f7c17d8aeba3da6f3738bb31" name="ga11bc83f4f7c17d8aeba3da6f3738bb31"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__notification__or__indication.html">uhos_ble_gattc_notification_or_indication</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_notification_or_indication_t</b></td></tr>
+<tr class="separator:ga11bc83f4f7c17d8aeba3da6f3738bb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5893786ccad3b063c6dcac773c523ae6" id="r_ga5893786ccad3b063c6dcac773c523ae6"><td class="memItemLeft" align="right" valign="top"><a id="ga5893786ccad3b063c6dcac773c523ae6" name="ga5893786ccad3b063c6dcac773c523ae6"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__mtu__rsp.html">uhos_ble_gattc_mtu_rsp</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_mtu_rsp_t</b></td></tr>
+<tr class="separator:ga5893786ccad3b063c6dcac773c523ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62145eb78808d93e546c7c210bd1ebef" id="r_ga62145eb78808d93e546c7c210bd1ebef"><td class="memItemLeft" align="right" valign="top"><a id="ga62145eb78808d93e546c7c210bd1ebef" name="ga62145eb78808d93e546c7c210bd1ebef"></a>
+typedef struct <a class="el" href="structuhos__ble__gattc__evt__param.html">uhos_ble_gattc_evt_param</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_evt_param_t</b></td></tr>
+<tr class="separator:ga62145eb78808d93e546c7c210bd1ebef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a44c1212c9a8c2937c817256df523cd" id="r_ga2a44c1212c9a8c2937c817256df523cd"><td class="memItemLeft" align="right" valign="top"><a id="ga2a44c1212c9a8c2937c817256df523cd" name="ga2a44c1212c9a8c2937c817256df523cd"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_callback_t</b>) (uhos_ble_gattc_evt_t evt, <a class="el" href="structuhos__ble__gattc__evt__param.html">uhos_ble_gattc_evt_param_t</a> *param)</td></tr>
+<tr class="memdesc:ga2a44c1212c9a8c2937c817256df523cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT client的回调函数 <br /></td></tr>
+<tr class="separator:ga2a44c1212c9a8c2937c817256df523cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga13843b87d629245c3829761f47cdbc41" id="r_ga13843b87d629245c3829761f47cdbc41"><td class="memItemLeft" align="right" valign="top"><a id="ga13843b87d629245c3829761f47cdbc41" name="ga13843b87d629245c3829761f47cdbc41"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_addr_type_t</b> { <b>UHOS_BLE_ADDRESS_TYPE_PUBLIC</b>
+, <b>UHOS_BLE_ADDRESS_TYPE_RANDOM</b>
+ }</td></tr>
+<tr class="separator:ga13843b87d629245c3829761f47cdbc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa09c61ea4c39fcdeb06aca46a9200f17" id="r_gaa09c61ea4c39fcdeb06aca46a9200f17"><td class="memItemLeft" align="right" valign="top"><a id="gaa09c61ea4c39fcdeb06aca46a9200f17" name="gaa09c61ea4c39fcdeb06aca46a9200f17"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_uuid_type_t</b> { <b>UHOS_BLE_UUID_TYPE_16</b>
+, <b>UHOS_BLE_UUID_TYPE_128</b>
+ }</td></tr>
+<tr class="separator:gaa09c61ea4c39fcdeb06aca46a9200f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1efc2400f69a59043a1a22780a167e07" id="r_ga1efc2400f69a59043a1a22780a167e07"><td class="memItemLeft" align="right" valign="top"><a id="ga1efc2400f69a59043a1a22780a167e07" name="ga1efc2400f69a59043a1a22780a167e07"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_role_t</b> { <b>UHOS_BLE_GAP_BROADCASTER</b>
+, <b>UHOS_BLE_GAP_OBSERVER</b>
+, <b>UHOS_BLE_GAP_PERIPHERAL</b>
+, <b>UHOS_BLE_GAP_CENTRAL</b>
+ }</td></tr>
+<tr class="separator:ga1efc2400f69a59043a1a22780a167e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84ab3dc61091a07e2f04252210193063" id="r_ga84ab3dc61091a07e2f04252210193063"><td class="memItemLeft" align="right" valign="top"><a id="ga84ab3dc61091a07e2f04252210193063" name="ga84ab3dc61091a07e2f04252210193063"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_status_t</b> { <b>UHOS_BLE_SUCCESS</b> = 0
+, <b>UHOS_BLE_ERROR</b> = -1
+ }</td></tr>
+<tr class="separator:ga84ab3dc61091a07e2f04252210193063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92039a169944eaed643b9a5f6b3efaf0" id="r_ga92039a169944eaed643b9a5f6b3efaf0"><td class="memItemLeft" align="right" valign="top"><a id="ga92039a169944eaed643b9a5f6b3efaf0" name="ga92039a169944eaed643b9a5f6b3efaf0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_adv_type_t</b> { <br />
+&#160;&#160;<b>UHOS_BLE_ADV_TYPE_CONNECTABLE_UNDIRECTED</b>
+, <b>UHOS_BLE_ADV_TYPE_SCANNABLE_UNDIRECTED</b>
+, <b>UHOS_BLE_ADV_TYPE_NON_CONNECTABLE_UNDIRECTED</b>
+, <b>UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_HDC</b>
+, <br />
+&#160;&#160;<b>UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_LDC</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga92039a169944eaed643b9a5f6b3efaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38c107b40720f394792c4b30f1a1afdd" id="r_ga38c107b40720f394792c4b30f1a1afdd"><td class="memItemLeft" align="right" valign="top"><a id="ga38c107b40720f394792c4b30f1a1afdd" name="ga38c107b40720f394792c4b30f1a1afdd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_scan_type_t</b> { <b>UHOS_BLE_SCAN_TYPE_PASSIVE</b>
+, <b>UHOS_BLE_SCAN_TYPE_ACTIVE</b>
+ }</td></tr>
+<tr class="separator:ga38c107b40720f394792c4b30f1a1afdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd08b5306bb7e9cc19276e0a5381b295" id="r_gabd08b5306bb7e9cc19276e0a5381b295"><td class="memItemLeft" align="right" valign="top"><a id="gabd08b5306bb7e9cc19276e0a5381b295" name="gabd08b5306bb7e9cc19276e0a5381b295"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_disconnect_reason_t</b> { <b>UNKNOW_OTHER_ERROR</b> = 0
+, <b>UHOS_BLE_CONNECTION_TIMEOUT</b> = 1
+, <b>UHOS_BLE_REMOTE_USER_TERMINATED</b>
+, <b>UHOS_BLE_LOCAL_HOST_TERMINATED</b>
+ }</td></tr>
+<tr class="separator:gabd08b5306bb7e9cc19276e0a5381b295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9a00bf3ebc43467d04a62eb046f2527" id="r_gab9a00bf3ebc43467d04a62eb046f2527"><td class="memItemLeft" align="right" valign="top"><a id="gab9a00bf3ebc43467d04a62eb046f2527" name="gab9a00bf3ebc43467d04a62eb046f2527"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_adv_data_type_t</b> { <b>ADV_DATA</b>
+, <b>SCAN_RSP_DATA</b>
+, <b>FULL_DATA</b>
+ }</td></tr>
+<tr class="separator:gab9a00bf3ebc43467d04a62eb046f2527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8b2e90385ebc678b2e4ee714c6a3d31" id="r_gad8b2e90385ebc678b2e4ee714c6a3d31"><td class="memItemLeft" align="right" valign="top"><a id="gad8b2e90385ebc678b2e4ee714c6a3d31" name="gad8b2e90385ebc678b2e4ee714c6a3d31"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gap_evt_t</b> { <b>UHOS_BLE_GAP_EVT_CONNECTED</b> = 0
+, <b>UHOS_BLE_GAP_EVT_DISCONNET</b>
+, <b>UHOS_BLE_GAP_EVT_CONN_PARAM_UPDATED</b>
+, <b>UHOS_BLE_GAP_EVT_ADV_REPORT</b>
+ }</td></tr>
+<tr class="separator:gad8b2e90385ebc678b2e4ee714c6a3d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b26e06c8f3e87449472f54bed22e922" id="r_ga9b26e06c8f3e87449472f54bed22e922"><td class="memItemLeft" align="right" valign="top"><a id="ga9b26e06c8f3e87449472f54bed22e922" name="ga9b26e06c8f3e87449472f54bed22e922"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_evt_t</b> { <br />
+&#160;&#160;<b>UHOS_BLE_GATTS_EVT_READ</b>
+, <b>UHOS_BLE_GATTS_EVT_WRITE</b>
+, <b>UHOS_BLE_GATTS_EVT_CCCD_UPDATE</b>
+, <b>UHOS_BLE_GATTS_EVT_READ_PERMIT_REQ</b>
+, <br />
+&#160;&#160;<b>UHOS_BLE_GATTS_EVT_WRITE_PERMIT_REQ</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga9b26e06c8f3e87449472f54bed22e922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1410560262029f07f74165364587d6d4" id="r_ga1410560262029f07f74165364587d6d4"><td class="memItemLeft" align="right" valign="top"><a id="ga1410560262029f07f74165364587d6d4" name="ga1410560262029f07f74165364587d6d4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_service_t</b> { <b>UHOS_BLE_PRIMARY_SERVICE</b> = 1
+, <b>UHOS_BLE_SECONDARY_SERVICE</b>
+ }</td></tr>
+<tr class="separator:ga1410560262029f07f74165364587d6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f0dbb5abb2a0e69f9959420c88ef20e" id="r_ga3f0dbb5abb2a0e69f9959420c88ef20e"><td class="memItemLeft" align="right" valign="top"><a id="ga3f0dbb5abb2a0e69f9959420c88ef20e" name="ga3f0dbb5abb2a0e69f9959420c88ef20e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gatts_char_property_t</b> { <br />
+&#160;&#160;<b>UHOS_BLE_CHAR_PROP_BROADCAST</b> = 0x01
+, <b>UHOS_BLE_CHAR_PROP_READ</b> = 0x02
+, <b>UHOS_BLE_CHAR_PROP_WRITE_WITHOUT_RESP</b> = 0x04
+, <b>UHOS_BLE_CHAR_PROP_WRITE</b> = 0x08
+, <br />
+&#160;&#160;<b>UHOS_BLE_CHAR_PROP_NOTIFY</b> = 0x10
+, <b>UHOS_BLE_CHAR_PROP_INDICATE</b> = 0x20
+, <b>UHOS_BLE_CHAR_PROP_AUTH_SIGNED_WRITE</b> = 0x40
+, <b>UHOS_BLE_CHAR_PROP_EXTENDED_PROPERTIES</b> = 0x80
+<br />
+ }</td></tr>
+<tr class="separator:ga3f0dbb5abb2a0e69f9959420c88ef20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65c60b6da44f1dcfe2fd356c2c900e3f" id="r_ga65c60b6da44f1dcfe2fd356c2c900e3f"><td class="memItemLeft" align="right" valign="top"><a id="ga65c60b6da44f1dcfe2fd356c2c900e3f" name="ga65c60b6da44f1dcfe2fd356c2c900e3f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_evt_t</b> { <br />
+&#160;&#160;<b>UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP</b> = 0
+, <b>UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_DONE</b>
+, <b>UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_DONE</b>
+, <br />
+&#160;&#160;<b>UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_BY_UUID_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_DONE</b>
+, <b>UHOS_BLE_GATTC_EVT_CCCD_DISCOVER_RESP</b>
+, <br />
+&#160;&#160;<b>UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_BY_UUID_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_READ_USING_UUID_DONE</b>
+, <br />
+&#160;&#160;<b>UHOS_BLE_GATTC_EVT_WRITE_RESP</b>
+, <b>UHOS_BLE_GATTC_EVT_NOTIFICATION</b>
+, <b>UHOS_BLE_GATTC_EVT_INDICATION</b>
+, <b>UHOS_BLE_GATTC_EVT_EXCHANGE_MTU_DONE</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga65c60b6da44f1dcfe2fd356c2c900e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gae82d4dc19114b1b69a89380885ad5424" id="r_gae82d4dc19114b1b69a89380885ad5424"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gae82d4dc19114b1b69a89380885ad5424">uhos_ble_address_get</a> (uhos_ble_addr_t mac)</td></tr>
+<tr class="memdesc:gae82d4dc19114b1b69a89380885ad5424"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取BLE的MAC地址  <br /></td></tr>
+<tr class="separator:gae82d4dc19114b1b69a89380885ad5424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88c50c066d860ba25723947fb4ad68f8" id="r_ga88c50c066d860ba25723947fb4ad68f8"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga88c50c066d860ba25723947fb4ad68f8">uhos_ble_enable</a> (void)</td></tr>
+<tr class="memdesc:ga88c50c066d860ba25723947fb4ad68f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">使能BLE 应用初始化的早期调用。  <br /></td></tr>
+<tr class="separator:ga88c50c066d860ba25723947fb4ad68f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga767414f5e4e608193207ec9517a92045" id="r_ga767414f5e4e608193207ec9517a92045"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga767414f5e4e608193207ec9517a92045">uhos_ble_disable</a> (void)</td></tr>
+<tr class="memdesc:ga767414f5e4e608193207ec9517a92045"><td class="mdescLeft">&#160;</td><td class="mdescRight">失能BLE  <br /></td></tr>
+<tr class="separator:ga767414f5e4e608193207ec9517a92045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fdbd5dca3480999d70485e307543eeb" id="r_ga8fdbd5dca3480999d70485e307543eeb"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga8fdbd5dca3480999d70485e307543eeb">uhos_ble_rssi_start</a> (uhos_u16 conn_handle)</td></tr>
+<tr class="memdesc:ga8fdbd5dca3480999d70485e307543eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动获取信号强度  <br /></td></tr>
+<tr class="separator:ga8fdbd5dca3480999d70485e307543eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ccedfe5ddea96352d7a890cadc3015f" id="r_ga0ccedfe5ddea96352d7a890cadc3015f"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga0ccedfe5ddea96352d7a890cadc3015f">uhos_ble_rssi_get_detect</a> (uhos_u16 conn_handle, uhos_s8 *rssi)</td></tr>
+<tr class="memdesc:ga0ccedfe5ddea96352d7a890cadc3015f"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接从缓存数据中获取信号强度值（rssi）  <br /></td></tr>
+<tr class="separator:ga0ccedfe5ddea96352d7a890cadc3015f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25fdaa9963665c52fd32d2c6e10188b7" id="r_ga25fdaa9963665c52fd32d2c6e10188b7"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga25fdaa9963665c52fd32d2c6e10188b7">uhos_ble_rssi_get</a> (uhos_u16 conn_handle, uhos_s8 *rssi)</td></tr>
+<tr class="memdesc:ga25fdaa9963665c52fd32d2c6e10188b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取BLE信号强度  <br /></td></tr>
+<tr class="separator:ga25fdaa9963665c52fd32d2c6e10188b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefc83a4e3c13c72ce4f2b022671b79d1" id="r_gaefc83a4e3c13c72ce4f2b022671b79d1"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gaefc83a4e3c13c72ce4f2b022671b79d1">uhos_ble_rssi_stop</a> (uhos_u16 conn_handle)</td></tr>
+<tr class="memdesc:gaefc83a4e3c13c72ce4f2b022671b79d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止获取信号强度  <br /></td></tr>
+<tr class="separator:gaefc83a4e3c13c72ce4f2b022671b79d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9b495cb965c443c1364e79d3ea29651" id="r_gae9b495cb965c443c1364e79d3ea29651"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gae9b495cb965c443c1364e79d3ea29651">uhos_ble_tx_power_set</a> (uhos_u16 conn_handle, uhos_s8 tx_power)</td></tr>
+<tr class="memdesc:gae9b495cb965c443c1364e79d3ea29651"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置BLE的发射功率等级  <br /></td></tr>
+<tr class="separator:gae9b495cb965c443c1364e79d3ea29651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7fc7662c6eeb4a7b2816420f087bcbd" id="r_gae7fc7662c6eeb4a7b2816420f087bcbd"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gae7fc7662c6eeb4a7b2816420f087bcbd">uhos_ble_gap_adv_data_set</a> (uhos_u8 const *p_data, uhos_u8 dlen, uhos_u8 const *p_sr_data, uhos_u8 srdlen)</td></tr>
+<tr class="memdesc:gae7fc7662c6eeb4a7b2816420f087bcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置广播相关的数据  <br /></td></tr>
+<tr class="separator:gae7fc7662c6eeb4a7b2816420f087bcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga746c0c1d206b6562a2b6a44c6b999dc4" id="r_ga746c0c1d206b6562a2b6a44c6b999dc4"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga746c0c1d206b6562a2b6a44c6b999dc4">uhos_ble_gap_adv_start</a> (<a class="el" href="structuhos__ble__gap__adv__param.html">uhos_ble_gap_adv_param_t</a> *p_adv_param)</td></tr>
+<tr class="memdesc:ga746c0c1d206b6562a2b6a44c6b999dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启广播  <br /></td></tr>
+<tr class="separator:ga746c0c1d206b6562a2b6a44c6b999dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50b7728822e650dcba57def065183d97" id="r_ga50b7728822e650dcba57def065183d97"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga50b7728822e650dcba57def065183d97">uhos_ble_gap_reset_adv_start</a> (void)</td></tr>
+<tr class="memdesc:ga50b7728822e650dcba57def065183d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">采用全局数据中的广播参数重新启动广播  <br /></td></tr>
+<tr class="separator:ga50b7728822e650dcba57def065183d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga229b9836b650d7111f0307e10408c6f3" id="r_ga229b9836b650d7111f0307e10408c6f3"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga229b9836b650d7111f0307e10408c6f3">uhos_ble_gap_adv_stop</a> (void)</td></tr>
+<tr class="memdesc:ga229b9836b650d7111f0307e10408c6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭广播  <br /></td></tr>
+<tr class="separator:ga229b9836b650d7111f0307e10408c6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec860db101d8ace1495daee129acd5a4" id="r_gaec860db101d8ace1495daee129acd5a4"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gaec860db101d8ace1495daee129acd5a4">uhos_ble_gap_non_connectable_stop</a> (void)</td></tr>
+<tr class="memdesc:gaec860db101d8ace1495daee129acd5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭不可连接广播  <br /></td></tr>
+<tr class="separator:gaec860db101d8ace1495daee129acd5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab710bf49f4a7fe98183566327ae657aa" id="r_gab710bf49f4a7fe98183566327ae657aa"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gab710bf49f4a7fe98183566327ae657aa">uhos_ble_gap_scan_start</a> (uhos_ble_gap_scan_type_t scan_type, <a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param_t</a> scan_param)</td></tr>
+<tr class="memdesc:gab710bf49f4a7fe98183566327ae657aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启扫描功能  <br /></td></tr>
+<tr class="separator:gab710bf49f4a7fe98183566327ae657aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga409c5031c52590881fed9538b6d8b3cf" id="r_ga409c5031c52590881fed9538b6d8b3cf"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga409c5031c52590881fed9538b6d8b3cf">uhos_ble_gap_scan_stop</a> (void)</td></tr>
+<tr class="memdesc:ga409c5031c52590881fed9538b6d8b3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭扫描  <br /></td></tr>
+<tr class="separator:ga409c5031c52590881fed9538b6d8b3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8bddb6d662d62e8c70ef3e90495ad68" id="r_gae8bddb6d662d62e8c70ef3e90495ad68"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gae8bddb6d662d62e8c70ef3e90495ad68">uhos_ble_gap_update_conn_params</a> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__gap__conn__param.html">uhos_ble_gap_conn_param_t</a> conn_params)</td></tr>
+<tr class="memdesc:gae8bddb6d662d62e8c70ef3e90495ad68"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新连接参数  <br /></td></tr>
+<tr class="separator:gae8bddb6d662d62e8c70ef3e90495ad68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3590ff771ee63faa3ce8c7a8afcff8a" id="r_gaa3590ff771ee63faa3ce8c7a8afcff8a"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gaa3590ff771ee63faa3ce8c7a8afcff8a">uhos_ble_gap_disconnect</a> (uhos_u16 conn_handle)</td></tr>
+<tr class="memdesc:gaa3590ff771ee63faa3ce8c7a8afcff8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开连接  <br /></td></tr>
+<tr class="separator:gaa3590ff771ee63faa3ce8c7a8afcff8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a244aa4b65040537b453b7d8b6ddc87" id="r_ga9a244aa4b65040537b453b7d8b6ddc87"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga9a244aa4b65040537b453b7d8b6ddc87">uhos_ble_gap_connect</a> (<a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param_t</a> scan_param, <a class="el" href="structuhos__ble__gap__connect.html">uhos_ble_gap_connect_t</a> conn_param)</td></tr>
+<tr class="memdesc:ga9a244aa4b65040537b453b7d8b6ddc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接设备  <br /></td></tr>
+<tr class="separator:ga9a244aa4b65040537b453b7d8b6ddc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga706e497be850ac0d4210118e772bc53b" id="r_ga706e497be850ac0d4210118e772bc53b"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga706e497be850ac0d4210118e772bc53b">uhos_ble_gap_callback_register</a> (<a class="el" href="group__grp__uhosble.html#ga40b548543a3d5d2b7c094a2d889f54d1">uhos_ble_gap_cb_t</a> cb)</td></tr>
+<tr class="memdesc:ga706e497be850ac0d4210118e772bc53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册GAP层用户回调函数  <br /></td></tr>
+<tr class="separator:ga706e497be850ac0d4210118e772bc53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49f9493e9c7cab0e71496614c6346978" id="r_ga49f9493e9c7cab0e71496614c6346978"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga49f9493e9c7cab0e71496614c6346978">uhos_ble_gap_white_list_add</a> (uhos_u8 *mac)</td></tr>
+<tr class="memdesc:ga49f9493e9c7cab0e71496614c6346978"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置gap的白名单设备  <br /></td></tr>
+<tr class="separator:ga49f9493e9c7cab0e71496614c6346978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd080bd3e9334c3ac6d07c646e82adce" id="r_gafd080bd3e9334c3ac6d07c646e82adce"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gafd080bd3e9334c3ac6d07c646e82adce">uhos_ble_gap_white_list_remove</a> (uhos_u8 *mac)</td></tr>
+<tr class="memdesc:gafd080bd3e9334c3ac6d07c646e82adce"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置清除gap的单个白名单设备  <br /></td></tr>
+<tr class="separator:gafd080bd3e9334c3ac6d07c646e82adce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40e54566551c0243cb3b8fda5043061e" id="r_ga40e54566551c0243cb3b8fda5043061e"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga40e54566551c0243cb3b8fda5043061e">uhos_ble_gap_white_list_clear</a> (void)</td></tr>
+<tr class="memdesc:ga40e54566551c0243cb3b8fda5043061e"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除gap的白名单设备  <br /></td></tr>
+<tr class="separator:ga40e54566551c0243cb3b8fda5043061e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeea5edb503c228680dbc27221d2b402c" id="r_gaeea5edb503c228680dbc27221d2b402c"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gaeea5edb503c228680dbc27221d2b402c">uhos_ble_gatts_callback_register</a> (<a class="el" href="group__grp__uhosble.html#ga1764b107139c98f4908eab155949c809">uhos_ble_gatts_cb_t</a> cb)</td></tr>
+<tr class="memdesc:gaeea5edb503c228680dbc27221d2b402c"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册GATT层Server端用户回调函数  <br /></td></tr>
+<tr class="separator:gaeea5edb503c228680dbc27221d2b402c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1521878b4ca7de6ebcc9a52f0249836d" id="r_ga1521878b4ca7de6ebcc9a52f0249836d"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga1521878b4ca7de6ebcc9a52f0249836d">uhos_ble_gatts_register_destroy</a> (<a class="el" href="group__grp__uhosble.html#ga6d8e51fdc1ca2c548427008fcda22300">destroy_func_t</a> destroy)</td></tr>
+<tr class="memdesc:ga1521878b4ca7de6ebcc9a52f0249836d"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册GATT层Server端用户侧的free函数，用来free用户侧申请的堆内存  <br /></td></tr>
+<tr class="separator:ga1521878b4ca7de6ebcc9a52f0249836d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849aa070ac0d6e687f129b816d08e570" id="r_ga849aa070ac0d6e687f129b816d08e570"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga849aa070ac0d6e687f129b816d08e570">uhos_ble_gatts_service_set</a> (<a class="el" href="structuhos__ble__gatts__db.html">uhos_ble_gatts_db_t</a> *uhos_ble_service_database)</td></tr>
+<tr class="memdesc:ga849aa070ac0d6e687f129b816d08e570"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置GATT层Server端的服务框架  <br /></td></tr>
+<tr class="separator:ga849aa070ac0d6e687f129b816d08e570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0a0ed22fc80b389f583785564a435f2" id="r_gab0a0ed22fc80b389f583785564a435f2"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gab0a0ed22fc80b389f583785564a435f2">uhos_ble_gatts_notify_or_indicate</a> (uhos_u16 conn_handle, uhos_u16 srv_handle, uhos_u16 char_value_handle, uhos_u8 offset, uhos_u8 *p_value, uhos_u16 len)</td></tr>
+<tr class="memdesc:gab0a0ed22fc80b389f583785564a435f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向指定的特性发送notify和indicate数据  <br /></td></tr>
+<tr class="separator:gab0a0ed22fc80b389f583785564a435f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4cbed5d1e0a14d510db7849004fc7825" id="r_ga4cbed5d1e0a14d510db7849004fc7825"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga4cbed5d1e0a14d510db7849004fc7825">uhos_ble_gatts_mtu_default_set</a> (uhos_u16 mtu)</td></tr>
+<tr class="memdesc:ga4cbed5d1e0a14d510db7849004fc7825"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置默认的MTU  <br /></td></tr>
+<tr class="separator:ga4cbed5d1e0a14d510db7849004fc7825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga066fb7cc6c9d98d2e5512bb4f9b8a051" id="r_ga066fb7cc6c9d98d2e5512bb4f9b8a051"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga066fb7cc6c9d98d2e5512bb4f9b8a051">uhos_ble_gatts_mtu_get</a> (uhos_u16 conn_handle, uhos_u16 *mtu_size)</td></tr>
+<tr class="memdesc:ga066fb7cc6c9d98d2e5512bb4f9b8a051"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前的MTU值  <br /></td></tr>
+<tr class="separator:ga066fb7cc6c9d98d2e5512bb4f9b8a051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c2c1ee8d900ae043325ec3762facec2" id="r_ga3c2c1ee8d900ae043325ec3762facec2"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga3c2c1ee8d900ae043325ec3762facec2">uhos_ble_gattc_callback_register</a> (<a class="el" href="group__grp__uhosble.html#ga2a44c1212c9a8c2937c817256df523cd">uhos_ble_gattc_callback_t</a> cb)</td></tr>
+<tr class="memdesc:ga3c2c1ee8d900ae043325ec3762facec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册GATT层client端用户回调函数  <br /></td></tr>
+<tr class="separator:ga3c2c1ee8d900ae043325ec3762facec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d75e2d92612601e6fa9128d54d54747" id="r_ga9d75e2d92612601e6fa9128d54d54747"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga9d75e2d92612601e6fa9128d54d54747">uhos_ble_gattc_primary_service_discover_all</a> (uhos_u16 conn_handle, void *req)</td></tr>
+<tr class="memdesc:ga9d75e2d92612601e6fa9128d54d54747"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动所有首要服务发现  <br /></td></tr>
+<tr class="separator:ga9d75e2d92612601e6fa9128d54d54747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1e3b27276de5482c84f37cefdc4cdf1" id="r_gae1e3b27276de5482c84f37cefdc4cdf1"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#gae1e3b27276de5482c84f37cefdc4cdf1">uhos_ble_gattc_primary_service_discover_by_uuid</a> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *handle_range, <a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *p_srv_uuid)</td></tr>
+<tr class="memdesc:gae1e3b27276de5482c84f37cefdc4cdf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过UUID启动首要服务发现  <br /></td></tr>
+<tr class="separator:gae1e3b27276de5482c84f37cefdc4cdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79c71fc68f918947c371b5fdb24b3776" id="r_ga79c71fc68f918947c371b5fdb24b3776"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga79c71fc68f918947c371b5fdb24b3776">uhos_ble_gattc_char_discover_by_uuid</a> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *handle_range, <a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *p_char_uuid)</td></tr>
+<tr class="memdesc:ga79c71fc68f918947c371b5fdb24b3776"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过UUID启动服务特征发现  <br /></td></tr>
+<tr class="separator:ga79c71fc68f918947c371b5fdb24b3776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4aa741a331104a7bce560a5152dcc075" id="r_ga4aa741a331104a7bce560a5152dcc075"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga4aa741a331104a7bce560a5152dcc075">uhos_ble_gattc_clt_cfg_descriptor_discover</a> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *handle_range)</td></tr>
+<tr class="memdesc:ga4aa741a331104a7bce560a5152dcc075"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动特征描述符发现  <br /></td></tr>
+<tr class="separator:ga4aa741a331104a7bce560a5152dcc075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae46db56a73b170f6f67f7a7da8543ee5" id="r_gae46db56a73b170f6f67f7a7da8543ee5"><td class="memItemLeft" align="right" valign="top"><a id="gae46db56a73b170f6f67f7a7da8543ee5" name="gae46db56a73b170f6f67f7a7da8543ee5"></a>
+uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_read_char_value</b> (uhos_u16 conn_handle, uhos_u16 char_value_handle)</td></tr>
+<tr class="separator:gae46db56a73b170f6f67f7a7da8543ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57f2b465a50797d338e2aba9ed718e13" id="r_ga57f2b465a50797d338e2aba9ed718e13"><td class="memItemLeft" align="right" valign="top"><a id="ga57f2b465a50797d338e2aba9ed718e13" name="ga57f2b465a50797d338e2aba9ed718e13"></a>
+uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_write_without_rsp</b> (uhos_u16 conn_handle, uhos_u16 char_value_handle, uhos_u8 *p_value, uhos_u16 len)</td></tr>
+<tr class="separator:ga57f2b465a50797d338e2aba9ed718e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8e52021c1665e1b33b38a36c6bbeb52" id="r_gaf8e52021c1665e1b33b38a36c6bbeb52"><td class="memItemLeft" align="right" valign="top"><a id="gaf8e52021c1665e1b33b38a36c6bbeb52" name="gaf8e52021c1665e1b33b38a36c6bbeb52"></a>
+uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_char_discover_of_service</b> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *char_handle_range)</td></tr>
+<tr class="separator:gaf8e52021c1665e1b33b38a36c6bbeb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga987fb3d5e02de4f71a322f0b91328f03" id="r_ga987fb3d5e02de4f71a322f0b91328f03"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga987fb3d5e02de4f71a322f0b91328f03">uhos_ble_gattc_read_char_value_by_uuid</a> (uhos_u16 conn_handle, <a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *handle_range, <a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *p_char_uuid)</td></tr>
+<tr class="memdesc:ga987fb3d5e02de4f71a322f0b91328f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取指定UUID特征的特征值  <br /></td></tr>
+<tr class="separator:ga987fb3d5e02de4f71a322f0b91328f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5234aad422e429d0b762b07e214e033d" id="r_ga5234aad422e429d0b762b07e214e033d"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga5234aad422e429d0b762b07e214e033d">uhos_ble_gattc_write_with_rsp</a> (uhos_u16 conn_handle, uhos_u16 handle, uhos_u8 *p_value, uhos_u8 len)</td></tr>
+<tr class="memdesc:ga5234aad422e429d0b762b07e214e033d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GTAA层client写特征值（需要响应）  <br /></td></tr>
+<tr class="separator:ga5234aad422e429d0b762b07e214e033d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b9715d2e6261018e4afc831119f5755" id="r_ga3b9715d2e6261018e4afc831119f5755"><td class="memItemLeft" align="right" valign="top">uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosble.html#ga3b9715d2e6261018e4afc831119f5755">uhos_ble_gattc_write_cmd</a> (uhos_u16 conn_handle, uhos_u16 handle, uhos_u8 *p_value, uhos_u8 len)</td></tr>
+<tr class="memdesc:ga3b9715d2e6261018e4afc831119f5755"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT层client端写命令  <br /></td></tr>
+<tr class="separator:ga3b9715d2e6261018e4afc831119f5755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54a7849b53468dd157cff639c348b3cd" id="r_ga54a7849b53468dd157cff639c348b3cd"><td class="memItemLeft" align="right" valign="top"><a id="ga54a7849b53468dd157cff639c348b3cd" name="ga54a7849b53468dd157cff639c348b3cd"></a>
+uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_exchange_mtu</b> (uhos_u16 conn_handle, uhos_u16 mtu)</td></tr>
+<tr class="separator:ga54a7849b53468dd157cff639c348b3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25dd34345e10383c7680fdbe4465d0e5" id="r_ga25dd34345e10383c7680fdbe4465d0e5"><td class="memItemLeft" align="right" valign="top"><a id="ga25dd34345e10383c7680fdbe4465d0e5" name="ga25dd34345e10383c7680fdbe4465d0e5"></a>
+uhos_ble_status_t&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_ble_gattc_mtu_get</b> (uhos_u16 conn_handle, uhos_u16 *mtu_size)</td></tr>
+<tr class="separator:ga25dd34345e10383c7680fdbe4465d0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">函数说明</h2>
+<a id="gae82d4dc19114b1b69a89380885ad5424" name="gae82d4dc19114b1b69a89380885ad5424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae82d4dc19114b1b69a89380885ad5424">&#9670;&#160;</a></span>uhos_ble_address_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_address_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_ble_addr_t&#160;</td>
+          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取BLE的MAC地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">mac</td><td>MAC地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga767414f5e4e608193207ec9517a92045" name="ga767414f5e4e608193207ec9517a92045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga767414f5e4e608193207ec9517a92045">&#9670;&#160;</a></span>uhos_ble_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_disable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>失能BLE </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行状态 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga88c50c066d860ba25723947fb4ad68f8" name="ga88c50c066d860ba25723947fb4ad68f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88c50c066d860ba25723947fb4ad68f8">&#9670;&#160;</a></span>uhos_ble_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_enable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使能BLE 应用初始化的早期调用。 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae7fc7662c6eeb4a7b2816420f087bcbd" name="gae7fc7662c6eeb4a7b2816420f087bcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7fc7662c6eeb4a7b2816420f087bcbd">&#9670;&#160;</a></span>uhos_ble_gap_adv_data_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_adv_data_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 const *&#160;</td>
+          <td class="paramname"><em>p_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>dlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 const *&#160;</td>
+          <td class="paramname"><em>p_sr_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>srdlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置广播相关的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_data</td><td>广播数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dlen</td><td>广播数据长度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_sr_data</td><td>扫描响应数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">srdlen</td><td>扫描响应数据的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uplus_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga746c0c1d206b6562a2b6a44c6b999dc4" name="ga746c0c1d206b6562a2b6a44c6b999dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga746c0c1d206b6562a2b6a44c6b999dc4">&#9670;&#160;</a></span>uhos_ble_gap_adv_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_adv_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gap__adv__param.html">uhos_ble_gap_adv_param_t</a> *&#160;</td>
+          <td class="paramname"><em>p_adv_param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开启广播 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_adv_param</td><td>广播参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga229b9836b650d7111f0307e10408c6f3" name="ga229b9836b650d7111f0307e10408c6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga229b9836b650d7111f0307e10408c6f3">&#9670;&#160;</a></span>uhos_ble_gap_adv_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_adv_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭广播 </p>
+<dl class="section note"><dt>注解</dt><dd>该接口会持续等待，直到确认广播停止 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga706e497be850ac0d4210118e772bc53b" name="ga706e497be850ac0d4210118e772bc53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga706e497be850ac0d4210118e772bc53b">&#9670;&#160;</a></span>uhos_ble_gap_callback_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_callback_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosble.html#ga40b548543a3d5d2b7c094a2d889f54d1">uhos_ble_gap_cb_t</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册GAP层用户回调函数 </p>
+<p>同一用户只能调用一次本接口。每次调用，系统会自动增加用户编号。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHOS_BLE_ERROR</td><td>错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9a244aa4b65040537b453b7d8b6ddc87" name="ga9a244aa4b65040537b453b7d8b6ddc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a244aa4b65040537b453b7d8b6ddc87">&#9670;&#160;</a></span>uhos_ble_gap_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t <a class="el" href="structuhos__ble__gap__connect.html">uhos_ble_gap_connect</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param_t</a>&#160;</td>
+          <td class="paramname"><em>scan_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gap__connect.html">uhos_ble_gap_connect_t</a>&#160;</td>
+          <td class="paramname"><em>conn_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scan_param</td><td>扫描参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_param</td><td>连接参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gaa3590ff771ee63faa3ce8c7a8afcff8a" name="gaa3590ff771ee63faa3ce8c7a8afcff8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3590ff771ee63faa3ce8c7a8afcff8a">&#9670;&#160;</a></span>uhos_ble_gap_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t <a class="el" href="structuhos__ble__gap__disconnect.html">uhos_ble_gap_disconnect</a> </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>断开连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gaec860db101d8ace1495daee129acd5a4" name="gaec860db101d8ace1495daee129acd5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec860db101d8ace1495daee129acd5a4">&#9670;&#160;</a></span>uhos_ble_gap_non_connectable_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_non_connectable_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭不可连接广播 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga50b7728822e650dcba57def065183d97" name="ga50b7728822e650dcba57def065183d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50b7728822e650dcba57def065183d97">&#9670;&#160;</a></span>uhos_ble_gap_reset_adv_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_reset_adv_start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>采用全局数据中的广播参数重新启动广播 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gab710bf49f4a7fe98183566327ae657aa" name="gab710bf49f4a7fe98183566327ae657aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab710bf49f4a7fe98183566327ae657aa">&#9670;&#160;</a></span>uhos_ble_gap_scan_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_scan_start </td>
+          <td>(</td>
+          <td class="paramtype">uhos_ble_gap_scan_type_t&#160;</td>
+          <td class="paramname"><em>scan_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gap__scan__param.html">uhos_ble_gap_scan_param_t</a>&#160;</td>
+          <td class="paramname"><em>scan_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开启扫描功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scan_type</td><td>扫描类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scan_param</td><td>扫描参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga409c5031c52590881fed9538b6d8b3cf" name="ga409c5031c52590881fed9538b6d8b3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga409c5031c52590881fed9538b6d8b3cf">&#9670;&#160;</a></span>uhos_ble_gap_scan_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_scan_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭扫描 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gae8bddb6d662d62e8c70ef3e90495ad68" name="gae8bddb6d662d62e8c70ef3e90495ad68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8bddb6d662d62e8c70ef3e90495ad68">&#9670;&#160;</a></span>uhos_ble_gap_update_conn_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_update_conn_params </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gap__conn__param.html">uhos_ble_gap_conn_param_t</a>&#160;</td>
+          <td class="paramname"><em>conn_params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新连接参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_params</td><td>连接参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga49f9493e9c7cab0e71496614c6346978" name="ga49f9493e9c7cab0e71496614c6346978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49f9493e9c7cab0e71496614c6346978">&#9670;&#160;</a></span>uhos_ble_gap_white_list_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_white_list_add </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置gap的白名单设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mac</td><td>白名单设备的mac地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHOS_BLE_ERROR</td><td>错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga40e54566551c0243cb3b8fda5043061e" name="ga40e54566551c0243cb3b8fda5043061e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40e54566551c0243cb3b8fda5043061e">&#9670;&#160;</a></span>uhos_ble_gap_white_list_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_white_list_clear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清除gap的白名单设备 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHOS_BLE_ERROR</td><td>错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafd080bd3e9334c3ac6d07c646e82adce" name="gafd080bd3e9334c3ac6d07c646e82adce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd080bd3e9334c3ac6d07c646e82adce">&#9670;&#160;</a></span>uhos_ble_gap_white_list_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gap_white_list_remove </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置清除gap的单个白名单设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mac</td><td>白名单设备的mac地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHOS_BLE_ERROR</td><td>错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3c2c1ee8d900ae043325ec3762facec2" name="ga3c2c1ee8d900ae043325ec3762facec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c2c1ee8d900ae043325ec3762facec2">&#9670;&#160;</a></span>uhos_ble_gattc_callback_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_callback_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosble.html#ga2a44c1212c9a8c2937c817256df523cd">uhos_ble_gattc_callback_t</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册GATT层client端用户回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>用户回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uplus_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga79c71fc68f918947c371b5fdb24b3776" name="ga79c71fc68f918947c371b5fdb24b3776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79c71fc68f918947c371b5fdb24b3776">&#9670;&#160;</a></span>uhos_ble_gattc_char_discover_by_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_char_discover_by_uuid </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *&#160;</td>
+          <td class="paramname"><em>handle_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>p_char_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过UUID启动服务特征发现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_range</td><td>句柄范围 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_char_uuid</td><td>特征UUID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga4aa741a331104a7bce560a5152dcc075" name="ga4aa741a331104a7bce560a5152dcc075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4aa741a331104a7bce560a5152dcc075">&#9670;&#160;</a></span>uhos_ble_gattc_clt_cfg_descriptor_discover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_clt_cfg_descriptor_discover </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *&#160;</td>
+          <td class="paramname"><em>handle_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动特征描述符发现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_range</td><td>句柄范围 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga9d75e2d92612601e6fa9128d54d54747" name="ga9d75e2d92612601e6fa9128d54d54747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d75e2d92612601e6fa9128d54d54747">&#9670;&#160;</a></span>uhos_ble_gattc_primary_service_discover_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_primary_service_discover_all </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>req</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动所有首要服务发现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_range</td><td>服务ID的范围 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_srv_uuid</td><td>UUID的描述 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gae1e3b27276de5482c84f37cefdc4cdf1" name="gae1e3b27276de5482c84f37cefdc4cdf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1e3b27276de5482c84f37cefdc4cdf1">&#9670;&#160;</a></span>uhos_ble_gattc_primary_service_discover_by_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_primary_service_discover_by_uuid </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *&#160;</td>
+          <td class="paramname"><em>handle_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>p_srv_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过UUID启动首要服务发现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_range</td><td>服务ID的范围 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_srv_uuid</td><td>UUID的描述 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga987fb3d5e02de4f71a322f0b91328f03" name="ga987fb3d5e02de4f71a322f0b91328f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga987fb3d5e02de4f71a322f0b91328f03">&#9670;&#160;</a></span>uhos_ble_gattc_read_char_value_by_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_read_char_value_by_uuid </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__handle__range.html">uhos_ble_handle_range_t</a> *&#160;</td>
+          <td class="paramname"><em>handle_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__uuid.html">uhos_ble_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>p_char_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取指定UUID特征的特征值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_range</td><td>句柄范围 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_char_uuid</td><td>特征UUID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga3b9715d2e6261018e4afc831119f5755" name="ga3b9715d2e6261018e4afc831119f5755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b9715d2e6261018e4afc831119f5755">&#9670;&#160;</a></span>uhos_ble_gattc_write_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_write_cmd </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>p_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GATT层client端写命令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>特性句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_value</td><td>命令数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>命令数据字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga5234aad422e429d0b762b07e214e033d" name="ga5234aad422e429d0b762b07e214e033d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5234aad422e429d0b762b07e214e033d">&#9670;&#160;</a></span>uhos_ble_gattc_write_with_rsp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gattc_write_with_rsp </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>p_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GTAA层client写特征值（需要响应） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>特性句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_value</td><td>写入数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>写入数据字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gaeea5edb503c228680dbc27221d2b402c" name="gaeea5edb503c228680dbc27221d2b402c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeea5edb503c228680dbc27221d2b402c">&#9670;&#160;</a></span>uhos_ble_gatts_callback_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_callback_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosble.html#ga1764b107139c98f4908eab155949c809">uhos_ble_gatts_cb_t</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册GATT层Server端用户回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>用户回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga4cbed5d1e0a14d510db7849004fc7825" name="ga4cbed5d1e0a14d510db7849004fc7825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4cbed5d1e0a14d510db7849004fc7825">&#9670;&#160;</a></span>uhos_ble_gatts_mtu_default_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_mtu_default_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>mtu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置默认的MTU </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mtu</td><td>MTU值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t </dd></dl>
+
+</div>
+</div>
+<a id="ga066fb7cc6c9d98d2e5512bb4f9b8a051" name="ga066fb7cc6c9d98d2e5512bb4f9b8a051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga066fb7cc6c9d98d2e5512bb4f9b8a051">&#9670;&#160;</a></span>uhos_ble_gatts_mtu_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_mtu_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>mtu_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前的MTU值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接ID </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mtu_size</td><td>当前的MTU值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="gab0a0ed22fc80b389f583785564a435f2" name="gab0a0ed22fc80b389f583785564a435f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0a0ed22fc80b389f583785564a435f2">&#9670;&#160;</a></span>uhos_ble_gatts_notify_or_indicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_notify_or_indicate </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>srv_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>char_value_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>p_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向指定的特性发送notify和indicate数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">srv_handle</td><td>服务句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char_value_handle</td><td>特性值句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>偏移量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_value</td><td>发送数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>发送数据的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga1521878b4ca7de6ebcc9a52f0249836d" name="ga1521878b4ca7de6ebcc9a52f0249836d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1521878b4ca7de6ebcc9a52f0249836d">&#9670;&#160;</a></span>uhos_ble_gatts_register_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_register_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosble.html#ga6d8e51fdc1ca2c548427008fcda22300">destroy_func_t</a>&#160;</td>
+          <td class="paramname"><em>destroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>注册GATT层Server端用户侧的free函数，用来free用户侧申请的堆内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>用户注册的free函数，用来free用户侧malloc的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga849aa070ac0d6e687f129b816d08e570" name="ga849aa070ac0d6e687f129b816d08e570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga849aa070ac0d6e687f129b816d08e570">&#9670;&#160;</a></span>uhos_ble_gatts_service_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_gatts_service_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuhos__ble__gatts__db.html">uhos_ble_gatts_db_t</a> *&#160;</td>
+          <td class="paramname"><em>uhos_ble_service_database</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置GATT层Server端的服务框架 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">service_database</td><td>服务数据集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uplus_ble_status_t 执行结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga25fdaa9963665c52fd32d2c6e10188b7" name="ga25fdaa9963665c52fd32d2c6e10188b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25fdaa9963665c52fd32d2c6e10188b7">&#9670;&#160;</a></span>uhos_ble_rssi_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_rssi_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s8 *&#160;</td>
+          <td class="paramname"><em>rssi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取BLE信号强度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rssi</td><td>信号强度值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0ccedfe5ddea96352d7a890cadc3015f" name="ga0ccedfe5ddea96352d7a890cadc3015f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ccedfe5ddea96352d7a890cadc3015f">&#9670;&#160;</a></span>uhos_ble_rssi_get_detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_rssi_get_detect </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s8 *&#160;</td>
+          <td class="paramname"><em>rssi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>直接从缓存数据中获取信号强度值（rssi） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄（未使用该参数） </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rssi</td><td>信号强度值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行状态 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8fdbd5dca3480999d70485e307543eeb" name="ga8fdbd5dca3480999d70485e307543eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fdbd5dca3480999d70485e307543eeb">&#9670;&#160;</a></span>uhos_ble_rssi_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_rssi_start </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动获取信号强度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行状态 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaefc83a4e3c13c72ce4f2b022671b79d1" name="gaefc83a4e3c13c72ce4f2b022671b79d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefc83a4e3c13c72ce4f2b022671b79d1">&#9670;&#160;</a></span>uhos_ble_rssi_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_rssi_stop </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止获取信号强度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae9b495cb965c443c1364e79d3ea29651" name="gae9b495cb965c443c1364e79d3ea29651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9b495cb965c443c1364e79d3ea29651">&#9670;&#160;</a></span>uhos_ble_tx_power_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_ble_status_t uhos_ble_tx_power_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>conn_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s8&#160;</td>
+          <td class="paramname"><em>tx_power</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置BLE的发射功率等级 </p>
+<dl class="section note"><dt>注解</dt><dd>该接口暂未实现 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">conn_handle</td><td>连接句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_power</td><td>功率等级值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_ble_status_t 执行结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">UHOS_BLE_SUCCESS</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

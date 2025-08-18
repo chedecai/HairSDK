@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_sys.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__sys_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uh_sys.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uh__sys_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef __UHOS_SYS_H__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define __UHOS_SYS_H__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="uh__types_8h.html">uh_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// typedef unsigned int uhos_size_t;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gaa997b45b96f140635683596315e7acc2">   36</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gaa997b45b96f140635683596315e7acc2">uhos_sys_serial_open</a>(uhos_s32 *fd, uhos_u32 baudrate);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga12d559e37878f79f7875bf6103a654a2">   45</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga12d559e37878f79f7875bf6103a654a2">uhos_sys_serial_close</a>(uhos_s32 fd);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gac310991233ab29f2ce7a03c9b5a552a0">   56</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gac310991233ab29f2ce7a03c9b5a552a0">uhos_sys_serial_read</a>(uhos_s32 fd, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga48d62cd9ce273d9e1673d8c746e07f4d">   65</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga48d62cd9ce273d9e1673d8c746e07f4d">uhos_sys_serial_write</a>(uhos_s32 fd, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gac7686befa3f403790e5e498b356994a8">   73</a></span>UHSD_API <span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#gac7686befa3f403790e5e498b356994a8">uhos_log_output</a>(uhos_u8 *log, uhos_size_t size);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga8c9bb3483159ad3973b65a63b83f8052">   79</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga8c9bb3483159ad3973b65a63b83f8052">uhos_sys_shell_serial_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gaf3639670c72f073cb7ca266be2efce42">   87</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gaf3639670c72f073cb7ca266be2efce42">uhos_sys_shell_serial_read</a>(uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga09a28de3be5fae9607310806fc9af0fa">   95</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga09a28de3be5fae9607310806fc9af0fa">uhos_sys_shell_serial_write</a>(uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga6ddca39e262da65fb89fe969c46bfe99">  101</a></span>UHSD_API <span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga6ddca39e262da65fb89fe969c46bfe99">uhos_sys_system_reset</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga2dff86c07448ea7c162b7adfe07e1d39">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga2dff86c07448ea7c162b7adfe07e1d39">uhos_sys_chippin_set</a>(uhos_u8 onoff);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gafa46a2c4ccb7f1897c1e3a05cc2179f7">  116</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gafa46a2c4ccb7f1897c1e3a05cc2179f7">uhos_sys_config_read</a>(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga40f410544e5fbe40af855902751e9e64">  125</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga40f410544e5fbe40af855902751e9e64">uhos_sys_config_write</a>(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga6a43a6aa1c8267839f08da835b8f5aec">  171</a></span><span class="preprocessor">#define ZONE_1       1</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga3f02a72dbcb6379f3b79f4c4e981f285">  172</a></span><span class="preprocessor">#define ZONE_2       2</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga70927a870911769ed6fda080367d46c5">  173</a></span><span class="preprocessor">#define ZONE_BOARD   3</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gac8305e4b22f8761300735a8170296fc9">  174</a></span><span class="preprocessor">#define ZONE_3       4</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga04243e7f1b867fafa41d7b0312374dfe">  175</a></span><span class="preprocessor">#define ZONE_4       5</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#define ZONE_5       6</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#define ZONE_6       7</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga91d669f20df913272c35cf62e631317b">  178</a></span><span class="preprocessor">#define ZONE_7       8</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#define ZONE_LICENSE 9</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga5f7bd40112fcbcd056249500f65272dc">  180</a></span><span class="preprocessor">#define ZONE_8       10</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga713cd1f0c8e5532a218eabfc6afc3fa9">  181</a></span><span class="preprocessor">#define ZONE_9       11</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#define ZONE_OTHER 0</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga24500167935bf6131e71e3d8bd6e6aa9">  191</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga24500167935bf6131e71e3d8bd6e6aa9">uhos_sys_run_image_get</a>(uhos_u8 *image_zone);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga80414ecbae489a2215befad575cb5ef3">  202</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga80414ecbae489a2215befad575cb5ef3">uhos_sys_image_read</a>(uhos_u8 image_zone, uhos_u32 offset, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga641954652a1783749f634f3b1db4c2ba">  213</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga641954652a1783749f634f3b1db4c2ba">uhos_sys_image_write</a>(uhos_u8 image_zone, uhos_u32 offset, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga2ebfcbb0b9eedb36eead1c67c5166f0d">  221</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga2ebfcbb0b9eedb36eead1c67c5166f0d">uhos_get_sys_image_size</a>(uhos_u8 image_zone);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gad163463244ab088e9e151f8df671654d">  227</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gad163463244ab088e9e151f8df671654d">uhos_sys_image_start</a>(uhos_u8 image_zone);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#define OTA_IMAGE_OK   1</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gadd03a3ffc39b7c355ee894dd0122c7cf">  235</a></span><span class="preprocessor">#define OTA_IMAGE_FAIL 0</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga18d121265e194c21226f68b52f075b4d">  243</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga18d121265e194c21226f68b52f075b4d">uhos_sys_image_finish</a>(uhos_u8 image_zone, uhos_s32 result);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gac673ca9d1717f9e035aef82f0d28da10">  250</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gac673ca9d1717f9e035aef82f0d28da10">uhos_sys_image_switch</a>(uhos_u8 image_zone);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga28544f8c845586e5e7fb8655b66ec2cf">  257</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga28544f8c845586e5e7fb8655b66ec2cf">uhos_display_freeheap_size</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_UNDEF             -1</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_POWER_ON          0</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_WATCHDOG          1</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_RESET             2</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_PIN               3</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_PROC_RESET        4</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_PROC_ABNORMAL     5</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_PROC_WATCHDOG     6</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#define SYSTEM_RESET_TYPE_PROC_MEM_OVERFLOW 7</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga320fe82eab3a8f47a561576e03ededcf">  285</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga320fe82eab3a8f47a561576e03ededcf">uhos_sys_reset_type_get</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga360c5947a343e406ab2df75fe6388675">  295</a></span>uhos_u16 <a class="code hl_function" href="group__grp__uhossys.html#ga360c5947a343e406ab2df75fe6388675">uhos_sys_res_area_get_size</a>(<span class="keywordtype">void</span> **mem);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga7ad3d8874e93988ed647748e8b9d6b67">  305</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga7ad3d8874e93988ed647748e8b9d6b67">uhos_sys_res_area_read</a>(uhos_u32 offset, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gae9d39efe83e4f9e298288a68d08a6bd6">  315</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gae9d39efe83e4f9e298288a68d08a6bd6">uhos_sys_res_area_write</a>(uhos_u32 offset, uhos_u8 *buf, uhos_size_t len);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga27a43f20d9be1f71b2b17133c9f0dc73">  322</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga27a43f20d9be1f71b2b17133c9f0dc73">uhos_sys_lower_power_enter</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga71f447967d3d21e7d3fde6b64044c844">  329</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga71f447967d3d21e7d3fde6b64044c844">uhos_sys_lower_power_exit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga5d300d05049b13d96b2c37000a2c26b0">  337</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga5d300d05049b13d96b2c37000a2c26b0">uhos_sys_watchdog_start</a>(uhos_u32 timeout);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga5b44a2f00c2daedc184d1a5ca722e17b">  343</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__grp__uhossys.html#ga5b44a2f00c2daedc184d1a5ca722e17b">uhos_sys_watchdog_feed</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#gacc76bbb48a1ce7710740f748403c5368">  349</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#gacc76bbb48a1ce7710740f748403c5368">uh_system_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="group__grp__uhossys.html#ga5c1dccc0dfce7e44a8b69f486e505ff5">  355</a></span>UHSD_API uhos_s32 <a class="code hl_function" href="group__grp__uhossys.html#ga5c1dccc0dfce7e44a8b69f486e505ff5">uh_system_uninit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>UHSD_API uhos_s32 uhos_sys_config_app_read(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>UHSD_API uhos_s32 uhos_sys_config_app_write(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>}</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">#endif </span><span class="comment">// _UH_SYS_H</span></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga09a28de3be5fae9607310806fc9af0fa"><div class="ttname"><a href="group__grp__uhossys.html#ga09a28de3be5fae9607310806fc9af0fa">uhos_sys_shell_serial_write</a></div><div class="ttdeci">uhos_s32 uhos_sys_shell_serial_write(uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">用于shell的串口写数据实现，如果不支持SHELL组件，不需要实现</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga12d559e37878f79f7875bf6103a654a2"><div class="ttname"><a href="group__grp__uhossys.html#ga12d559e37878f79f7875bf6103a654a2">uhos_sys_serial_close</a></div><div class="ttdeci">uhos_s32 uhos_sys_serial_close(uhos_s32 fd)</div><div class="ttdoc">关闭串行设备（与底板通信）。打开串行设备（与底板通信）。有海尔EPP组件，才需要适配，有参考代码提供</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga18d121265e194c21226f68b52f075b4d"><div class="ttname"><a href="group__grp__uhossys.html#ga18d121265e194c21226f68b52f075b4d">uhos_sys_image_finish</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_image_finish(uhos_u8 image_zone, uhos_s32 result)</div><div class="ttdoc">完成写入镜像数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga24500167935bf6131e71e3d8bd6e6aa9"><div class="ttname"><a href="group__grp__uhossys.html#ga24500167935bf6131e71e3d8bd6e6aa9">uhos_sys_run_image_get</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_run_image_get(uhos_u8 *image_zone)</div><div class="ttdoc">获取当前运行镜像区域。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga27a43f20d9be1f71b2b17133c9f0dc73"><div class="ttname"><a href="group__grp__uhossys.html#ga27a43f20d9be1f71b2b17133c9f0dc73">uhos_sys_lower_power_enter</a></div><div class="ttdeci">void uhos_sys_lower_power_enter(void)</div><div class="ttdoc">进入低功耗模式。 有海尔EPP组件且支持低功耗功能时才需要适配</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga28544f8c845586e5e7fb8655b66ec2cf"><div class="ttname"><a href="group__grp__uhossys.html#ga28544f8c845586e5e7fb8655b66ec2cf">uhos_display_freeheap_size</a></div><div class="ttdeci">void uhos_display_freeheap_size(void)</div><div class="ttdoc">显示剩余可分配内存大小</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga2dff86c07448ea7c162b7adfe07e1d39"><div class="ttname"><a href="group__grp__uhossys.html#ga2dff86c07448ea7c162b7adfe07e1d39">uhos_sys_chippin_set</a></div><div class="ttdeci">void uhos_sys_chippin_set(uhos_u8 onoff)</div><div class="ttdoc">低功耗接口，暂无应用，可直接返回</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga2ebfcbb0b9eedb36eead1c67c5166f0d"><div class="ttname"><a href="group__grp__uhossys.html#ga2ebfcbb0b9eedb36eead1c67c5166f0d">uhos_get_sys_image_size</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_get_sys_image_size(uhos_u8 image_zone)</div><div class="ttdoc">取得A/B区 预留镜像的大小</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga320fe82eab3a8f47a561576e03ededcf"><div class="ttname"><a href="group__grp__uhossys.html#ga320fe82eab3a8f47a561576e03ededcf">uhos_sys_reset_type_get</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_reset_type_get(void)</div><div class="ttdoc">获取系统复位类型。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga360c5947a343e406ab2df75fe6388675"><div class="ttname"><a href="group__grp__uhossys.html#ga360c5947a343e406ab2df75fe6388675">uhos_sys_res_area_get_size</a></div><div class="ttdeci">uhos_u16 uhos_sys_res_area_get_size(void **mem)</div><div class="ttdoc">获取系统保留区域大小。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga40f410544e5fbe40af855902751e9e64"><div class="ttname"><a href="group__grp__uhossys.html#ga40f410544e5fbe40af855902751e9e64">uhos_sys_config_write</a></div><div class="ttdeci">uhos_s32 uhos_sys_config_write(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len)</div><div class="ttdoc">写配置，将配置写入非易失性存储器中。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga48d62cd9ce273d9e1673d8c746e07f4d"><div class="ttname"><a href="group__grp__uhossys.html#ga48d62cd9ce273d9e1673d8c746e07f4d">uhos_sys_serial_write</a></div><div class="ttdeci">uhos_s32 uhos_sys_serial_write(uhos_s32 fd, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">向串行设备写入数据（与底板通信）。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga5b44a2f00c2daedc184d1a5ca722e17b"><div class="ttname"><a href="group__grp__uhossys.html#ga5b44a2f00c2daedc184d1a5ca722e17b">uhos_sys_watchdog_feed</a></div><div class="ttdeci">void uhos_sys_watchdog_feed(void)</div><div class="ttdoc">喂狗。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga5c1dccc0dfce7e44a8b69f486e505ff5"><div class="ttname"><a href="group__grp__uhossys.html#ga5c1dccc0dfce7e44a8b69f486e505ff5">uh_system_uninit</a></div><div class="ttdeci">UHSD_API uhos_s32 uh_system_uninit(void)</div><div class="ttdoc">硬件平台必要反初始化入口;</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga5d300d05049b13d96b2c37000a2c26b0"><div class="ttname"><a href="group__grp__uhossys.html#ga5d300d05049b13d96b2c37000a2c26b0">uhos_sys_watchdog_start</a></div><div class="ttdeci">uhos_s32 uhos_sys_watchdog_start(uhos_u32 timeout)</div><div class="ttdoc">启动看门狗。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga641954652a1783749f634f3b1db4c2ba"><div class="ttname"><a href="group__grp__uhossys.html#ga641954652a1783749f634f3b1db4c2ba">uhos_sys_image_write</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_image_write(uhos_u8 image_zone, uhos_u32 offset, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">写入镜像数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga6ddca39e262da65fb89fe969c46bfe99"><div class="ttname"><a href="group__grp__uhossys.html#ga6ddca39e262da65fb89fe969c46bfe99">uhos_sys_system_reset</a></div><div class="ttdeci">UHSD_API void uhos_sys_system_reset(void)</div><div class="ttdoc">系统复位。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga71f447967d3d21e7d3fde6b64044c844"><div class="ttname"><a href="group__grp__uhossys.html#ga71f447967d3d21e7d3fde6b64044c844">uhos_sys_lower_power_exit</a></div><div class="ttdeci">void uhos_sys_lower_power_exit(void)</div><div class="ttdoc">退出低功耗模式。 有海尔EPP组件且支持低功耗功能时才需要适配</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga7ad3d8874e93988ed647748e8b9d6b67"><div class="ttname"><a href="group__grp__uhossys.html#ga7ad3d8874e93988ed647748e8b9d6b67">uhos_sys_res_area_read</a></div><div class="ttdeci">uhos_s32 uhos_sys_res_area_read(uhos_u32 offset, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">获取系统保留区域的数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga80414ecbae489a2215befad575cb5ef3"><div class="ttname"><a href="group__grp__uhossys.html#ga80414ecbae489a2215befad575cb5ef3">uhos_sys_image_read</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_image_read(uhos_u8 image_zone, uhos_u32 offset, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">读取镜像数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_ga8c9bb3483159ad3973b65a63b83f8052"><div class="ttname"><a href="group__grp__uhossys.html#ga8c9bb3483159ad3973b65a63b83f8052">uhos_sys_shell_serial_init</a></div><div class="ttdeci">uhos_s32 uhos_sys_shell_serial_init(void)</div><div class="ttdoc">用于shell的串口的初始化， 如果不支持SHELL组件，不需要实现</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gaa997b45b96f140635683596315e7acc2"><div class="ttname"><a href="group__grp__uhossys.html#gaa997b45b96f140635683596315e7acc2">uhos_sys_serial_open</a></div><div class="ttdeci">uhos_s32 uhos_sys_serial_open(uhos_s32 *fd, uhos_u32 baudrate)</div><div class="ttdoc">打开串行设备（与底板通信）。有海尔EPP组件，才需要适配，有参考代码提供</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gac310991233ab29f2ce7a03c9b5a552a0"><div class="ttname"><a href="group__grp__uhossys.html#gac310991233ab29f2ce7a03c9b5a552a0">uhos_sys_serial_read</a></div><div class="ttdeci">uhos_s32 uhos_sys_serial_read(uhos_s32 fd, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">从串行设备读取数据（与底板通信）。打开串行设备（与底板通信）。有海尔EPP组件，才需要适配，有参考代码提供</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gac673ca9d1717f9e035aef82f0d28da10"><div class="ttname"><a href="group__grp__uhossys.html#gac673ca9d1717f9e035aef82f0d28da10">uhos_sys_image_switch</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_image_switch(uhos_u8 image_zone)</div><div class="ttdoc">镜像版本切换</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gac7686befa3f403790e5e498b356994a8"><div class="ttname"><a href="group__grp__uhossys.html#gac7686befa3f403790e5e498b356994a8">uhos_log_output</a></div><div class="ttdeci">UHSD_API void uhos_log_output(uhos_u8 *log, uhos_size_t size)</div><div class="ttdoc">用于日志的输出， 如果支持SHELL组件，不需要实现</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gacc76bbb48a1ce7710740f748403c5368"><div class="ttname"><a href="group__grp__uhossys.html#gacc76bbb48a1ce7710740f748403c5368">uh_system_init</a></div><div class="ttdeci">UHSD_API uhos_s32 uh_system_init(void)</div><div class="ttdoc">硬件平台必要初始化入口;</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gad163463244ab088e9e151f8df671654d"><div class="ttname"><a href="group__grp__uhossys.html#gad163463244ab088e9e151f8df671654d">uhos_sys_image_start</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_sys_image_start(uhos_u8 image_zone)</div><div class="ttdoc">准备写入镜像数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gae9d39efe83e4f9e298288a68d08a6bd6"><div class="ttname"><a href="group__grp__uhossys.html#gae9d39efe83e4f9e298288a68d08a6bd6">uhos_sys_res_area_write</a></div><div class="ttdeci">uhos_s32 uhos_sys_res_area_write(uhos_u32 offset, uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">向系统保留区域写入数据。</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gaf3639670c72f073cb7ca266be2efce42"><div class="ttname"><a href="group__grp__uhossys.html#gaf3639670c72f073cb7ca266be2efce42">uhos_sys_shell_serial_read</a></div><div class="ttdeci">uhos_s32 uhos_sys_shell_serial_read(uhos_u8 *buf, uhos_size_t len)</div><div class="ttdoc">用于shell的串口读数据实现，如果不支持SHELL组件，不需要实现</div></div>
+<div class="ttc" id="agroup__grp__uhossys_html_gafa46a2c4ccb7f1897c1e3a05cc2179f7"><div class="ttname"><a href="group__grp__uhossys.html#gafa46a2c4ccb7f1897c1e3a05cc2179f7">uhos_sys_config_read</a></div><div class="ttdeci">uhos_s32 uhos_sys_config_read(uhos_u8 config_zone, uhos_u8 *conf, uhos_size_t len)</div><div class="ttdoc">读取配置，从非易失性存储器中读取配置到内存中。</div></div>
+<div class="ttc" id="auh__types_8h_html"><div class="ttname"><a href="uh__types_8h.html">uh_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_885e0ca17da38b00a45ee6b98a1c75a4.html">AL_SYS</a></li><li class="navelem"><a class="el" href="uh__sys_8h.html">uh_sys.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

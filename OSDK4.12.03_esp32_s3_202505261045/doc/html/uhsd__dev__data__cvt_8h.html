@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_dev_data_cvt.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__dev__data__cvt_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uhsd_dev_data_cvt.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhsd__dev__data__cvt.html">设备数据转换</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uhsd__types_8h_source.html">uhsd_types.h</a>&quot;</code><br />
+</div>
+<p><a href="uhsd__dev__data__cvt_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gac9cc63fab93c2ba161f8d77225505a5c" id="r_gac9cc63fab93c2ba161f8d77225505a5c"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_void *&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ddc_mem_ctx_t</b></td></tr>
+<tr class="separator:gac9cc63fab93c2ba161f8d77225505a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bebd995d8eb513f3d46defa1cc6e9fa" id="r_ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a>) (uhsd_devHandle devHandle, uhsd_s32 status, uhsd_void *user_param)</td></tr>
+<tr class="memdesc:ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据转换状态通知回调  <br /></td></tr>
+<tr class="separator:ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga4f16d4f77c7ab8c0d9f6405d56ce97d7" id="r_ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> (uhsd_char *appID, uhsd_char *appKey, uhsd_char *clientID, uhsd_char *appVersion)</td></tr>
+<tr class="memdesc:ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建数据转换功能句柄  <br /></td></tr>
+<tr class="separator:ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga205eb2b9fed5b9369d48db6163dc95e4" id="r_ga205eb2b9fed5b9369d48db6163dc95e4"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga205eb2b9fed5b9369d48db6163dc95e4">uhsd_dev_data_cvt_del</a> (uhsd_void *dataCvtHandle)</td></tr>
+<tr class="memdesc:ga205eb2b9fed5b9369d48db6163dc95e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除数据转换功能  <br /></td></tr>
+<tr class="separator:ga205eb2b9fed5b9369d48db6163dc95e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf57dfa6e6837af9d3f24b81567ebdb9" id="r_gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gadf57dfa6e6837af9d3f24b81567ebdb9">uhsd_dev_data_cvt_params_set</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a> dc_status_cb, uhsd_void *user_param)</td></tr>
+<tr class="memdesc:gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">smartDevice 设置需要转换的设备信息  <br /></td></tr>
+<tr class="separator:gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf6eaceddf02c39f0491f59f1c864c73" id="r_gadf6eaceddf02c39f0491f59f1c864c73"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gadf6eaceddf02c39f0491f59f1c864c73">uhsd_dev_data_cvt_cfgFileJsonData_set</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, uhsd_char *file_data_json)</td></tr>
+<tr class="memdesc:gadf6eaceddf02c39f0491f59f1c864c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">smartDevice 设置配置文件数据  <br /></td></tr>
+<tr class="separator:gadf6eaceddf02c39f0491f59f1c864c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42f43be1ea45a97767ab40e2b82804b9" id="r_ga42f43be1ea45a97767ab40e2b82804b9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga42f43be1ea45a97767ab40e2b82804b9">uhsd_dev_data_cvt_op_binary_to_standard</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:ga42f43be1ea45a97767ab40e2b82804b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OP binary数据转标准数据  <br /></td></tr>
+<tr class="separator:ga42f43be1ea45a97767ab40e2b82804b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe97f4063e82d50cca4b38a933d98545" id="r_gabe97f4063e82d50cca4b38a933d98545"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gabe97f4063e82d50cca4b38a933d98545">uhsd_dev_data_cvt_op_standard_to_binary</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, uhsd_char **out_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gabe97f4063e82d50cca4b38a933d98545"><td class="mdescLeft">&#160;</td><td class="mdescRight">OP 标准数据转binary数据  <br /></td></tr>
+<tr class="separator:gabe97f4063e82d50cca4b38a933d98545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3d5276d4f1348c6f8e8afc3cf2235c0" id="r_gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gab3d5276d4f1348c6f8e8afc3cf2235c0">uhsd_dev_data_cvt_write_standard_to_binary</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *property_name, const uhsd_char *property_value, uhsd_char **out_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">WRITE 标准数据转binary数据  <br /></td></tr>
+<tr class="separator:gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc47c03b1dfb47d1c23b50fcac1b9b1f" id="r_gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gabc47c03b1dfb47d1c23b50fcac1b9b1f">uhsd_dev_data_cvt_rawEpp_to_standard</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_u8 *epp, const uhsd_u16 epp_len, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">E++属性、告警、事件数据转换为标准数据  <br /></td></tr>
+<tr class="separator:gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7c88fbe543162715688f57ddaa60a29" id="r_gac7c88fbe543162715688f57ddaa60a29"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gac7c88fbe543162715688f57ddaa60a29">uhsd_dev_data_cvt_standard_to_rawEpp</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, uhsd_u8 **out_epp, uhsd_u16 *out_epp_len, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gac7c88fbe543162715688f57ddaa60a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">标准下行控制数据转换为E++完整数据  <br /></td></tr>
+<tr class="separator:gac7c88fbe543162715688f57ddaa60a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b9306030597f6e84302f15339e14c89" id="r_ga9b9306030597f6e84302f15339e14c89"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9b9306030597f6e84302f15339e14c89">uhsd_dev_data_cvt_mem_free</a> (uhsd_ddc_mem_ctx_t ctx)</td></tr>
+<tr class="memdesc:ga9b9306030597f6e84302f15339e14c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放转换后的数据内存  <br /></td></tr>
+<tr class="separator:ga9b9306030597f6e84302f15339e14c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><a class="el" href="uhsd__dev__data__cvt_8h.html">uhsd_dev_data_cvt.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

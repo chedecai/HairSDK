@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['可选项_20宏定义_20增加编译器的_20d_20选项_20如：_0',['可选项 宏定义 增加编译器的 d 选项 如：',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md14',1,'define:                                  # &lt;可选项&gt; 宏定义, 增加编译器的-D 选项,如：'],['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md46',1,'define:                                  # &lt;可选项&gt; 宏定义, 增加编译器的-D 选项,如：']]],
+  ['可选项_20屏蔽全局_20cflags_20值：true_20false_1',['cflag_mask: true                         # &lt;可选项&gt;屏蔽全局 cflags 值：true/false',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md35',1,'']]],
+  ['可选项_20库标志_2',['libflag:                                 # &lt;可选项&gt; 库标志',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md17',1,'']]],
+  ['可选项_20指定静态库所在的路径（相对于该组件路径）_3',['libpath:                                 # &lt;可选项&gt; 指定静态库所在的路径（相对于该组件路径）',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md23',1,'']]],
+  ['可选项_20汇编器所需要要参数_4',['可选项 汇编器所需要要参数',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md10',1,'asmflag:                                # &lt;可选项&gt; 汇编器所需要要参数'],['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md42',1,'asmflag:                                # &lt;可选项&gt; 汇编器所需要要参数']]],
+  ['可选项_20编译时，影响编译器的_20i_20参数_20组件内有效_5',['internal_include:                    # &lt;可选项&gt; 编译时，影响编译器的-I 参数 ,组件内有效',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md5',1,'']]],
+  ['可选项_20该组件中支持的二进制静态库_20如：libxxx_20a_20libyyy_20a_6',['libs:                                    # &lt;可选项&gt; 该组件中支持的二进制静态库,如：libxxx.a, libyyy.a',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md20',1,'']]],
+  ['可选项_20链接文件_7',['ldfile: tools/rtl8710c_ram_uhomeos.ld    # &lt;可选项&gt; 链接文件',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md27',1,'']]],
+  ['可选项_20链接标志_8',['ldflag:                                  # &lt;可选项&gt; 链接标志',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md25',1,'']]],
+  ['可选项_20c_20编译器所需要要的编译参数，组件内部_9',['internal_cflag:                          # &lt;可选项&gt; C 编译器所需要要的编译参数，组件内部',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md34',1,'']]],
+  ['可选项_20c_20编译器所需要要的编译参数_10',['cflag:                                   # &lt;可选项&gt; C 编译器所需要要的编译参数',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md36',1,'']]],
+  ['可选项_20cxx_20编译器所需要要的编译参数_11',['可选项 cxx 编译器所需要要的编译参数',['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2AL__API_2README.html#autotoc_md6',1,'cxxflag:                                # &lt;可选项&gt; CXX 编译器所需要要的编译参数'],['../md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html#autotoc_md38',1,'cxxflag:                                # &lt;可选项&gt; CXX 编译器所需要要的编译参数']]]
+];

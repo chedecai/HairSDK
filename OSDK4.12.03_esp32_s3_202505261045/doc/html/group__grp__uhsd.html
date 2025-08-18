@@ -1,0 +1,2075 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 通用接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhsd.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">通用接口</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SmartDevice 通用接口  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uhsd_8h" id="r_uhsd_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd_8h.html">uhsd.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uhsd__error_8h" id="r_uhsd__error_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd__error_8h.html">uhsd_error.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uhsd__scene_8h" id="r_uhsd__scene_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd__scene_8h.html">uhsd_scene.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ble__adv__scan__passthrough__rules__t.html">uhsd_ble_adv_scan_passthrough_rules_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__log__upload__config__t.html">uhsd_log_upload_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志上传配置参数  <a href="structuhsd__log__upload__config__t.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__uhsd__scene__data__t__.html">_uhsd_scene_data_t_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga1748b99b9b74917fe32fa34bafaa6993" id="r_ga1748b99b9b74917fe32fa34bafaa6993"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1748b99b9b74917fe32fa34bafaa6993">UHSD_LOG_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga1748b99b9b74917fe32fa34bafaa6993"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice日志控制  <br /></td></tr>
+<tr class="separator:ga1748b99b9b74917fe32fa34bafaa6993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39b2298dbaf434e9b678b9859ba51610" id="r_ga39b2298dbaf434e9b678b9859ba51610"><td class="memItemLeft" align="right" valign="top"><a id="ga39b2298dbaf434e9b678b9859ba51610" name="ga39b2298dbaf434e9b678b9859ba51610"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_VERBOSE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga39b2298dbaf434e9b678b9859ba51610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d6db1417776bf5d806b5b14ef9f97b9" id="r_ga5d6db1417776bf5d806b5b14ef9f97b9"><td class="memItemLeft" align="right" valign="top"><a id="ga5d6db1417776bf5d806b5b14ef9f97b9" name="ga5d6db1417776bf5d806b5b14ef9f97b9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_DEBUG</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ga5d6db1417776bf5d806b5b14ef9f97b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd265d9af6037fb46bce4c351cd98264" id="r_gabd265d9af6037fb46bce4c351cd98264"><td class="memItemLeft" align="right" valign="top"><a id="gabd265d9af6037fb46bce4c351cd98264" name="gabd265d9af6037fb46bce4c351cd98264"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_INFO</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:gabd265d9af6037fb46bce4c351cd98264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c973d2e93daa7b29911acbb338e914e" id="r_ga3c973d2e93daa7b29911acbb338e914e"><td class="memItemLeft" align="right" valign="top"><a id="ga3c973d2e93daa7b29911acbb338e914e" name="ga3c973d2e93daa7b29911acbb338e914e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_WARN</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ga3c973d2e93daa7b29911acbb338e914e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0619509d1e81d50833746184b9aaec74" id="r_ga0619509d1e81d50833746184b9aaec74"><td class="memItemLeft" align="right" valign="top"><a id="ga0619509d1e81d50833746184b9aaec74" name="ga0619509d1e81d50833746184b9aaec74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_ERROR</b>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ga0619509d1e81d50833746184b9aaec74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4675a015327642dfaee87a7b82a4f591" id="r_ga4675a015327642dfaee87a7b82a4f591"><td class="memItemLeft" align="right" valign="top"><a id="ga4675a015327642dfaee87a7b82a4f591" name="ga4675a015327642dfaee87a7b82a4f591"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_LOG_LEVEL_FATAL</b>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:ga4675a015327642dfaee87a7b82a4f591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78182583499eaf6442860924c13c6b59" id="r_ga78182583499eaf6442860924c13c6b59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga78182583499eaf6442860924c13c6b59">UHSD_E_COMMON_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:ga78182583499eaf6442860924c13c6b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">UHSD错误码定义 一般错误 -1 ～ -99 设备接入错误 -100 ～ -199 设备配置错误 -200 ～ -249 设备绑定错误 -250 ～ -299 设备OTA错误 -300 ～ -349 消息推送错误 -350 ～ -399 数据转换功能错误 -400 ～ -450 用户token错误 -451 ～ -499 video错误 -500 ～ -599  <br /></td></tr>
+<tr class="separator:ga78182583499eaf6442860924c13c6b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2729b9d7193bd676eba68bf7233fd83" id="r_gae2729b9d7193bd676eba68bf7233fd83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gae2729b9d7193bd676eba68bf7233fd83">UHSD_E_COMMON_COMM_FAIL</a>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="separator:gae2729b9d7193bd676eba68bf7233fd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec5a3b2a0861b7c0cf1a1961deede4a8" id="r_gaec5a3b2a0861b7c0cf1a1961deede4a8"><td class="memItemLeft" align="right" valign="top"><a id="gaec5a3b2a0861b7c0cf1a1961deede4a8" name="gaec5a3b2a0861b7c0cf1a1961deede4a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_PARAM</b>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="separator:gaec5a3b2a0861b7c0cf1a1961deede4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c8298de1e085c8f3a65308e88afbc1e" id="r_ga1c8298de1e085c8f3a65308e88afbc1e"><td class="memItemLeft" align="right" valign="top"><a id="ga1c8298de1e085c8f3a65308e88afbc1e" name="ga1c8298de1e085c8f3a65308e88afbc1e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NO_ENOUGH_MEMORY</b>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="separator:ga1c8298de1e085c8f3a65308e88afbc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d5ff675656655cfebf1cbfb9a9e9280" id="r_ga7d5ff675656655cfebf1cbfb9a9e9280"><td class="memItemLeft" align="right" valign="top"><a id="ga7d5ff675656655cfebf1cbfb9a9e9280" name="ga7d5ff675656655cfebf1cbfb9a9e9280"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_STARTED</b>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="separator:ga7d5ff675656655cfebf1cbfb9a9e9280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7f43c1c252819ff36087f32ab264a6f" id="r_gab7f43c1c252819ff36087f32ab264a6f"><td class="memItemLeft" align="right" valign="top"><a id="gab7f43c1c252819ff36087f32ab264a6f" name="gab7f43c1c252819ff36087f32ab264a6f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_START</b>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="separator:gab7f43c1c252819ff36087f32ab264a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga541b45c9eeb5b1486e974016189c7939" id="r_ga541b45c9eeb5b1486e974016189c7939"><td class="memItemLeft" align="right" valign="top"><a id="ga541b45c9eeb5b1486e974016189c7939" name="ga541b45c9eeb5b1486e974016189c7939"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_REGISTERED</b>&#160;&#160;&#160;(-6)</td></tr>
+<tr class="separator:ga541b45c9eeb5b1486e974016189c7939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0693f7a04ae38aaceb2d6d6ef7176fbc" id="r_ga0693f7a04ae38aaceb2d6d6ef7176fbc"><td class="memItemLeft" align="right" valign="top"><a id="ga0693f7a04ae38aaceb2d6d6ef7176fbc" name="ga0693f7a04ae38aaceb2d6d6ef7176fbc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_REGISTER</b>&#160;&#160;&#160;(-7)</td></tr>
+<tr class="separator:ga0693f7a04ae38aaceb2d6d6ef7176fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae82cc3f1f39bdbc6d8ff0706dd92e3c8" id="r_gae82cc3f1f39bdbc6d8ff0706dd92e3c8"><td class="memItemLeft" align="right" valign="top"><a id="gae82cc3f1f39bdbc6d8ff0706dd92e3c8" name="gae82cc3f1f39bdbc6d8ff0706dd92e3c8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_INITIALIZED</b>&#160;&#160;&#160;(-8)</td></tr>
+<tr class="separator:gae82cc3f1f39bdbc6d8ff0706dd92e3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f288126b2b000c7800b6f46381180b5" id="r_ga8f288126b2b000c7800b6f46381180b5"><td class="memItemLeft" align="right" valign="top"><a id="ga8f288126b2b000c7800b6f46381180b5" name="ga8f288126b2b000c7800b6f46381180b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_INIT</b>&#160;&#160;&#160;(-9)</td></tr>
+<tr class="separator:ga8f288126b2b000c7800b6f46381180b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad13edc6bd10d86147ce0841ea3986b5" id="r_gaad13edc6bd10d86147ce0841ea3986b5"><td class="memItemLeft" align="right" valign="top"><a id="gaad13edc6bd10d86147ce0841ea3986b5" name="gaad13edc6bd10d86147ce0841ea3986b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_FIX_LEN</b>&#160;&#160;&#160;(-10)</td></tr>
+<tr class="separator:gaad13edc6bd10d86147ce0841ea3986b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdb64aca13ba33363f3016791de4f7ce" id="r_gacdb64aca13ba33363f3016791de4f7ce"><td class="memItemLeft" align="right" valign="top"><a id="gacdb64aca13ba33363f3016791de4f7ce" name="gacdb64aca13ba33363f3016791de4f7ce"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_RANGE_LEN</b>&#160;&#160;&#160;(-11)</td></tr>
+<tr class="separator:gacdb64aca13ba33363f3016791de4f7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga942bfb7020c309b702eb8c4e7fd18b91" id="r_ga942bfb7020c309b702eb8c4e7fd18b91"><td class="memItemLeft" align="right" valign="top"><a id="ga942bfb7020c309b702eb8c4e7fd18b91" name="ga942bfb7020c309b702eb8c4e7fd18b91"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_CONTENT</b>&#160;&#160;&#160;(-12)</td></tr>
+<tr class="separator:ga942bfb7020c309b702eb8c4e7fd18b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aa337496539846ec2940f0107d6cd14" id="r_ga2aa337496539846ec2940f0107d6cd14"><td class="memItemLeft" align="right" valign="top"><a id="ga2aa337496539846ec2940f0107d6cd14" name="ga2aa337496539846ec2940f0107d6cd14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_VER</b>&#160;&#160;&#160;(-13)</td></tr>
+<tr class="separator:ga2aa337496539846ec2940f0107d6cd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga894a44cff80bc3e71c958b8a6b8f1901" id="r_ga894a44cff80bc3e71c958b8a6b8f1901"><td class="memItemLeft" align="right" valign="top"><a id="ga894a44cff80bc3e71c958b8a6b8f1901" name="ga894a44cff80bc3e71c958b8a6b8f1901"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_MODULE_TYPE</b>&#160;&#160;&#160;(-14)</td></tr>
+<tr class="separator:ga894a44cff80bc3e71c958b8a6b8f1901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac268dadaaeb29f7f2094ee939c7c8671" id="r_gac268dadaaeb29f7f2094ee939c7c8671"><td class="memItemLeft" align="right" valign="top"><a id="gac268dadaaeb29f7f2094ee939c7c8671" name="gac268dadaaeb29f7f2094ee939c7c8671"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_TIMEOUT</b>&#160;&#160;&#160;(-15)</td></tr>
+<tr class="separator:gac268dadaaeb29f7f2094ee939c7c8671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47d7db4197d01858e4829d61c0abe78c" id="r_ga47d7db4197d01858e4829d61c0abe78c"><td class="memItemLeft" align="right" valign="top"><a id="ga47d7db4197d01858e4829d61c0abe78c" name="ga47d7db4197d01858e4829d61c0abe78c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_CMD</b>&#160;&#160;&#160;(-16)</td></tr>
+<tr class="separator:ga47d7db4197d01858e4829d61c0abe78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga590d32548ac9998842c6b9ce0ed70028" id="r_ga590d32548ac9998842c6b9ce0ed70028"><td class="memItemLeft" align="right" valign="top"><a id="ga590d32548ac9998842c6b9ce0ed70028" name="ga590d32548ac9998842c6b9ce0ed70028"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_ALLOW</b>&#160;&#160;&#160;(-17)</td></tr>
+<tr class="separator:ga590d32548ac9998842c6b9ce0ed70028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae05ebdbaf8f2a0e0ecbd682c8127323a" id="r_gae05ebdbaf8f2a0e0ecbd682c8127323a"><td class="memItemLeft" align="right" valign="top"><a id="gae05ebdbaf8f2a0e0ecbd682c8127323a" name="gae05ebdbaf8f2a0e0ecbd682c8127323a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RESET_BUSYING</b>&#160;&#160;&#160;(-18)</td></tr>
+<tr class="separator:gae05ebdbaf8f2a0e0ecbd682c8127323a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0e2de4d26cfaa2e241e8f2d8f791e21" id="r_gac0e2de4d26cfaa2e241e8f2d8f791e21"><td class="memItemLeft" align="right" valign="top"><a id="gac0e2de4d26cfaa2e241e8f2d8f791e21" name="gac0e2de4d26cfaa2e241e8f2d8f791e21"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CLOUD_NOT_CONNECTED</b>&#160;&#160;&#160;(-19)</td></tr>
+<tr class="separator:gac0e2de4d26cfaa2e241e8f2d8f791e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa080a47b4b88af719d954996c398c9ff" id="r_gaa080a47b4b88af719d954996c398c9ff"><td class="memItemLeft" align="right" valign="top"><a id="gaa080a47b4b88af719d954996c398c9ff" name="gaa080a47b4b88af719d954996c398c9ff"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CREATE_HTTPREQ</b>&#160;&#160;&#160;(-20)</td></tr>
+<tr class="separator:gaa080a47b4b88af719d954996c398c9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea5dd4c801df9ff409d4c4a206d3f733" id="r_gaea5dd4c801df9ff409d4c4a206d3f733"><td class="memItemLeft" align="right" valign="top"><a id="gaea5dd4c801df9ff409d4c4a206d3f733" name="gaea5dd4c801df9ff409d4c4a206d3f733"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_SEND_HTTPREQ</b>&#160;&#160;&#160;(-21)</td></tr>
+<tr class="separator:gaea5dd4c801df9ff409d4c4a206d3f733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68a706353065d2716e46526d80763855" id="r_ga68a706353065d2716e46526d80763855"><td class="memItemLeft" align="right" valign="top"><a id="ga68a706353065d2716e46526d80763855" name="ga68a706353065d2716e46526d80763855"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_ENABLE</b>&#160;&#160;&#160;(-22)</td></tr>
+<tr class="separator:ga68a706353065d2716e46526d80763855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga889515a9fe68c5c42b3180791aa15026" id="r_ga889515a9fe68c5c42b3180791aa15026"><td class="memItemLeft" align="right" valign="top"><a id="ga889515a9fe68c5c42b3180791aa15026" name="ga889515a9fe68c5c42b3180791aa15026"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_DISABLE</b>&#160;&#160;&#160;(-23)</td></tr>
+<tr class="separator:ga889515a9fe68c5c42b3180791aa15026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25ec7a8e7a522fc5608553b0fc2b4c68" id="r_ga25ec7a8e7a522fc5608553b0fc2b4c68"><td class="memItemLeft" align="right" valign="top"><a id="ga25ec7a8e7a522fc5608553b0fc2b4c68" name="ga25ec7a8e7a522fc5608553b0fc2b4c68"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_E_COMMON_OVER_MAX_NUM</b>&#160;&#160;&#160;(-24)</td></tr>
+<tr class="separator:ga25ec7a8e7a522fc5608553b0fc2b4c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad97656f091912c92bb4e3ca8f919a96a" id="r_gad97656f091912c92bb4e3ca8f919a96a"><td class="memItemLeft" align="right" valign="top"><a id="gad97656f091912c92bb4e3ca8f919a96a" name="gad97656f091912c92bb4e3ca8f919a96a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FIND_DEV</b>&#160;&#160;&#160;(-25)</td></tr>
+<tr class="separator:gad97656f091912c92bb4e3ca8f919a96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9196aa39c1da5b26749708ac04fc9ac" id="r_gac9196aa39c1da5b26749708ac04fc9ac"><td class="memItemLeft" align="right" valign="top"><a id="gac9196aa39c1da5b26749708ac04fc9ac" name="gac9196aa39c1da5b26749708ac04fc9ac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FIND_NODE</b>&#160;&#160;&#160;(-26)</td></tr>
+<tr class="separator:gac9196aa39c1da5b26749708ac04fc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac27cd56b6354df42e6152a2795f9b700" id="r_gac27cd56b6354df42e6152a2795f9b700"><td class="memItemLeft" align="right" valign="top"><a id="gac27cd56b6354df42e6152a2795f9b700" name="gac27cd56b6354df42e6152a2795f9b700"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOSD_E_COMMON_DEV_NOT_ONLINE</b>&#160;&#160;&#160;(-27)</td></tr>
+<tr class="separator:gac27cd56b6354df42e6152a2795f9b700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c1ba7ba76336f3fe3d2ac3319d0dad2" id="r_ga5c1ba7ba76336f3fe3d2ac3319d0dad2"><td class="memItemLeft" align="right" valign="top"><a id="ga5c1ba7ba76336f3fe3d2ac3319d0dad2" name="ga5c1ba7ba76336f3fe3d2ac3319d0dad2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_FATAL2REBOOT</b>&#160;&#160;&#160;(-28)</td></tr>
+<tr class="separator:ga5c1ba7ba76336f3fe3d2ac3319d0dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga752e99c8cc793ffa6aa9e8b180d771ac" id="r_ga752e99c8cc793ffa6aa9e8b180d771ac"><td class="memItemLeft" align="right" valign="top"><a id="ga752e99c8cc793ffa6aa9e8b180d771ac" name="ga752e99c8cc793ffa6aa9e8b180d771ac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NO_MASTER_HANDLE</b>&#160;&#160;&#160;(-29)</td></tr>
+<tr class="separator:ga752e99c8cc793ffa6aa9e8b180d771ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe68f8efc64763b42e46fc0b643376fa" id="r_gabe68f8efc64763b42e46fc0b643376fa"><td class="memItemLeft" align="right" valign="top"><a id="gabe68f8efc64763b42e46fc0b643376fa" name="gabe68f8efc64763b42e46fc0b643376fa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CLOUD_CONNECTED</b>&#160;&#160;&#160;(-30)</td></tr>
+<tr class="separator:gabe68f8efc64763b42e46fc0b643376fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ae6f34f0be5e4bae2a70bcadb67285e" id="r_ga1ae6f34f0be5e4bae2a70bcadb67285e"><td class="memItemLeft" align="right" valign="top"><a id="ga1ae6f34f0be5e4bae2a70bcadb67285e" name="ga1ae6f34f0be5e4bae2a70bcadb67285e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FOUND_MATSTER_DEV</b>&#160;&#160;&#160;(-31)</td></tr>
+<tr class="separator:ga1ae6f34f0be5e4bae2a70bcadb67285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa21f25afdd8541ce7498d514efeca04b" id="r_gaa21f25afdd8541ce7498d514efeca04b"><td class="memItemLeft" align="right" valign="top"><a id="gaa21f25afdd8541ce7498d514efeca04b" name="gaa21f25afdd8541ce7498d514efeca04b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_REPEAT_ADD_DEV</b>&#160;&#160;&#160;(-32)</td></tr>
+<tr class="separator:gaa21f25afdd8541ce7498d514efeca04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa91d4d522c2415538065ac2d22c6f7b9" id="r_gaa91d4d522c2415538065ac2d22c6f7b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa91d4d522c2415538065ac2d22c6f7b9">UHSD_E_DEV_NOT_FIND_DEV</a>&#160;&#160;&#160;(-100)</td></tr>
+<tr class="separator:gaa91d4d522c2415538065ac2d22c6f7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09b2511419d12f95394bdbe42f9ca1b8" id="r_ga09b2511419d12f95394bdbe42f9ca1b8"><td class="memItemLeft" align="right" valign="top"><a id="ga09b2511419d12f95394bdbe42f9ca1b8" name="ga09b2511419d12f95394bdbe42f9ca1b8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_FIND_MODULE</b>&#160;&#160;&#160;(-101)</td></tr>
+<tr class="separator:ga09b2511419d12f95394bdbe42f9ca1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac94392cafc85b258cea106bdd02a92f2" id="r_gac94392cafc85b258cea106bdd02a92f2"><td class="memItemLeft" align="right" valign="top"><a id="gac94392cafc85b258cea106bdd02a92f2" name="gac94392cafc85b258cea106bdd02a92f2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_DEVINFO</b>&#160;&#160;&#160;(-102)</td></tr>
+<tr class="separator:gac94392cafc85b258cea106bdd02a92f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a02ecdba5a1ac26415b695ea11b8d17" id="r_ga9a02ecdba5a1ac26415b695ea11b8d17"><td class="memItemLeft" align="right" valign="top"><a id="ga9a02ecdba5a1ac26415b695ea11b8d17" name="ga9a02ecdba5a1ac26415b695ea11b8d17"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_EPP_TO_PAIR</b>&#160;&#160;&#160;(-103)</td></tr>
+<tr class="separator:ga9a02ecdba5a1ac26415b695ea11b8d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03620a78cca67251f6e7a946dc6b6001" id="r_ga03620a78cca67251f6e7a946dc6b6001"><td class="memItemLeft" align="right" valign="top"><a id="ga03620a78cca67251f6e7a946dc6b6001" name="ga03620a78cca67251f6e7a946dc6b6001"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_PAIR_TO_EPP</b>&#160;&#160;&#160;(-104)</td></tr>
+<tr class="separator:ga03620a78cca67251f6e7a946dc6b6001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga365a579fdf2368349aee7280d1d2d56d" id="r_ga365a579fdf2368349aee7280d1d2d56d"><td class="memItemLeft" align="right" valign="top"><a id="ga365a579fdf2368349aee7280d1d2d56d" name="ga365a579fdf2368349aee7280d1d2d56d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_REGISTER_FAIL</b>&#160;&#160;&#160;(-105)</td></tr>
+<tr class="separator:ga365a579fdf2368349aee7280d1d2d56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfa780edd48d395344805fff287a4ffc" id="r_gadfa780edd48d395344805fff287a4ffc"><td class="memItemLeft" align="right" valign="top"><a id="gadfa780edd48d395344805fff287a4ffc" name="gadfa780edd48d395344805fff287a4ffc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SET_ATTR</b>&#160;&#160;&#160;(-106)</td></tr>
+<tr class="separator:gadfa780edd48d395344805fff287a4ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fa2617cc4067e07ab4d8428406d4d64" id="r_ga9fa2617cc4067e07ab4d8428406d4d64"><td class="memItemLeft" align="right" valign="top"><a id="ga9fa2617cc4067e07ab4d8428406d4d64" name="ga9fa2617cc4067e07ab4d8428406d4d64"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_GET_DEV_OBJECT</b>&#160;&#160;&#160;(-107)</td></tr>
+<tr class="separator:ga9fa2617cc4067e07ab4d8428406d4d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28d0816bcdc4c344bf280da2ffbac0c7" id="r_ga28d0816bcdc4c344bf280da2ffbac0c7"><td class="memItemLeft" align="right" valign="top"><a id="ga28d0816bcdc4c344bf280da2ffbac0c7" name="ga28d0816bcdc4c344bf280da2ffbac0c7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_PKT</b>&#160;&#160;&#160;(-108)</td></tr>
+<tr class="separator:ga28d0816bcdc4c344bf280da2ffbac0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f6a341a54d27225281bb85f09647db0" id="r_ga0f6a341a54d27225281bb85f09647db0"><td class="memItemLeft" align="right" valign="top"><a id="ga0f6a341a54d27225281bb85f09647db0" name="ga0f6a341a54d27225281bb85f09647db0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_SESSION</b>&#160;&#160;&#160;(-109)</td></tr>
+<tr class="separator:ga0f6a341a54d27225281bb85f09647db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc871cb4ff2f14acdc73fe006b288ade" id="r_gafc871cb4ff2f14acdc73fe006b288ade"><td class="memItemLeft" align="right" valign="top"><a id="gafc871cb4ff2f14acdc73fe006b288ade" name="gafc871cb4ff2f14acdc73fe006b288ade"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ADD_MODULE</b>&#160;&#160;&#160;(-110)</td></tr>
+<tr class="separator:gafc871cb4ff2f14acdc73fe006b288ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cb4f163d4d261b61c95e7723ab24e31" id="r_ga2cb4f163d4d261b61c95e7723ab24e31"><td class="memItemLeft" align="right" valign="top"><a id="ga2cb4f163d4d261b61c95e7723ab24e31" name="ga2cb4f163d4d261b61c95e7723ab24e31"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_GETTING_DEVID</b>&#160;&#160;&#160;(-111)</td></tr>
+<tr class="separator:ga2cb4f163d4d261b61c95e7723ab24e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa34d829ffd1bb77f317ff9a3c0111583" id="r_gaa34d829ffd1bb77f317ff9a3c0111583"><td class="memItemLeft" align="right" valign="top"><a id="gaa34d829ffd1bb77f317ff9a3c0111583" name="gaa34d829ffd1bb77f317ff9a3c0111583"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_PHY_MODULE</b>&#160;&#160;&#160;(-112)</td></tr>
+<tr class="separator:gaa34d829ffd1bb77f317ff9a3c0111583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8e48fa2bec293532417b50d6d371151" id="r_gac8e48fa2bec293532417b50d6d371151"><td class="memItemLeft" align="right" valign="top"><a id="gac8e48fa2bec293532417b50d6d371151" name="gac8e48fa2bec293532417b50d6d371151"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_BASEBOARD_INFO</b>&#160;&#160;&#160;(-113)</td></tr>
+<tr class="separator:gac8e48fa2bec293532417b50d6d371151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac27ab673896b33676a0fde133c857a26" id="r_gac27ab673896b33676a0fde133c857a26"><td class="memItemLeft" align="right" valign="top"><a id="gac27ab673896b33676a0fde133c857a26" name="gac27ab673896b33676a0fde133c857a26"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SEND_FOTA_INFO</b>&#160;&#160;&#160;(-115)</td></tr>
+<tr class="separator:gac27ab673896b33676a0fde133c857a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf5f24d91da8580833879ab3de8c6b10" id="r_gaaf5f24d91da8580833879ab3de8c6b10"><td class="memItemLeft" align="right" valign="top"><a id="gaaf5f24d91da8580833879ab3de8c6b10" name="gaaf5f24d91da8580833879ab3de8c6b10"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SEND_TRANSPARENT_ERR</b>&#160;&#160;&#160;(-116)</td></tr>
+<tr class="separator:gaaf5f24d91da8580833879ab3de8c6b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f31d5333ae77612a7c4e3f29693ebb7" id="r_ga5f31d5333ae77612a7c4e3f29693ebb7"><td class="memItemLeft" align="right" valign="top"><a id="ga5f31d5333ae77612a7c4e3f29693ebb7" name="ga5f31d5333ae77612a7c4e3f29693ebb7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_FW_INFO</b>&#160;&#160;&#160;(-118)</td></tr>
+<tr class="separator:ga5f31d5333ae77612a7c4e3f29693ebb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d9385f6b54ed405db3741d6d17b063f" id="r_ga1d9385f6b54ed405db3741d6d17b063f"><td class="memItemLeft" align="right" valign="top"><a id="ga1d9385f6b54ed405db3741d6d17b063f" name="ga1d9385f6b54ed405db3741d6d17b063f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_ROLE</b>&#160;&#160;&#160;(-119)</td></tr>
+<tr class="separator:ga1d9385f6b54ed405db3741d6d17b063f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4969bec80c51b4a5688a931ca980a206" id="r_ga4969bec80c51b4a5688a931ca980a206"><td class="memItemLeft" align="right" valign="top"><a id="ga4969bec80c51b4a5688a931ca980a206" name="ga4969bec80c51b4a5688a931ca980a206"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ATTR_INFO_EXPIRED</b>&#160;&#160;&#160;(-120)</td></tr>
+<tr class="separator:ga4969bec80c51b4a5688a931ca980a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae32b65e2bb21285d66714dabd51a3a14" id="r_gae32b65e2bb21285d66714dabd51a3a14"><td class="memItemLeft" align="right" valign="top"><a id="gae32b65e2bb21285d66714dabd51a3a14" name="gae32b65e2bb21285d66714dabd51a3a14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ALREADY_REG_PHYMODULE</b>&#160;&#160;&#160;(-121)</td></tr>
+<tr class="separator:gae32b65e2bb21285d66714dabd51a3a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2d52608919793e8c454721c41c38c6b" id="r_gac2d52608919793e8c454721c41c38c6b"><td class="memItemLeft" align="right" valign="top"><a id="gac2d52608919793e8c454721c41c38c6b" name="gac2d52608919793e8c454721c41c38c6b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_PARSE_CERT_INFO</b>&#160;&#160;&#160;(-122)</td></tr>
+<tr class="separator:gac2d52608919793e8c454721c41c38c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6df4ba36849d973d2ba367787ae3346f" id="r_ga6df4ba36849d973d2ba367787ae3346f"><td class="memItemLeft" align="right" valign="top"><a id="ga6df4ba36849d973d2ba367787ae3346f" name="ga6df4ba36849d973d2ba367787ae3346f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_OFFLINE_MASTER_DEV</b>&#160;&#160;&#160;(-123)</td></tr>
+<tr class="separator:ga6df4ba36849d973d2ba367787ae3346f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec206c184419798ad2b668e40fa2b56a" id="r_gaec206c184419798ad2b668e40fa2b56a"><td class="memItemLeft" align="right" valign="top"><a id="gaec206c184419798ad2b668e40fa2b56a" name="gaec206c184419798ad2b668e40fa2b56a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_NTP</b>&#160;&#160;&#160;(-124)</td></tr>
+<tr class="separator:gaec206c184419798ad2b668e40fa2b56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36001539ba18b7d2d0ba0e6162ec23fd" id="r_ga36001539ba18b7d2d0ba0e6162ec23fd"><td class="memItemLeft" align="right" valign="top"><a id="ga36001539ba18b7d2d0ba0e6162ec23fd" name="ga36001539ba18b7d2d0ba0e6162ec23fd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_MUTUAL_AUTH_DEV_ONLY_ALLOW_ONE_DEV</b>&#160;&#160;&#160;(-125)</td></tr>
+<tr class="separator:ga36001539ba18b7d2d0ba0e6162ec23fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b983b6436aca9487fff46656061ab39" id="r_ga1b983b6436aca9487fff46656061ab39"><td class="memItemLeft" align="right" valign="top"><a id="ga1b983b6436aca9487fff46656061ab39" name="ga1b983b6436aca9487fff46656061ab39"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_WHEN_DEV_ONLINE</b>&#160;&#160;&#160;(-126)</td></tr>
+<tr class="separator:ga1b983b6436aca9487fff46656061ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef4dd0f30d1b286f9e2f571b74c7b0a0" id="r_gaef4dd0f30d1b286f9e2f571b74c7b0a0"><td class="memItemLeft" align="right" valign="top"><a id="gaef4dd0f30d1b286f9e2f571b74c7b0a0" name="gaef4dd0f30d1b286f9e2f571b74c7b0a0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_MASTER_NOT_ONLINE</b>&#160;&#160;&#160;(-127)</td></tr>
+<tr class="separator:gaef4dd0f30d1b286f9e2f571b74c7b0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff270b85208635d5e0190a3f03c45cd1" id="r_gaff270b85208635d5e0190a3f03c45cd1"><td class="memItemLeft" align="right" valign="top"><a id="gaff270b85208635d5e0190a3f03c45cd1" name="gaff270b85208635d5e0190a3f03c45cd1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_OVER_MAX_NUM</b>&#160;&#160;&#160;(-128)</td></tr>
+<tr class="separator:gaff270b85208635d5e0190a3f03c45cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaddc1fdf9040d275110b63d975c228aa6" id="r_gaddc1fdf9040d275110b63d975c228aa6"><td class="memItemLeft" align="right" valign="top"><a id="gaddc1fdf9040d275110b63d975c228aa6" name="gaddc1fdf9040d275110b63d975c228aa6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_WHEN_DEV_NOT_OFFLINE</b>&#160;&#160;&#160;(-129)</td></tr>
+<tr class="separator:gaddc1fdf9040d275110b63d975c228aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ae8cb660215642fb43e887ad846b220" id="r_ga5ae8cb660215642fb43e887ad846b220"><td class="memItemLeft" align="right" valign="top"><a id="ga5ae8cb660215642fb43e887ad846b220" name="ga5ae8cb660215642fb43e887ad846b220"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_IN_FT_MODE</b>&#160;&#160;&#160;(-130)</td></tr>
+<tr class="separator:ga5ae8cb660215642fb43e887ad846b220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga775332f1609e98976b49292a23720f14" id="r_ga775332f1609e98976b49292a23720f14"><td class="memItemLeft" align="right" valign="top"><a id="ga775332f1609e98976b49292a23720f14" name="ga775332f1609e98976b49292a23720f14"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW</b>&#160;&#160;&#160;(-131)</td></tr>
+<tr class="separator:ga775332f1609e98976b49292a23720f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b5ef462766cfa8bb137c808e87847cc" id="r_ga7b5ef462766cfa8bb137c808e87847cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga7b5ef462766cfa8bb137c808e87847cc">UHSD_E_CFG_USER_CONFIGURING</a>&#160;&#160;&#160;(-200)</td></tr>
+<tr class="separator:ga7b5ef462766cfa8bb137c808e87847cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bb5837cd58932ef31248df8884f151f" id="r_ga5bb5837cd58932ef31248df8884f151f"><td class="memItemLeft" align="right" valign="top"><a id="ga5bb5837cd58932ef31248df8884f151f" name="ga5bb5837cd58932ef31248df8884f151f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_CFG_NOT_REGISTER_DEV</b>&#160;&#160;&#160;(-201)</td></tr>
+<tr class="separator:ga5bb5837cd58932ef31248df8884f151f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d480114f8c9b82b39ef80d0c73529fd" id="r_ga5d480114f8c9b82b39ef80d0c73529fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5d480114f8c9b82b39ef80d0c73529fd">UHSD_E_OTA_ALREADY_UPGRADING</a>&#160;&#160;&#160;(-300)</td></tr>
+<tr class="separator:ga5d480114f8c9b82b39ef80d0c73529fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b7939854edb5cd2c2bb9790355d2997" id="r_ga4b7939854edb5cd2c2bb9790355d2997"><td class="memItemLeft" align="right" valign="top"><a id="ga4b7939854edb5cd2c2bb9790355d2997" name="ga4b7939854edb5cd2c2bb9790355d2997"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_ALREADY_QUERYING</b>&#160;&#160;&#160;(-301)</td></tr>
+<tr class="separator:ga4b7939854edb5cd2c2bb9790355d2997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8219d89788943bda5f2cb4198ebf49b2" id="r_ga8219d89788943bda5f2cb4198ebf49b2"><td class="memItemLeft" align="right" valign="top"><a id="ga8219d89788943bda5f2cb4198ebf49b2" name="ga8219d89788943bda5f2cb4198ebf49b2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_QUERY_TIMEOUT</b>&#160;&#160;&#160;(-302)</td></tr>
+<tr class="separator:ga8219d89788943bda5f2cb4198ebf49b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad96c20ab5d7f2b71feb745bb1a1a905b" id="r_gad96c20ab5d7f2b71feb745bb1a1a905b"><td class="memItemLeft" align="right" valign="top"><a id="gad96c20ab5d7f2b71feb745bb1a1a905b" name="gad96c20ab5d7f2b71feb745bb1a1a905b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_NO_UPGRADE_FW</b>&#160;&#160;&#160;(-303)</td></tr>
+<tr class="separator:gad96c20ab5d7f2b71feb745bb1a1a905b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd724663421d6324213ac733c285abcc" id="r_gacd724663421d6324213ac733c285abcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gacd724663421d6324213ac733c285abcc">UHSD_E_DATACVT_UNKNOWN</a>&#160;&#160;&#160;(-400)</td></tr>
+<tr class="separator:gacd724663421d6324213ac733c285abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36c6537cef957e03d3ec96af445f0d97" id="r_ga36c6537cef957e03d3ec96af445f0d97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga36c6537cef957e03d3ec96af445f0d97">UHSD_E_DATACVT_PRESET_DATA_MISSED</a>&#160;&#160;&#160;(-401)</td></tr>
+<tr class="separator:ga36c6537cef957e03d3ec96af445f0d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec71b91fd6f7e58bfe6006d0bf0ac47" id="r_ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">UHSD_E_USER_TOKEN_SYSTEM_ERROR</a>&#160;&#160;&#160;(-451)</td></tr>
+<tr class="separator:ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec71b91fd6f7e58bfe6006d0bf0ac47" id="r_ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">UHSD_E_USER_TOKEN_SYSTEM_ERROR</a>&#160;&#160;&#160;(-451)</td></tr>
+<tr class="separator:ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5016acd958d8277387348a58975d9fc" id="r_gae5016acd958d8277387348a58975d9fc"><td class="memItemLeft" align="right" valign="top"><a id="gae5016acd958d8277387348a58975d9fc" name="gae5016acd958d8277387348a58975d9fc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_INVALID_CONTENT</b>&#160;&#160;&#160;(-452)</td></tr>
+<tr class="separator:gae5016acd958d8277387348a58975d9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5016acd958d8277387348a58975d9fc" id="r_gae5016acd958d8277387348a58975d9fc"><td class="memItemLeft" align="right" valign="top"><a id="gae5016acd958d8277387348a58975d9fc" name="gae5016acd958d8277387348a58975d9fc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_INVALID_CONTENT</b>&#160;&#160;&#160;(-452)</td></tr>
+<tr class="separator:gae5016acd958d8277387348a58975d9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0c062c34fb2a18d72068ad200fbe991" id="r_gac0c062c34fb2a18d72068ad200fbe991"><td class="memItemLeft" align="right" valign="top"><a id="gac0c062c34fb2a18d72068ad200fbe991" name="gac0c062c34fb2a18d72068ad200fbe991"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_REJECT</b>&#160;&#160;&#160;(-453)</td></tr>
+<tr class="separator:gac0c062c34fb2a18d72068ad200fbe991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0c062c34fb2a18d72068ad200fbe991" id="r_gac0c062c34fb2a18d72068ad200fbe991"><td class="memItemLeft" align="right" valign="top"><a id="gac0c062c34fb2a18d72068ad200fbe991" name="gac0c062c34fb2a18d72068ad200fbe991"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_REJECT</b>&#160;&#160;&#160;(-453)</td></tr>
+<tr class="separator:gac0c062c34fb2a18d72068ad200fbe991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3efa92939ce3e0ca4e879975be0598" id="r_ga4a3efa92939ce3e0ca4e879975be0598"><td class="memItemLeft" align="right" valign="top"><a id="ga4a3efa92939ce3e0ca4e879975be0598" name="ga4a3efa92939ce3e0ca4e879975be0598"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_ACCESS_EXPIRED</b>&#160;&#160;&#160;(-454)</td></tr>
+<tr class="separator:ga4a3efa92939ce3e0ca4e879975be0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3efa92939ce3e0ca4e879975be0598" id="r_ga4a3efa92939ce3e0ca4e879975be0598"><td class="memItemLeft" align="right" valign="top"><a id="ga4a3efa92939ce3e0ca4e879975be0598" name="ga4a3efa92939ce3e0ca4e879975be0598"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_ACCESS_EXPIRED</b>&#160;&#160;&#160;(-454)</td></tr>
+<tr class="separator:ga4a3efa92939ce3e0ca4e879975be0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ebea9f50ae62cf91d22d47a2efa761" id="r_ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memItemLeft" align="right" valign="top"><a id="ga30ebea9f50ae62cf91d22d47a2efa761" name="ga30ebea9f50ae62cf91d22d47a2efa761"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_EXPIRED</b>&#160;&#160;&#160;(-455)</td></tr>
+<tr class="separator:ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ebea9f50ae62cf91d22d47a2efa761" id="r_ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memItemLeft" align="right" valign="top"><a id="ga30ebea9f50ae62cf91d22d47a2efa761" name="ga30ebea9f50ae62cf91d22d47a2efa761"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_EXPIRED</b>&#160;&#160;&#160;(-455)</td></tr>
+<tr class="separator:ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80a31aa204c344c14873d4a212545a19" id="r_ga80a31aa204c344c14873d4a212545a19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga80a31aa204c344c14873d4a212545a19">UHSD_E_P2P_RSC_CHANNEL_DISCONNECT</a>&#160;&#160;&#160;(-400)</td></tr>
+<tr class="separator:ga80a31aa204c344c14873d4a212545a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ff3f6506712a3eb18209dfb0c89b0da" id="r_ga0ff3f6506712a3eb18209dfb0c89b0da"><td class="memItemLeft" align="right" valign="top"><a id="ga0ff3f6506712a3eb18209dfb0c89b0da" name="ga0ff3f6506712a3eb18209dfb0c89b0da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_REGISTER</b>&#160;&#160;&#160;(-401)</td></tr>
+<tr class="separator:ga0ff3f6506712a3eb18209dfb0c89b0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf8ae0df2d60e625a2bd12fa5a0eed96" id="r_gabf8ae0df2d60e625a2bd12fa5a0eed96"><td class="memItemLeft" align="right" valign="top"><a id="gabf8ae0df2d60e625a2bd12fa5a0eed96" name="gabf8ae0df2d60e625a2bd12fa5a0eed96"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_SUBSCRIBE</b>&#160;&#160;&#160;(-402)</td></tr>
+<tr class="separator:gabf8ae0df2d60e625a2bd12fa5a0eed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45298aba21c2fa7eeedd97f914dd009f" id="r_ga45298aba21c2fa7eeedd97f914dd009f"><td class="memItemLeft" align="right" valign="top"><a id="ga45298aba21c2fa7eeedd97f914dd009f" name="ga45298aba21c2fa7eeedd97f914dd009f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_REG_CB</b>&#160;&#160;&#160;(-403)</td></tr>
+<tr class="separator:ga45298aba21c2fa7eeedd97f914dd009f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c9aad54e8fecb68e960ae0d72727caf" id="r_ga1c9aad54e8fecb68e960ae0d72727caf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1c9aad54e8fecb68e960ae0d72727caf">UHSD_E_VIDEO_AUTH_ONLINE</a>&#160;&#160;&#160;(-500)</td></tr>
+<tr class="separator:ga1c9aad54e8fecb68e960ae0d72727caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c7b2cc7e742b7b974eb678a40a3a81e" id="r_ga5c7b2cc7e742b7b974eb678a40a3a81e"><td class="memItemLeft" align="right" valign="top"><a id="ga5c7b2cc7e742b7b974eb678a40a3a81e" name="ga5c7b2cc7e742b7b974eb678a40a3a81e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_SECRET_KEY</b>&#160;&#160;&#160;(-501)</td></tr>
+<tr class="separator:ga5c7b2cc7e742b7b974eb678a40a3a81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab74a39cea758bf15dd87b27af1cd1cf7" id="r_gab74a39cea758bf15dd87b27af1cd1cf7"><td class="memItemLeft" align="right" valign="top"><a id="gab74a39cea758bf15dd87b27af1cd1cf7" name="gab74a39cea758bf15dd87b27af1cd1cf7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_PUSH_STREAM</b>&#160;&#160;&#160;(-502)</td></tr>
+<tr class="separator:gab74a39cea758bf15dd87b27af1cd1cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga795a9811eca36cb1a37cdc6b5b6241b6" id="r_ga795a9811eca36cb1a37cdc6b5b6241b6"><td class="memItemLeft" align="right" valign="top"><a id="ga795a9811eca36cb1a37cdc6b5b6241b6" name="ga795a9811eca36cb1a37cdc6b5b6241b6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_UPLOAD_CS_STREAM</b>&#160;&#160;&#160;(-503)</td></tr>
+<tr class="separator:ga795a9811eca36cb1a37cdc6b5b6241b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff582d59cc720d1aa92ef5f847c85911" id="r_gaff582d59cc720d1aa92ef5f847c85911"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaff582d59cc720d1aa92ef5f847c85911">UHSD_E_DCC_INVALID_LISTENER</a>&#160;&#160;&#160;(-600)</td></tr>
+<tr class="separator:gaff582d59cc720d1aa92ef5f847c85911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef05e4b3b4d81ebdc9a89fd7014a492c" id="r_gaef05e4b3b4d81ebdc9a89fd7014a492c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaef05e4b3b4d81ebdc9a89fd7014a492c">UHSD_R_RSP_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:gaef05e4b3b4d81ebdc9a89fd7014a492c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36cf089f9553dbfce5a7a0777ddbb6d2" id="r_ga36cf089f9553dbfce5a7a0777ddbb6d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga36cf089f9553dbfce5a7a0777ddbb6d2">UHSD_R_COMM_ERROR</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:ga36cf089f9553dbfce5a7a0777ddbb6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a510a8c1af3b09ec878ece616b9d0d0" id="r_ga3a510a8c1af3b09ec878ece616b9d0d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga3a510a8c1af3b09ec878ece616b9d0d0">UHSD_R_PARAM_ERROR</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:ga3a510a8c1af3b09ec878ece616b9d0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661b8888e8dace753ce7a8c985525031" id="r_ga661b8888e8dace753ce7a8c985525031"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga661b8888e8dace753ce7a8c985525031">UHSD_R_CMD_TIMEOUT</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="separator:ga661b8888e8dace753ce7a8c985525031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5206951c0629cb7543b6c20fede8e7f6" id="r_ga5206951c0629cb7543b6c20fede8e7f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5206951c0629cb7543b6c20fede8e7f6">UHSD_R_INVALID_CMD</a>&#160;&#160;&#160;(12)</td></tr>
+<tr class="separator:ga5206951c0629cb7543b6c20fede8e7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94c3ba450ebf4b48a0c9983e3ae5111c" id="r_ga94c3ba450ebf4b48a0c9983e3ae5111c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga94c3ba450ebf4b48a0c9983e3ae5111c">UHSD_R_ILLEGAL_VALUE</a>&#160;&#160;&#160;(13)</td></tr>
+<tr class="separator:ga94c3ba450ebf4b48a0c9983e3ae5111c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b743249074e04acb43fd3e7d0cac8af" id="r_ga1b743249074e04acb43fd3e7d0cac8af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1b743249074e04acb43fd3e7d0cac8af">UHSD_R_UNSUPPORTED_CMD</a>&#160;&#160;&#160;(17)</td></tr>
+<tr class="separator:ga1b743249074e04acb43fd3e7d0cac8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c4fe79eb10fdbe214bfc4d8e3fc1eca" id="r_ga1c4fe79eb10fdbe214bfc4d8e3fc1eca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1c4fe79eb10fdbe214bfc4d8e3fc1eca">UHSD_R_UPGRADING</a>&#160;&#160;&#160;(501)</td></tr>
+<tr class="separator:ga1c4fe79eb10fdbe214bfc4d8e3fc1eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4f136a59adf8b87c36f409aa3faa548" id="r_gaf4f136a59adf8b87c36f409aa3faa548"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaf4f136a59adf8b87c36f409aa3faa548">UHSD_R_UNKNOWN_DEVICE</a>&#160;&#160;&#160;(503)</td></tr>
+<tr class="separator:gaf4f136a59adf8b87c36f409aa3faa548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fc2e46c4162e1de728348f17958e2a2" id="r_ga3fc2e46c4162e1de728348f17958e2a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga3fc2e46c4162e1de728348f17958e2a2">UHSD_R_STARTPAIR_FAILED</a>&#160;&#160;&#160;(504)</td></tr>
+<tr class="separator:ga3fc2e46c4162e1de728348f17958e2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9782f69ff22cb134a6e69b06554abda9" id="r_ga9782f69ff22cb134a6e69b06554abda9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9782f69ff22cb134a6e69b06554abda9">UHSD_R_INVALID_DEVICE_TYPE</a>&#160;&#160;&#160;(505)</td></tr>
+<tr class="separator:ga9782f69ff22cb134a6e69b06554abda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55e288f8081a4a61b8bfb491f3701bbf" id="r_ga55e288f8081a4a61b8bfb491f3701bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga55e288f8081a4a61b8bfb491f3701bbf">UHSD_R_REPEAT_STARTPAIR</a>&#160;&#160;&#160;(506)</td></tr>
+<tr class="separator:ga55e288f8081a4a61b8bfb491f3701bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf188f15821d965ef26165d468db076a2" id="r_gaf188f15821d965ef26165d468db076a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaf188f15821d965ef26165d468db076a2">UHSD_R_PAIR_DEV_MAX</a>&#160;&#160;&#160;(507)</td></tr>
+<tr class="separator:gaf188f15821d965ef26165d468db076a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60135ae05fe8d3f9c86bc536e3ba6df6" id="r_ga60135ae05fe8d3f9c86bc536e3ba6df6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga60135ae05fe8d3f9c86bc536e3ba6df6">UHSD_R_PAIR_TIMEOUT</a>&#160;&#160;&#160;(508)</td></tr>
+<tr class="separator:ga60135ae05fe8d3f9c86bc536e3ba6df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11b62d6ee8bd9253039424fa86c9a760" id="r_ga11b62d6ee8bd9253039424fa86c9a760"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga11b62d6ee8bd9253039424fa86c9a760">UHSD_R_BIND_ERROR</a>&#160;&#160;&#160;(509)</td></tr>
+<tr class="separator:ga11b62d6ee8bd9253039424fa86c9a760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae17b0676be808ea395f316859827b5a7" id="r_gae17b0676be808ea395f316859827b5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gae17b0676be808ea395f316859827b5a7">UHSD_R_EXIT_PAIR</a>&#160;&#160;&#160;(510)</td></tr>
+<tr class="separator:gae17b0676be808ea395f316859827b5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga112496329e3cd66db0dd1ba6526b06af" id="r_ga112496329e3cd66db0dd1ba6526b06af"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga112496329e3cd66db0dd1ba6526b06af">uhsd_datetime_sync_cb</a>) (uhsd_u32 sec, uhsd_u32 usec)</td></tr>
+<tr class="memdesc:ga112496329e3cd66db0dd1ba6526b06af"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，用户通过注册此函数获取系统时间同步的通知。  <br /></td></tr>
+<tr class="separator:ga112496329e3cd66db0dd1ba6526b06af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4267374ef4fe6432dbc725d005b85528" id="r_ga4267374ef4fe6432dbc725d005b85528"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga4267374ef4fe6432dbc725d005b85528">uhsd_ble_adv_scan_passthrough_rules_set_result_cb</a>) (uhsd_s32 result, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga4267374ef4fe6432dbc725d005b85528"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝牙广播透传规则设置结果  <br /></td></tr>
+<tr class="separator:ga4267374ef4fe6432dbc725d005b85528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfedf20d251da8e0f02fe28bc1c5d749" id="r_gacfedf20d251da8e0f02fe28bc1c5d749"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gacfedf20d251da8e0f02fe28bc1c5d749">uhsd_ble_adv_scan_passthrough_data_cb</a>) (uhsd_u8 *data, uhsd_u8 *data_len, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gacfedf20d251da8e0f02fe28bc1c5d749"><td class="mdescLeft">&#160;</td><td class="mdescRight">蓝牙广播透传数据回调  <br /></td></tr>
+<tr class="separator:gacfedf20d251da8e0f02fe28bc1c5d749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa414ae9a3c28f0750b58d4ffa114c0db" id="r_gaa414ae9a3c28f0750b58d4ffa114c0db"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa414ae9a3c28f0750b58d4ffa114c0db">uhsd_log_upload_status_cb</a>) (uhsd_u8 state, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gaa414ae9a3c28f0750b58d4ffa114c0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志上传状态监听回调函数  <br /></td></tr>
+<tr class="separator:gaa414ae9a3c28f0750b58d4ffa114c0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1df902d5b32c24004ac4949722e663c6" id="r_ga1df902d5b32c24004ac4949722e663c6"><td class="memItemLeft" align="right" valign="top"><a id="ga1df902d5b32c24004ac4949722e663c6" name="ga1df902d5b32c24004ac4949722e663c6"></a>
+typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_scene_async_read_notify_pfunc</b>) (uhsd_u32 id, uhsd_u32 offset, uhsd_u32 len, uhsd_u32 buffer_size, uhsd_void *user_data)</td></tr>
+<tr class="separator:ga1df902d5b32c24004ac4949722e663c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c576b627eabcb289cab02b0e335c764" id="r_ga2c576b627eabcb289cab02b0e335c764"><td class="memItemLeft" align="right" valign="top"><a id="ga2c576b627eabcb289cab02b0e335c764" name="ga2c576b627eabcb289cab02b0e335c764"></a>
+typedef struct <a class="el" href="struct__uhsd__scene__data__t__.html">_uhsd_scene_data_t_</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_scene_data_t</b></td></tr>
+<tr class="separator:ga2c576b627eabcb289cab02b0e335c764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga94798fdadfbf49a7c658ace669a1d310" id="r_ga94798fdadfbf49a7c658ace669a1d310"><td class="memItemLeft" align="right" valign="top"><a id="ga94798fdadfbf49a7c658ace669a1d310" name="ga94798fdadfbf49a7c658ace669a1d310"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<b>UHSD_REBOOT_REASON_ENTER_CONFIG</b> = 1
+, <b>UHSD_REBOOT_REASON_CLR_USER_CONFIG</b>
+, <b>UHSD_REBOOT_REASON_WATCHDOG</b>
+, <b>UHSD_REBOOT_REASON_OTA_RESET</b>
+, <br />
+&#160;&#160;<b>UHSD_REBOOT_REASON_DEV_FAIL</b>
+, <b>UHSD_REBOOT_REASON_RESET</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga94798fdadfbf49a7c658ace669a1d310"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备重启原因定义 <br /></td></tr>
+<tr class="separator:ga94798fdadfbf49a7c658ace669a1d310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga17e2e90e1a17f4d863883594015936ef" id="r_ga17e2e90e1a17f4d863883594015936ef"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga17e2e90e1a17f4d863883594015936ef">uhsd_init</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga17e2e90e1a17f4d863883594015936ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">smartDevice SDK 初始化  <br /></td></tr>
+<tr class="separator:ga17e2e90e1a17f4d863883594015936ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa73ea7c4f36891d84599fb12c9194d69" id="r_gaa73ea7c4f36891d84599fb12c9194d69"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa73ea7c4f36891d84599fb12c9194d69">uhsd_set_domain_region</a> (uhsd_domain_region_t region)</td></tr>
+<tr class="memdesc:gaa73ea7c4f36891d84599fb12c9194d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">smatDevice SDK设置域名区域  <br /></td></tr>
+<tr class="separator:gaa73ea7c4f36891d84599fb12c9194d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47380e1d82d258c467d8352a88be2394" id="r_ga47380e1d82d258c467d8352a88be2394"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga47380e1d82d258c467d8352a88be2394">uhsd_factory_reset</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga47380e1d82d258c467d8352a88be2394"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice SDK 恢复出厂设置。  <br /></td></tr>
+<tr class="separator:ga47380e1d82d258c467d8352a88be2394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4894b8b3dba67e00eefd0a1b11304f8" id="r_gaf4894b8b3dba67e00eefd0a1b11304f8"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaf4894b8b3dba67e00eefd0a1b11304f8">uhsd_reboot_notify</a> (uhsd_s32 reason, uhsd_void(*sd_reboot_cb)(uhsd_u32 seconds))</td></tr>
+<tr class="memdesc:gaf4894b8b3dba67e00eefd0a1b11304f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice SDK 设备重启通知  <br /></td></tr>
+<tr class="separator:gaf4894b8b3dba67e00eefd0a1b11304f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7177aa5193d223173a54be7994f2223a" id="r_ga7177aa5193d223173a54be7994f2223a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s8 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga7177aa5193d223173a54be7994f2223a">uhsd_version</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga7177aa5193d223173a54be7994f2223a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice版本查询  <br /></td></tr>
+<tr class="separator:ga7177aa5193d223173a54be7994f2223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf27c7bd47fcc495bdb858fa9b87c5fce" id="r_gaf27c7bd47fcc495bdb858fa9b87c5fce"><td class="memItemLeft" align="right" valign="top"><a id="gaf27c7bd47fcc495bdb858fa9b87c5fce" name="gaf27c7bd47fcc495bdb858fa9b87c5fce"></a>
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_log_set</b> (const uhsd_char *tag, uhsd_s32 level)</td></tr>
+<tr class="separator:gaf27c7bd47fcc495bdb858fa9b87c5fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d317ae4c08f6a46681a54935a8e988e" id="r_ga1d317ae4c08f6a46681a54935a8e988e"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1d317ae4c08f6a46681a54935a8e988e">uhsd_log_get</a> ()</td></tr>
+<tr class="memdesc:ga1d317ae4c08f6a46681a54935a8e988e"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用此接口获取当前日志级别  <br /></td></tr>
+<tr class="separator:ga1d317ae4c08f6a46681a54935a8e988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2caaec13250e5dad96f42b8b0067d127" id="r_ga2caaec13250e5dad96f42b8b0067d127"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga2caaec13250e5dad96f42b8b0067d127">uhsd_datetime_sync_start</a> (<a class="el" href="group__grp__uhsd.html#ga112496329e3cd66db0dd1ba6526b06af">uhsd_datetime_sync_cb</a> func_cb)</td></tr>
+<tr class="memdesc:ga2caaec13250e5dad96f42b8b0067d127"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice时间同步功能【使用wifibase协议时才有效】  <br /></td></tr>
+<tr class="separator:ga2caaec13250e5dad96f42b8b0067d127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8e2a35fb12277538d3c53a813c39e3f" id="r_gaa8e2a35fb12277538d3c53a813c39e3f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa8e2a35fb12277538d3c53a813c39e3f">uhsd_datetime_get</a> (uhsd_u32 *sec, uhsd_u32 *usec)</td></tr>
+<tr class="memdesc:gaa8e2a35fb12277538d3c53a813c39e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前时间  <br /></td></tr>
+<tr class="separator:gaa8e2a35fb12277538d3c53a813c39e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebf89adb3311433458852abe5e2573d9" id="r_gaebf89adb3311433458852abe5e2573d9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaebf89adb3311433458852abe5e2573d9">uhsd_datetime_set</a> (uhsd_u32 sec, uhsd_u32 usec)</td></tr>
+<tr class="memdesc:gaebf89adb3311433458852abe5e2573d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前时间  <br /></td></tr>
+<tr class="separator:gaebf89adb3311433458852abe5e2573d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaceb4e6ff107e4c28e477276333bf7fb7" id="r_gaceb4e6ff107e4c28e477276333bf7fb7"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaceb4e6ff107e4c28e477276333bf7fb7">uhsd_ble_adv_scan_passthrough_rule_set</a> (uhsd_u8 opt, <a class="el" href="structuhsd__ble__adv__scan__passthrough__rules__t.html">uhsd_ble_adv_scan_passthrough_rules_t</a> *rules, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:gaceb4e6ff107e4c28e477276333bf7fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置蓝牙广播透传规则  <br /></td></tr>
+<tr class="separator:gaceb4e6ff107e4c28e477276333bf7fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20d1167bc6b08d4a10c6fa87500abc2c" id="r_ga20d1167bc6b08d4a10c6fa87500abc2c"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga20d1167bc6b08d4a10c6fa87500abc2c">uhsd_ble_adv_scan_passthrough_start</a> (uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga20d1167bc6b08d4a10c6fa87500abc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启蓝牙广播透传功能  <br /></td></tr>
+<tr class="separator:ga20d1167bc6b08d4a10c6fa87500abc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6d8eb1909fd24e0c5bd4bd5f228bb9c" id="r_gac6d8eb1909fd24e0c5bd4bd5f228bb9c"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gac6d8eb1909fd24e0c5bd4bd5f228bb9c">uhsd_ble_adv_scan_passthrough_stop</a> (uhsd_void)</td></tr>
+<tr class="memdesc:gac6d8eb1909fd24e0c5bd4bd5f228bb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止蓝牙广播透传功能  <br /></td></tr>
+<tr class="separator:gac6d8eb1909fd24e0c5bd4bd5f228bb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b9df499c92a354884b06775ce6e478a" id="r_ga5b9df499c92a354884b06775ce6e478a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5b9df499c92a354884b06775ce6e478a">uhsd_log_upload_conifg</a> (<a class="el" href="structuhsd__log__upload__config__t.html">uhsd_log_upload_config_t</a> *config)</td></tr>
+<tr class="memdesc:ga5b9df499c92a354884b06775ce6e478a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置日志上传参数  <br /></td></tr>
+<tr class="separator:ga5b9df499c92a354884b06775ce6e478a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5169ca5be677afabc20378208a3fb363" id="r_ga5169ca5be677afabc20378208a3fb363"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5169ca5be677afabc20378208a3fb363">uhsd_log_upload_status_register</a> (<a class="el" href="group__grp__uhsd.html#gaa414ae9a3c28f0750b58d4ffa114c0db">uhsd_log_upload_status_cb</a> status_cb, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga5169ca5be677afabc20378208a3fb363"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志上传状态监听注册  <br /></td></tr>
+<tr class="separator:ga5169ca5be677afabc20378208a3fb363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae75b51ab53a118a782a2c60cef8f946" id="r_gaae75b51ab53a118a782a2c60cef8f946"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaae75b51ab53a118a782a2c60cef8f946">uhsd_log_upload_suspend</a> (uhsd_void)</td></tr>
+<tr class="memdesc:gaae75b51ab53a118a782a2c60cef8f946"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止日志上传  <br /></td></tr>
+<tr class="separator:gaae75b51ab53a118a782a2c60cef8f946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84537bcfbfea7dff68b623deeba75ee5" id="r_ga84537bcfbfea7dff68b623deeba75ee5"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga84537bcfbfea7dff68b623deeba75ee5">uhsd_log_upload_resume</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga84537bcfbfea7dff68b623deeba75ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复日志上传  <br /></td></tr>
+<tr class="separator:ga84537bcfbfea7dff68b623deeba75ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbebebcf440db481e29bc9b3d37c626b" id="r_gafbebebcf440db481e29bc9b3d37c626b"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gafbebebcf440db481e29bc9b3d37c626b">uhsd_ble_enable_async</a> (uhsd_u32 function, uhsd_void(*sd_ble_enable_ret_cb)(uhsd_s32 ret))</td></tr>
+<tr class="memdesc:gafbebebcf440db481e29bc9b3d37c626b"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启U+BLE业务  <br /></td></tr>
+<tr class="separator:gafbebebcf440db481e29bc9b3d37c626b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafde2540bc6eff8294c4e6a6bcf3c2a68" id="r_gafde2540bc6eff8294c4e6a6bcf3c2a68"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gafde2540bc6eff8294c4e6a6bcf3c2a68">uhsd_ble_disable_async</a> (uhsd_u32 function, uhsd_void(*sd_ble_disable_ret_cb)(uhsd_s32 ret))</td></tr>
+<tr class="memdesc:gafde2540bc6eff8294c4e6a6bcf3c2a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭U+BLE业务  <br /></td></tr>
+<tr class="separator:gafde2540bc6eff8294c4e6a6bcf3c2a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga703f3574faaf86a62545fadea74d80c2" id="r_ga703f3574faaf86a62545fadea74d80c2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga703f3574faaf86a62545fadea74d80c2">uhsd_wifi_enable_async</a> (uhsd_void(*sd_wifi_enable_ret_cb)(uhsd_s32 ret, uhsd_void *user_data), uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga703f3574faaf86a62545fadea74d80c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启Wi-Fi功能  <br /></td></tr>
+<tr class="separator:ga703f3574faaf86a62545fadea74d80c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5298c518549141aef99af69d86f9c7ac" id="r_ga5298c518549141aef99af69d86f9c7ac"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5298c518549141aef99af69d86f9c7ac">uhsd_wifi_disable_async</a> (uhsd_void(*sd_wifi_disable_ret_cb)(uhsd_s32 ret, uhsd_void *user_data), uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga5298c518549141aef99af69d86f9c7ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭Wi-Fi功能  <br /></td></tr>
+<tr class="separator:ga5298c518549141aef99af69d86f9c7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78aa18d4e81506f168acd899038e6a0d" id="r_ga78aa18d4e81506f168acd899038e6a0d"><td class="memItemLeft" align="right" valign="top"><a id="ga78aa18d4e81506f168acd899038e6a0d" name="ga78aa18d4e81506f168acd899038e6a0d"></a>
+uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_scene_pair_start</b> (uhsd_void)</td></tr>
+<tr class="memdesc:ga78aa18d4e81506f168acd899038e6a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">联动配对业务开始 <br /></td></tr>
+<tr class="separator:ga78aa18d4e81506f168acd899038e6a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4cd05bf9d59f46df726785bf7b7a538" id="r_gaa4cd05bf9d59f46df726785bf7b7a538"><td class="memItemLeft" align="right" valign="top"><a id="gaa4cd05bf9d59f46df726785bf7b7a538" name="gaa4cd05bf9d59f46df726785bf7b7a538"></a>
+uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_scene_pair_stop</b> (uhsd_s32 reason)</td></tr>
+<tr class="memdesc:gaa4cd05bf9d59f46df726785bf7b7a538"><td class="mdescLeft">&#160;</td><td class="mdescRight">联动配对业务停止 <br /></td></tr>
+<tr class="separator:gaa4cd05bf9d59f46df726785bf7b7a538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a5a6c92e307be8ccbf2de493192bb29" id="r_ga3a5a6c92e307be8ccbf2de493192bb29"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga3a5a6c92e307be8ccbf2de493192bb29">uhsd_scene_unpair</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga3a5a6c92e307be8ccbf2de493192bb29"><td class="mdescLeft">&#160;</td><td class="mdescRight">解除配对  <br /></td></tr>
+<tr class="separator:ga3a5a6c92e307be8ccbf2de493192bb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga653b3a1f115066a4bf1576dcd1d349f7" id="r_ga653b3a1f115066a4bf1576dcd1d349f7"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga653b3a1f115066a4bf1576dcd1d349f7">uhsd_scene_enable</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga653b3a1f115066a4bf1576dcd1d349f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启场景  <br /></td></tr>
+<tr class="separator:ga653b3a1f115066a4bf1576dcd1d349f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a185b8f79914d1e3bac7bf05a1f7e2f" id="r_ga7a185b8f79914d1e3bac7bf05a1f7e2f"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga7a185b8f79914d1e3bac7bf05a1f7e2f">uhsd_scene_disable</a> (uhsd_void)</td></tr>
+<tr class="memdesc:ga7a185b8f79914d1e3bac7bf05a1f7e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭场景  <br /></td></tr>
+<tr class="separator:ga7a185b8f79914d1e3bac7bf05a1f7e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f1d58cffd5fb9234fc8cd65daf5bc6a" id="r_ga0f1d58cffd5fb9234fc8cd65daf5bc6a"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga0f1d58cffd5fb9234fc8cd65daf5bc6a">uhsd_scene_status_get</a> (uhsd_u8 *pair_status, uhsd_u8 *scene_status)</td></tr>
+<tr class="memdesc:ga0f1d58cffd5fb9234fc8cd65daf5bc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取场景状态  <br /></td></tr>
+<tr class="separator:ga0f1d58cffd5fb9234fc8cd65daf5bc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1e6d06ca33a43a6f3f643169dc92d96" id="r_gaa1e6d06ca33a43a6f3f643169dc92d96"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa1e6d06ca33a43a6f3f643169dc92d96">uhsd_scene_data_set</a> (<a class="el" href="struct__uhsd__scene__data__t__.html">uhsd_scene_data_t</a> *scene_data)</td></tr>
+<tr class="memdesc:gaa1e6d06ca33a43a6f3f643169dc92d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">预置模版数据 设置结束后，使用 <a class="el" href="group__grp__uhsd.html#gaea1dbdc050103da405eff6d19b90038b">uhsd_scene_data_update</a> 接口触发数据更新。  <br /></td></tr>
+<tr class="separator:gaa1e6d06ca33a43a6f3f643169dc92d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea1dbdc050103da405eff6d19b90038b" id="r_gaea1dbdc050103da405eff6d19b90038b"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaea1dbdc050103da405eff6d19b90038b">uhsd_scene_data_update</a> (uhsd_void)</td></tr>
+<tr class="memdesc:gaea1dbdc050103da405eff6d19b90038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发预置模版数据更新  <br /></td></tr>
+<tr class="separator:gaea1dbdc050103da405eff6d19b90038b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac66261bb2d2c66cba9dfe6dd5043b313" id="r_gac66261bb2d2c66cba9dfe6dd5043b313"><td class="memItemLeft" align="right" valign="top">uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gac66261bb2d2c66cba9dfe6dd5043b313">uhsd_scene_data_async_read_resp</a> (uhsd_u32 data_id, uhsd_u32 offset, uhsd_char *buf, uhsd_u32 len)</td></tr>
+<tr class="separator:gac66261bb2d2c66cba9dfe6dd5043b313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>SmartDevice 通用接口 </p>
+<p>SmartDevice 场景功能接口</p>
+<p>SmartDevice 错误码</p>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>hudx (<a href="#" onclick="location.href='mai'+'lto:'+'hud'+'in'+'gxu'+'an'+'.xi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">hudin<span class="obfuscator">.nosp@m.</span>gxua<span class="obfuscator">.nosp@m.</span>n.xia<span class="obfuscator">.nosp@m.</span>n@ha<span class="obfuscator">.nosp@m.</span>ier.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-08-14</dd></dl>
+<pre>
+<pre class="fragment">功能包括：
+1. SmartDevice初始化
+2. SmartDevice重置
+3. 设备APP重启通知SmartDevice功能
+4. SmartDevice版本查询
+5. SmartDevice日志控制
+6. 时间同步功能
+7. 日志上传功能
+</pre>
+</pre><dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>zhoudong (<a href="#" onclick="location.href='mai'+'lto:'+'zho'+'ud'+'ong'+'@h'+'aie'+'r.'+'com'; return false;">zhoud<span class="obfuscator">.nosp@m.</span>ong@<span class="obfuscator">.nosp@m.</span>haier<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-08-31</dd></dl>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>hudx (<a href="#" onclick="location.href='mai'+'lto:'+'hud'+'in'+'gxu'+'an'+'.xi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">hudin<span class="obfuscator">.nosp@m.</span>gxua<span class="obfuscator">.nosp@m.</span>n.xia<span class="obfuscator">.nosp@m.</span>n@ha<span class="obfuscator">.nosp@m.</span>ier.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-06-12</dd></dl>
+<pre>
+<pre class="fragment"></pre>
+</pre> <h2 class="groupheader">宏定义说明</h2>
+<a id="ga7b5ef462766cfa8bb137c808e87847cc" name="ga7b5ef462766cfa8bb137c808e87847cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b5ef462766cfa8bb137c808e87847cc">&#9670;&#160;</a></span>UHSD_E_CFG_USER_CONFIGURING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_CFG_USER_CONFIGURING&#160;&#160;&#160;(-200)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设备配置错误 -200 ～ -249 </p>
+
+</div>
+</div>
+<a id="gae2729b9d7193bd676eba68bf7233fd83" name="gae2729b9d7193bd676eba68bf7233fd83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2729b9d7193bd676eba68bf7233fd83">&#9670;&#160;</a></span>UHSD_E_COMMON_COMM_FAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_COMMON_COMM_FAIL&#160;&#160;&#160;(-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>一般错误 -1 ～ -99 </p>
+
+</div>
+</div>
+<a id="ga78182583499eaf6442860924c13c6b59" name="ga78182583499eaf6442860924c13c6b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78182583499eaf6442860924c13c6b59">&#9670;&#160;</a></span>UHSD_E_COMMON_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_COMMON_OK&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UHSD错误码定义 一般错误 -1 ～ -99 设备接入错误 -100 ～ -199 设备配置错误 -200 ～ -249 设备绑定错误 -250 ～ -299 设备OTA错误 -300 ～ -349 消息推送错误 -350 ～ -399 数据转换功能错误 -400 ～ -450 用户token错误 -451 ～ -499 video错误 -500 ～ -599 </p>
+<p>成功 </p>
+
+</div>
+</div>
+<a id="ga36c6537cef957e03d3ec96af445f0d97" name="ga36c6537cef957e03d3ec96af445f0d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36c6537cef957e03d3ec96af445f0d97">&#9670;&#160;</a></span>UHSD_E_DATACVT_PRESET_DATA_MISSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_DATACVT_PRESET_DATA_MISSED&#160;&#160;&#160;(-401)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>没有预置文件，当下载成功后，会通过相应的回调接口通知设备APP </p>
+
+</div>
+</div>
+<a id="gacd724663421d6324213ac733c285abcc" name="gacd724663421d6324213ac733c285abcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd724663421d6324213ac733c285abcc">&#9670;&#160;</a></span>UHSD_E_DATACVT_UNKNOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_DATACVT_UNKNOWN&#160;&#160;&#160;(-400)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>消息推送错误 -350 ～ -399</p>
+<p>数据转换接错误 -400 ～ -450 </p>
+
+</div>
+</div>
+<a id="gaff582d59cc720d1aa92ef5f847c85911" name="gaff582d59cc720d1aa92ef5f847c85911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff582d59cc720d1aa92ef5f847c85911">&#9670;&#160;</a></span>UHSD_E_DCC_INVALID_LISTENER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_DCC_INVALID_LISTENER&#160;&#160;&#160;(-600)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DCC错误码 -600 ～ -699 </p>
+
+</div>
+</div>
+<a id="gaa91d4d522c2415538065ac2d22c6f7b9" name="gaa91d4d522c2415538065ac2d22c6f7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa91d4d522c2415538065ac2d22c6f7b9">&#9670;&#160;</a></span>UHSD_E_DEV_NOT_FIND_DEV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_DEV_NOT_FIND_DEV&#160;&#160;&#160;(-100)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设备接入错误 -100 ～ -199 </p>
+
+</div>
+</div>
+<a id="ga5d480114f8c9b82b39ef80d0c73529fd" name="ga5d480114f8c9b82b39ef80d0c73529fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d480114f8c9b82b39ef80d0c73529fd">&#9670;&#160;</a></span>UHSD_E_OTA_ALREADY_UPGRADING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_OTA_ALREADY_UPGRADING&#160;&#160;&#160;(-300)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设备绑定错误 -250 ～ -299</p>
+<p>设备OTA错误 -300 ～ -349 </p>
+
+</div>
+</div>
+<a id="ga80a31aa204c344c14873d4a212545a19" name="ga80a31aa204c344c14873d4a212545a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80a31aa204c344c14873d4a212545a19">&#9670;&#160;</a></span>UHSD_E_P2P_RSC_CHANNEL_DISCONNECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_P2P_RSC_CHANNEL_DISCONNECT&#160;&#160;&#160;(-400)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>P2P资源上报错误 -400 ～ -430 </p>
+
+</div>
+</div>
+<a id="ga9ec71b91fd6f7e58bfe6006d0bf0ac47" name="ga9ec71b91fd6f7e58bfe6006d0bf0ac47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">&#9670;&#160;</a></span>UHSD_E_USER_TOKEN_SYSTEM_ERROR <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_USER_TOKEN_SYSTEM_ERROR&#160;&#160;&#160;(-451)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>用户token相关错误 -451 ～ -499 </p>
+
+</div>
+</div>
+<a id="ga9ec71b91fd6f7e58bfe6006d0bf0ac47" name="ga9ec71b91fd6f7e58bfe6006d0bf0ac47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">&#9670;&#160;</a></span>UHSD_E_USER_TOKEN_SYSTEM_ERROR <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_USER_TOKEN_SYSTEM_ERROR&#160;&#160;&#160;(-451)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>用户token相关错误 -451 ～ -499 </p>
+
+</div>
+</div>
+<a id="ga1c9aad54e8fecb68e960ae0d72727caf" name="ga1c9aad54e8fecb68e960ae0d72727caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c9aad54e8fecb68e960ae0d72727caf">&#9670;&#160;</a></span>UHSD_E_VIDEO_AUTH_ONLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_E_VIDEO_AUTH_ONLINE&#160;&#160;&#160;(-500)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>video错误码 -400 ～ -430 </p>
+
+</div>
+</div>
+<a id="ga1748b99b9b74917fe32fa34bafaa6993" name="ga1748b99b9b74917fe32fa34bafaa6993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1748b99b9b74917fe32fa34bafaa6993">&#9670;&#160;</a></span>UHSD_LOG_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_LOG_OFF&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SmartDevice日志控制 </p>
+<p>用户可使用此接口调节SmartDevice的日志级别。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>如果为NULL，则为全局设置，否则为对应的组件名称。 详见 文档。 </td></tr>
+    <tr><td class="paramname">level</td><td>0 关闭日志。 1-Verbose 2-Debug 3-Info 4-Warn 5-Error 6-Fatal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 接口调用结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga11b62d6ee8bd9253039424fa86c9a760" name="ga11b62d6ee8bd9253039424fa86c9a760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11b62d6ee8bd9253039424fa86c9a760">&#9670;&#160;</a></span>UHSD_R_BIND_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_BIND_ERROR&#160;&#160;&#160;(509)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绑定失败，绑定中使用 </p>
+
+</div>
+</div>
+<a id="ga661b8888e8dace753ce7a8c985525031" name="ga661b8888e8dace753ce7a8c985525031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga661b8888e8dace753ce7a8c985525031">&#9670;&#160;</a></span>UHSD_R_CMD_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_CMD_TIMEOUT&#160;&#160;&#160;(11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>命令执行超时，主要指设备底板执行命令超时 </p>
+
+</div>
+</div>
+<a id="ga36cf089f9553dbfce5a7a0777ddbb6d2" name="ga36cf089f9553dbfce5a7a0777ddbb6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36cf089f9553dbfce5a7a0777ddbb6d2">&#9670;&#160;</a></span>UHSD_R_COMM_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_COMM_ERROR&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>通用错误应答码 </p>
+
+</div>
+</div>
+<a id="gae17b0676be808ea395f316859827b5a7" name="gae17b0676be808ea395f316859827b5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae17b0676be808ea395f316859827b5a7">&#9670;&#160;</a></span>UHSD_R_EXIT_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_EXIT_PAIR&#160;&#160;&#160;(510)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>退出配对，配对过程中使用 </p>
+
+</div>
+</div>
+<a id="ga94c3ba450ebf4b48a0c9983e3ae5111c" name="ga94c3ba450ebf4b48a0c9983e3ae5111c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94c3ba450ebf4b48a0c9983e3ae5111c">&#9670;&#160;</a></span>UHSD_R_ILLEGAL_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_ILLEGAL_VALUE&#160;&#160;&#160;(13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>非法值，主要指设备操作的操作值非法，例如温度设置的温度值越界 </p>
+
+</div>
+</div>
+<a id="ga5206951c0629cb7543b6c20fede8e7f6" name="ga5206951c0629cb7543b6c20fede8e7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5206951c0629cb7543b6c20fede8e7f6">&#9670;&#160;</a></span>UHSD_R_INVALID_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_INVALID_CMD&#160;&#160;&#160;(12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>无效命令，主要指命令执行逻辑错误,例如关机状态下再关机等 </p>
+
+</div>
+</div>
+<a id="ga9782f69ff22cb134a6e69b06554abda9" name="ga9782f69ff22cb134a6e69b06554abda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9782f69ff22cb134a6e69b06554abda9">&#9670;&#160;</a></span>UHSD_R_INVALID_DEVICE_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_INVALID_DEVICE_TYPE&#160;&#160;&#160;(505)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>无效设备类型，启动配对阶段使用 </p>
+
+</div>
+</div>
+<a id="gaf188f15821d965ef26165d468db076a2" name="gaf188f15821d965ef26165d468db076a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf188f15821d965ef26165d468db076a2">&#9670;&#160;</a></span>UHSD_R_PAIR_DEV_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_PAIR_DEV_MAX&#160;&#160;&#160;(507)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>配对设备个数达上线,启动配对阶段使用 </p>
+
+</div>
+</div>
+<a id="ga60135ae05fe8d3f9c86bc536e3ba6df6" name="ga60135ae05fe8d3f9c86bc536e3ba6df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60135ae05fe8d3f9c86bc536e3ba6df6">&#9670;&#160;</a></span>UHSD_R_PAIR_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_PAIR_TIMEOUT&#160;&#160;&#160;(508)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>配对超时，配对过程中使用 </p>
+
+</div>
+</div>
+<a id="ga3a510a8c1af3b09ec878ece616b9d0d0" name="ga3a510a8c1af3b09ec878ece616b9d0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a510a8c1af3b09ec878ece616b9d0d0">&#9670;&#160;</a></span>UHSD_R_PARAM_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_PARAM_ERROR&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>参数错误,缺少部分必填字段 </p>
+
+</div>
+</div>
+<a id="ga55e288f8081a4a61b8bfb491f3701bbf" name="ga55e288f8081a4a61b8bfb491f3701bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55e288f8081a4a61b8bfb491f3701bbf">&#9670;&#160;</a></span>UHSD_R_REPEAT_STARTPAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_REPEAT_STARTPAIR&#160;&#160;&#160;(506)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>重复启动配对，启动配对阶段使用 </p>
+
+</div>
+</div>
+<a id="gaef05e4b3b4d81ebdc9a89fd7014a492c" name="gaef05e4b3b4d81ebdc9a89fd7014a492c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef05e4b3b4d81ebdc9a89fd7014a492c">&#9670;&#160;</a></span>UHSD_R_RSP_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_RSP_OK&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>应答码，devApp调用应答接口时使用 </p>
+
+</div>
+</div>
+<a id="ga3fc2e46c4162e1de728348f17958e2a2" name="ga3fc2e46c4162e1de728348f17958e2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3fc2e46c4162e1de728348f17958e2a2">&#9670;&#160;</a></span>UHSD_R_STARTPAIR_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_STARTPAIR_FAILED&#160;&#160;&#160;(504)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>配对失败，启动配对阶段使用 </p>
+
+</div>
+</div>
+<a id="gaf4f136a59adf8b87c36f409aa3faa548" name="gaf4f136a59adf8b87c36f409aa3faa548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4f136a59adf8b87c36f409aa3faa548">&#9670;&#160;</a></span>UHSD_R_UNKNOWN_DEVICE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_UNKNOWN_DEVICE&#160;&#160;&#160;(503)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>未知设备，指向设备发送指令时，设备已注销或不存在 </p>
+
+</div>
+</div>
+<a id="ga1b743249074e04acb43fd3e7d0cac8af" name="ga1b743249074e04acb43fd3e7d0cac8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b743249074e04acb43fd3e7d0cac8af">&#9670;&#160;</a></span>UHSD_R_UNSUPPORTED_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_UNSUPPORTED_CMD&#160;&#160;&#160;(17)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>不支持的命令,主要指读属性或写属性请求时，设备无此属性，或者操作时，设备不支持此操作 </p>
+
+</div>
+</div>
+<a id="ga1c4fe79eb10fdbe214bfc4d8e3fc1eca" name="ga1c4fe79eb10fdbe214bfc4d8e3fc1eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c4fe79eb10fdbe214bfc4d8e3fc1eca">&#9670;&#160;</a></span>UHSD_R_UPGRADING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UHSD_R_UPGRADING&#160;&#160;&#160;(501)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设备当前正在升级，不支持控制 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gacfedf20d251da8e0f02fe28bc1c5d749" name="gacfedf20d251da8e0f02fe28bc1c5d749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfedf20d251da8e0f02fe28bc1c5d749">&#9670;&#160;</a></span>uhsd_ble_adv_scan_passthrough_data_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_ble_adv_scan_passthrough_data_cb) (uhsd_u8 *data, uhsd_u8 *data_len, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝牙广播透传数据回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_len</td><td>数据长度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>用户自定义数据返回 <a class="el" href="group__grp__uhsd.html#ga20d1167bc6b08d4a10c6fa87500abc2c">uhsd_ble_adv_scan_passthrough_start</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4267374ef4fe6432dbc725d005b85528" name="ga4267374ef4fe6432dbc725d005b85528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4267374ef4fe6432dbc725d005b85528">&#9670;&#160;</a></span>uhsd_ble_adv_scan_passthrough_rules_set_result_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_s32(* uhsd_ble_adv_scan_passthrough_rules_set_result_cb) (uhsd_s32 result, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>蓝牙广播透传规则设置结果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>设置结果：0:成功；1:扫描规则前后矛盾；2:扫描规则解析失败；3:无可用资源；4:扫描规则已执行。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga112496329e3cd66db0dd1ba6526b06af" name="ga112496329e3cd66db0dd1ba6526b06af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga112496329e3cd66db0dd1ba6526b06af">&#9670;&#160;</a></span>uhsd_datetime_sync_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_datetime_sync_cb) (uhsd_u32 sec, uhsd_u32 usec)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>函数指针，用户通过注册此函数获取系统时间同步的通知。 </p>
+<p>SDSDK=&gt;DEVAPP </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">时间同步结果，如果sec和usec均为0，则此次时间同步失败</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_void </dd></dl>
+
+</div>
+</div>
+<a id="gaa414ae9a3c28f0750b58d4ffa114c0db" name="gaa414ae9a3c28f0750b58d4ffa114c0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa414ae9a3c28f0750b58d4ffa114c0db">&#9670;&#160;</a></span>uhsd_log_upload_status_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_log_upload_status_cb) (uhsd_u8 state, uhsd_void *user_data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日志上传状态监听回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">state</td><td>0x00-关闭日志上传功能,0x01-打开日志上传功能 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_data</td><td>用户指针</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaceb4e6ff107e4c28e477276333bf7fb7" name="gaceb4e6ff107e4c28e477276333bf7fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaceb4e6ff107e4c28e477276333bf7fb7">&#9670;&#160;</a></span>uhsd_ble_adv_scan_passthrough_rule_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_ble_adv_scan_passthrough_rule_set </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8&#160;</td>
+          <td class="paramname"><em>opt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__ble__adv__scan__passthrough__rules__t.html">uhsd_ble_adv_scan_passthrough_rules_t</a> *&#160;</td>
+          <td class="paramname"><em>rules</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置蓝牙广播透传规则 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>0: 清除所有规则； 1: 设置规则； </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rules</td><td>规则 <a class="el" href="structuhsd__ble__adv__scan__passthrough__rules__t.html">uhsd_ble_adv_scan_passthrough_rules_t</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result_cb</td><td>设置结果 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>自定义数据， <a class="el" href="group__grp__uhsd.html#ga4267374ef4fe6432dbc725d005b85528">uhsd_ble_adv_scan_passthrough_rules_set_result_cb</a> 时返回。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>UHSD_API </dd></dl>
+
+</div>
+</div>
+<a id="ga20d1167bc6b08d4a10c6fa87500abc2c" name="ga20d1167bc6b08d4a10c6fa87500abc2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20d1167bc6b08d4a10c6fa87500abc2c">&#9670;&#160;</a></span>uhsd_ble_adv_scan_passthrough_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_ble_adv_scan_passthrough_start </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启蓝牙广播透传功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opt</td><td></td></tr>
+    <tr><td class="paramname">rules</td><td></td></tr>
+    <tr><td class="paramname">result_cb</td><td></td></tr>
+    <tr><td class="paramname">user_data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>UHSD_API </dd></dl>
+
+</div>
+</div>
+<a id="gac6d8eb1909fd24e0c5bd4bd5f228bb9c" name="gac6d8eb1909fd24e0c5bd4bd5f228bb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6d8eb1909fd24e0c5bd4bd5f228bb9c">&#9670;&#160;</a></span>uhsd_ble_adv_scan_passthrough_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_ble_adv_scan_passthrough_stop </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止蓝牙广播透传功能 </p>
+<dl class="section return"><dt>返回</dt><dd>UHSD_API </dd></dl>
+
+</div>
+</div>
+<a id="gafde2540bc6eff8294c4e6a6bcf3c2a68" name="gafde2540bc6eff8294c4e6a6bcf3c2a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafde2540bc6eff8294c4e6a6bcf3c2a68">&#9670;&#160;</a></span>uhsd_ble_disable_async()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_ble_disable_async </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void(*)(uhsd_s32 ret)&#160;</td>
+          <td class="paramname"><em>sd_ble_disable_ret_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭U+BLE业务 </p>
+<p>关闭后，将无法使用OSDK的蓝牙小程序直控功能。 业务包括：</p><ol type="1">
+<li>关闭快连业务</li>
+<li>关闭小程序业务 <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fucntion</td><td>0x01 关闭快连； 0x02 关闭小程序； 0xFFFFFFFF 关闭所有业务。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">返回执行结果，注意，需要等待完全执行结束后，再进行后续操作。ret</td><td>0x00 成功 ret: &lt;0 失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>异常 UHSD_ERROR_NUM</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>即使设备APP关闭U+BLE业务，当设备APP调用进入配置接口时，若设备APP支持经典蓝牙，则需要设备APP关闭自己的经典蓝牙，并确保uhsd_ble_enable已经开启。 </dd></dl>
+</li>
+</ol>
+
+</div>
+</div>
+<a id="gafbebebcf440db481e29bc9b3d37c626b" name="gafbebebcf440db481e29bc9b3d37c626b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbebebcf440db481e29bc9b3d37c626b">&#9670;&#160;</a></span>uhsd_ble_enable_async()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_ble_enable_async </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void(*)(uhsd_s32 ret)&#160;</td>
+          <td class="paramname"><em>sd_ble_enable_ret_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启U+BLE业务 </p>
+<p>OSDK初始化后，默认开启。</p>
+<p>业务包括：</p><ol type="1">
+<li>开启快连业务</li>
+<li>开启小程序业务 <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>0x01 开启快连； 0x02 开启小程序； 0xFFFFFFFF 开启所有业务。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">返回执行结果，注意，需要等待完全执行结束后，再进行后续操作。ret</td><td>0x00 成功 ret: &lt;0 失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>异常 UHSD_ERROR_NUM </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ol>
+
+</div>
+</div>
+<a id="gaa8e2a35fb12277538d3c53a813c39e3f" name="gaa8e2a35fb12277538d3c53a813c39e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8e2a35fb12277538d3c53a813c39e3f">&#9670;&#160;</a></span>uhsd_datetime_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_datetime_get </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u32 *&#160;</td>
+          <td class="paramname"><em>sec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u32 *&#160;</td>
+          <td class="paramname"><em>usec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">secs</td><td>1970年到现在的秒数 </td></tr>
+    <tr><td class="paramname">usec</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 接口返回值 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>时间已经同步。 </td></tr>
+    <tr><td class="paramname">-1</td><td>时间未同步。 需要用户调用 <a class="el" href="group__grp__uhsd.html#ga2caaec13250e5dad96f42b8b0067d127">uhsd_datetime_sync_start</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaebf89adb3311433458852abe5e2573d9" name="gaebf89adb3311433458852abe5e2573d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebf89adb3311433458852abe5e2573d9">&#9670;&#160;</a></span>uhsd_datetime_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_datetime_set </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>sec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>usec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置当前时间 </p>
+<p>当用户不需要OSDK进行时间同步时，可使用此接口进行时间设置, 设置的时间为1970年到现在的秒数 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">secs</td><td>设置时间的秒数整数部分 </td></tr>
+    <tr><td class="paramname">usec</td><td>设置时间秒数的小数部分，以微秒为单位, 取值范围为[0, 1000000); </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32</dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>如果调用了此接口，则SmartDevice不会自行进行时间同步。 </dd></dl>
+
+</div>
+</div>
+<a id="ga2caaec13250e5dad96f42b8b0067d127" name="ga2caaec13250e5dad96f42b8b0067d127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2caaec13250e5dad96f42b8b0067d127">&#9670;&#160;</a></span>uhsd_datetime_sync_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_datetime_sync_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsd.html#ga112496329e3cd66db0dd1ba6526b06af">uhsd_datetime_sync_cb</a>&#160;</td>
+          <td class="paramname"><em>func_cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SmartDevice时间同步功能【使用wifibase协议时才有效】 </p>
+<p>设备APP通过调用此接口，SmartDevice开始进行时间同步。 同步结果则通过回调通知设备APP。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func_cb</td><td>时间同步回调</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga47380e1d82d258c467d8352a88be2394" name="ga47380e1d82d258c467d8352a88be2394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47380e1d82d258c467d8352a88be2394">&#9670;&#160;</a></span>uhsd_factory_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_factory_reset </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SmartDevice SDK 恢复出厂设置。 </p>
+<p>SmartDevice清空当前状态以及SDK存储的数据。</p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 接口调用结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功。 </td></tr>
+    <tr><td class="paramname">others</td><td>失败。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd><ol type="1">
+<li>如用户自行重制Flash，可能会导致SmartDevice运行异常。</li>
+<li>调用此接口后，建议用户自行重启设备。重启前，需要调用uhsd_reboot_notify接口以通知SmartDevice SDK释放对应资源并上报离线原因。 默认重启时间5秒。 </li>
+</ol>
+</dd></dl>
+
+</div>
+</div>
+<a id="ga17e2e90e1a17f4d863883594015936ef" name="ga17e2e90e1a17f4d863883594015936ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17e2e90e1a17f4d863883594015936ef">&#9670;&#160;</a></span>uhsd_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_init </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>smartDevice SDK 初始化 </p>
+<p>设备APP必须调用此接口成功后，才可调用SmartDevice提供的任意接口。</p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>异常 UHSD_ERROR_NUM </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1d317ae4c08f6a46681a54935a8e988e" name="ga1d317ae4c08f6a46681a54935a8e988e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d317ae4c08f6a46681a54935a8e988e">&#9670;&#160;</a></span>uhsd_log_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_log_get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调用此接口获取当前日志级别 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回当前日志级别，失败返回&lt;0 UHSD_LOG_LEVEL_XXX </dd></dl>
+
+</div>
+</div>
+<a id="ga5b9df499c92a354884b06775ce6e478a" name="ga5b9df499c92a354884b06775ce6e478a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b9df499c92a354884b06775ce6e478a">&#9670;&#160;</a></span>uhsd_log_upload_conifg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_log_upload_conifg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuhsd__log__upload__config__t.html">uhsd_log_upload_config_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置日志上传参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>日志上传的配置参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>失败 </td></tr>
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga84537bcfbfea7dff68b623deeba75ee5" name="ga84537bcfbfea7dff68b623deeba75ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84537bcfbfea7dff68b623deeba75ee5">&#9670;&#160;</a></span>uhsd_log_upload_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_log_upload_resume </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>恢复日志上传 </p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5169ca5be677afabc20378208a3fb363" name="ga5169ca5be677afabc20378208a3fb363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5169ca5be677afabc20378208a3fb363">&#9670;&#160;</a></span>uhsd_log_upload_status_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_log_upload_status_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsd.html#gaa414ae9a3c28f0750b58d4ffa114c0db">uhsd_log_upload_status_cb</a>&#160;</td>
+          <td class="paramname"><em>status_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>日志上传状态监听注册 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status_cb</td><td>状态回调 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>用户数据指针</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaae75b51ab53a118a782a2c60cef8f946" name="gaae75b51ab53a118a782a2c60cef8f946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae75b51ab53a118a782a2c60cef8f946">&#9670;&#160;</a></span>uhsd_log_upload_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_log_upload_suspend </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止日志上传 </p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf4894b8b3dba67e00eefd0a1b11304f8" name="gaf4894b8b3dba67e00eefd0a1b11304f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4894b8b3dba67e00eefd0a1b11304f8">&#9670;&#160;</a></span>uhsd_reboot_notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_reboot_notify </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void(*)(uhsd_u32 seconds)&#160;</td>
+          <td class="paramname"><em>sd_reboot_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SmartDevice SDK 设备重启通知 </p>
+<p>设备APP需要进行设备重启时，需通知SmartDevice，以防出现系统异常。 SmartDevice系统 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>重启原因 </td></tr>
+    <tr><td class="paramname">cb</td><td>SmartDevice确认可以重启后，通过此回调反馈给设备APP。 如果seconds=0，则可以立即重启。否则，需要设备APP延迟相应的秒数后重启。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 接口调用结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>接口调用成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>接口调用异常</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>SDK不会自动重启，需要设备APP收到sd_reboot_cb回调后，自行调用系统接口重启设备。 </dd></dl>
+
+</div>
+</div>
+<a id="gac66261bb2d2c66cba9dfe6dd5043b313" name="gac66261bb2d2c66cba9dfe6dd5043b313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac66261bb2d2c66cba9dfe6dd5043b313">&#9670;&#160;</a></span>uhsd_scene_data_async_read_resp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_data_async_read_resp </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>data_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u32&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_id</td><td>数据标识（或是文件标识） </td></tr>
+    <tr><td class="paramname">offset</td><td>返回的数据偏移地址 </td></tr>
+    <tr><td class="paramname">buf</td><td>数据 </td></tr>
+    <tr><td class="paramname">len</td><td>此次返回的数据大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">others</td><td>失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa1e6d06ca33a43a6f3f643169dc92d96" name="gaa1e6d06ca33a43a6f3f643169dc92d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1e6d06ca33a43a6f3f643169dc92d96">&#9670;&#160;</a></span>uhsd_scene_data_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_data_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__uhsd__scene__data__t__.html">uhsd_scene_data_t</a> *&#160;</td>
+          <td class="paramname"><em>scene_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>预置模版数据 设置结束后，使用 <a class="el" href="group__grp__uhsd.html#gaea1dbdc050103da405eff6d19b90038b">uhsd_scene_data_update</a> 接口触发数据更新。 </p>
+<dl class="section note"><dt>注解</dt><dd>如果有多个文件，则需要多次调用。</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene_data</td><td>模板文件描述信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+
+</div>
+</div>
+<a id="gaea1dbdc050103da405eff6d19b90038b" name="gaea1dbdc050103da405eff6d19b90038b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea1dbdc050103da405eff6d19b90038b">&#9670;&#160;</a></span>uhsd_scene_data_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_data_update </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>触发预置模版数据更新 </p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga7a185b8f79914d1e3bac7bf05a1f7e2f" name="ga7a185b8f79914d1e3bac7bf05a1f7e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a185b8f79914d1e3bac7bf05a1f7e2f">&#9670;&#160;</a></span>uhsd_scene_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_disable </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭场景 </p>
+<p>如关闭场景，所有完成过配对的设备都会停止场景联动。 </p>
+
+</div>
+</div>
+<a id="ga653b3a1f115066a4bf1576dcd1d349f7" name="ga653b3a1f115066a4bf1576dcd1d349f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga653b3a1f115066a4bf1576dcd1d349f7">&#9670;&#160;</a></span>uhsd_scene_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_enable </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启场景 </p>
+<p>如果配对成功，需要使用者进行开启场景。 </p>
+
+</div>
+</div>
+<a id="ga0f1d58cffd5fb9234fc8cd65daf5bc6a" name="ga0f1d58cffd5fb9234fc8cd65daf5bc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f1d58cffd5fb9234fc8cd65daf5bc6a">&#9670;&#160;</a></span>uhsd_scene_status_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_status_get </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>pair_status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>scene_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取场景状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pair_status</td><td>大于0表示已经配对，反之代表未配对 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">scene_status</td><td>大于0表示场景已经使能，反之代表场景已经关闭 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3a5a6c92e307be8ccbf2de493192bb29" name="ga3a5a6c92e307be8ccbf2de493192bb29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a5a6c92e307be8ccbf2de493192bb29">&#9670;&#160;</a></span>uhsd_scene_unpair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhsd_s32 uhsd_scene_unpair </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解除配对 </p>
+<p>支持多 </p>
+
+</div>
+</div>
+<a id="gaa73ea7c4f36891d84599fb12c9194d69" name="gaa73ea7c4f36891d84599fb12c9194d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa73ea7c4f36891d84599fb12c9194d69">&#9670;&#160;</a></span>uhsd_set_domain_region()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_set_domain_region </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_domain_region_t&#160;</td>
+          <td class="paramname"><em>region</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>smatDevice SDK设置域名区域 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">region</td><td>连云环境区域</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 接口调用结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7177aa5193d223173a54be7994f2223a" name="ga7177aa5193d223173a54be7994f2223a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7177aa5193d223173a54be7994f2223a">&#9670;&#160;</a></span>uhsd_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s8 * uhsd_version </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SmartDevice版本查询 </p>
+<p>[x.x.xx]</p>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s8* </dd></dl>
+
+</div>
+</div>
+<a id="ga5298c518549141aef99af69d86f9c7ac" name="ga5298c518549141aef99af69d86f9c7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5298c518549141aef99af69d86f9c7ac">&#9670;&#160;</a></span>uhsd_wifi_disable_async()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_wifi_disable_async </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void(*)(uhsd_s32 ret, uhsd_void *user_data)&#160;</td>
+          <td class="paramname"><em>sd_wifi_disable_ret_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭Wi-Fi功能 </p>
+<ol type="1">
+<li>若用户接管Wi-Fi，则 用户调用此接口后，OSDK需要上报离线原因等操作</li>
+</ol>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">返回执行结果回调，注意，需要等待完全执行结束后，再进行后续操作。ret</td><td>0x00 成功 ret: &lt;0 失败； user_data：用户数据。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>用户数据，sd_wifi_disable_ret_cb 返回时将带回给调用者。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHSD_E_COMMON_COMM_FAIL</td><td>其他原因导致的关闭失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga703f3574faaf86a62545fadea74d80c2" name="ga703f3574faaf86a62545fadea74d80c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga703f3574faaf86a62545fadea74d80c2">&#9670;&#160;</a></span>uhsd_wifi_enable_async()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_wifi_enable_async </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void(*)(uhsd_s32 ret, uhsd_void *user_data)&#160;</td>
+          <td class="paramname"><em>sd_wifi_enable_ret_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启Wi-Fi功能 </p>
+<p>OSDK初始化后，默认开启。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">返回执行结果回调，注意，需要等待完全执行结束后，再进行后续操作。ret</td><td>0x00 成功 ret: &lt;0 失败； user_data：用户数据。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>用户数据，sd_wifi_enable_ret_cb 返回时将带回给调用者。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">UHSD_E_COMMON_RE_ENABLE</td><td>Wi-Fi重复开启 </td></tr>
+    <tr><td class="paramname">UHSD_E_COMMON_COMM_FAIL</td><td>其他原因导致的开启失败。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

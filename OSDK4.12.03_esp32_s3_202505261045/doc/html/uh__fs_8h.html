@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_fs.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__fs_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uh_fs.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhosfs.html">Grp_uhosfs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>本文件接口是参考linux的posix接口, 每个函数的行为、入参、出参、返回值等都和posix保持一致，只是都加了"UHOS_"或者"uhos_"前缀  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="uh__fs__types_8h_source.html">uh_fs_types.h</a>&quot;</code><br />
+</div>
+<p><a href="uh__fs_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gab1629602d015cf368f3758a085437eec" id="r_gab1629602d015cf368f3758a085437eec"><td class="memItemLeft" align="right" valign="top">
+typedef uhos_void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_poll_notify_t</b>) (uhos_void *fds, uhos_void *arg)</td></tr>
+<tr class="separator:gab1629602d015cf368f3758a085437eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga974ddd8d1e0867345423fe5b1e4e982e" id="r_ga974ddd8d1e0867345423fe5b1e4e982e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga974ddd8d1e0867345423fe5b1e4e982e">uhos_fs_init</a> (uhos_void)</td></tr>
+<tr class="memdesc:ga974ddd8d1e0867345423fe5b1e4e982e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化文件系统  <br /></td></tr>
+<tr class="separator:ga974ddd8d1e0867345423fe5b1e4e982e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22a3d6a0ab988fd6eb31baeea6b28fc3" id="r_ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga22a3d6a0ab988fd6eb31baeea6b28fc3">uhos_open</a> (const uhos_char *path, uhos_s32 flags)</td></tr>
+<tr class="memdesc:ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开一个文件或者设备  <br /></td></tr>
+<tr class="separator:ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe7536fe03089ea53be19af1ca14d2a8" id="r_gafe7536fe03089ea53be19af1ca14d2a8"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gafe7536fe03089ea53be19af1ca14d2a8">uhos_close</a> (uhos_s32 fd)</td></tr>
+<tr class="memdesc:gafe7536fe03089ea53be19af1ca14d2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭文件或者设备  <br /></td></tr>
+<tr class="separator:gafe7536fe03089ea53be19af1ca14d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecb061ca235f53801d2a238c06dc1742" id="r_gaecb061ca235f53801d2a238c06dc1742"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gaecb061ca235f53801d2a238c06dc1742">uhos_read</a> (uhos_s32 fd, uhos_void *buf, uhos_u32 nbytes)</td></tr>
+<tr class="memdesc:gaecb061ca235f53801d2a238c06dc1742"><td class="mdescLeft">&#160;</td><td class="mdescRight">从fd指向的文件或者设备中读取内容到buf中  <br /></td></tr>
+<tr class="separator:gaecb061ca235f53801d2a238c06dc1742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ededbdaaf7751f6f361c3209442018c" id="r_ga0ededbdaaf7751f6f361c3209442018c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga0ededbdaaf7751f6f361c3209442018c">uhos_write</a> (uhos_s32 fd, const uhos_void *buf, uhos_u32 nbytes)</td></tr>
+<tr class="memdesc:ga0ededbdaaf7751f6f361c3209442018c"><td class="mdescLeft">&#160;</td><td class="mdescRight">向fd指向的文件或者设备写入内容  <br /></td></tr>
+<tr class="separator:ga0ededbdaaf7751f6f361c3209442018c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19b3164abe82a07ec01f1eb34afeffe2" id="r_ga19b3164abe82a07ec01f1eb34afeffe2"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga19b3164abe82a07ec01f1eb34afeffe2">uhos_ioctl</a> (uhos_s32 fd, uhos_s32 cmd,...)</td></tr>
+<tr class="memdesc:ga19b3164abe82a07ec01f1eb34afeffe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO操作, 行为参考posix的ioctl  <br /></td></tr>
+<tr class="separator:ga19b3164abe82a07ec01f1eb34afeffe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e9555364747c652c096393897d7ba5f" id="r_ga8e9555364747c652c096393897d7ba5f"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga8e9555364747c652c096393897d7ba5f">uhos_do_pollfd</a> (uhos_s32 fd, uhos_s32 flag, uhos_poll_notify_t notify, uhos_void *fds, uhos_void *arg)</td></tr>
+<tr class="memdesc:ga8e9555364747c652c096393897d7ba5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">通配符API，用于通过fd执行特定的轮询  <br /></td></tr>
+<tr class="separator:ga8e9555364747c652c096393897d7ba5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb620e615efb2c64ee52909f54e87ec0" id="r_gaeb620e615efb2c64ee52909f54e87ec0"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gaeb620e615efb2c64ee52909f54e87ec0">uhos_lseek</a> (uhos_s32 fd, uhos_s32 offset, uhos_s32 whence)</td></tr>
+<tr class="memdesc:gaeb620e615efb2c64ee52909f54e87ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件位置移动到给定位置的给定偏移量  <br /></td></tr>
+<tr class="separator:gaeb620e615efb2c64ee52909f54e87ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6e92612c61303913297dd06a61bf076" id="r_gab6e92612c61303913297dd06a61bf076"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gab6e92612c61303913297dd06a61bf076">uhos_sync</a> (uhos_s32 fd)</td></tr>
+<tr class="memdesc:gab6e92612c61303913297dd06a61bf076"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新与该文件关联的所有缓冲区  <br /></td></tr>
+<tr class="separator:gab6e92612c61303913297dd06a61bf076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac69dc4873adf54245071a17ee4094338" id="r_gac69dc4873adf54245071a17ee4094338"><td class="memItemLeft" align="right" valign="top">uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gac69dc4873adf54245071a17ee4094338">uhos_allsync</a> (uhos_void)</td></tr>
+<tr class="memdesc:gac69dc4873adf54245071a17ee4094338"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新内存中更新要写入文件系统的文件系统的所有信息  <br /></td></tr>
+<tr class="separator:gac69dc4873adf54245071a17ee4094338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9cf301aa628bb0712dba9bd8671ac385" id="r_ga9cf301aa628bb0712dba9bd8671ac385"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga9cf301aa628bb0712dba9bd8671ac385">uhos_stat</a> (const uhos_char *path, <a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *st)</td></tr>
+<tr class="memdesc:ga9cf301aa628bb0712dba9bd8671ac385"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件信息存储在st中  <br /></td></tr>
+<tr class="separator:ga9cf301aa628bb0712dba9bd8671ac385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18e008d2694f2a887a057236b4ce302c" id="r_ga18e008d2694f2a887a057236b4ce302c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga18e008d2694f2a887a057236b4ce302c">uhos_fstat</a> (uhos_s32 fd, <a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *st)</td></tr>
+<tr class="memdesc:ga18e008d2694f2a887a057236b4ce302c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件信息存储在st中  <br /></td></tr>
+<tr class="separator:ga18e008d2694f2a887a057236b4ce302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac580106153861825ff71f72ca2a153" id="r_ga1ac580106153861825ff71f72ca2a153"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga1ac580106153861825ff71f72ca2a153">uhos_link</a> (const uhos_char *oldpath, const uhos_char *newpath)</td></tr>
+<tr class="memdesc:ga1ac580106153861825ff71f72ca2a153"><td class="mdescLeft">&#160;</td><td class="mdescRight">为一个文件创建一个新的链接  <br /></td></tr>
+<tr class="separator:ga1ac580106153861825ff71f72ca2a153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5bbbb6fa6fda1be7144b8225fc2426b" id="r_gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gac5bbbb6fa6fda1be7144b8225fc2426b">uhos_unlink</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一个文件  <br /></td></tr>
+<tr class="separator:gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d4dfd5e073846c37443acbbe972ee19" id="r_ga4d4dfd5e073846c37443acbbe972ee19"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga4d4dfd5e073846c37443acbbe972ee19">uhos_remove</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:ga4d4dfd5e073846c37443acbbe972ee19"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一个文件或目录  <br /></td></tr>
+<tr class="separator:ga4d4dfd5e073846c37443acbbe972ee19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30249814495728e244ac1849e2570ffb" id="r_ga30249814495728e244ac1849e2570ffb"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga30249814495728e244ac1849e2570ffb">uhos_rename</a> (const uhos_char *oldpath, const uhos_char *newpath)</td></tr>
+<tr class="memdesc:ga30249814495728e244ac1849e2570ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">重命名文件  <br /></td></tr>
+<tr class="separator:ga30249814495728e244ac1849e2570ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ea5162270bffad263f4f6d9c4905e6e" id="r_ga9ea5162270bffad263f4f6d9c4905e6e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga9ea5162270bffad263f4f6d9c4905e6e">uhos_access</a> (const uhos_char *path, uhos_s32 amode)</td></tr>
+<tr class="memdesc:ga9ea5162270bffad263f4f6d9c4905e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取访问信息  <br /></td></tr>
+<tr class="separator:ga9ea5162270bffad263f4f6d9c4905e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f66c66c7d1c2ac192885446c83bc0d3" id="r_ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga8f66c66c7d1c2ac192885446c83bc0d3">uhos_fcntl</a> (uhos_s32 fd, uhos_s32 cmd,...)</td></tr>
+<tr class="memdesc:ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作文件描述符  <br /></td></tr>
+<tr class="separator:ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97a2eca1e07640fd1de2a60a7272b3c5" id="r_ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga97a2eca1e07640fd1de2a60a7272b3c5">uhos_utime</a> (const uhos_char *path, const <a class="el" href="structuhos__utimbuf__t.html">uhos_utimbuf_t</a> *times)</td></tr>
+<tr class="memdesc:ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文件的访问和修改时间  <br /></td></tr>
+<tr class="separator:ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>本文件接口是参考linux的posix接口, 每个函数的行为、入参、出参、返回值等都和posix保持一致，只是都加了"UHOS_"或者"uhos_"前缀 </p>
+<dl class="section author"><dt>作者</dt><dd>your name (<a href="#" onclick="location.href='mai'+'lto:'+'wan'+'gs'+'hao'+'li'+'n@h'+'ai'+'er.'+'co'+'m'; return false;">wangs<span class="obfuscator">.nosp@m.</span>haol<span class="obfuscator">.nosp@m.</span>in@ha<span class="obfuscator">.nosp@m.</span>ier.<span class="obfuscator">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-02-23</dd></dl>
+<dl class="section user"><dt>History:</dt><dd><table class="doxtable">
+<tr>
+<th>Date </th><th>version </th><th>Author </th><th>Description </th></tr>
+<tr>
+<td>2023-02-23 </td><td>1.0 </td><td></td><td></td></tr>
+</table>
+</dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_13852d8bd01d4b41dd69a964e258bb7b.html">AL_FS</a></li><li class="navelem"><a class="el" href="uh__fs_8h.html">uh_fs.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

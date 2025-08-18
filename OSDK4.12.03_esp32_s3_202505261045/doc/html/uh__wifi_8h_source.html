@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_wifi.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__wifi_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uh_wifi.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uh__wifi_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef __UH_WIFI_H__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define __UH_WIFI_H__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="uh__types_8h.html">uh_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define NEED_TO_OPTIMALIZE</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define WIFI_MODE_AP     1</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define WIFI_MODE_STA    2</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define WIFI_MODE_AP_STA 3</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define WIFI_ENCRYPT_AUTH_NONE     0x0</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define WIFI_ENCRYPT_AUTH_WPA_PSK  0x1</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define WIFI_ENCRYPT_AUTH_WPA2_PSK 0x2</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define WIFI_ENCRYPT_AUTH_WPA3_SAE 0x4</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define WIFI_ENCRYPT_AUTH_MASK     0xFFFF</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define WIFI_ENCRYPT_CIPHER_NONE 0x00000</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define WIFI_ENCRYPT_CIPHER_TKIP 0x10000</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define WIFI_ENCRYPT_CIPHER_CCMP 0x20000</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define WIFI_ENCRYPT_CIPHER_WEP  0x40000</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define WIFI_ENCRYPT_CIPHER_MASK 0xFFFF0000</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define WIFI_DOWN 0</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define WIFI_UP   1</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gae2eb7251a78120c8ab46c2d27ef748cc">   86</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gae2eb7251a78120c8ab46c2d27ef748cc">uhos_wifi_power_on</a>(uhos_u8 wifi_mode);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gacd8c8bd4e27486eaf5c7219a153d787c">   93</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gacd8c8bd4e27486eaf5c7219a153d787c">uhos_wifi_power_off</a>(uhos_u8 mode);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga5de7c925830ea4c76d8242fc7cc79193">  100</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga5de7c925830ea4c76d8242fc7cc79193">uhos_wifi_is_on</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga7f982f2554dd7d0ddb36de7e8286e1f2">  107</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga7f982f2554dd7d0ddb36de7e8286e1f2">uhos_wifi_disconnect</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga9f15bf1b855fe6f1eb97438bb74b0d15">  114</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga9f15bf1b855fe6f1eb97438bb74b0d15">uhos_wifi_country_set</a>(uhos_char *country_code);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="};">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="structpromisc__frame__info__t.html">  124</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    uhos_u8 frame_is_ok;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    uhos_u8 wifi_strength;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    uhos_u16 rx_channel;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>} <a class="code hl_struct" href="structpromisc__frame__info__t.html">promisc_frame_info_t</a>;</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#pragma pack(1)</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="};">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="structuhos__ieee80211__frame.html">  132</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structuhos__ieee80211__frame.html">uhos_ieee80211_frame</a></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    uhos_u8 i_fc[2];</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    uhos_u8 i_dur[2];</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    uhos_u8 i_addr1[6];</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    uhos_u8 i_addr2[6];</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    uhos_u8 i_addr3[6];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    uhos_u8 i_seq[2];</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#pragma pack()</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="};">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="structpromisc__enhance__info__t.html">  149</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    uhos_u8 ap_mac[6];</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>} <a class="code hl_struct" href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a>;</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaa79b4afea8fd5d7de54ca48e99a67491">  160</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gaa79b4afea8fd5d7de54ca48e99a67491">uhos_wifi_sniffer_enhance</a>(uhos_s32 enable, <a class="code hl_struct" href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a> *info);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">  170</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a>)(uhos_u8 *frame, uhos_s32 length, <a class="code hl_struct" href="structpromisc__frame__info__t.html">promisc_frame_info_t</a> *info);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gad62c05cd1e49e8753946c59b49cce46b">  178</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gad62c05cd1e49e8753946c59b49cce46b">uhos_wifi_sniffer_start</a>(<a class="code hl_typedef" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a> cb);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga8f522f685a49558496a5a9a8034c6117">  184</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga8f522f685a49558496a5a9a8034c6117">uhos_wifi_sniffer_stop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga5a2cf7f6d82c87fe5543ca466562c653">  192</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga5a2cf7f6d82c87fe5543ca466562c653">uhos_wifi_channel_set</a>(uhos_u16 channel);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga66f6f500ab74fdfc7c334aaf3197366a">  200</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga66f6f500ab74fdfc7c334aaf3197366a">uhos_wifi_channel_get</a>(uhos_u16 *channel);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">#define WIFI_EXT_CHANNEL_NONE  0</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#define WIFI_EXT_CHANNEL_ABOVE 1</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#define WIFI_EXT_CHANNEL_BELOW 2</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">#define WIFI_EXT_CHANNEL_KEEP  3</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga6b587a307d9ccc7555daa0479b492c76">  223</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga6b587a307d9ccc7555daa0479b492c76">uhos_wifi_sniffer_channel_set</a>(uhos_u16 channel, uhos_s32 ext_channel);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">  231</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a>)(<span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gab7b8976e94f4f30dc9d801c5b87ccad2">  239</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gab7b8976e94f4f30dc9d801c5b87ccad2">uhos_wifi_scan_start</a>(<a class="code hl_typedef" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a> cb, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga23e87d9ad0af98eed3aa4a84d7df48df">  249</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga23e87d9ad0af98eed3aa4a84d7df48df">uhos_wifi_scan_with_ssid_start</a>(<span class="keyword">const</span> uhos_char *ssid, uhos_u16 ssid_len, <a class="code hl_typedef" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a> cb, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gab5639604b7701ace97cbc864b472b7e4">  255</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gab5639604b7701ace97cbc864b472b7e4">uhos_wifi_scan_stop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="foldopen" id="foldopen00257" data-start="{" data-end="};">
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="structap__list__api__t.html">  257</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>{</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    uhos_char ssid[32 + 1];</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    uhos_u8 ap_mac[6];</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    uhos_s8 ap_power;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    uhos_u32 encryption;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    uhos_u16 channel;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>} <a class="code hl_struct" href="structap__list__api__t.html">ap_list_api_t</a>;</div>
+</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="foldopen" id="foldopen00266" data-start="{" data-end="};">
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html">  266</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structuh__wifi__scan__item.html">uh_wifi_scan_item</a></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>{</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a7720b458de5e92b4aa23ccb090969f00">  268</a></span>    uhos_u8 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a7720b458de5e92b4aa23ccb090969f00">ssid</a>[32 + 1]; </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a5253f09775f520d2b6a4c0de53f2c810">  269</a></span>    uhos_u16 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a5253f09775f520d2b6a4c0de53f2c810">ssid_len</a>;    </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#aa85d12078ce3a973aa5990a74fcd48a3">  270</a></span>    uhos_u8 <a class="code hl_variable" href="structuh__wifi__scan__item.html#aa85d12078ce3a973aa5990a74fcd48a3">bssid</a>[6];     </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a1d6b935d84d8a80261e6eadc6f44d68b">  271</a></span>    uhos_u8 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a1d6b935d84d8a80261e6eadc6f44d68b">bssid_len</a>;    </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a2b12262514286fc03bb8c35e79d5f80e">  272</a></span>    uhos_s32 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a2b12262514286fc03bb8c35e79d5f80e">rssi</a>;        </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a5f2efbab74d56ac6eca5017f937732e1">  273</a></span>    uhos_u16 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a5f2efbab74d56ac6eca5017f937732e1">channel</a>;     </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="structuh__wifi__scan__item.html#a4a08b32e7657b48fa2bf3430d8e4751e">  274</a></span>    uhos_s32 <a class="code hl_variable" href="structuh__wifi__scan__item.html#a4a08b32e7657b48fa2bf3430d8e4751e">security</a>;    </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>} <a class="code hl_struct" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a>;</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keyword">typedef</span> void (*uh_wifi_scan_results_cb)(<a class="code hl_struct" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a> *results, <span class="keywordtype">int</span> len, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga36270a2543fc8df1c2a6709e2194cbef">  297</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga36270a2543fc8df1c2a6709e2194cbef">uhos_wifi_scan_general</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *ssid,</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                                       <span class="keywordtype">int</span> ssid_len,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                                       <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> *channels,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                                       <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *bssid,</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                                       uh_wifi_scan_results_cb cb,</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                                       <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaee1eda8bcbe3242fb6df4ca926542f8a">  311</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gaee1eda8bcbe3242fb6df4ca926542f8a">uhos_wifi_ap_list_get</a>(uhos_u8 *ap_number, <a class="code hl_struct" href="structap__list__api__t.html">ap_list_api_t</a> *list);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gae03b301978915329d4326124580894f2">  317</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gae03b301978915329d4326124580894f2">uhos_wifi_ps_enable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gae8eb83d9d213eb1c4531933955c08bd5">  323</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gae8eb83d9d213eb1c4531933955c08bd5">uhos_wifi_ps_disable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga317840990ee2a2ddf89084e8f47afa3e">  331</a></span>UHSD_API <span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga317840990ee2a2ddf89084e8f47afa3e">uhos_wifi_status_get</a>(uhos_u8 *status, uhos_s8 *wifi_strength);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gab2205cdaec16d1d571e2d8989ada1431">  338</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gab2205cdaec16d1d571e2d8989ada1431">uhos_wifi_snr_get</a>(uhos_u8 *snr);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">#define WIFI_DOWN_UNDEF             0</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">#define WIFI_DOWN_TIMEOUT           -1</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">#define WIFI_DOWN_CONNECTIVITY_FAIL -2</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">#define WIFI_DOWN_AP_PAPA_CHANGE    -3</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">#define WIFI_DOWN_AP_RESTART        -4</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">#define WIFI_DOWN_AP_DISCONNECT     -10</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="preprocessor">#define WIFI_DOWN_AP_DISCONNECT_MAX -(10 + 66) </span><span class="comment">/*def in 802.11, total error code 66*/</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">  355</a></span><span class="keyword">typedef</span> uhos_s32 (*<a class="code hl_typedef" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a>)(uhos_u8 status, uhos_s32 extra_error);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaae8f73e1c84e07500eb7fa6b4cd3e963">  362</a></span>UHSD_API <span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gaae8f73e1c84e07500eb7fa6b4cd3e963">uhos_wifi_set_status_callback</a>(<a class="code hl_typedef" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a> callback);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gae372557640891b9da64f86597c16132b">  369</a></span>UHSD_API <span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gae372557640891b9da64f86597c16132b">uhos_wifi_mac_get</a>(uhos_u8 *mac);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">#define WIFI_NET_CFG_OK                  0</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="preprocessor">#define WIFI_NET_CFG_ERR_GENERAL         (-1)</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">#define WIFI_NET_CFG_ERR_NONE_NETWORK    (-2)</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">#define WIFI_NET_CFG_ERR_CONNECT_FAIL    (-3)</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">#define WIFI_NET_CFG_ERR_AUTH_FAIL       (-4)</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">#define WIFI_NET_CFG_ERR_MAYBE_AUTH_FAIL (-5)</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga21e7861cd8641791fd87ea61301bcbe1">  399</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga21e7861cd8641791fd87ea61301bcbe1">uhos_wifi_network_set</a>(uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_char *wifi_key, uhos_u16 channel, uhos_u32 encryption);</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaf7a2000f85ed16f8912bd0780e5e2652">  410</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gaf7a2000f85ed16f8912bd0780e5e2652">uhos_wifi_network_get</a>(uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span> </div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="preprocessor">#define WIFI_CUSTOM_IE_TRANS_BEACON    1</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span><span class="preprocessor">#define WIFI_CUSTOM_IE_TRANS_PROBE_REQ 2</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="preprocessor">#define WIFI_CUSTOM_IE_TRANS_PROBE_RSP 4</span></div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span><span class="preprocessor">#define WIFI_CUSTOM_IE_INFO_MAX_LEN (255)</span></div>
+<div class="foldopen" id="foldopen00425" data-start="{" data-end="};">
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno"><a class="line" href="structwifi__custom__ie.html">  425</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structwifi__custom__ie.html">wifi_custom_ie</a></div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>{</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    uhos_u8 id;</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    uhos_u8 len;</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    uhos_u8 info[WIFI_CUSTOM_IE_INFO_MAX_LEN];</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>} <a class="code hl_struct" href="structwifi__custom__ie.html">wifi_custom_ie_t</a>;</div>
+</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gae0aa1a173d3fb1dec3347b1c6c29585c">  438</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gae0aa1a173d3fb1dec3347b1c6c29585c">uhos_wifi_custom_ie_add</a>(uhos_u8 *ie_info, uhos_u16 trans_type);</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span> </div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga70c3cce3362d85fd93537ea34bb10c03">  445</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga70c3cce3362d85fd93537ea34bb10c03">uhos_wifi_custom_ie_del</a>(uhos_s32 index);</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> </div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga85655d02e3ed2904ef95b2290f82f4db">  453</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga85655d02e3ed2904ef95b2290f82f4db">uhos_wifi_get_bssid</a>(uhos_u8 *bssid, uhos_u16 *bssid_len);</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="keyword">typedef</span> void (*wifi_frame_cb_func)(uhos_u8 *frame, uhos_s32 length, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span> </div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga532fe585be3a3c28811c717577a7419c">  473</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga532fe585be3a3c28811c717577a7419c">uhos_wifi_set_rx_frame</a>(uhos_s32 enable, wifi_frame_cb_func cb, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span> </div>
+<div class="line"><a id="l00482" name="l00482"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga0a7f7a6b2fdfbafb3df936b03c79dd23">  482</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga0a7f7a6b2fdfbafb3df936b03c79dd23">uhos_wifi_tx_frame</a>(uhos_u8 *frame, uhos_s32 length);</div>
+<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span> </div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>{</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    UHOS_WIFI_OPTIM_OFF = 0,</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="comment">/* take performance into account when optimization,</span></div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span><span class="comment">      connection with extremely low throughput is not acceptable. */</span></div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    UHOS_WIFI_OPTIM_THROUGHPUT_0,</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    UHOS_WIFI_OPTIM_THROUGHPUT_1,</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>    UHOS_WIFI_OPTIM_THROUGHPUT_2,</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>    UHOS_WIFI_OPTIM_THROUGHPUT_3,</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>    <span class="comment">/* try very hard to see if we can connect to the ap, let alone the performance. */</span></div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    UHOS_WIFI_OPTIM_TRY_HARD_0,</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>    UHOS_WIFI_OPTIM_TRY_HARD_1,</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    UHOS_WIFI_OPTIM_TRY_HARD_2,</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>    UHOS_WIFI_OPTIM_TRY_HARD_3,</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>} uhos_wifi_optim_level_e;</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span> </div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gaac015f53d3642980255a9225483a5a5a">  506</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gaac015f53d3642980255a9225483a5a5a">uhos_wifi_set_poor_signal_optim_level</a>(uhos_wifi_optim_level_e level);</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span> </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga2eefc834ceba6d52e7b9dbfd14d5bcd5">  513</a></span><span class="keyword">extern</span> uhos_wifi_optim_level_e <a class="code hl_function" href="group__grp__uhoswifi.html#ga2eefc834ceba6d52e7b9dbfd14d5bcd5">uhos_wifi_get_poor_signal_optim_level</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gabc97282aa92843efcd883cb32e352320">  521</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gabc97282aa92843efcd883cb32e352320">uhos_wifi_get_max_tx_power</a>(uhos_s32 *max_txpower);</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span> </div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga9c5b4e2f68cde50ad3b21a555c5a65f7">  529</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga9c5b4e2f68cde50ad3b21a555c5a65f7">uhos_wifi_set_tx_power_offset</a>(uhos_s32 offset);</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">#ifdef NEED_TO_OPTIMALIZE</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span> </div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga5c23b318a8cc060c29db8872a67ddac3">  541</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga5c23b318a8cc060c29db8872a67ddac3">uhos_wifi_get_network_and_bssid_check</a>(uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid);</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span> </div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga6f4b278bd4a1becdf098a730a6a77b51">  550</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga6f4b278bd4a1becdf098a730a6a77b51">uhos_wifi_set_scan</a>(uhos_u16 *channel_list, uhos_u8 len);</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span> </div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga6c1295f285782e76b9420894f22d35fb">  558</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga6c1295f285782e76b9420894f22d35fb">uhos_wifi_get_scan</a>(<a class="code hl_struct" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a> *result, uhos_u16 *result_len);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#gabf025bf75d58dc22b2d57262e3e66ab3">  567</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#gabf025bf75d58dc22b2d57262e3e66ab3">uhos_wifi_set_scan_with_ssid</a>(<span class="keyword">const</span> uhos_u8 *ssid, uhos_u16 ssid_len);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span> </div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga31eb2d5fe78ed73e6fc930daaf900ebe">  586</a></span><span class="keyword">extern</span> uhos_u32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga31eb2d5fe78ed73e6fc930daaf900ebe">uhos_wifi_security_to_encryption</a>(uhos_u32 security);</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment">    double_freq for 5g</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="foldopen" id="foldopen00592" data-start="{" data-end="};">
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="structwifi__fuzzy__match.html">  592</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structwifi__fuzzy__match.html">wifi_fuzzy_match</a></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>{</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    uhos_char wifi_ssid[32 + 1];</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    uhos_u16 channel;</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    uhos_u32 encryption;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    uhos_u8 is_fuzzy_valid;</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>} <a class="code hl_struct" href="structwifi__fuzzy__match.html">wifi_fuzzy_match_t</a>;</div>
+</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno"><a class="line" href="group__grp__uhoswifi.html#ga6c73e94f72ccbfab02af32d60072cb19">  611</a></span><span class="keyword">extern</span> uhos_s32 <a class="code hl_function" href="group__grp__uhoswifi.html#ga6c73e94f72ccbfab02af32d60072cb19">uhos_wifi_get_network_for_dual_freq</a>(uhos_char *wifi_ssid,</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>                                                    uhos_u16 *channel,</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>                                                    uhos_u32 *encryption,</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>                                                    uhos_u8 *bssid,</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>                                                    uhos_u8 enable_fuzzy_matching,</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                                                    <a class="code hl_struct" href="structwifi__fuzzy__match.html">wifi_fuzzy_match_t</a> *fuzzy_match_wifi);</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>}</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#endif </span><span class="comment">// __UH_WIFI_H__</span></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga0a7f7a6b2fdfbafb3df936b03c79dd23"><div class="ttname"><a href="group__grp__uhoswifi.html#ga0a7f7a6b2fdfbafb3df936b03c79dd23">uhos_wifi_tx_frame</a></div><div class="ttdeci">uhos_s32 uhos_wifi_tx_frame(uhos_u8 *frame, uhos_s32 length)</div><div class="ttdoc">发送802.11帧。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga21e7861cd8641791fd87ea61301bcbe1"><div class="ttname"><a href="group__grp__uhoswifi.html#ga21e7861cd8641791fd87ea61301bcbe1">uhos_wifi_network_set</a></div><div class="ttdeci">uhos_s32 uhos_wifi_network_set(uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_char *wifi_key, uhos_u16 channel, uhos_u32 encryption)</div><div class="ttdoc">启动WIFI网络连接。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga23e87d9ad0af98eed3aa4a84d7df48df"><div class="ttname"><a href="group__grp__uhoswifi.html#ga23e87d9ad0af98eed3aa4a84d7df48df">uhos_wifi_scan_with_ssid_start</a></div><div class="ttdeci">uhos_s32 uhos_wifi_scan_with_ssid_start(const uhos_char *ssid, uhos_u16 ssid_len, wifi_scan_cb_func cb, void *param)</div><div class="ttdoc">开始扫描指定SSID的WIFI AP。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga2eefc834ceba6d52e7b9dbfd14d5bcd5"><div class="ttname"><a href="group__grp__uhoswifi.html#ga2eefc834ceba6d52e7b9dbfd14d5bcd5">uhos_wifi_get_poor_signal_optim_level</a></div><div class="ttdeci">uhos_wifi_optim_level_e uhos_wifi_get_poor_signal_optim_level(void)</div><div class="ttdoc">获取弱网优化级别；</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga305e4b0236f48fb93a182edc197f6a0b"><div class="ttname"><a href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a></div><div class="ttdeci">void(* wifi_scan_cb_func)(void *param)</div><div class="ttdoc">扫描完成后的回调通知。</div><div class="ttdef"><b>Definition</b> uh_wifi.h:231</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga317840990ee2a2ddf89084e8f47afa3e"><div class="ttname"><a href="group__grp__uhoswifi.html#ga317840990ee2a2ddf89084e8f47afa3e">uhos_wifi_status_get</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_wifi_status_get(uhos_u8 *status, uhos_s8 *wifi_strength)</div><div class="ttdoc">查询WIFI状态。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga31eb2d5fe78ed73e6fc930daaf900ebe"><div class="ttname"><a href="group__grp__uhoswifi.html#ga31eb2d5fe78ed73e6fc930daaf900ebe">uhos_wifi_security_to_encryption</a></div><div class="ttdeci">uhos_u32 uhos_wifi_security_to_encryption(uhos_u32 security)</div><div class="ttdoc">加密算法转换为加密方式</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga36270a2543fc8df1c2a6709e2194cbef"><div class="ttname"><a href="group__grp__uhoswifi.html#ga36270a2543fc8df1c2a6709e2194cbef">uhos_wifi_scan_general</a></div><div class="ttdeci">uhos_s32 uhos_wifi_scan_general(unsigned char *ssid, int ssid_len, unsigned short *channels, unsigned char *bssid, uh_wifi_scan_results_cb cb, void *param)</div><div class="ttdoc">开始扫描指定SSID的WIFI AP。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga3937c0d5c4273f881dcd2d6bb038e2ea"><div class="ttname"><a href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a></div><div class="ttdeci">void(* promisc_cb_func)(uhos_u8 *frame, uhos_s32 length, promisc_frame_info_t *info)</div><div class="ttdoc">混杂模式下报文接收接口。</div><div class="ttdef"><b>Definition</b> uh_wifi.h:170</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga532fe585be3a3c28811c717577a7419c"><div class="ttname"><a href="group__grp__uhoswifi.html#ga532fe585be3a3c28811c717577a7419c">uhos_wifi_set_rx_frame</a></div><div class="ttdeci">uhos_s32 uhos_wifi_set_rx_frame(uhos_s32 enable, wifi_frame_cb_func cb, void *param)</div><div class="ttdoc">设置802.11帧接收回调。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga5a2cf7f6d82c87fe5543ca466562c653"><div class="ttname"><a href="group__grp__uhoswifi.html#ga5a2cf7f6d82c87fe5543ca466562c653">uhos_wifi_channel_set</a></div><div class="ttdeci">uhos_s32 uhos_wifi_channel_set(uhos_u16 channel)</div><div class="ttdoc">设置WIFI信道。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga5c23b318a8cc060c29db8872a67ddac3"><div class="ttname"><a href="group__grp__uhoswifi.html#ga5c23b318a8cc060c29db8872a67ddac3">uhos_wifi_get_network_and_bssid_check</a></div><div class="ttdeci">uhos_s32 uhos_wifi_get_network_and_bssid_check(uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid)</div><div class="ttdoc">根据ssid获取该路由器的通道、加密方式和bssid</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga5de7c925830ea4c76d8242fc7cc79193"><div class="ttname"><a href="group__grp__uhoswifi.html#ga5de7c925830ea4c76d8242fc7cc79193">uhos_wifi_is_on</a></div><div class="ttdeci">uhos_s32 uhos_wifi_is_on(void)</div><div class="ttdoc">WIFI功能是否打开。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga66f6f500ab74fdfc7c334aaf3197366a"><div class="ttname"><a href="group__grp__uhoswifi.html#ga66f6f500ab74fdfc7c334aaf3197366a">uhos_wifi_channel_get</a></div><div class="ttdeci">uhos_s32 uhos_wifi_channel_get(uhos_u16 *channel)</div><div class="ttdoc">获取WIFI信道。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga6b587a307d9ccc7555daa0479b492c76"><div class="ttname"><a href="group__grp__uhoswifi.html#ga6b587a307d9ccc7555daa0479b492c76">uhos_wifi_sniffer_channel_set</a></div><div class="ttdeci">uhos_s32 uhos_wifi_sniffer_channel_set(uhos_u16 channel, uhos_s32 ext_channel)</div><div class="ttdoc">设置WIFI扩展信道。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga6c1295f285782e76b9420894f22d35fb"><div class="ttname"><a href="group__grp__uhoswifi.html#ga6c1295f285782e76b9420894f22d35fb">uhos_wifi_get_scan</a></div><div class="ttdeci">uhos_s32 uhos_wifi_get_scan(uh_wifi_scan_item_t *result, uhos_u16 *result_len)</div><div class="ttdoc">获取AP扫描结果。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga6c73e94f72ccbfab02af32d60072cb19"><div class="ttname"><a href="group__grp__uhoswifi.html#ga6c73e94f72ccbfab02af32d60072cb19">uhos_wifi_get_network_for_dual_freq</a></div><div class="ttdeci">uhos_s32 uhos_wifi_get_network_for_dual_freq(uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid, uhos_u8 enable_fuzzy_matching, wifi_fuzzy_match_t *fuzzy_match_wifi)</div><div class="ttdoc">如果开启模糊匹配功能获得模糊匹配的路由器信息，如果ssid有5G关键字获取相对应的非5G ssid</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga6f4b278bd4a1becdf098a730a6a77b51"><div class="ttname"><a href="group__grp__uhoswifi.html#ga6f4b278bd4a1becdf098a730a6a77b51">uhos_wifi_set_scan</a></div><div class="ttdeci">uhos_s32 uhos_wifi_set_scan(uhos_u16 *channel_list, uhos_u8 len)</div><div class="ttdoc">启动AP扫描</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga70c3cce3362d85fd93537ea34bb10c03"><div class="ttname"><a href="group__grp__uhoswifi.html#ga70c3cce3362d85fd93537ea34bb10c03">uhos_wifi_custom_ie_del</a></div><div class="ttdeci">uhos_s32 uhos_wifi_custom_ie_del(uhos_s32 index)</div><div class="ttdoc">WIFI管理帧中删除自定义IE。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga7f982f2554dd7d0ddb36de7e8286e1f2"><div class="ttname"><a href="group__grp__uhoswifi.html#ga7f982f2554dd7d0ddb36de7e8286e1f2">uhos_wifi_disconnect</a></div><div class="ttdeci">uhos_s32 uhos_wifi_disconnect(void)</div><div class="ttdoc">断开WIFI连接。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga85655d02e3ed2904ef95b2290f82f4db"><div class="ttname"><a href="group__grp__uhoswifi.html#ga85655d02e3ed2904ef95b2290f82f4db">uhos_wifi_get_bssid</a></div><div class="ttdeci">uhos_s32 uhos_wifi_get_bssid(uhos_u8 *bssid, uhos_u16 *bssid_len)</div><div class="ttdoc">获取BSSID。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga8f522f685a49558496a5a9a8034c6117"><div class="ttname"><a href="group__grp__uhoswifi.html#ga8f522f685a49558496a5a9a8034c6117">uhos_wifi_sniffer_stop</a></div><div class="ttdeci">uhos_s32 uhos_wifi_sniffer_stop(void)</div><div class="ttdoc">退出WIFI promiscuous模式。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga9c5b4e2f68cde50ad3b21a555c5a65f7"><div class="ttname"><a href="group__grp__uhoswifi.html#ga9c5b4e2f68cde50ad3b21a555c5a65f7">uhos_wifi_set_tx_power_offset</a></div><div class="ttdeci">uhos_s32 uhos_wifi_set_tx_power_offset(uhos_s32 offset)</div><div class="ttdoc">设置基于校准功率的发射功率调整值；</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_ga9f15bf1b855fe6f1eb97438bb74b0d15"><div class="ttname"><a href="group__grp__uhoswifi.html#ga9f15bf1b855fe6f1eb97438bb74b0d15">uhos_wifi_country_set</a></div><div class="ttdeci">uhos_s32 uhos_wifi_country_set(uhos_char *country_code)</div><div class="ttdoc">设置WIFI区域。不同区域支持的信道不同，需要根据区域设置所支持的信道。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaa79b4afea8fd5d7de54ca48e99a67491"><div class="ttname"><a href="group__grp__uhoswifi.html#gaa79b4afea8fd5d7de54ca48e99a67491">uhos_wifi_sniffer_enhance</a></div><div class="ttdeci">uhos_s32 uhos_wifi_sniffer_enhance(uhos_s32 enable, promisc_enhance_info_t *info)</div><div class="ttdoc">锁定信道后，增加混杂模式下该目标AP收取转发报文能力。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaac015f53d3642980255a9225483a5a5a"><div class="ttname"><a href="group__grp__uhoswifi.html#gaac015f53d3642980255a9225483a5a5a">uhos_wifi_set_poor_signal_optim_level</a></div><div class="ttdeci">uhos_s32 uhos_wifi_set_poor_signal_optim_level(uhos_wifi_optim_level_e level)</div><div class="ttdoc">设置弱网优化级别；</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaae8f73e1c84e07500eb7fa6b4cd3e963"><div class="ttname"><a href="group__grp__uhoswifi.html#gaae8f73e1c84e07500eb7fa6b4cd3e963">uhos_wifi_set_status_callback</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_wifi_set_status_callback(uhos_wifi_status_callback callback)</div><div class="ttdoc">设置Wi-Fi连接状态变化通知回调。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gab2205cdaec16d1d571e2d8989ada1431"><div class="ttname"><a href="group__grp__uhoswifi.html#gab2205cdaec16d1d571e2d8989ada1431">uhos_wifi_snr_get</a></div><div class="ttdeci">uhos_s32 uhos_wifi_snr_get(uhos_u8 *snr)</div><div class="ttdoc">获取WIFI信噪比。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gab5639604b7701ace97cbc864b472b7e4"><div class="ttname"><a href="group__grp__uhoswifi.html#gab5639604b7701ace97cbc864b472b7e4">uhos_wifi_scan_stop</a></div><div class="ttdeci">uhos_s32 uhos_wifi_scan_stop(void)</div><div class="ttdoc">停止扫描WIFI AP。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gab7b8976e94f4f30dc9d801c5b87ccad2"><div class="ttname"><a href="group__grp__uhoswifi.html#gab7b8976e94f4f30dc9d801c5b87ccad2">uhos_wifi_scan_start</a></div><div class="ttdeci">uhos_s32 uhos_wifi_scan_start(wifi_scan_cb_func cb, void *param)</div><div class="ttdoc">开始扫描WIFI AP。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gabc97282aa92843efcd883cb32e352320"><div class="ttname"><a href="group__grp__uhoswifi.html#gabc97282aa92843efcd883cb32e352320">uhos_wifi_get_max_tx_power</a></div><div class="ttdeci">uhos_s32 uhos_wifi_get_max_tx_power(uhos_s32 *max_txpower)</div><div class="ttdoc">获取安全发射功率；</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gabf025bf75d58dc22b2d57262e3e66ab3"><div class="ttname"><a href="group__grp__uhoswifi.html#gabf025bf75d58dc22b2d57262e3e66ab3">uhos_wifi_set_scan_with_ssid</a></div><div class="ttdeci">uhos_s32 uhos_wifi_set_scan_with_ssid(const uhos_u8 *ssid, uhos_u16 ssid_len)</div><div class="ttdoc">启动指定SSID的AP扫描。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gacd8c8bd4e27486eaf5c7219a153d787c"><div class="ttname"><a href="group__grp__uhoswifi.html#gacd8c8bd4e27486eaf5c7219a153d787c">uhos_wifi_power_off</a></div><div class="ttdeci">uhos_s32 uhos_wifi_power_off(uhos_u8 mode)</div><div class="ttdoc">WIFI功能关闭。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gad62c05cd1e49e8753946c59b49cce46b"><div class="ttname"><a href="group__grp__uhoswifi.html#gad62c05cd1e49e8753946c59b49cce46b">uhos_wifi_sniffer_start</a></div><div class="ttdeci">uhos_s32 uhos_wifi_sniffer_start(promisc_cb_func cb)</div><div class="ttdoc">进入WIFI Promiscuous模式。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gae03b301978915329d4326124580894f2"><div class="ttname"><a href="group__grp__uhoswifi.html#gae03b301978915329d4326124580894f2">uhos_wifi_ps_enable</a></div><div class="ttdeci">uhos_s32 uhos_wifi_ps_enable(void)</div><div class="ttdoc">使能WIFI省电模式。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gae0aa1a173d3fb1dec3347b1c6c29585c"><div class="ttname"><a href="group__grp__uhoswifi.html#gae0aa1a173d3fb1dec3347b1c6c29585c">uhos_wifi_custom_ie_add</a></div><div class="ttdeci">uhos_s32 uhos_wifi_custom_ie_add(uhos_u8 *ie_info, uhos_u16 trans_type)</div><div class="ttdoc">WIFI管理帧中增加自定义IE。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gae2eb7251a78120c8ab46c2d27ef748cc"><div class="ttname"><a href="group__grp__uhoswifi.html#gae2eb7251a78120c8ab46c2d27ef748cc">uhos_wifi_power_on</a></div><div class="ttdeci">uhos_s32 uhos_wifi_power_on(uhos_u8 wifi_mode)</div><div class="ttdoc">WIFI功能打开。WIFI必须支持AP模式和STA模式。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gae372557640891b9da64f86597c16132b"><div class="ttname"><a href="group__grp__uhoswifi.html#gae372557640891b9da64f86597c16132b">uhos_wifi_mac_get</a></div><div class="ttdeci">UHSD_API uhos_s32 uhos_wifi_mac_get(uhos_u8 *mac)</div><div class="ttdoc">获取WIFI MAC。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gae8eb83d9d213eb1c4531933955c08bd5"><div class="ttname"><a href="group__grp__uhoswifi.html#gae8eb83d9d213eb1c4531933955c08bd5">uhos_wifi_ps_disable</a></div><div class="ttdeci">uhos_s32 uhos_wifi_ps_disable(void)</div><div class="ttdoc">关闭WIFI省电模式。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaee1eda8bcbe3242fb6df4ca926542f8a"><div class="ttname"><a href="group__grp__uhoswifi.html#gaee1eda8bcbe3242fb6df4ca926542f8a">uhos_wifi_ap_list_get</a></div><div class="ttdeci">uhos_s32 uhos_wifi_ap_list_get(uhos_u8 *ap_number, ap_list_api_t *list)</div><div class="ttdoc">查询WIFI AP列表。</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaf6f69ba336f623d592905bf67f4b45b9"><div class="ttname"><a href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a></div><div class="ttdeci">uhos_s32(* uhos_wifi_status_callback)(uhos_u8 status, uhos_s32 extra_error)</div><div class="ttdoc">WIFI状态变化通知。</div><div class="ttdef"><b>Definition</b> uh_wifi.h:355</div></div>
+<div class="ttc" id="agroup__grp__uhoswifi_html_gaf7a2000f85ed16f8912bd0780e5e2652"><div class="ttname"><a href="group__grp__uhoswifi.html#gaf7a2000f85ed16f8912bd0780e5e2652">uhos_wifi_network_get</a></div><div class="ttdeci">uhos_s32 uhos_wifi_network_get(uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid)</div><div class="ttdoc">查询WIFI网络信息。</div></div>
+<div class="ttc" id="astructap__list__api__t_html"><div class="ttname"><a href="structap__list__api__t.html">ap_list_api_t</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:258</div></div>
+<div class="ttc" id="astructpromisc__enhance__info__t_html"><div class="ttname"><a href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:150</div></div>
+<div class="ttc" id="astructpromisc__frame__info__t_html"><div class="ttname"><a href="structpromisc__frame__info__t.html">promisc_frame_info_t</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:125</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html"><div class="ttname"><a href="structuh__wifi__scan__item.html">uh_wifi_scan_item</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:267</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a1d6b935d84d8a80261e6eadc6f44d68b"><div class="ttname"><a href="structuh__wifi__scan__item.html#a1d6b935d84d8a80261e6eadc6f44d68b">uh_wifi_scan_item::bssid_len</a></div><div class="ttdeci">uhos_u8 bssid_len</div><div class="ttdef"><b>Definition</b> uh_wifi.h:271</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a2b12262514286fc03bb8c35e79d5f80e"><div class="ttname"><a href="structuh__wifi__scan__item.html#a2b12262514286fc03bb8c35e79d5f80e">uh_wifi_scan_item::rssi</a></div><div class="ttdeci">uhos_s32 rssi</div><div class="ttdef"><b>Definition</b> uh_wifi.h:272</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a4a08b32e7657b48fa2bf3430d8e4751e"><div class="ttname"><a href="structuh__wifi__scan__item.html#a4a08b32e7657b48fa2bf3430d8e4751e">uh_wifi_scan_item::security</a></div><div class="ttdeci">uhos_s32 security</div><div class="ttdef"><b>Definition</b> uh_wifi.h:274</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a5253f09775f520d2b6a4c0de53f2c810"><div class="ttname"><a href="structuh__wifi__scan__item.html#a5253f09775f520d2b6a4c0de53f2c810">uh_wifi_scan_item::ssid_len</a></div><div class="ttdeci">uhos_u16 ssid_len</div><div class="ttdef"><b>Definition</b> uh_wifi.h:269</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a5f2efbab74d56ac6eca5017f937732e1"><div class="ttname"><a href="structuh__wifi__scan__item.html#a5f2efbab74d56ac6eca5017f937732e1">uh_wifi_scan_item::channel</a></div><div class="ttdeci">uhos_u16 channel</div><div class="ttdef"><b>Definition</b> uh_wifi.h:273</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_a7720b458de5e92b4aa23ccb090969f00"><div class="ttname"><a href="structuh__wifi__scan__item.html#a7720b458de5e92b4aa23ccb090969f00">uh_wifi_scan_item::ssid</a></div><div class="ttdeci">uhos_u8 ssid[32+1]</div><div class="ttdef"><b>Definition</b> uh_wifi.h:268</div></div>
+<div class="ttc" id="astructuh__wifi__scan__item_html_aa85d12078ce3a973aa5990a74fcd48a3"><div class="ttname"><a href="structuh__wifi__scan__item.html#aa85d12078ce3a973aa5990a74fcd48a3">uh_wifi_scan_item::bssid</a></div><div class="ttdeci">uhos_u8 bssid[6]</div><div class="ttdef"><b>Definition</b> uh_wifi.h:270</div></div>
+<div class="ttc" id="astructuhos__ieee80211__frame_html"><div class="ttname"><a href="structuhos__ieee80211__frame.html">uhos_ieee80211_frame</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:133</div></div>
+<div class="ttc" id="astructwifi__custom__ie_html"><div class="ttname"><a href="structwifi__custom__ie.html">wifi_custom_ie</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:426</div></div>
+<div class="ttc" id="astructwifi__fuzzy__match_html"><div class="ttname"><a href="structwifi__fuzzy__match.html">wifi_fuzzy_match</a></div><div class="ttdef"><b>Definition</b> uh_wifi.h:593</div></div>
+<div class="ttc" id="auh__types_8h_html"><div class="ttname"><a href="uh__types_8h.html">uh_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_b78b0c51e825bd4aa4c7f2ffcdd172d7.html">AL_WIFI</a></li><li class="navelem"><a class="el" href="uh__wifi_8h.html">uh_wifi.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

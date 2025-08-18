@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_findTMS.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__findTMS_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uhsd_findTMS.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __uhsd_FINDTMS_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __uhsd_FINDTMS_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="uhsd__types_8h.html">uhsd_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="structuhsd__ble__dev__type__info__t.html">    5</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    uhsd_u8 is_valid;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    uhsd_s32 type_main;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    uhsd_s32 type_minor;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>} <a class="code hl_struct" href="structuhsd__ble__dev__type__info__t.html">uhsd_ble_dev_type_info_t</a>;</div>
+</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structuhsd__findTMS__dev__attr__t.html">   12</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    uhsd_char device_tmpId[33]; <span class="comment">// 设备临时id</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    uhsd_char device_id[33];</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    uhsd_char product_code[33];        <span class="comment">// 产品编码</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    uhsd_s32 rssi;                     <span class="comment">// 信号强度</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    uhsd_char dev_name[64];            <span class="comment">// 设备名称</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_struct" href="structuhsd__ble__dev__type__info__t.html">uhsd_ble_dev_type_info_t</a> dev_type; <span class="comment">// 设备类型</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <a class="code hl_struct" href="structuhsd__findTMS__dev__attr__t.html">uhsd_findTMS_dev_attr_t</a>;</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structuhsd__findTMS__dev__t.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_struct" href="structuhsd__findTMS__dev__attr__t.html">uhsd_findTMS_dev_attr_t</a> dev_info;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    uhsd_s32 status;   <span class="comment">// 配置绑定状态。必填。</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    uhsd_s32 err_code; <span class="comment">// 错误码</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <a class="code hl_struct" href="structuhsd__findTMS__dev__t.html">uhsd_findTMS_dev_t</a>;</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">typedef</span> uhsd_void (*findTMS_find_cb)(uhsd_s32 err_code, uhsd_u32 dev_num, <a class="code hl_struct" href="structuhsd__findTMS__dev__attr__t.html">uhsd_findTMS_dev_attr_t</a> *dev_attr_list, uhsd_void *user_data);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>UHSD_API uhsd_s32 uhsd_findTMS_init(uhsd_void);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>UHSD_API uhsd_s32 uhsd_findTMS_deinit(uhsd_void);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>UHSD_API uhsd_void *uhsd_findTMS_crt(uhsd_char *clientId,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                     uhsd_char *appId,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                     uhsd_char *appKey,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                     uhsd_char *access_token,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                     uhsd_s32 src_devHandle,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                     uhsd_u8 is_sync_roomInfo);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>UHSD_API uhsd_s32 uhsd_findTMS_dstr(uhsd_void *findTMS_handle);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>UHSD_API uhsd_s32 uhsd_findTMS_find_start(uhsd_void *findTMSHandle, uhsd_u32 timeout, findTMS_find_cb cb, uhsd_void *cb_param);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>UHSD_API uhsd_s32 uhsd_findTMS_find_stop(uhsd_void);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/***********************启动批量配置接口 start***********************/</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// 批量整体配置绑定状态回调</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_IDLE     (0)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_CTRLABLE (1)</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_INCONFIG (2)</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_TRIGABLE (3)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_CONFIGED (4)</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_UNBINDED (5)</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_BINDED   (6) </span><span class="comment">// 配置绑定成功, 只有6是成功，其他都是异常</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define UHSD_FINDTMS_STATE_TIMEOUT  (7) </span><span class="comment">// 配置超时</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// 具体error code 数值</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define UHSD_E_FINDTMS_BASE             (-600)</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define UHSD_E_FINDTMS_NOT_ALL_CONFIGED (-601)</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#define UHSD_E_FINDTMS_STOP_FROM_APP    (-650)</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="};">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="structfindTMS__config__s.html">  105</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structfindTMS__config__s.html">findTMS_config_s</a></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    uhsd_s32 state;    <span class="comment">// @ref UHSD_FINDTMS_STATE_XXX</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    uhsd_s32 err_code; <span class="comment">// state不等于UHSD_FINDTMS_STATE_BINDED, 再看err_code，err_code值来自于蓝牙上报</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    uhsd_char *device_tmpID;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    uhsd_char *device_id;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    uhsd_void *extra_data; <span class="comment">// 暂时未用</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <a class="code hl_struct" href="structfindTMS__config__s.html">findTMS_config_t</a>;</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">// typedef uhsd_void (</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//     *findTMS_config_process_cb)(uhsd_s32 status, uhsd_s32 sn, uhsd_char *device_tmpID, uhsd_char *device_id, uhsd_void *extra_data, uhsd_void *user_data);</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">typedef</span> uhsd_void (*findTMS_config_process_cb)(<a class="code hl_struct" href="structfindTMS__config__s.html">findTMS_config_t</a> *single_config, uhsd_void *user_data);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">// 批量配置绑定结果</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">typedef</span> uhsd_void (*findTMS_batch_config_cb)(uhsd_s32 ret, uhsd_u32 dev_num, <a class="code hl_struct" href="structfindTMS__config__s.html">findTMS_config_t</a> **batch_config, uhsd_void *user_data);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>UHSD_API uhsd_s32 uhsd_findTMS_batch_config_start(uhsd_void *findTMSHandle,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                                  uhsd_u32 total_timeout,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                                                  uhsd_u32 single_timeout,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                                  uhsd_char *user_token, <span class="comment">// 新增</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                                  uhsd_char *ssid,       <span class="comment">// 新增</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                                  uhsd_char *pwd,        <span class="comment">// 新增</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                                  uhsd_char *bssid,      <span class="comment">// 新增</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                                  uhsd_s32 sn,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                                                  uhsd_char *traceID,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                                                  uhsd_char *device_tmpID_list[33],</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                                                  uhsd_u32 device_num,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                                                  uhsd_void *user_data,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                                  findTMS_config_process_cb config_process_cb,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                                  findTMS_batch_config_cb batch_config_cb);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>UHSD_API uhsd_s32 uhsd_findTMS_batch_config_stop(uhsd_void *findTMSHandle);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">/***********************启动批量配置接口 end***********************/</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructfindTMS__config__s_html"><div class="ttname"><a href="structfindTMS__config__s.html">findTMS_config_s</a></div><div class="ttdef"><b>Definition</b> uhsd_findTMS.h:106</div></div>
+<div class="ttc" id="astructuhsd__ble__dev__type__info__t_html"><div class="ttname"><a href="structuhsd__ble__dev__type__info__t.html">uhsd_ble_dev_type_info_t</a></div><div class="ttdef"><b>Definition</b> uhsd_findTMS.h:6</div></div>
+<div class="ttc" id="astructuhsd__findTMS__dev__attr__t_html"><div class="ttname"><a href="structuhsd__findTMS__dev__attr__t.html">uhsd_findTMS_dev_attr_t</a></div><div class="ttdef"><b>Definition</b> uhsd_findTMS.h:13</div></div>
+<div class="ttc" id="astructuhsd__findTMS__dev__t_html"><div class="ttname"><a href="structuhsd__findTMS__dev__t.html">uhsd_findTMS_dev_t</a></div><div class="ttdef"><b>Definition</b> uhsd_findTMS.h:23</div></div>
+<div class="ttc" id="auhsd__types_8h_html"><div class="ttname"><a href="uhsd__types_8h.html">uhsd_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><b>uhsd_findTMS.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

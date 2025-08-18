@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_video.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__video_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uhsd_video.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhsddev.html">设备接入以及控制接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>音视频插件对外接口  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="uhsd__types_8h_source.html">uhsd_types.h</a>&gt;</code><br />
+</div>
+<p><a href="uhsd__video_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__avt__data__info__t.html">uhsd_avt_data_info_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__frame__t.html">uhsd_frame_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__notify__cs__service__info.html">uhsd_notify_cs_service_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">云存服务状态通知回调函数  <a href="structuhsd__notify__cs__service__info.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__video__cs__service__info.html">uhsd_video_cs_service_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__video__params__t.html">uhsd_video_params_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga4620eb783fd7aaa1d61fe4fdaa750d74" id="r_ga4620eb783fd7aaa1d61fe4fdaa750d74"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_PATH_SIZE</b>&#160;&#160;&#160;(128)</td></tr>
+<tr class="separator:ga4620eb783fd7aaa1d61fe4fdaa750d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849038a84a955e8668485dc921633028" id="r_ga849038a84a955e8668485dc921633028"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_DEVID_SIZE</b>&#160;&#160;&#160;(20)</td></tr>
+<tr class="separator:ga849038a84a955e8668485dc921633028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace0884362242861615e03e12e0145849" id="r_gace0884362242861615e03e12e0145849"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NETCAR_NAME_SIZE</b>&#160;&#160;&#160;(20)</td></tr>
+<tr class="separator:gace0884362242861615e03e12e0145849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a872ebe0cd22727fd6530a9071e1d07" id="r_ga1a872ebe0cd22727fd6530a9071e1d07"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IV_AVT_MAX_VENC_CHN_NUM</b>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:ga1a872ebe0cd22727fd6530a9071e1d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gac206c672766e16243512d7276002c201" id="r_gac206c672766e16243512d7276002c201"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gac206c672766e16243512d7276002c201">uhsd_recv_stream_cb</a>) (uhsd_u16 cap_chn, uhsd_u16 user_index, uhsd_stream_type_e eAvtStreamType, <a class="el" href="structuhsd__frame__t.html">uhsd_frame_t</a> frame)</td></tr>
+<tr class="memdesc:gac206c672766e16243512d7276002c201"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受多路音视频回调函数  <br /></td></tr>
+<tr class="separator:gac206c672766e16243512d7276002c201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga756225ef30f5a1467f1fdb755a0d2b5c" id="r_ga756225ef30f5a1467f1fdb755a0d2b5c"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga756225ef30f5a1467f1fdb755a0d2b5c">uhsd_start_rcv_audio_stream_cb</a>) (uhsd_u32 avt_channel, <a class="el" href="structuhsd__avt__data__info__t.html">uhsd_avt_data_info_t</a> *avenc_info)</td></tr>
+<tr class="memdesc:ga756225ef30f5a1467f1fdb755a0d2b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始接收音频对讲状态通知回调函数  <br /></td></tr>
+<tr class="separator:ga756225ef30f5a1467f1fdb755a0d2b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab761a6a4283f68f83f3f53cd21de2f5e" id="r_gab761a6a4283f68f83f3f53cd21de2f5e"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gab761a6a4283f68f83f3f53cd21de2f5e">uhsd_stop_rcv_audio_stream_cb</a>) (uhsd_u32 avt_channel, uhsd_stream_type_e stream_typer)</td></tr>
+<tr class="memdesc:gab761a6a4283f68f83f3f53cd21de2f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止接收音频对讲状态通知回调函数  <br /></td></tr>
+<tr class="separator:gab761a6a4283f68f83f3f53cd21de2f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga486bdcf5e78922f00d5befc5e627b512" id="r_ga486bdcf5e78922f00d5befc5e627b512"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_notify_cs_service_cb</b>) (<a class="el" href="structuhsd__notify__cs__service__info.html">uhsd_notify_cs_service_info</a> *service_info)</td></tr>
+<tr class="separator:ga486bdcf5e78922f00d5befc5e627b512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa602ee46a4092ab5ec084ebd41b1a8e6" id="r_gaa602ee46a4092ab5ec084ebd41b1a8e6"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gaa602ee46a4092ab5ec084ebd41b1a8e6">uhsd_notify_status_cb</a>) (uhsd_s32 status)</td></tr>
+<tr class="memdesc:gaa602ee46a4092ab5ec084ebd41b1a8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IOT视频连接状态回调通知  <br /></td></tr>
+<tr class="separator:gaa602ee46a4092ab5ec084ebd41b1a8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23b413249771afa2e8168258a3f7ea1c" id="r_ga23b413249771afa2e8168258a3f7ea1c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structuhsd__avt__data__info__t.html">uhsd_avt_data_info_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga23b413249771afa2e8168258a3f7ea1c">uhsd_get_av_enc_info_cb</a>) (uhsd_u32 av_channnel, uhsd_video_definition_e definition)</td></tr>
+<tr class="memdesc:ga23b413249771afa2e8168258a3f7ea1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取多路音视频编码信息  <br /></td></tr>
+<tr class="separator:ga23b413249771afa2e8168258a3f7ea1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga932bc427c993f9283f06c89d218d4792" id="r_ga932bc427c993f9283f06c89d218d4792"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga932bc427c993f9283f06c89d218d4792">uhsd_request_key_frame_cb</a>) (uhsd_u32 av_channnel, uhsd_video_definition_e definition)</td></tr>
+<tr class="memdesc:ga932bc427c993f9283f06c89d218d4792"><td class="mdescLeft">&#160;</td><td class="mdescRight">多路音视频同步关键帧  <br /></td></tr>
+<tr class="separator:ga932bc427c993f9283f06c89d218d4792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7eb5392d7d5f44afb0e3aa6026249bb2" id="r_ga7eb5392d7d5f44afb0e3aa6026249bb2"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga7eb5392d7d5f44afb0e3aa6026249bb2">uhsd_control_live_stream_cb</a>) (uhsd_u32 av_channnel, uhsd_video_definition_e definition, uhsd_s32 status)</td></tr>
+<tr class="memdesc:ga7eb5392d7d5f44afb0e3aa6026249bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">多路音视频开关直播推流通知  <br /></td></tr>
+<tr class="separator:ga7eb5392d7d5f44afb0e3aa6026249bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2e597965accf14042f0a1e9a237f6ad" id="r_gae2e597965accf14042f0a1e9a237f6ad"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gae2e597965accf14042f0a1e9a237f6ad">uhsd_live_stream_play_num_cb</a>) (uhsd_s32 num)</td></tr>
+<tr class="memdesc:gae2e597965accf14042f0a1e9a237f6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">音视频直播观看人数通知  <br /></td></tr>
+<tr class="separator:gae2e597965accf14042f0a1e9a237f6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafceaaf8bd4110d8d5e44f1acf3870a2c" id="r_gafceaaf8bd4110d8d5e44f1acf3870a2c"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gafceaaf8bd4110d8d5e44f1acf3870a2c">uhsd_dev_get_cs_service_result_cb</a>) (uhsd_s32 err_num, <a class="el" href="structuhsd__video__cs__service__info.html">uhsd_video_cs_service_info</a> *result, uhsd_void *param)</td></tr>
+<tr class="memdesc:gafceaaf8bd4110d8d5e44f1acf3870a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">云存服务结果查询回调  <br /></td></tr>
+<tr class="separator:gafceaaf8bd4110d8d5e44f1acf3870a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3182c8750e28def248c48799d9bc880" id="r_gaa3182c8750e28def248c48799d9bc880"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gaa3182c8750e28def248c48799d9bc880">uhsd_video_user_audio_notify_cb</a>) (const uhsd_char *url, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:gaa3182c8750e28def248c48799d9bc880"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义语音通知回调  <br /></td></tr>
+<tr class="separator:gaa3182c8750e28def248c48799d9bc880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bc71e66d67914f421fdc21634a95903" id="r_ga2bc71e66d67914f421fdc21634a95903"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga2bc71e66d67914f421fdc21634a95903">uhsd_video_blacklist_query_cb</a>) (uhsd_s32 err_num, uhsd_s32 result, uhsd_void *param)</td></tr>
+<tr class="memdesc:ga2bc71e66d67914f421fdc21634a95903"><td class="mdescLeft">&#160;</td><td class="mdescRight">黑名单查询结果回调  <br /></td></tr>
+<tr class="separator:ga2bc71e66d67914f421fdc21634a95903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga652a1d1fd5a0c6f55ec33589ea4c3e28" id="r_ga652a1d1fd5a0c6f55ec33589ea4c3e28"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga652a1d1fd5a0c6f55ec33589ea4c3e28">uhsd_video_blacklist_report_cb</a>) (uhsd_s32 err_num, uhsd_s32 cs_result, uhsd_void *param)</td></tr>
+<tr class="memdesc:ga652a1d1fd5a0c6f55ec33589ea4c3e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">黑名单上报结果回调  <br /></td></tr>
+<tr class="separator:ga652a1d1fd5a0c6f55ec33589ea4c3e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54f39f326433e514135171b385abbd9e" id="r_ga54f39f326433e514135171b385abbd9e"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga54f39f326433e514135171b385abbd9e">uhsd_video_upload_log_notify_cb</a>) (uhsd_void *param)</td></tr>
+<tr class="memdesc:ga54f39f326433e514135171b385abbd9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传日志通知回调  <br /></td></tr>
+<tr class="separator:ga54f39f326433e514135171b385abbd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga99eaa08585fe35133d0c8e834ad281e0" id="r_ga99eaa08585fe35133d0c8e834ad281e0"><td class="memItemLeft" align="right" valign="top"><a id="ga99eaa08585fe35133d0c8e834ad281e0" name="ga99eaa08585fe35133d0c8e834ad281e0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_codec_type_e</b> { <b>VIDEO_CODEC_TYPE_UNSUPPORTED</b> = 0
+, <b>VIDEO_CODEC_TYPE_H264</b> = 1
+, <b>VIDEO_CODEC_TYPE_H265</b> = 2
+ }</td></tr>
+<tr class="separator:ga99eaa08585fe35133d0c8e834ad281e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32cad191c1c542b5640d206a5f60a9db" id="r_ga32cad191c1c542b5640d206a5f60a9db"><td class="memItemLeft" align="right" valign="top"><a id="ga32cad191c1c542b5640d206a5f60a9db" name="ga32cad191c1c542b5640d206a5f60a9db"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_device_ability_e</b> { <br />
+&#160;&#160;<b>VIDEO_ABILITY_UNSUPPORTED</b> = 0
+, <b>VIDEO_ABILITY_MONITOR</b> = 1
+, <b>VIDEO_ABILITY_RECORDR</b> = 2
+, <b>VIDEO_ABILITY_MONITORandRECORDR</b> = 3
+, <br />
+&#160;&#160;<b>VIDEO_ABILITY_CLOUD</b> = 4
+, <b>VIDEO_ABILITY_MONITORandCLOUD</b> = 5
+, <b>VIDEO_ABILITY_RECORDRandCLOUD</b> = 6
+, <b>VIDEO_ABILITY_MONITORandRECORDRandCLOUD</b> = 7
+<br />
+ }</td></tr>
+<tr class="separator:ga32cad191c1c542b5640d206a5f60a9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54a5f14d7d95e0b49cc37d5b7572c406" id="r_ga54a5f14d7d95e0b49cc37d5b7572c406"><td class="memItemLeft" align="right" valign="top"><a id="ga54a5f14d7d95e0b49cc37d5b7572c406" name="ga54a5f14d7d95e0b49cc37d5b7572c406"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_definition_e</b> { <br />
+&#160;&#160;<b>VIDEO_DEFINITION_FL</b> = 0
+, <b>VIDEO_DEFINITION_SD</b> = 1
+, <b>VIDEO_DEFINITION_HD</b> = 2
+, <b>VIDEO_DEFINITION_ONLY_AUDIO</b> = 3
+, <br />
+&#160;&#160;<b>VIDEO_DEFINITION_DEFAULT</b> = 10
+<br />
+ }</td></tr>
+<tr class="separator:ga54a5f14d7d95e0b49cc37d5b7572c406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb0c13c5a81eb515961ae02699b98b85" id="r_gafb0c13c5a81eb515961ae02699b98b85"><td class="memItemLeft" align="right" valign="top"><a id="gafb0c13c5a81eb515961ae02699b98b85" name="gafb0c13c5a81eb515961ae02699b98b85"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_audio_aenc_mode_e</b> { <b>AENC_MODE_MONO</b> = 0
+, <b>AENC_MODE_STEREO</b> = 1
+, <b>AENC_MODE_BUTT</b>
+ }</td></tr>
+<tr class="separator:gafb0c13c5a81eb515961ae02699b98b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad0c054b67453417c955a89b4ebbbe4e" id="r_gaad0c054b67453417c955a89b4ebbbe4e"><td class="memItemLeft" align="right" valign="top"><a id="gaad0c054b67453417c955a89b4ebbbe4e" name="gaad0c054b67453417c955a89b4ebbbe4e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_audio_sample_rate_e</b> { <br />
+&#160;&#160;<b>AENC_SAMPLE_RATE_UNSUPPORTED</b> = 0
+, <b>AENC_SAMPLE_RATE_8000</b> = 8000
+, <b>AENC_SAMPLE_RATE_12000</b> = 12000
+, <b>AENC_SAMPLE_RATE_11025</b> = 11025
+, <br />
+&#160;&#160;<b>AENC_SAMPLE_RATE_16000</b> = 16000
+, <b>AENC_SAMPLE_RATE_22050</b> = 22050
+, <b>AENC_SAMPLE_RATE_24000</b> = 24000
+, <b>AENC_SAMPLE_RATE_32000</b> = 32000
+, <br />
+&#160;&#160;<b>AENC_SAMPLE_RATE_44100</b> = 44100
+, <b>AENC_SAMPLE_RATE_48000</b> = 48000
+, <b>AENC_SAMPLE_RATE_64000</b> = 64000
+, <b>AENC_SAMPLE_RATE_96000</b> = 96000
+, <br />
+&#160;&#160;<b>AENC_SAMPLE_RATE_BUTT</b>
+<br />
+ }</td></tr>
+<tr class="separator:gaad0c054b67453417c955a89b4ebbbe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fa496bc74102dfe54e0cc799fde00f7" id="r_ga4fa496bc74102dfe54e0cc799fde00f7"><td class="memItemLeft" align="right" valign="top"><a id="ga4fa496bc74102dfe54e0cc799fde00f7" name="ga4fa496bc74102dfe54e0cc799fde00f7"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_audio_bit_width_e</b> { <b>AENC_BIT_WIDTH_8</b> = 0
+, <b>AENC_BIT_WIDTH_16</b> = 1
+, <b>AENC_BIT_WIDTH_24</b> = 2
+, <b>AENC_BIT_WIDTH_BUTT</b>
+ }</td></tr>
+<tr class="separator:ga4fa496bc74102dfe54e0cc799fde00f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga095e515c18d41c287ebde8c71565f30a" id="r_ga095e515c18d41c287ebde8c71565f30a"><td class="memItemLeft" align="right" valign="top"><a id="ga095e515c18d41c287ebde8c71565f30a" name="ga095e515c18d41c287ebde8c71565f30a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_audio_aenc_type_e</b> { <br />
+&#160;&#160;<b>AENC_TYPE_PCM</b> = 0
+, <b>AENC_TYPE_G711A</b> = 1
+, <b>AENC_TYPE_G711U</b> = 2
+, <b>AENC_TYPE_G726</b> = 3
+, <br />
+&#160;&#160;<b>AENC_TYPE_AAC</b> = 4
+, <b>AENC_TYPE_AMR</b> = 5
+, <b>AENC_TYPE_ADPCMA</b> = 6
+, <b>AENC_TYPE_BUTT</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga095e515c18d41c287ebde8c71565f30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1eea3fb9561d85cfc2ca1c0824c7c3a5" id="r_ga1eea3fb9561d85cfc2ca1c0824c7c3a5"><td class="memItemLeft" align="right" valign="top"><a id="ga1eea3fb9561d85cfc2ca1c0824c7c3a5" name="ga1eea3fb9561d85cfc2ca1c0824c7c3a5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_audio_aenc_aac_type_e</b> { <br />
+&#160;&#160;<b>AENC_AAC_TYPE_NONE</b> = 0
+, <b>AENC_AAC_TYPE_MAIN</b> = 1
+, <b>AENC_AAC_TYPE_LC</b> = 2
+, <b>AENC_AAC_TYPE_SSR</b> = 3
+, <br />
+&#160;&#160;<b>AENC_AAC_TYPE_LTP</b> = 4
+, <b>AENC_AAC_TYPE_SBR</b> = 5
+, <b>AENC_AAC_TYPE_SCALCBLE</b> = 6
+, <b>AENC_AAC_TYPE_TWINVQ</b> = 7
+, <br />
+&#160;&#160;<b>AENC_AAC_TYPE_CELP</b> = 8
+, <b>AENC_AAC_TYPE_HVXC</b> = 9
+, <b>AENC_AAC_TYPE_BUTT</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga1eea3fb9561d85cfc2ca1c0824c7c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29f1ed44a65f1e1b9500c5b87f6740a0" id="r_ga29f1ed44a65f1e1b9500c5b87f6740a0"><td class="memItemLeft" align="right" valign="top"><a id="ga29f1ed44a65f1e1b9500c5b87f6740a0" name="ga29f1ed44a65f1e1b9500c5b87f6740a0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_avt_bit_rate_e</b> { <b>UHSD_MDMAIN_BITRATE</b> = 1
+, <b>UHSD_MDSUB_BITRATE</b> = 2
+, <b>UHSD_THIRD_BITRATE</b> = 3
+ }</td></tr>
+<tr class="separator:ga29f1ed44a65f1e1b9500c5b87f6740a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4654ea19a6b4dbf68bfed3d0c1c6f9fe" id="r_ga4654ea19a6b4dbf68bfed3d0c1c6f9fe"><td class="memItemLeft" align="right" valign="top"><a id="ga4654ea19a6b4dbf68bfed3d0c1c6f9fe" name="ga4654ea19a6b4dbf68bfed3d0c1c6f9fe"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_stream_type_e</b> { <br />
+&#160;&#160;<b>STREAM_TYPE_AUDIO</b> = 0
+, <b>STREAM_TYPE_VIDEO</b> = 1
+, <b>STREAM_TYPE_AV</b> = 2
+, <b>STREAM_TYPE_ONLY_AUDIO</b> = 3
+, <br />
+&#160;&#160;<b>STREAM_TYPE_ONLY_VIDEO</b> = 4
+, <b>STREAM_TYPE_BUTT</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga4654ea19a6b4dbf68bfed3d0c1c6f9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0df97524c502280e54ed718e9148956f" id="r_ga0df97524c502280e54ed718e9148956f"><td class="memItemLeft" align="right" valign="top"><a id="ga0df97524c502280e54ed718e9148956f" name="ga0df97524c502280e54ed718e9148956f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_send_channel_e</b> { <b>UHSD_SEND_CHANNEL_MONITOR</b> = 0
+, <b>UHSD_SEND_CHANNEL_RECORD</b>
+, <b>UHSD_SEND_CHANNEL_CLOUD</b>
+ }</td></tr>
+<tr class="separator:ga0df97524c502280e54ed718e9148956f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f34000e13e105c2b1f870d7c2213a88" id="r_ga9f34000e13e105c2b1f870d7c2213a88"><td class="memItemLeft" align="right" valign="top"><a id="ga9f34000e13e105c2b1f870d7c2213a88" name="ga9f34000e13e105c2b1f870d7c2213a88"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_cs_evevt_type_e</b> { <br />
+&#160;&#160;<b>CS_EVENT_TYPE_MOTION</b> = 0
+, <b>CS_EVENT_TYPE_PERSON</b> = 1
+, <b>CS_EVENT_TYPE_SOUND</b> = 2
+, <b>CS_EVENT_TYPE_LINKAGE</b> = 3
+, <br />
+&#160;&#160;<b>CS_EVENT_TYPE_AIFACE</b> = 4
+, <b>CS_EVENT_TYPE_MANUAL</b> = 5
+, <b>CS_EVENT_TYPE_CRY_VOICE</b> = 6
+, <b>CS_EVENT_TYPE_PERSON_TRACE</b> = 7
+, <br />
+&#160;&#160;<b>CS_EVENT_TYPE_CAR_NUMBER</b> = 8
+, <b>CS_EVENT_TYPE_CAR_SHAPE</b> = 9
+, <b>CS_EVENT_TYPE_OUT_AREA</b> = 10
+, <b>CS_EVENT_TYPE_AREA</b> = 11
+, <br />
+&#160;&#160;<b>CS_EVENT_TYPE_PIR</b> = 12
+, <b>CS_EVENT_TYPE_STAY</b> = 13
+, <b>CS_EVENT_TYPE_DOORBELL</b> = 14
+, <b>CS_EVENT_TYPE_PROTECE</b> = 15
+, <br />
+&#160;&#160;<b>CS_EVENT_TYPE_LOW_BATTERY</b> = 16
+, <b>CS_EVENT_TYPE_MAX</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga9f34000e13e105c2b1f870d7c2213a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gad2061e788e6cd78d70f36ab0423d2d8e" id="r_gad2061e788e6cd78d70f36ab0423d2d8e"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gad2061e788e6cd78d70f36ab0423d2d8e">uhsd_video_init</a> (<a class="el" href="structuhsd__video__params__t.html">uhsd_video_params_t</a> param)</td></tr>
+<tr class="memdesc:gad2061e788e6cd78d70f36ab0423d2d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化IOT设备运行环境  <br /></td></tr>
+<tr class="separator:gad2061e788e6cd78d70f36ab0423d2d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd9f334faa7fec7d1ca02f210b11ae68" id="r_gadd9f334faa7fec7d1ca02f210b11ae68"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_destory</b> (uhsd_void)</td></tr>
+<tr class="memdesc:gadd9f334faa7fec7d1ca02f210b11ae68"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放运行资源 <br /></td></tr>
+<tr class="separator:gadd9f334faa7fec7d1ca02f210b11ae68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74a19fd14d015d3d7e7379309ca752da" id="r_ga74a19fd14d015d3d7e7379309ca752da"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga74a19fd14d015d3d7e7379309ca752da">uhsd_video_send_video</a> (<a class="el" href="structuhsd__frame__t.html">uhsd_frame_t</a> *frame)</td></tr>
+<tr class="memdesc:ga74a19fd14d015d3d7e7379309ca752da"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送视频帧；  <br /></td></tr>
+<tr class="separator:ga74a19fd14d015d3d7e7379309ca752da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68028f6b8a20dd3b9d70bed8c1a6a85e" id="r_ga68028f6b8a20dd3b9d70bed8c1a6a85e"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga68028f6b8a20dd3b9d70bed8c1a6a85e">uhsd_video_send_audio</a> (<a class="el" href="structuhsd__frame__t.html">uhsd_frame_t</a> *frame)</td></tr>
+<tr class="memdesc:ga68028f6b8a20dd3b9d70bed8c1a6a85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送音频帧；  <br /></td></tr>
+<tr class="separator:ga68028f6b8a20dd3b9d70bed8c1a6a85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7dbd949feb7223cc6a4d22a2f7ee1b48" id="r_ga7dbd949feb7223cc6a4d22a2f7ee1b48"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_enable_ability</b> (uhsd_s32 ability)</td></tr>
+<tr class="memdesc:ga7dbd949feb7223cc6a4d22a2f7ee1b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">使能能力集,实时监控(1)、本地录像(2)、云存(4)、 实时监控+本地录像(3)、实时监控+云存(5)、本地录像+云存(6)、实时监控+本地录像+云存(7) 注意：开启云存功能的时候，要调用uhsd_video_get_cs_service函数查询是否存在云存套餐 <br /></td></tr>
+<tr class="separator:ga7dbd949feb7223cc6a4d22a2f7ee1b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab03b88b4400a64ec73ed89ddaf15e5c8" id="r_gab03b88b4400a64ec73ed89ddaf15e5c8"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_video_disable_ability</b> (uhsd_s32 ability)</td></tr>
+<tr class="memdesc:gab03b88b4400a64ec73ed89ddaf15e5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">去使能能力集,实时监控(1)、本地录像(2)、云存(4)、 实时监控+本地录像(3)、实时监控+云存(5)、本地录像+云存(6)、实时监控+本地录像+云存(7) <br /></td></tr>
+<tr class="separator:gab03b88b4400a64ec73ed89ddaf15e5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccc782eb9cbcd0130585b84e2ed34c59" id="r_gaccc782eb9cbcd0130585b84e2ed34c59"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gaccc782eb9cbcd0130585b84e2ed34c59">uhsd_video_setRecordType</a> (uhsd_char *recordType)</td></tr>
+<tr class="memdesc:gaccc782eb9cbcd0130585b84e2ed34c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前本地录像片段的标签  <br /></td></tr>
+<tr class="separator:gaccc782eb9cbcd0130585b84e2ed34c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga528973f494439c26f69da3885635c6c8" id="r_ga528973f494439c26f69da3885635c6c8"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga528973f494439c26f69da3885635c6c8">uhsd_video_notifyCsEvent</a> (uhsd_cs_evevt_type_e type, uhsd_u64 startTimeMs)</td></tr>
+<tr class="memdesc:ga528973f494439c26f69da3885635c6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知云存事件发生  <br /></td></tr>
+<tr class="separator:ga528973f494439c26f69da3885635c6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga341b590cace8641138c096162faf2cc0" id="r_ga341b590cace8641138c096162faf2cc0"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga341b590cace8641138c096162faf2cc0">uhsd_video_get_cs_service</a> (const uhsd_char *devid, <a class="el" href="group__grp__uhsddev.html#gafceaaf8bd4110d8d5e44f1acf3870a2c">uhsd_dev_get_cs_service_result_cb</a> cb, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:ga341b590cace8641138c096162faf2cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取云存服务状态  <br /></td></tr>
+<tr class="separator:ga341b590cace8641138c096162faf2cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27d17f78c1d079cece2c37dfe31d09e3" id="r_ga27d17f78c1d079cece2c37dfe31d09e3"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga27d17f78c1d079cece2c37dfe31d09e3">uhsd_video_set_user_audio_notify_cb</a> (const uhsd_char *devid, <a class="el" href="group__grp__uhsddev.html#gaa3182c8750e28def248c48799d9bc880">uhsd_video_user_audio_notify_cb</a> cb, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:ga27d17f78c1d079cece2c37dfe31d09e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义语音通知回调  <br /></td></tr>
+<tr class="separator:ga27d17f78c1d079cece2c37dfe31d09e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17b888a3aa369a17f60ac13837a7e913" id="r_ga17b888a3aa369a17f60ac13837a7e913"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga17b888a3aa369a17f60ac13837a7e913">uhsd_video_blacklist_query</a> (const uhsd_char *devid, <a class="el" href="group__grp__uhsddev.html#ga2bc71e66d67914f421fdc21634a95903">uhsd_video_blacklist_query_cb</a> cb, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:ga17b888a3aa369a17f60ac13837a7e913"><td class="mdescLeft">&#160;</td><td class="mdescRight">黑名单查询功能  <br /></td></tr>
+<tr class="separator:ga17b888a3aa369a17f60ac13837a7e913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37c67ff96c72a95b97b4037dcf40a964" id="r_ga37c67ff96c72a95b97b4037dcf40a964"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga37c67ff96c72a95b97b4037dcf40a964">uhsd_video_blacklist_report</a> (const uhsd_char *devid, uhsd_s32 flag, <a class="el" href="group__grp__uhsddev.html#ga652a1d1fd5a0c6f55ec33589ea4c3e28">uhsd_video_blacklist_report_cb</a> cb, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:ga37c67ff96c72a95b97b4037dcf40a964"><td class="mdescLeft">&#160;</td><td class="mdescRight">黑名单处理结果上报  <br /></td></tr>
+<tr class="separator:ga37c67ff96c72a95b97b4037dcf40a964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3763668cbaad0eb30f18d29ba2640233" id="r_ga3763668cbaad0eb30f18d29ba2640233"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#ga3763668cbaad0eb30f18d29ba2640233">uhsd_video_set_upload_log_notify_cb</a> (<a class="el" href="group__grp__uhsddev.html#ga54f39f326433e514135171b385abbd9e">uhsd_video_upload_log_notify_cb</a> cb, uhsd_void *cb_param)</td></tr>
+<tr class="memdesc:ga3763668cbaad0eb30f18d29ba2640233"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置上传日志通知回调  <br /></td></tr>
+<tr class="separator:ga3763668cbaad0eb30f18d29ba2640233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5b92dd6b75956b8d8b6646b3188797a" id="r_gac5b92dd6b75956b8d8b6646b3188797a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsddev.html#gac5b92dd6b75956b8d8b6646b3188797a">uhsd_video_remove_sd_occupation</a> (uhsd_void)</td></tr>
+<tr class="memdesc:gac5b92dd6b75956b8d8b6646b3188797a"><td class="mdescLeft">&#160;</td><td class="mdescRight">解除程序占用sd卡，此函数会关闭录像功能， 如需录像功能，插入sd卡后需要重新使能录像功能  <br /></td></tr>
+<tr class="separator:gac5b92dd6b75956b8d8b6646b3188797a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>音视频插件对外接口 </p>
+<dl class="section author"><dt>作者</dt><dd>dengtaowen (<a href="#" onclick="location.href='mai'+'lto:'+'den'+'gt'+'aow'+'en'+'@ha'+'ie'+'r.c'+'om'; return false;">dengt<span class="obfuscator">.nosp@m.</span>aowe<span class="obfuscator">.nosp@m.</span>n@hai<span class="obfuscator">.nosp@m.</span>er.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-03-24</dd></dl>
+<dl class="section user"><dt>History:</dt><dd><table class="doxtable">
+<tr>
+<th>Date </th><th>version </th><th>Author </th><th>Description </th></tr>
+<tr>
+<td>2023-03-24 </td><td>1.0 </td><td></td><td></td></tr>
+</table>
+</dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><a class="el" href="uhsd__video_8h.html">uhsd_video.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

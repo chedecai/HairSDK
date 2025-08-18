@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_semaphore.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__semaphore_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uh_semaphore.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhosos.html">操作系统适配接口定义</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uh__types_8h_source.html">uh_types.h</a>&quot;</code><br />
+</div>
+<p><a href="uh__semaphore_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga088b9ad1a88f98ffd33b923e0e01d246" id="r_ga088b9ad1a88f98ffd33b923e0e01d246"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_TEST_SEM</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga088b9ad1a88f98ffd33b923e0e01d246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00af11774fbd53caaa0003dfc09ce10d" id="r_ga00af11774fbd53caaa0003dfc09ce10d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_WAIT_FOREVER</b>&#160;&#160;&#160;0xfffffffful</td></tr>
+<tr class="separator:ga00af11774fbd53caaa0003dfc09ce10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b7d60e4733017702f2c936c33f188b8" id="r_ga1b7d60e4733017702f2c936c33f188b8"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_WAIT_NONE</b>&#160;&#160;&#160;0u</td></tr>
+<tr class="separator:ga1b7d60e4733017702f2c936c33f188b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga329e9a7c1929dada90a264d039a9e035" id="r_ga329e9a7c1929dada90a264d039a9e035"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEM_TIME_OUT</b>&#160;&#160;&#160;110</td></tr>
+<tr class="separator:ga329e9a7c1929dada90a264d039a9e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga13d70bca09b71d2f95e7e70f0216dbc6" id="r_ga13d70bca09b71d2f95e7e70f0216dbc6"><td class="memItemLeft" align="right" valign="top">
+typedef struct uhos_sem_s *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_sem_t</b></td></tr>
+<tr class="separator:ga13d70bca09b71d2f95e7e70f0216dbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga41a8c7c0172a652cd92af4d0283b327b" id="r_ga41a8c7c0172a652cd92af4d0283b327b"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga41a8c7c0172a652cd92af4d0283b327b">uhos_sem_create</a> (uhos_sem_t *sem, uhos_u32 initial_count)</td></tr>
+<tr class="memdesc:ga41a8c7c0172a652cd92af4d0283b327b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并初始化用于管理资源的信号量对象  <br /></td></tr>
+<tr class="separator:ga41a8c7c0172a652cd92af4d0283b327b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cda613d02737c28897a6d3087ce1906" id="r_ga8cda613d02737c28897a6d3087ce1906"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga8cda613d02737c28897a6d3087ce1906">uhos_sem_delete</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga8cda613d02737c28897a6d3087ce1906"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除由 uhos_sem_creat 创建的信号量  <br /></td></tr>
+<tr class="separator:ga8cda613d02737c28897a6d3087ce1906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62fa2f3059ad233411deae9bc2ff04a7" id="r_ga62fa2f3059ad233411deae9bc2ff04a7"><td class="memItemLeft" align="right" valign="top">uhos_u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga62fa2f3059ad233411deae9bc2ff04a7">uhos_sem_count</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga62fa2f3059ad233411deae9bc2ff04a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量对象的可用标记数  <br /></td></tr>
+<tr class="separator:ga62fa2f3059ad233411deae9bc2ff04a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60d272853054d4bf768e940faf0a2ae1" id="r_ga60d272853054d4bf768e940faf0a2ae1"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga60d272853054d4bf768e940faf0a2ae1">uhos_sem_wait</a> (uhos_sem_t sem, uhos_u32 millisec)</td></tr>
+<tr class="separator:ga60d272853054d4bf768e940faf0a2ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89347f3f0d8a57098a82c51cfcad4c2d" id="r_ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosos.html#ga89347f3f0d8a57098a82c51cfcad4c2d">uhos_sem_release</a> (uhos_sem_t sem)</td></tr>
+<tr class="memdesc:ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放信号量令牌 uhos_sem_wait  <br /></td></tr>
+<tr class="separator:ga89347f3f0d8a57098a82c51cfcad4c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>shiqingpeng (<a href="#" onclick="location.href='mai'+'lto:'+'shi'+'qi'+'ngp'+'en'+'g@h'+'ai'+'er.'+'co'+'m'; return false;">shiqi<span class="obfuscator">.nosp@m.</span>ngpe<span class="obfuscator">.nosp@m.</span>ng@ha<span class="obfuscator">.nosp@m.</span>ier.<span class="obfuscator">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2021-10-18</dd></dl>
+<dl class="section user"><dt>History:</dt><dd><table class="doxtable">
+<tr>
+<th>Date </th><th>version </th><th>Author </th><th>Description </th></tr>
+<tr>
+<td>2021-10-18 </td><td>1.0 </td><td></td><td></td></tr>
+</table>
+</dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_123ada123df3448aaf3955a16272eb19.html">AL_OS</a></li><li class="navelem"><a class="el" href="uh__semaphore_8h.html">uh_semaphore.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

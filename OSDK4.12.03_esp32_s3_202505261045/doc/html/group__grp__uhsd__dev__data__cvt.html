@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 设备数据转换</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhsd__dev__data__cvt.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">设备数据转换</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SmartDevice 数据转换  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uhsd__dev__data__cvt_8h" id="r_uhsd__dev__data__cvt_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uhsd__dev__data__cvt_8h.html">uhsd_dev_data_cvt.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gac9cc63fab93c2ba161f8d77225505a5c" id="r_gac9cc63fab93c2ba161f8d77225505a5c"><td class="memItemLeft" align="right" valign="top"><a id="gac9cc63fab93c2ba161f8d77225505a5c" name="gac9cc63fab93c2ba161f8d77225505a5c"></a>
+typedef uhsd_void *&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ddc_mem_ctx_t</b></td></tr>
+<tr class="separator:gac9cc63fab93c2ba161f8d77225505a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bebd995d8eb513f3d46defa1cc6e9fa" id="r_ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="memItemLeft" align="right" valign="top">typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a>) (uhsd_devHandle devHandle, uhsd_s32 status, uhsd_void *user_param)</td></tr>
+<tr class="memdesc:ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据转换状态通知回调  <br /></td></tr>
+<tr class="separator:ga9bebd995d8eb513f3d46defa1cc6e9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga4f16d4f77c7ab8c0d9f6405d56ce97d7" id="r_ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> (uhsd_char *appID, uhsd_char *appKey, uhsd_char *clientID, uhsd_char *appVersion)</td></tr>
+<tr class="memdesc:ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建数据转换功能句柄  <br /></td></tr>
+<tr class="separator:ga4f16d4f77c7ab8c0d9f6405d56ce97d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga205eb2b9fed5b9369d48db6163dc95e4" id="r_ga205eb2b9fed5b9369d48db6163dc95e4"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga205eb2b9fed5b9369d48db6163dc95e4">uhsd_dev_data_cvt_del</a> (uhsd_void *dataCvtHandle)</td></tr>
+<tr class="memdesc:ga205eb2b9fed5b9369d48db6163dc95e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除数据转换功能  <br /></td></tr>
+<tr class="separator:ga205eb2b9fed5b9369d48db6163dc95e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf57dfa6e6837af9d3f24b81567ebdb9" id="r_gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gadf57dfa6e6837af9d3f24b81567ebdb9">uhsd_dev_data_cvt_params_set</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a> dc_status_cb, uhsd_void *user_param)</td></tr>
+<tr class="memdesc:gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">smartDevice 设置需要转换的设备信息  <br /></td></tr>
+<tr class="separator:gadf57dfa6e6837af9d3f24b81567ebdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf6eaceddf02c39f0491f59f1c864c73" id="r_gadf6eaceddf02c39f0491f59f1c864c73"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gadf6eaceddf02c39f0491f59f1c864c73">uhsd_dev_data_cvt_cfgFileJsonData_set</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, uhsd_char *file_data_json)</td></tr>
+<tr class="memdesc:gadf6eaceddf02c39f0491f59f1c864c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">smartDevice 设置配置文件数据  <br /></td></tr>
+<tr class="separator:gadf6eaceddf02c39f0491f59f1c864c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42f43be1ea45a97767ab40e2b82804b9" id="r_ga42f43be1ea45a97767ab40e2b82804b9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga42f43be1ea45a97767ab40e2b82804b9">uhsd_dev_data_cvt_op_binary_to_standard</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:ga42f43be1ea45a97767ab40e2b82804b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OP binary数据转标准数据  <br /></td></tr>
+<tr class="separator:ga42f43be1ea45a97767ab40e2b82804b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe97f4063e82d50cca4b38a933d98545" id="r_gabe97f4063e82d50cca4b38a933d98545"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gabe97f4063e82d50cca4b38a933d98545">uhsd_dev_data_cvt_op_standard_to_binary</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, uhsd_char **out_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gabe97f4063e82d50cca4b38a933d98545"><td class="mdescLeft">&#160;</td><td class="mdescRight">OP 标准数据转binary数据  <br /></td></tr>
+<tr class="separator:gabe97f4063e82d50cca4b38a933d98545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3d5276d4f1348c6f8e8afc3cf2235c0" id="r_gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gab3d5276d4f1348c6f8e8afc3cf2235c0">uhsd_dev_data_cvt_write_standard_to_binary</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *property_name, const uhsd_char *property_value, uhsd_char **out_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">WRITE 标准数据转binary数据  <br /></td></tr>
+<tr class="separator:gab3d5276d4f1348c6f8e8afc3cf2235c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc47c03b1dfb47d1c23b50fcac1b9b1f" id="r_gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gabc47c03b1dfb47d1c23b50fcac1b9b1f">uhsd_dev_data_cvt_rawEpp_to_standard</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_u8 *epp, const uhsd_u16 epp_len, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *out_pairs[], uhsd_s32 *out_pairs_num, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">E++属性、告警、事件数据转换为标准数据  <br /></td></tr>
+<tr class="separator:gabc47c03b1dfb47d1c23b50fcac1b9b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7c88fbe543162715688f57ddaa60a29" id="r_gac7c88fbe543162715688f57ddaa60a29"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#gac7c88fbe543162715688f57ddaa60a29">uhsd_dev_data_cvt_standard_to_rawEpp</a> (uhsd_void *dataCvtHandle, uhsd_devHandle devHandle, const uhsd_char *in_op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> in_pairs[], uhsd_s32 in_pairs_num, uhsd_u8 **out_epp, uhsd_u16 *out_epp_len, uhsd_ddc_mem_ctx_t *out_data_mem_ctx)</td></tr>
+<tr class="memdesc:gac7c88fbe543162715688f57ddaa60a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">标准下行控制数据转换为E++完整数据  <br /></td></tr>
+<tr class="separator:gac7c88fbe543162715688f57ddaa60a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b9306030597f6e84302f15339e14c89" id="r_ga9b9306030597f6e84302f15339e14c89"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9b9306030597f6e84302f15339e14c89">uhsd_dev_data_cvt_mem_free</a> (uhsd_ddc_mem_ctx_t ctx)</td></tr>
+<tr class="memdesc:ga9b9306030597f6e84302f15339e14c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放转换后的数据内存  <br /></td></tr>
+<tr class="separator:ga9b9306030597f6e84302f15339e14c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>SmartDevice 数据转换 </p>
+<dl class="section version"><dt>版本</dt><dd>0.1 </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>hudx (<a href="#" onclick="location.href='mai'+'lto:'+'hud'+'in'+'gxu'+'an'+'.xi'+'an'+'@ha'+'ie'+'r.c'+'om'; return false;">hudin<span class="obfuscator">.nosp@m.</span>gxua<span class="obfuscator">.nosp@m.</span>n.xia<span class="obfuscator">.nosp@m.</span>n@ha<span class="obfuscator">.nosp@m.</span>ier.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-08-14</dd></dl>
+<pre>
+<pre class="fragment">功能包括：
+1. binary数据格式转换为标准设备数据格式
+2. 标准设备数据格式转换为binary数据格式
+</pre>
+</pre> <h2 class="groupheader">类型定义说明</h2>
+<a id="ga9bebd995d8eb513f3d46defa1cc6e9fa" name="ga9bebd995d8eb513f3d46defa1cc6e9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9bebd995d8eb513f3d46defa1cc6e9fa">&#9670;&#160;</a></span>uhsd_dev_data_cvt_status_notify_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhsd_void(* uhsd_dev_data_cvt_status_notify_cb) (uhsd_devHandle devHandle, uhsd_s32 status, uhsd_void *user_param)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数据转换状态通知回调 </p>
+<p>由用户实现，用于通知当前数据转换功能的状态。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">devHandle</td><td>设备句柄 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>状态 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">user_param</td><td>用户参数， 来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#gadf57dfa6e6837af9d3f24b81567ebdb9">uhsd_dev_data_cvt_params_set</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gadf6eaceddf02c39f0491f59f1c864c73" name="gadf6eaceddf02c39f0491f59f1c864c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf6eaceddf02c39f0491f59f1c864c73">&#9670;&#160;</a></span>uhsd_dev_data_cvt_cfgFileJsonData_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_cfgFileJsonData_set </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>file_data_json</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>smartDevice 设置配置文件数据 </p>
+<p>设备APP必须调用此接口成功后，后续的转换接口才可以正常工作。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>数据转换句柄，来源: <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>设备句柄，来源: uhsd_dev_new_devHandle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_data_json</td><td>E++配置文件数据JSON格式； </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>异常 UHSD_ERROR_NUM</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>file_data_json </dd></dl>
+
+</div>
+</div>
+<a id="ga4f16d4f77c7ab8c0d9f6405d56ce97d7" name="ga4f16d4f77c7ab8c0d9f6405d56ce97d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">&#9670;&#160;</a></span>uhsd_dev_data_cvt_crt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_void * uhsd_dev_data_cvt_crt </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>appID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>appKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>clientID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char *&#160;</td>
+          <td class="paramname"><em>appVersion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建数据转换功能句柄 </p>
+<p>通过ID、KEY可从云端拉去设备配置信息</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>设备句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">appID</td><td>应用ID，海极网颁发 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">appKey</td><td>应用KEY，海极网颁发 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clientID</td><td>客户端ID，海极网颁发 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">appVersion</td><td>用户应用版本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_void * 数据转换功能句柄，可创建多个。 </dd></dl>
+
+</div>
+</div>
+<a id="ga205eb2b9fed5b9369d48db6163dc95e4" name="ga205eb2b9fed5b9369d48db6163dc95e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga205eb2b9fed5b9369d48db6163dc95e4">&#9670;&#160;</a></span>uhsd_dev_data_cvt_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_del </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除数据转换功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>数据转换功能句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 删除结果 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>删除成功 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9b9306030597f6e84302f15339e14c89" name="ga9b9306030597f6e84302f15339e14c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b9306030597f6e84302f15339e14c89">&#9670;&#160;</a></span>uhsd_dev_data_cvt_mem_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_mem_free </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放转换后的数据内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>释放内存上下文 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">-1</td><td>失败 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga42f43be1ea45a97767ab40e2b82804b9" name="ga42f43be1ea45a97767ab40e2b82804b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga42f43be1ea45a97767ab40e2b82804b9">&#9670;&#160;</a></span>uhsd_dev_data_cvt_op_binary_to_standard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_op_binary_to_standard </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>in_op_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a>&#160;</td>
+          <td class="paramname"><em>in_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>in_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *&#160;</td>
+          <td class="paramname"><em>out_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32 *&#160;</td>
+          <td class="paramname"><em>out_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t *&#160;</td>
+          <td class="paramname"><em>out_data_mem_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OP binary数据转标准数据 </p>
+<p>将E++软件上报的响应（事件/属性）的binary数据模型转换为标准设备数据模型 数据来源： <a class="el" href="group__grp__uhepp.html#ga20e4560392a255e77a47a979a681f0c8">uhepp_op_binary_callback</a> uhsd_dev_device_op_binary_resp uhsd_dev_op_binary_report </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>句柄，来源： uhsd_dev_new_devHandle 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_op_name</td><td>操作类型， 包括1. 全属性查询；2.单属性查询；3. 告警查询。对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> op_name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs</td><td>数据对，对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs_num</td><td>数据对个数，对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs_num </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gab2f95a05581db1e665e55cba54c8d8b6">uhsd_dev_device_op_binary_resp</a> <a class="el" href="group__grp__uhsddev.html#gab92c9fa18f30ae52cb3209b547d39102">uhsd_dev_op_binary_report</a> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs_num</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gab2f95a05581db1e665e55cba54c8d8b6">uhsd_dev_device_op_binary_resp</a> <a class="el" href="group__grp__uhsddev.html#gab92c9fa18f30ae52cb3209b547d39102">uhsd_dev_op_binary_report</a> pairs_num </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_data_mem_ctx</td><td>内存释放句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">others</td><td>失败</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>使用完成out_pairs之后，出参必须使用 uhsd_dev_data_cvt_pairs_free 进行释放 </dd></dl>
+
+</div>
+</div>
+<a id="gabe97f4063e82d50cca4b38a933d98545" name="gabe97f4063e82d50cca4b38a933d98545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe97f4063e82d50cca4b38a933d98545">&#9670;&#160;</a></span>uhsd_dev_data_cvt_op_standard_to_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_op_standard_to_binary </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>in_op_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a>&#160;</td>
+          <td class="paramname"><em>in_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>in_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char **&#160;</td>
+          <td class="paramname"><em>out_op_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *&#160;</td>
+          <td class="paramname"><em>out_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32 *&#160;</td>
+          <td class="paramname"><em>out_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t *&#160;</td>
+          <td class="paramname"><em>out_data_mem_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OP 标准数据转binary数据 </p>
+<p>数据来源： <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>句柄，来源： uhsd_dev_new_devHandle 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_op_name</td><td>操作类型， 包括1. 全属性查询；2.单属性查询；3. 告警查询。对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> op_name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs</td><td>数据对，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs_num</td><td>数据对个数，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs_num </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_op_name</td><td>操作类型，包括1. 全属性查询；2.单属性查询；3. 告警查询。对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> op_name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs_num</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs_num </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>出参必须使用 uhsd_dev_data_cvt_pairs_free 进行释放 </dd></dl>
+
+</div>
+</div>
+<a id="gadf57dfa6e6837af9d3f24b81567ebdb9" name="gadf57dfa6e6837af9d3f24b81567ebdb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf57dfa6e6837af9d3f24b81567ebdb9">&#9670;&#160;</a></span>uhsd_dev_data_cvt_params_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_params_set </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a>&#160;</td>
+          <td class="paramname"><em>dc_status_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>user_param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>smartDevice 设置需要转换的设备信息 </p>
+<p>设备APP必须调用此接口成功后，后续的转换接口才可以正常工作。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>数据转换句柄，来源: <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>设备句柄，来源: uhsd_dev_new_devHandle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dc_status_cb</td><td>回调状态，当转换器状态变更时通过此回调通知调用者。当前状态包括：新数据下载成功(用户可正常使用转换接口)； </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_param</td><td>用户设置的回调数据指针， 会在 <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga9bebd995d8eb513f3d46defa1cc6e9fa">uhsd_dev_data_cvt_status_notify_cb</a> 回调时返回给调用者。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>异常 UHSD_ERROR_NUM </td></tr>
+    <tr><td class="paramname">无预置设备数据，需要等待网络连接且数据下载成功后，才可使用转换接口。</td><td></td></tr>
+    <tr><td class="paramname">预制数据异常，需要等待网络连接且数据下载成功后，才可使用转换接口。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabc47c03b1dfb47d1c23b50fcac1b9b1f" name="gabc47c03b1dfb47d1c23b50fcac1b9b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc47c03b1dfb47d1c23b50fcac1b9b1f">&#9670;&#160;</a></span>uhsd_dev_data_cvt_rawEpp_to_standard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_rawEpp_to_standard </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_u8 *&#160;</td>
+          <td class="paramname"><em>epp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_u16&#160;</td>
+          <td class="paramname"><em>epp_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *&#160;</td>
+          <td class="paramname"><em>out_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32 *&#160;</td>
+          <td class="paramname"><em>out_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t *&#160;</td>
+          <td class="paramname"><em>out_data_mem_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>E++属性、告警、事件数据转换为标准数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>句柄，来源： uhsd_dev_new_devHandle 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">epp</td><td>完整E++数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">epp_len</td><td>E++数据长度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs</td><td>标准数据对 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs_num</td><td>标准数据对个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>UHSD_API </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>出参必须使用 uhsd_dev_data_cvt_pairs_free 进行释放 </dd></dl>
+
+</div>
+</div>
+<a id="gac7c88fbe543162715688f57ddaa60a29" name="gac7c88fbe543162715688f57ddaa60a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7c88fbe543162715688f57ddaa60a29">&#9670;&#160;</a></span>uhsd_dev_data_cvt_standard_to_rawEpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_standard_to_rawEpp </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>in_op_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a>&#160;</td>
+          <td class="paramname"><em>in_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32&#160;</td>
+          <td class="paramname"><em>in_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u8 **&#160;</td>
+          <td class="paramname"><em>out_epp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_u16 *&#160;</td>
+          <td class="paramname"><em>out_epp_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t *&#160;</td>
+          <td class="paramname"><em>out_data_mem_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>标准下行控制数据转换为E++完整数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>句柄，来源： uhsd_dev_new_devHandle 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_op_name</td><td>操作类型， 包括1. 全属性查询；2.单属性查询；3. 告警查询。对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> op_name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs</td><td>数据对，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs_num</td><td>数据对个数，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs_num </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_epp</td><td>完整E++数据 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_epp_len</td><td>完整E++数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhsd_s32 </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>出参 out_epp 必须使用 uhsd_dev_data_cvt_rawEpp_free 进行释放 </dd></dl>
+
+</div>
+</div>
+<a id="gab3d5276d4f1348c6f8e8afc3cf2235c0" name="gab3d5276d4f1348c6f8e8afc3cf2235c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3d5276d4f1348c6f8e8afc3cf2235c0">&#9670;&#160;</a></span>uhsd_dev_data_cvt_write_standard_to_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhsd_s32 uhsd_dev_data_cvt_write_standard_to_binary </td>
+          <td>(</td>
+          <td class="paramtype">uhsd_void *&#160;</td>
+          <td class="paramname"><em>dataCvtHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_devHandle&#160;</td>
+          <td class="paramname"><em>devHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>property_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhsd_char *&#160;</td>
+          <td class="paramname"><em>property_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_char **&#160;</td>
+          <td class="paramname"><em>out_op_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *&#160;</td>
+          <td class="paramname"><em>out_pairs</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_s32 *&#160;</td>
+          <td class="paramname"><em>out_pairs_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhsd_ddc_mem_ctx_t *&#160;</td>
+          <td class="paramname"><em>out_data_mem_ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WRITE 标准数据转binary数据 </p>
+<p>数据来源： <a class="el" href="group__grp__uhsddev.html#ga88086a4497ddd59cc622bc8e23aec4a9">uhsd_dev_write_cb</a> </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataCvtHandle</td><td>句柄，来源： <a class="el" href="group__grp__uhsd__dev__data__cvt.html#ga4f16d4f77c7ab8c0d9f6405d56ce97d7">uhsd_dev_data_cvt_crt</a> 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">devHandle</td><td>句柄，来源： uhsd_dev_new_devHandle 的返回值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs</td><td>数据对，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_pairs_num</td><td>数据对个数，对应 <a class="el" href="group__grp__uhsddev.html#ga0379a2edd9a4e9b1b3451571d85a666e">uhsd_dev_op_cb</a> pairs_num </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_op_name</td><td>操作类型，包括1. 全属性查询；2.单属性查询；3. 告警查询。对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> op_name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs[] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_pairs_num</td><td>对应 <a class="el" href="group__grp__uhsddev.html#gafa0e43c7078099b3f71bf50d5c7feae0">uhsd_dev_op_binary_cb</a> pairs_num </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>UHSD_API </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>出参必须使用 uhsd_dev_data_cvt_pairs_free 进行释放 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

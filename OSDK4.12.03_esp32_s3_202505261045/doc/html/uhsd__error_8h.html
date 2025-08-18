@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_error.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__error_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle"><div class="title">uhsd_error.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhsd.html">通用接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="uhsd__error_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga78182583499eaf6442860924c13c6b59" id="r_ga78182583499eaf6442860924c13c6b59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga78182583499eaf6442860924c13c6b59">UHSD_E_COMMON_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:ga78182583499eaf6442860924c13c6b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">UHSD错误码定义 一般错误 -1 ～ -99 设备接入错误 -100 ～ -199 设备配置错误 -200 ～ -249 设备绑定错误 -250 ～ -299 设备OTA错误 -300 ～ -349 消息推送错误 -350 ～ -399 数据转换功能错误 -400 ～ -450 用户token错误 -451 ～ -499 video错误 -500 ～ -599  <br /></td></tr>
+<tr class="separator:ga78182583499eaf6442860924c13c6b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2729b9d7193bd676eba68bf7233fd83" id="r_gae2729b9d7193bd676eba68bf7233fd83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gae2729b9d7193bd676eba68bf7233fd83">UHSD_E_COMMON_COMM_FAIL</a>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="separator:gae2729b9d7193bd676eba68bf7233fd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec5a3b2a0861b7c0cf1a1961deede4a8" id="r_gaec5a3b2a0861b7c0cf1a1961deede4a8"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_PARAM</b>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="separator:gaec5a3b2a0861b7c0cf1a1961deede4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c8298de1e085c8f3a65308e88afbc1e" id="r_ga1c8298de1e085c8f3a65308e88afbc1e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NO_ENOUGH_MEMORY</b>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="separator:ga1c8298de1e085c8f3a65308e88afbc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d5ff675656655cfebf1cbfb9a9e9280" id="r_ga7d5ff675656655cfebf1cbfb9a9e9280"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_STARTED</b>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="separator:ga7d5ff675656655cfebf1cbfb9a9e9280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7f43c1c252819ff36087f32ab264a6f" id="r_gab7f43c1c252819ff36087f32ab264a6f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_START</b>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="separator:gab7f43c1c252819ff36087f32ab264a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga541b45c9eeb5b1486e974016189c7939" id="r_ga541b45c9eeb5b1486e974016189c7939"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_REGISTERED</b>&#160;&#160;&#160;(-6)</td></tr>
+<tr class="separator:ga541b45c9eeb5b1486e974016189c7939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0693f7a04ae38aaceb2d6d6ef7176fbc" id="r_ga0693f7a04ae38aaceb2d6d6ef7176fbc"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_REGISTER</b>&#160;&#160;&#160;(-7)</td></tr>
+<tr class="separator:ga0693f7a04ae38aaceb2d6d6ef7176fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae82cc3f1f39bdbc6d8ff0706dd92e3c8" id="r_gae82cc3f1f39bdbc6d8ff0706dd92e3c8"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_INITIALIZED</b>&#160;&#160;&#160;(-8)</td></tr>
+<tr class="separator:gae82cc3f1f39bdbc6d8ff0706dd92e3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f288126b2b000c7800b6f46381180b5" id="r_ga8f288126b2b000c7800b6f46381180b5"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_INIT</b>&#160;&#160;&#160;(-9)</td></tr>
+<tr class="separator:ga8f288126b2b000c7800b6f46381180b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad13edc6bd10d86147ce0841ea3986b5" id="r_gaad13edc6bd10d86147ce0841ea3986b5"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_FIX_LEN</b>&#160;&#160;&#160;(-10)</td></tr>
+<tr class="separator:gaad13edc6bd10d86147ce0841ea3986b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdb64aca13ba33363f3016791de4f7ce" id="r_gacdb64aca13ba33363f3016791de4f7ce"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_RANGE_LEN</b>&#160;&#160;&#160;(-11)</td></tr>
+<tr class="separator:gacdb64aca13ba33363f3016791de4f7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga942bfb7020c309b702eb8c4e7fd18b91" id="r_ga942bfb7020c309b702eb8c4e7fd18b91"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_CONTENT</b>&#160;&#160;&#160;(-12)</td></tr>
+<tr class="separator:ga942bfb7020c309b702eb8c4e7fd18b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aa337496539846ec2940f0107d6cd14" id="r_ga2aa337496539846ec2940f0107d6cd14"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_VER</b>&#160;&#160;&#160;(-13)</td></tr>
+<tr class="separator:ga2aa337496539846ec2940f0107d6cd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga894a44cff80bc3e71c958b8a6b8f1901" id="r_ga894a44cff80bc3e71c958b8a6b8f1901"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_MODULE_TYPE</b>&#160;&#160;&#160;(-14)</td></tr>
+<tr class="separator:ga894a44cff80bc3e71c958b8a6b8f1901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac268dadaaeb29f7f2094ee939c7c8671" id="r_gac268dadaaeb29f7f2094ee939c7c8671"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_TIMEOUT</b>&#160;&#160;&#160;(-15)</td></tr>
+<tr class="separator:gac268dadaaeb29f7f2094ee939c7c8671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47d7db4197d01858e4829d61c0abe78c" id="r_ga47d7db4197d01858e4829d61c0abe78c"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_INVALID_CMD</b>&#160;&#160;&#160;(-16)</td></tr>
+<tr class="separator:ga47d7db4197d01858e4829d61c0abe78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga590d32548ac9998842c6b9ce0ed70028" id="r_ga590d32548ac9998842c6b9ce0ed70028"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_ALLOW</b>&#160;&#160;&#160;(-17)</td></tr>
+<tr class="separator:ga590d32548ac9998842c6b9ce0ed70028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae05ebdbaf8f2a0e0ecbd682c8127323a" id="r_gae05ebdbaf8f2a0e0ecbd682c8127323a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RESET_BUSYING</b>&#160;&#160;&#160;(-18)</td></tr>
+<tr class="separator:gae05ebdbaf8f2a0e0ecbd682c8127323a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0e2de4d26cfaa2e241e8f2d8f791e21" id="r_gac0e2de4d26cfaa2e241e8f2d8f791e21"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CLOUD_NOT_CONNECTED</b>&#160;&#160;&#160;(-19)</td></tr>
+<tr class="separator:gac0e2de4d26cfaa2e241e8f2d8f791e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa080a47b4b88af719d954996c398c9ff" id="r_gaa080a47b4b88af719d954996c398c9ff"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CREATE_HTTPREQ</b>&#160;&#160;&#160;(-20)</td></tr>
+<tr class="separator:gaa080a47b4b88af719d954996c398c9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea5dd4c801df9ff409d4c4a206d3f733" id="r_gaea5dd4c801df9ff409d4c4a206d3f733"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_SEND_HTTPREQ</b>&#160;&#160;&#160;(-21)</td></tr>
+<tr class="separator:gaea5dd4c801df9ff409d4c4a206d3f733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68a706353065d2716e46526d80763855" id="r_ga68a706353065d2716e46526d80763855"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_ENABLE</b>&#160;&#160;&#160;(-22)</td></tr>
+<tr class="separator:ga68a706353065d2716e46526d80763855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga889515a9fe68c5c42b3180791aa15026" id="r_ga889515a9fe68c5c42b3180791aa15026"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_RE_DISABLE</b>&#160;&#160;&#160;(-23)</td></tr>
+<tr class="separator:ga889515a9fe68c5c42b3180791aa15026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25ec7a8e7a522fc5608553b0fc2b4c68" id="r_ga25ec7a8e7a522fc5608553b0fc2b4c68"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_E_COMMON_OVER_MAX_NUM</b>&#160;&#160;&#160;(-24)</td></tr>
+<tr class="separator:ga25ec7a8e7a522fc5608553b0fc2b4c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad97656f091912c92bb4e3ca8f919a96a" id="r_gad97656f091912c92bb4e3ca8f919a96a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FIND_DEV</b>&#160;&#160;&#160;(-25)</td></tr>
+<tr class="separator:gad97656f091912c92bb4e3ca8f919a96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9196aa39c1da5b26749708ac04fc9ac" id="r_gac9196aa39c1da5b26749708ac04fc9ac"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FIND_NODE</b>&#160;&#160;&#160;(-26)</td></tr>
+<tr class="separator:gac9196aa39c1da5b26749708ac04fc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac27cd56b6354df42e6152a2795f9b700" id="r_gac27cd56b6354df42e6152a2795f9b700"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOSD_E_COMMON_DEV_NOT_ONLINE</b>&#160;&#160;&#160;(-27)</td></tr>
+<tr class="separator:gac27cd56b6354df42e6152a2795f9b700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c1ba7ba76336f3fe3d2ac3319d0dad2" id="r_ga5c1ba7ba76336f3fe3d2ac3319d0dad2"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_FATAL2REBOOT</b>&#160;&#160;&#160;(-28)</td></tr>
+<tr class="separator:ga5c1ba7ba76336f3fe3d2ac3319d0dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga752e99c8cc793ffa6aa9e8b180d771ac" id="r_ga752e99c8cc793ffa6aa9e8b180d771ac"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NO_MASTER_HANDLE</b>&#160;&#160;&#160;(-29)</td></tr>
+<tr class="separator:ga752e99c8cc793ffa6aa9e8b180d771ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe68f8efc64763b42e46fc0b643376fa" id="r_gabe68f8efc64763b42e46fc0b643376fa"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_CLOUD_CONNECTED</b>&#160;&#160;&#160;(-30)</td></tr>
+<tr class="separator:gabe68f8efc64763b42e46fc0b643376fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ae6f34f0be5e4bae2a70bcadb67285e" id="r_ga1ae6f34f0be5e4bae2a70bcadb67285e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_NOT_FOUND_MATSTER_DEV</b>&#160;&#160;&#160;(-31)</td></tr>
+<tr class="separator:ga1ae6f34f0be5e4bae2a70bcadb67285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa21f25afdd8541ce7498d514efeca04b" id="r_gaa21f25afdd8541ce7498d514efeca04b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_COMMON_REPEAT_ADD_DEV</b>&#160;&#160;&#160;(-32)</td></tr>
+<tr class="separator:gaa21f25afdd8541ce7498d514efeca04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa91d4d522c2415538065ac2d22c6f7b9" id="r_gaa91d4d522c2415538065ac2d22c6f7b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaa91d4d522c2415538065ac2d22c6f7b9">UHSD_E_DEV_NOT_FIND_DEV</a>&#160;&#160;&#160;(-100)</td></tr>
+<tr class="separator:gaa91d4d522c2415538065ac2d22c6f7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09b2511419d12f95394bdbe42f9ca1b8" id="r_ga09b2511419d12f95394bdbe42f9ca1b8"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_FIND_MODULE</b>&#160;&#160;&#160;(-101)</td></tr>
+<tr class="separator:ga09b2511419d12f95394bdbe42f9ca1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac94392cafc85b258cea106bdd02a92f2" id="r_gac94392cafc85b258cea106bdd02a92f2"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_DEVINFO</b>&#160;&#160;&#160;(-102)</td></tr>
+<tr class="separator:gac94392cafc85b258cea106bdd02a92f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a02ecdba5a1ac26415b695ea11b8d17" id="r_ga9a02ecdba5a1ac26415b695ea11b8d17"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_EPP_TO_PAIR</b>&#160;&#160;&#160;(-103)</td></tr>
+<tr class="separator:ga9a02ecdba5a1ac26415b695ea11b8d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03620a78cca67251f6e7a946dc6b6001" id="r_ga03620a78cca67251f6e7a946dc6b6001"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_PAIR_TO_EPP</b>&#160;&#160;&#160;(-104)</td></tr>
+<tr class="separator:ga03620a78cca67251f6e7a946dc6b6001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga365a579fdf2368349aee7280d1d2d56d" id="r_ga365a579fdf2368349aee7280d1d2d56d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_REGISTER_FAIL</b>&#160;&#160;&#160;(-105)</td></tr>
+<tr class="separator:ga365a579fdf2368349aee7280d1d2d56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfa780edd48d395344805fff287a4ffc" id="r_gadfa780edd48d395344805fff287a4ffc"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SET_ATTR</b>&#160;&#160;&#160;(-106)</td></tr>
+<tr class="separator:gadfa780edd48d395344805fff287a4ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fa2617cc4067e07ab4d8428406d4d64" id="r_ga9fa2617cc4067e07ab4d8428406d4d64"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_GET_DEV_OBJECT</b>&#160;&#160;&#160;(-107)</td></tr>
+<tr class="separator:ga9fa2617cc4067e07ab4d8428406d4d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28d0816bcdc4c344bf280da2ffbac0c7" id="r_ga28d0816bcdc4c344bf280da2ffbac0c7"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_PKT</b>&#160;&#160;&#160;(-108)</td></tr>
+<tr class="separator:ga28d0816bcdc4c344bf280da2ffbac0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f6a341a54d27225281bb85f09647db0" id="r_ga0f6a341a54d27225281bb85f09647db0"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_SESSION</b>&#160;&#160;&#160;(-109)</td></tr>
+<tr class="separator:ga0f6a341a54d27225281bb85f09647db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc871cb4ff2f14acdc73fe006b288ade" id="r_gafc871cb4ff2f14acdc73fe006b288ade"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ADD_MODULE</b>&#160;&#160;&#160;(-110)</td></tr>
+<tr class="separator:gafc871cb4ff2f14acdc73fe006b288ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cb4f163d4d261b61c95e7723ab24e31" id="r_ga2cb4f163d4d261b61c95e7723ab24e31"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_GETTING_DEVID</b>&#160;&#160;&#160;(-111)</td></tr>
+<tr class="separator:ga2cb4f163d4d261b61c95e7723ab24e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa34d829ffd1bb77f317ff9a3c0111583" id="r_gaa34d829ffd1bb77f317ff9a3c0111583"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_PHY_MODULE</b>&#160;&#160;&#160;(-112)</td></tr>
+<tr class="separator:gaa34d829ffd1bb77f317ff9a3c0111583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8e48fa2bec293532417b50d6d371151" id="r_gac8e48fa2bec293532417b50d6d371151"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_BASEBOARD_INFO</b>&#160;&#160;&#160;(-113)</td></tr>
+<tr class="separator:gac8e48fa2bec293532417b50d6d371151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac27ab673896b33676a0fde133c857a26" id="r_gac27ab673896b33676a0fde133c857a26"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SEND_FOTA_INFO</b>&#160;&#160;&#160;(-115)</td></tr>
+<tr class="separator:gac27ab673896b33676a0fde133c857a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf5f24d91da8580833879ab3de8c6b10" id="r_gaaf5f24d91da8580833879ab3de8c6b10"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_SEND_TRANSPARENT_ERR</b>&#160;&#160;&#160;(-116)</td></tr>
+<tr class="separator:gaaf5f24d91da8580833879ab3de8c6b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f31d5333ae77612a7c4e3f29693ebb7" id="r_ga5f31d5333ae77612a7c4e3f29693ebb7"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_FW_INFO</b>&#160;&#160;&#160;(-118)</td></tr>
+<tr class="separator:ga5f31d5333ae77612a7c4e3f29693ebb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d9385f6b54ed405db3741d6d17b063f" id="r_ga1d9385f6b54ed405db3741d6d17b063f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_INVALID_ROLE</b>&#160;&#160;&#160;(-119)</td></tr>
+<tr class="separator:ga1d9385f6b54ed405db3741d6d17b063f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4969bec80c51b4a5688a931ca980a206" id="r_ga4969bec80c51b4a5688a931ca980a206"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ATTR_INFO_EXPIRED</b>&#160;&#160;&#160;(-120)</td></tr>
+<tr class="separator:ga4969bec80c51b4a5688a931ca980a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae32b65e2bb21285d66714dabd51a3a14" id="r_gae32b65e2bb21285d66714dabd51a3a14"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_ALREADY_REG_PHYMODULE</b>&#160;&#160;&#160;(-121)</td></tr>
+<tr class="separator:gae32b65e2bb21285d66714dabd51a3a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2d52608919793e8c454721c41c38c6b" id="r_gac2d52608919793e8c454721c41c38c6b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_PARSE_CERT_INFO</b>&#160;&#160;&#160;(-122)</td></tr>
+<tr class="separator:gac2d52608919793e8c454721c41c38c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6df4ba36849d973d2ba367787ae3346f" id="r_ga6df4ba36849d973d2ba367787ae3346f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_OFFLINE_MASTER_DEV</b>&#160;&#160;&#160;(-123)</td></tr>
+<tr class="separator:ga6df4ba36849d973d2ba367787ae3346f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec206c184419798ad2b668e40fa2b56a" id="r_gaec206c184419798ad2b668e40fa2b56a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_NTP</b>&#160;&#160;&#160;(-124)</td></tr>
+<tr class="separator:gaec206c184419798ad2b668e40fa2b56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36001539ba18b7d2d0ba0e6162ec23fd" id="r_ga36001539ba18b7d2d0ba0e6162ec23fd"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_MUTUAL_AUTH_DEV_ONLY_ALLOW_ONE_DEV</b>&#160;&#160;&#160;(-125)</td></tr>
+<tr class="separator:ga36001539ba18b7d2d0ba0e6162ec23fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b983b6436aca9487fff46656061ab39" id="r_ga1b983b6436aca9487fff46656061ab39"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_WHEN_DEV_ONLINE</b>&#160;&#160;&#160;(-126)</td></tr>
+<tr class="separator:ga1b983b6436aca9487fff46656061ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef4dd0f30d1b286f9e2f571b74c7b0a0" id="r_gaef4dd0f30d1b286f9e2f571b74c7b0a0"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_MASTER_NOT_ONLINE</b>&#160;&#160;&#160;(-127)</td></tr>
+<tr class="separator:gaef4dd0f30d1b286f9e2f571b74c7b0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff270b85208635d5e0190a3f03c45cd1" id="r_gaff270b85208635d5e0190a3f03c45cd1"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_OVER_MAX_NUM</b>&#160;&#160;&#160;(-128)</td></tr>
+<tr class="separator:gaff270b85208635d5e0190a3f03c45cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaddc1fdf9040d275110b63d975c228aa6" id="r_gaddc1fdf9040d275110b63d975c228aa6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW_WHEN_DEV_NOT_OFFLINE</b>&#160;&#160;&#160;(-129)</td></tr>
+<tr class="separator:gaddc1fdf9040d275110b63d975c228aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ae8cb660215642fb43e887ad846b220" id="r_ga5ae8cb660215642fb43e887ad846b220"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_IN_FT_MODE</b>&#160;&#160;&#160;(-130)</td></tr>
+<tr class="separator:ga5ae8cb660215642fb43e887ad846b220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga775332f1609e98976b49292a23720f14" id="r_ga775332f1609e98976b49292a23720f14"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_DEV_NOT_ALLOW</b>&#160;&#160;&#160;(-131)</td></tr>
+<tr class="separator:ga775332f1609e98976b49292a23720f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b5ef462766cfa8bb137c808e87847cc" id="r_ga7b5ef462766cfa8bb137c808e87847cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga7b5ef462766cfa8bb137c808e87847cc">UHSD_E_CFG_USER_CONFIGURING</a>&#160;&#160;&#160;(-200)</td></tr>
+<tr class="separator:ga7b5ef462766cfa8bb137c808e87847cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bb5837cd58932ef31248df8884f151f" id="r_ga5bb5837cd58932ef31248df8884f151f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_CFG_NOT_REGISTER_DEV</b>&#160;&#160;&#160;(-201)</td></tr>
+<tr class="separator:ga5bb5837cd58932ef31248df8884f151f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d480114f8c9b82b39ef80d0c73529fd" id="r_ga5d480114f8c9b82b39ef80d0c73529fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5d480114f8c9b82b39ef80d0c73529fd">UHSD_E_OTA_ALREADY_UPGRADING</a>&#160;&#160;&#160;(-300)</td></tr>
+<tr class="separator:ga5d480114f8c9b82b39ef80d0c73529fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b7939854edb5cd2c2bb9790355d2997" id="r_ga4b7939854edb5cd2c2bb9790355d2997"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_ALREADY_QUERYING</b>&#160;&#160;&#160;(-301)</td></tr>
+<tr class="separator:ga4b7939854edb5cd2c2bb9790355d2997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8219d89788943bda5f2cb4198ebf49b2" id="r_ga8219d89788943bda5f2cb4198ebf49b2"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_QUERY_TIMEOUT</b>&#160;&#160;&#160;(-302)</td></tr>
+<tr class="separator:ga8219d89788943bda5f2cb4198ebf49b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad96c20ab5d7f2b71feb745bb1a1a905b" id="r_gad96c20ab5d7f2b71feb745bb1a1a905b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_OTA_NO_UPGRADE_FW</b>&#160;&#160;&#160;(-303)</td></tr>
+<tr class="separator:gad96c20ab5d7f2b71feb745bb1a1a905b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd724663421d6324213ac733c285abcc" id="r_gacd724663421d6324213ac733c285abcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gacd724663421d6324213ac733c285abcc">UHSD_E_DATACVT_UNKNOWN</a>&#160;&#160;&#160;(-400)</td></tr>
+<tr class="separator:gacd724663421d6324213ac733c285abcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36c6537cef957e03d3ec96af445f0d97" id="r_ga36c6537cef957e03d3ec96af445f0d97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga36c6537cef957e03d3ec96af445f0d97">UHSD_E_DATACVT_PRESET_DATA_MISSED</a>&#160;&#160;&#160;(-401)</td></tr>
+<tr class="separator:ga36c6537cef957e03d3ec96af445f0d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec71b91fd6f7e58bfe6006d0bf0ac47" id="r_ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">UHSD_E_USER_TOKEN_SYSTEM_ERROR</a>&#160;&#160;&#160;(-451)</td></tr>
+<tr class="separator:ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5016acd958d8277387348a58975d9fc" id="r_gae5016acd958d8277387348a58975d9fc"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_INVALID_CONTENT</b>&#160;&#160;&#160;(-452)</td></tr>
+<tr class="separator:gae5016acd958d8277387348a58975d9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0c062c34fb2a18d72068ad200fbe991" id="r_gac0c062c34fb2a18d72068ad200fbe991"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_REJECT</b>&#160;&#160;&#160;(-453)</td></tr>
+<tr class="separator:gac0c062c34fb2a18d72068ad200fbe991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3efa92939ce3e0ca4e879975be0598" id="r_ga4a3efa92939ce3e0ca4e879975be0598"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_ACCESS_EXPIRED</b>&#160;&#160;&#160;(-454)</td></tr>
+<tr class="separator:ga4a3efa92939ce3e0ca4e879975be0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ebea9f50ae62cf91d22d47a2efa761" id="r_ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_EXPIRED</b>&#160;&#160;&#160;(-455)</td></tr>
+<tr class="separator:ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80a31aa204c344c14873d4a212545a19" id="r_ga80a31aa204c344c14873d4a212545a19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga80a31aa204c344c14873d4a212545a19">UHSD_E_P2P_RSC_CHANNEL_DISCONNECT</a>&#160;&#160;&#160;(-400)</td></tr>
+<tr class="separator:ga80a31aa204c344c14873d4a212545a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ff3f6506712a3eb18209dfb0c89b0da" id="r_ga0ff3f6506712a3eb18209dfb0c89b0da"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_REGISTER</b>&#160;&#160;&#160;(-401)</td></tr>
+<tr class="separator:ga0ff3f6506712a3eb18209dfb0c89b0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf8ae0df2d60e625a2bd12fa5a0eed96" id="r_gabf8ae0df2d60e625a2bd12fa5a0eed96"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_SUBSCRIBE</b>&#160;&#160;&#160;(-402)</td></tr>
+<tr class="separator:gabf8ae0df2d60e625a2bd12fa5a0eed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45298aba21c2fa7eeedd97f914dd009f" id="r_ga45298aba21c2fa7eeedd97f914dd009f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_P2P_RSC_NOT_REG_CB</b>&#160;&#160;&#160;(-403)</td></tr>
+<tr class="separator:ga45298aba21c2fa7eeedd97f914dd009f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec71b91fd6f7e58bfe6006d0bf0ac47" id="r_ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9ec71b91fd6f7e58bfe6006d0bf0ac47">UHSD_E_USER_TOKEN_SYSTEM_ERROR</a>&#160;&#160;&#160;(-451)</td></tr>
+<tr class="separator:ga9ec71b91fd6f7e58bfe6006d0bf0ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5016acd958d8277387348a58975d9fc" id="r_gae5016acd958d8277387348a58975d9fc"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_INVALID_CONTENT</b>&#160;&#160;&#160;(-452)</td></tr>
+<tr class="separator:gae5016acd958d8277387348a58975d9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0c062c34fb2a18d72068ad200fbe991" id="r_gac0c062c34fb2a18d72068ad200fbe991"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_REJECT</b>&#160;&#160;&#160;(-453)</td></tr>
+<tr class="separator:gac0c062c34fb2a18d72068ad200fbe991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3efa92939ce3e0ca4e879975be0598" id="r_ga4a3efa92939ce3e0ca4e879975be0598"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_ACCESS_EXPIRED</b>&#160;&#160;&#160;(-454)</td></tr>
+<tr class="separator:ga4a3efa92939ce3e0ca4e879975be0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ebea9f50ae62cf91d22d47a2efa761" id="r_ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_USER_TOKEN_REFRESH_EXPIRED</b>&#160;&#160;&#160;(-455)</td></tr>
+<tr class="separator:ga30ebea9f50ae62cf91d22d47a2efa761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c9aad54e8fecb68e960ae0d72727caf" id="r_ga1c9aad54e8fecb68e960ae0d72727caf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1c9aad54e8fecb68e960ae0d72727caf">UHSD_E_VIDEO_AUTH_ONLINE</a>&#160;&#160;&#160;(-500)</td></tr>
+<tr class="separator:ga1c9aad54e8fecb68e960ae0d72727caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c7b2cc7e742b7b974eb678a40a3a81e" id="r_ga5c7b2cc7e742b7b974eb678a40a3a81e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_SECRET_KEY</b>&#160;&#160;&#160;(-501)</td></tr>
+<tr class="separator:ga5c7b2cc7e742b7b974eb678a40a3a81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab74a39cea758bf15dd87b27af1cd1cf7" id="r_gab74a39cea758bf15dd87b27af1cd1cf7"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_PUSH_STREAM</b>&#160;&#160;&#160;(-502)</td></tr>
+<tr class="separator:gab74a39cea758bf15dd87b27af1cd1cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga795a9811eca36cb1a37cdc6b5b6241b6" id="r_ga795a9811eca36cb1a37cdc6b5b6241b6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHSD_E_VIDEO_UPLOAD_CS_STREAM</b>&#160;&#160;&#160;(-503)</td></tr>
+<tr class="separator:ga795a9811eca36cb1a37cdc6b5b6241b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff582d59cc720d1aa92ef5f847c85911" id="r_gaff582d59cc720d1aa92ef5f847c85911"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaff582d59cc720d1aa92ef5f847c85911">UHSD_E_DCC_INVALID_LISTENER</a>&#160;&#160;&#160;(-600)</td></tr>
+<tr class="separator:gaff582d59cc720d1aa92ef5f847c85911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef05e4b3b4d81ebdc9a89fd7014a492c" id="r_gaef05e4b3b4d81ebdc9a89fd7014a492c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaef05e4b3b4d81ebdc9a89fd7014a492c">UHSD_R_RSP_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:gaef05e4b3b4d81ebdc9a89fd7014a492c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36cf089f9553dbfce5a7a0777ddbb6d2" id="r_ga36cf089f9553dbfce5a7a0777ddbb6d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga36cf089f9553dbfce5a7a0777ddbb6d2">UHSD_R_COMM_ERROR</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:ga36cf089f9553dbfce5a7a0777ddbb6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a510a8c1af3b09ec878ece616b9d0d0" id="r_ga3a510a8c1af3b09ec878ece616b9d0d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga3a510a8c1af3b09ec878ece616b9d0d0">UHSD_R_PARAM_ERROR</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:ga3a510a8c1af3b09ec878ece616b9d0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661b8888e8dace753ce7a8c985525031" id="r_ga661b8888e8dace753ce7a8c985525031"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga661b8888e8dace753ce7a8c985525031">UHSD_R_CMD_TIMEOUT</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="separator:ga661b8888e8dace753ce7a8c985525031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5206951c0629cb7543b6c20fede8e7f6" id="r_ga5206951c0629cb7543b6c20fede8e7f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga5206951c0629cb7543b6c20fede8e7f6">UHSD_R_INVALID_CMD</a>&#160;&#160;&#160;(12)</td></tr>
+<tr class="separator:ga5206951c0629cb7543b6c20fede8e7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94c3ba450ebf4b48a0c9983e3ae5111c" id="r_ga94c3ba450ebf4b48a0c9983e3ae5111c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga94c3ba450ebf4b48a0c9983e3ae5111c">UHSD_R_ILLEGAL_VALUE</a>&#160;&#160;&#160;(13)</td></tr>
+<tr class="separator:ga94c3ba450ebf4b48a0c9983e3ae5111c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b743249074e04acb43fd3e7d0cac8af" id="r_ga1b743249074e04acb43fd3e7d0cac8af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1b743249074e04acb43fd3e7d0cac8af">UHSD_R_UNSUPPORTED_CMD</a>&#160;&#160;&#160;(17)</td></tr>
+<tr class="separator:ga1b743249074e04acb43fd3e7d0cac8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c4fe79eb10fdbe214bfc4d8e3fc1eca" id="r_ga1c4fe79eb10fdbe214bfc4d8e3fc1eca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga1c4fe79eb10fdbe214bfc4d8e3fc1eca">UHSD_R_UPGRADING</a>&#160;&#160;&#160;(501)</td></tr>
+<tr class="separator:ga1c4fe79eb10fdbe214bfc4d8e3fc1eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4f136a59adf8b87c36f409aa3faa548" id="r_gaf4f136a59adf8b87c36f409aa3faa548"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaf4f136a59adf8b87c36f409aa3faa548">UHSD_R_UNKNOWN_DEVICE</a>&#160;&#160;&#160;(503)</td></tr>
+<tr class="separator:gaf4f136a59adf8b87c36f409aa3faa548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fc2e46c4162e1de728348f17958e2a2" id="r_ga3fc2e46c4162e1de728348f17958e2a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga3fc2e46c4162e1de728348f17958e2a2">UHSD_R_STARTPAIR_FAILED</a>&#160;&#160;&#160;(504)</td></tr>
+<tr class="separator:ga3fc2e46c4162e1de728348f17958e2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9782f69ff22cb134a6e69b06554abda9" id="r_ga9782f69ff22cb134a6e69b06554abda9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga9782f69ff22cb134a6e69b06554abda9">UHSD_R_INVALID_DEVICE_TYPE</a>&#160;&#160;&#160;(505)</td></tr>
+<tr class="separator:ga9782f69ff22cb134a6e69b06554abda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55e288f8081a4a61b8bfb491f3701bbf" id="r_ga55e288f8081a4a61b8bfb491f3701bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga55e288f8081a4a61b8bfb491f3701bbf">UHSD_R_REPEAT_STARTPAIR</a>&#160;&#160;&#160;(506)</td></tr>
+<tr class="separator:ga55e288f8081a4a61b8bfb491f3701bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf188f15821d965ef26165d468db076a2" id="r_gaf188f15821d965ef26165d468db076a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gaf188f15821d965ef26165d468db076a2">UHSD_R_PAIR_DEV_MAX</a>&#160;&#160;&#160;(507)</td></tr>
+<tr class="separator:gaf188f15821d965ef26165d468db076a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60135ae05fe8d3f9c86bc536e3ba6df6" id="r_ga60135ae05fe8d3f9c86bc536e3ba6df6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga60135ae05fe8d3f9c86bc536e3ba6df6">UHSD_R_PAIR_TIMEOUT</a>&#160;&#160;&#160;(508)</td></tr>
+<tr class="separator:ga60135ae05fe8d3f9c86bc536e3ba6df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11b62d6ee8bd9253039424fa86c9a760" id="r_ga11b62d6ee8bd9253039424fa86c9a760"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#ga11b62d6ee8bd9253039424fa86c9a760">UHSD_R_BIND_ERROR</a>&#160;&#160;&#160;(509)</td></tr>
+<tr class="separator:ga11b62d6ee8bd9253039424fa86c9a760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae17b0676be808ea395f316859827b5a7" id="r_gae17b0676be808ea395f316859827b5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsd.html#gae17b0676be808ea395f316859827b5a7">UHSD_R_EXIT_PAIR</a>&#160;&#160;&#160;(510)</td></tr>
+<tr class="separator:gae17b0676be808ea395f316859827b5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><a class="el" href="uhsd__error_8h.html">uhsd_error.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

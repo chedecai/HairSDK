@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhepp_ft.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhepp__ft_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uhepp_ft.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uhepp__ft_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef __UHEPP_FT_H__</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define __UHEPP_FT_H__</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="uhepp__types_8h.html">uhepp_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#gab2abee71ad307d6c1a3674c7c74ac133">   34</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a80c99851587f9472127deb603a0a53a1">   45</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a80c99851587f9472127deb603a0a53a1">UHEPP_FT_TYPE_START</a> = 101,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a64a29242a343761f42bd3e67348109ee">   55</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a64a29242a343761f42bd3e67348109ee">UHEPP_FT_TYPE_START_ACK</a> = 102,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133ad20797bbef6ccf6e9770d2a9858f5237">   66</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133ad20797bbef6ccf6e9770d2a9858f5237">UHEPP_FT_TYPE_TRANS_DOWN</a> = 103,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133abf22a416f809eacfc90b0b1734ec2e8c">   76</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133abf22a416f809eacfc90b0b1734ec2e8c">UHEPP_FT_TYPE_TRANS_UP</a> = 104,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a59124523c8832b76161ffedd17f36ed0">   87</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a59124523c8832b76161ffedd17f36ed0">UHEPP_FT_TYPE_STOP</a> = 105,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5676bdafaf35ff85d48fb6bf26be2064">   97</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5676bdafaf35ff85d48fb6bf26be2064">UHEPP_FT_TYPE_STOP_ACK</a> = 106,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a792b86b9b443b78963b13e2092165dc0">  108</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a792b86b9b443b78963b13e2092165dc0">UHEPP_FT_TYPE_AUTH_COMM_KEY_REQ</a> = 301,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5691b7be7ce6e6ca2fbe1571f554a172">  118</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5691b7be7ce6e6ca2fbe1571f554a172">UHEPP_FT_TYPE_AUTH_COMM_KEY_RSP</a> = 302,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a659f095526bab664d4534d2788a44990">  129</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a659f095526bab664d4534d2788a44990">UHEPP_FT_TYPE_AUTH_SIGN_REQ</a> = 303,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a124cc4d3e3890add8d6afd9179f21061">  139</a></span>    <a class="code hl_enumvalue" href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a124cc4d3e3890add8d6afd9179f21061">UHEPP_FT_TYPE_AUTH_SIGN_RSP</a> = 304,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>} <a class="code hl_enumeration" href="group__grp__uhepp__ft.html#gab2abee71ad307d6c1a3674c7c74ac133">UHEPP_FT_TYPE_E</a>;</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="structuhepp__ft__type__start__ack__data__t.html">  147</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="structuhepp__ft__type__start__ack__data__t.html#ac1bb825275f888ae0691a8234db1c7a3">  149</a></span>    uhepp_s16 <a class="code hl_variable" href="structuhepp__ft__type__start__ack__data__t.html#ac1bb825275f888ae0691a8234db1c7a3">result</a>; </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>} <a class="code hl_struct" href="structuhepp__ft__type__start__ack__data__t.html">uhepp_ft_type_start_ack_data_t</a>;</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#gaa4c401a11aa0c6f72904e576064200e9">  164</a></span><span class="keyword">typedef</span> uhepp_s32 (</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    *<a class="code hl_typedef" href="group__grp__uhepp__ft.html#gaa4c401a11aa0c6f72904e576064200e9">uhepp_ft_channel_up_callback</a>)(uhepp_s32 sn, uhepp_u32 type, uhepp_u8 *data, uhepp_u32 data_len, <span class="keyword">const</span> uhepp_char *traceId, uhepp_void *user_data);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ga2f747105445127b46c80cb223669706a">  179</a></span>UHSD_API uhepp_s32 <a class="code hl_function" href="group__grp__uhepp__ft.html#ga2f747105445127b46c80cb223669706a">uhepp_ft_channel_up_register</a>(<a class="code hl_typedef" href="group__grp__uhepp__ft.html#gaa4c401a11aa0c6f72904e576064200e9">uhepp_ft_channel_up_callback</a> ft_chl_up_cb, uhepp_void *user_data);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="group__grp__uhepp__ft.html#ga93a50f8caaf91920de5b33257a3848d7">  192</a></span>UHSD_API uhepp_s32 <a class="code hl_function" href="group__grp__uhepp__ft.html#ga93a50f8caaf91920de5b33257a3848d7">uhepp_ft_channel_down</a>(uhepp_s32 sn, uhepp_u32 type, uhepp_u8 *data, uhepp_u32 data_len, <span class="keyword">const</span> uhepp_char *traceID);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ga2f747105445127b46c80cb223669706a"><div class="ttname"><a href="group__grp__uhepp__ft.html#ga2f747105445127b46c80cb223669706a">uhepp_ft_channel_up_register</a></div><div class="ttdeci">UHSD_API uhepp_s32 uhepp_ft_channel_up_register(uhepp_ft_channel_up_callback ft_chl_up_cb, uhepp_void *user_data)</div><div class="ttdoc">产测上行数据通道注册</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ga93a50f8caaf91920de5b33257a3848d7"><div class="ttname"><a href="group__grp__uhepp__ft.html#ga93a50f8caaf91920de5b33257a3848d7">uhepp_ft_channel_down</a></div><div class="ttdeci">UHSD_API uhepp_s32 uhepp_ft_channel_down(uhepp_s32 sn, uhepp_u32 type, uhepp_u8 *data, uhepp_u32 data_len, const uhepp_char *traceID)</div><div class="ttdoc">发送产测下行数据</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_gaa4c401a11aa0c6f72904e576064200e9"><div class="ttname"><a href="group__grp__uhepp__ft.html#gaa4c401a11aa0c6f72904e576064200e9">uhepp_ft_channel_up_callback</a></div><div class="ttdeci">uhepp_s32(* uhepp_ft_channel_up_callback)(uhepp_s32 sn, uhepp_u32 type, uhepp_u8 *data, uhepp_u32 data_len, const uhepp_char *traceId, uhepp_void *user_data)</div><div class="ttdoc">上行数据通道注册回调</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:165</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_gab2abee71ad307d6c1a3674c7c74ac133"><div class="ttname"><a href="group__grp__uhepp__ft.html#gab2abee71ad307d6c1a3674c7c74ac133">UHEPP_FT_TYPE_E</a></div><div class="ttdeci">UHEPP_FT_TYPE_E</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:35</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a124cc4d3e3890add8d6afd9179f21061"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a124cc4d3e3890add8d6afd9179f21061">UHEPP_FT_TYPE_AUTH_SIGN_RSP</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_AUTH_SIGN_RSP</div><div class="ttdoc">设备认证签名响应。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:139</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a5676bdafaf35ff85d48fb6bf26be2064"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5676bdafaf35ff85d48fb6bf26be2064">UHEPP_FT_TYPE_STOP_ACK</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_STOP_ACK</div><div class="ttdoc">停止工厂模式响应。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:97</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a5691b7be7ce6e6ca2fbe1571f554a172"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a5691b7be7ce6e6ca2fbe1571f554a172">UHEPP_FT_TYPE_AUTH_COMM_KEY_RSP</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_AUTH_COMM_KEY_RSP</div><div class="ttdoc">设备认证通信密钥响应。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:118</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a59124523c8832b76161ffedd17f36ed0"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a59124523c8832b76161ffedd17f36ed0">UHEPP_FT_TYPE_STOP</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_STOP</div><div class="ttdoc">停止工厂模式。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:87</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a64a29242a343761f42bd3e67348109ee"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a64a29242a343761f42bd3e67348109ee">UHEPP_FT_TYPE_START_ACK</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_START_ACK</div><div class="ttdoc">启动工厂模式响应。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:55</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a659f095526bab664d4534d2788a44990"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a659f095526bab664d4534d2788a44990">UHEPP_FT_TYPE_AUTH_SIGN_REQ</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_AUTH_SIGN_REQ</div><div class="ttdoc">设备认证签名请求。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:129</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a792b86b9b443b78963b13e2092165dc0"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a792b86b9b443b78963b13e2092165dc0">UHEPP_FT_TYPE_AUTH_COMM_KEY_REQ</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_AUTH_COMM_KEY_REQ</div><div class="ttdoc">设备认证通信密钥请求。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:108</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133a80c99851587f9472127deb603a0a53a1"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133a80c99851587f9472127deb603a0a53a1">UHEPP_FT_TYPE_START</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_START</div><div class="ttdoc">启动工厂模式。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:45</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133abf22a416f809eacfc90b0b1734ec2e8c"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133abf22a416f809eacfc90b0b1734ec2e8c">UHEPP_FT_TYPE_TRANS_UP</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_TRANS_UP</div><div class="ttdoc">工厂模式上行数据透传。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:76</div></div>
+<div class="ttc" id="agroup__grp__uhepp__ft_html_ggab2abee71ad307d6c1a3674c7c74ac133ad20797bbef6ccf6e9770d2a9858f5237"><div class="ttname"><a href="group__grp__uhepp__ft.html#ggab2abee71ad307d6c1a3674c7c74ac133ad20797bbef6ccf6e9770d2a9858f5237">UHEPP_FT_TYPE_TRANS_DOWN</a></div><div class="ttdeci">@ UHEPP_FT_TYPE_TRANS_DOWN</div><div class="ttdoc">工厂模式下行数据透传。</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:66</div></div>
+<div class="ttc" id="astructuhepp__ft__type__start__ack__data__t_html"><div class="ttname"><a href="structuhepp__ft__type__start__ack__data__t.html">uhepp_ft_type_start_ack_data_t</a></div><div class="ttdoc">启动工厂模式响应数据</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:148</div></div>
+<div class="ttc" id="astructuhepp__ft__type__start__ack__data__t_html_ac1bb825275f888ae0691a8234db1c7a3"><div class="ttname"><a href="structuhepp__ft__type__start__ack__data__t.html#ac1bb825275f888ae0691a8234db1c7a3">uhepp_ft_type_start_ack_data_t::result</a></div><div class="ttdeci">uhepp_s16 result</div><div class="ttdef"><b>Definition</b> uhepp_ft.h:149</div></div>
+<div class="ttc" id="auhepp__types_8h_html"><div class="ttname"><a href="uhepp__types_8h.html">uhepp_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><a class="el" href="uhepp__ft_8h.html">uhepp_ft.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

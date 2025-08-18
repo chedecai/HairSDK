@@ -1,0 +1,28 @@
+var uhsd_8h =
+[
+    [ "UHSD_LOG_OFF", "group__grp__uhsd.html#ga1748b99b9b74917fe32fa34bafaa6993", null ],
+    [ "uhsd_ble_adv_scan_passthrough_data_cb", "group__grp__uhsd.html#gacfedf20d251da8e0f02fe28bc1c5d749", null ],
+    [ "uhsd_ble_adv_scan_passthrough_rules_set_result_cb", "group__grp__uhsd.html#ga4267374ef4fe6432dbc725d005b85528", null ],
+    [ "uhsd_datetime_sync_cb", "group__grp__uhsd.html#ga112496329e3cd66db0dd1ba6526b06af", null ],
+    [ "uhsd_log_upload_status_cb", "group__grp__uhsd.html#gaa414ae9a3c28f0750b58d4ffa114c0db", null ],
+    [ "uhsd_ble_adv_scan_passthrough_rule_set", "group__grp__uhsd.html#gaceb4e6ff107e4c28e477276333bf7fb7", null ],
+    [ "uhsd_ble_adv_scan_passthrough_start", "group__grp__uhsd.html#ga20d1167bc6b08d4a10c6fa87500abc2c", null ],
+    [ "uhsd_ble_adv_scan_passthrough_stop", "group__grp__uhsd.html#gac6d8eb1909fd24e0c5bd4bd5f228bb9c", null ],
+    [ "uhsd_ble_disable_async", "group__grp__uhsd.html#gafde2540bc6eff8294c4e6a6bcf3c2a68", null ],
+    [ "uhsd_ble_enable_async", "group__grp__uhsd.html#gafbebebcf440db481e29bc9b3d37c626b", null ],
+    [ "uhsd_datetime_get", "group__grp__uhsd.html#gaa8e2a35fb12277538d3c53a813c39e3f", null ],
+    [ "uhsd_datetime_set", "group__grp__uhsd.html#gaebf89adb3311433458852abe5e2573d9", null ],
+    [ "uhsd_datetime_sync_start", "group__grp__uhsd.html#ga2caaec13250e5dad96f42b8b0067d127", null ],
+    [ "uhsd_factory_reset", "group__grp__uhsd.html#ga47380e1d82d258c467d8352a88be2394", null ],
+    [ "uhsd_init", "group__grp__uhsd.html#ga17e2e90e1a17f4d863883594015936ef", null ],
+    [ "uhsd_log_get", "group__grp__uhsd.html#ga1d317ae4c08f6a46681a54935a8e988e", null ],
+    [ "uhsd_log_upload_conifg", "group__grp__uhsd.html#ga5b9df499c92a354884b06775ce6e478a", null ],
+    [ "uhsd_log_upload_resume", "group__grp__uhsd.html#ga84537bcfbfea7dff68b623deeba75ee5", null ],
+    [ "uhsd_log_upload_status_register", "group__grp__uhsd.html#ga5169ca5be677afabc20378208a3fb363", null ],
+    [ "uhsd_log_upload_suspend", "group__grp__uhsd.html#gaae75b51ab53a118a782a2c60cef8f946", null ],
+    [ "uhsd_reboot_notify", "group__grp__uhsd.html#gaf4894b8b3dba67e00eefd0a1b11304f8", null ],
+    [ "uhsd_set_domain_region", "group__grp__uhsd.html#gaa73ea7c4f36891d84599fb12c9194d69", null ],
+    [ "uhsd_version", "group__grp__uhsd.html#ga7177aa5193d223173a54be7994f2223a", null ],
+    [ "uhsd_wifi_disable_async", "group__grp__uhsd.html#ga5298c518549141aef99af69d86f9c7ac", null ],
+    [ "uhsd_wifi_enable_async", "group__grp__uhsd.html#ga703f3574faaf86a62545fadea74d80c2", null ]
+];

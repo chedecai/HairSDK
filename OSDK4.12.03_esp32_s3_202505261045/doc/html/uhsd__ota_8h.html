@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_ota.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__ota_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uhsd_ota.h 文件参考<div class="ingroups"><a class="el" href="group__grp__uhsdfota.html">FOTA接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uhsd__types_8h_source.html">uhsd_types.h</a>&quot;</code><br />
+</div>
+<p><a href="uhsd__ota_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__uhsd__ota__req__.html">_uhsd_ota_req_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__version__qry__ack__t.html">uhsd_ota_version_qry_ack_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__evt__sec__firm__finish__t.html">uhsd_ota_evt_sec_firm_finish_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__evt__exception__t.html">uhsd_ota_evt_exception_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__uhsd__evt__.html">_uhsd_evt_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__uhsd__operation__.html">_uhsd_operation_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__online__whole__base__info.html">uhsd_ota_online_whole_base_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取整机包信息相关接口  <a href="structuhsd__ota__online__whole__base__info.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__online__whole__desc__info.html">uhsd_ota_online_whole_desc_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhsd__ota__online__sub__firm__info.html">uhsd_ota_online_sub_firm_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga265299f927f910842f31c85f1cbb8bff" id="r_ga265299f927f910842f31c85f1cbb8bff"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="struct__uhsd__ota__req__.html">_uhsd_ota_req_</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_evt_firm_info_t</b></td></tr>
+<tr class="separator:ga265299f927f910842f31c85f1cbb8bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f5381408bf771fb60859331ff33050d" id="r_ga3f5381408bf771fb60859331ff33050d"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="struct__uhsd__evt__.html">_uhsd_evt_</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_evt_t</b></td></tr>
+<tr class="separator:ga3f5381408bf771fb60859331ff33050d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cd17ba27c5586e70f692b522b8814ed" id="r_ga2cd17ba27c5586e70f692b522b8814ed"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga2cd17ba27c5586e70f692b522b8814ed">uhsd_ota_evt_func_cb</a>) (const <a class="el" href="struct__uhsd__evt__.html">uhsd_evt_t</a> *evt, void *userdata)</td></tr>
+<tr class="memdesc:ga2cd17ba27c5586e70f692b522b8814ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数指针，用户通过注册此函数获取OTA事件通知。  <br /></td></tr>
+<tr class="separator:ga2cd17ba27c5586e70f692b522b8814ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1778f1ff36d16a3b71d265115015f858" id="r_ga1778f1ff36d16a3b71d265115015f858"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="struct__uhsd__operation__.html">_uhsd_operation_</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_operation_t</b></td></tr>
+<tr class="separator:ga1778f1ff36d16a3b71d265115015f858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d0e5995c240931759c2598ba739f45e" id="r_ga8d0e5995c240931759c2598ba739f45e"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><b>ota_version_qry_cb</b>) (uhsd_s32 err_num, <a class="el" href="structuhsd__ota__version__qry__ack__t.html">uhsd_ota_version_qry_ack_t</a> *qry_ack, uhsd_void *user_data)</td></tr>
+<tr class="separator:ga8d0e5995c240931759c2598ba739f45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8637fda45ffe546e7747e22f5324b9d" id="r_gac8637fda45ffe546e7747e22f5324b9d"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="structuhsd__ota__online__whole__base__info.html">uhsd_ota_online_whole_base_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_online_whole_base_info_t</b></td></tr>
+<tr class="memdesc:gac8637fda45ffe546e7747e22f5324b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取整机包信息相关接口 <br /></td></tr>
+<tr class="separator:gac8637fda45ffe546e7747e22f5324b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc96f45272b81bf1cd1e4affa960a18a" id="r_gadc96f45272b81bf1cd1e4affa960a18a"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="structuhsd__ota__online__whole__desc__info.html">uhsd_ota_online_whole_desc_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_online_whole_desc_info_t</b></td></tr>
+<tr class="separator:gadc96f45272b81bf1cd1e4affa960a18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dedb558eb47761c8b1e894c3d6caab8" id="r_ga0dedb558eb47761c8b1e894c3d6caab8"><td class="memItemLeft" align="right" valign="top">
+typedef struct <a class="el" href="structuhsd__ota__online__sub__firm__info.html">uhsd_ota_online_sub_firm_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_online_sub_firm_info_t</b></td></tr>
+<tr class="separator:ga0dedb558eb47761c8b1e894c3d6caab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84075716cc12921b4adfb23049c848e6" id="r_ga84075716cc12921b4adfb23049c848e6"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_download_progress_notify</b>) (uhsd_s32 progress)</td></tr>
+<tr class="separator:ga84075716cc12921b4adfb23049c848e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafefe1c46aa8c1cffb0714f83bf8cc0e8" id="r_gafefe1c46aa8c1cffb0714f83bf8cc0e8"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_void(*&#160;</td><td class="memItemRight" valign="bottom"><b>ota_confirm_updae_cb</b>) (uhsd_s32 err_num, uhsd_void *user_data)</td></tr>
+<tr class="separator:gafefe1c46aa8c1cffb0714f83bf8cc0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gad3414abad484d5592bb8a618c47d5e24" id="r_gad3414abad484d5592bb8a618c47d5e24"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#gad3414abad484d5592bb8a618c47d5e24">UHSD_OTA_ERROR_E</a> { <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24aac58ee6add1ee85d52dce69627d42b5b">UHSD_OTA_ERROR_OK</a> = 0
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24aaf594a561149edc5e6641163d06ffbb6">UHSD_OTA_ERROR_OTHER</a> = 99
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a7e19b9dc81a62290efbecd4808af1d30">UHSD_OTA_ERROR_CONTENT_VALIDATION_FAILURE</a> = 106
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a70ded6ffb5f719020b362da13a3f4323">UHSD_OTA_ERROR_ILLEGAL_CONTENT</a> = 107
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a57800ad4b43e7544d03d054c77878111">UHSD_OTA_ERROR_ENTITY_TOO_LARGE</a> = 108
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a6b981c00d7ddfa8140d6d2ff3329cef3">UHSD_OTA_ERROR_RESOURCE_NOT_AVAILABLE</a> = 109
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a389945034fccb4839682853153558e8a">UHSD_OTA_ERROR_INCOMPLETE_CONTENT</a> = 110
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a618ca9d60384e280a007411280b568f1">UHSD_OTA_ERROR_DEVICE_BASEBOARD_UPGRADING</a> = 111
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24aacb0d29694d74a2fcc87da39a0753696">UHSD_OTA_ERROR_DEVICE_BASEBORAD_NOT_IN_SERVICE</a> = 112
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24ae24d6bae2b63cee00cb83a60233246b8">UHSD_OTA_ERROR_DEVICE_MODULE_UPGRADING</a> = 113
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a87a8e714c0858d52dcd55121569452fb">UHSD_OTA_ERROR_INVALID_UPGRADE_SN</a> = 114
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a7dd2c24d481de5a5d3f6f943161073c1">UHSD_OTA_ERROR_BOUNDARY</a> = 115
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24ab1b48e6bb7af75ea07a96579dbc12a89">UHSD_OTA_ERROR_CURRENT_UPGRADING</a> = 116
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24af9b7f69d09b4a95eedb72dbfe8611975">UHSD_OTA_ERROR_FRAGMENT_VALIDATION_FAILURE</a> = 117
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24ae6ec7077b0f983dcfd301abddac0d6fe">UHSD_OTA_ERROR_BASEBOARD_FILE_SIZE</a> = 119
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24ad3f7fedb2b5c7a05b28fb5651292610c">UHSD_OTA_ERROR_DIGEST_MISMATCH</a> = 120
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a2e318060e0ddfe80d86bb2de457e3509">UHSD_OTA_ERROR_UPDATE_TIMESUP</a> = 121
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a3ed0b40bdef9e603e582fb58f962c6ad">UHSD_OTA_ERROR_BASEBOARD_REJECT</a> = 122
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24aec747a8252d07a6c97cfdbeeb0d05c69">UHSD_OTA_ERROR_BASEBOARD_FAIL</a> = 123
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a87f041d67bb74a316b57cc08ba3ef9ee">UHSD_OTA_ERROR_BLE_CONFIGING</a> = 124
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24aa978f5da6052f75529b4793562a4ce82">UHSD_OTA_ERROR_DEVICE_RESOURCE_INSUFFICIENT</a> = 126
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24afa76c97d8d80a704b9b465a9ec37e9ac">UHSD_OTA_ERROR_DEVICE_UPGRADE_TIMEOUT</a> = 127
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a4fc3d9b2614775c06102fcd7b648b5ed">UHSD_OTA_ERROR_DEVICE_LOW_BATTERY</a> = 128
+, <a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24ac2f9a87a1d1052af91e25e9a83eb277f">UHSD_OTA_ERROR_INTERNAL_UPGRADE_VER_SAME</a> = -1
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#ggad3414abad484d5592bb8a618c47d5e24a1213dbc9c63385d1fb266df4f502b1b0">UHSD_OTA_ERROR_INTERNAL_UPGRADE_VER_TOO_LOW</a> = -2
+<br />
+ }</td></tr>
+<tr class="memdesc:gad3414abad484d5592bb8a618c47d5e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用OTA错误码  <a href="group__grp__uhsdfota.html#gad3414abad484d5592bb8a618c47d5e24">更多...</a><br /></td></tr>
+<tr class="separator:gad3414abad484d5592bb8a618c47d5e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaced32dcd130535d859b824a7adc63505" id="r_gaced32dcd130535d859b824a7adc63505"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#gaced32dcd130535d859b824a7adc63505">UHSD_OTA_PKG_SRC_E</a> { <a class="el" href="group__grp__uhsdfota.html#ggaced32dcd130535d859b824a7adc63505a06365e4827330a793be05c2b4c404fd0">UHSD_OTA_PKG_LOCAL</a> = 1
+, <a class="el" href="group__grp__uhsdfota.html#ggaced32dcd130535d859b824a7adc63505a6de9070130afe0bfb002280a0f814977">UHSD_OTA_PKG_ONLINE</a>
+, <b>UHSD_OTA_PKG_MAX</b>
+ }</td></tr>
+<tr class="memdesc:gaced32dcd130535d859b824a7adc63505"><td class="mdescLeft">&#160;</td><td class="mdescRight">包来源  <a href="group__grp__uhsdfota.html#gaced32dcd130535d859b824a7adc63505">更多...</a><br /></td></tr>
+<tr class="separator:gaced32dcd130535d859b824a7adc63505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6524ed12e57736caac0a20ff7bc20fa" id="r_gaf6524ed12e57736caac0a20ff7bc20fa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#gaf6524ed12e57736caac0a20ff7bc20fa">UHSD_OTA_UPGRADE_DST_E</a> { <a class="el" href="group__grp__uhsdfota.html#ggaf6524ed12e57736caac0a20ff7bc20faac3731db17607c6ae6e85bd3c44f1c2a2">UHSD_OTA_UPGRADE_DST_WHOLE</a> = 0
+, <a class="el" href="group__grp__uhsdfota.html#ggaf6524ed12e57736caac0a20ff7bc20faa6eab9752265bf95eb160b427b316710c">UHSD_OTA_UPGRADE_DST_WIFI_MODULE</a>
+, <a class="el" href="group__grp__uhsdfota.html#ggaf6524ed12e57736caac0a20ff7bc20faabf9fbb86936b0fd330595b97a7d0cdac">UHSD_OTA_UPGRADE_DST_VOICE</a>
+ }</td></tr>
+<tr class="memdesc:gaf6524ed12e57736caac0a20ff7bc20fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">升级包所对应的升级目标  <a href="group__grp__uhsdfota.html#gaf6524ed12e57736caac0a20ff7bc20fa">更多...</a><br /></td></tr>
+<tr class="separator:gaf6524ed12e57736caac0a20ff7bc20fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62ebe91278000bb7beee52d0cf367cce" id="r_ga62ebe91278000bb7beee52d0cf367cce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga62ebe91278000bb7beee52d0cf367cce">UHSD_OTA_EVT_E</a> { <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea72399ca41307a524294c4032cfca63fb">UHSD_OTA_EVT_REQ</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea3bd1ca4204c19a6d9ca3a2b38801c68c">UHSD_OTA_EVT_FIRM_READY</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea46fd904137f3957d73972663749e19cb">UHSD_OTA_EVT_SECTION_FIRM_DOWNLOAD_FINISH</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea5f90750d9f4b6a39d15f70bd1d6148bc">UHSD_OTA_EVT_UPDATE_NEED_CONFIRM_FIRM</a>
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea6099429797288f34e891f9c536568cf1">UHSD_OTA_EVT_CONFIRM_FIRM_UPDATE_VALIID</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga62ebe91278000bb7beee52d0cf367ccea99f8d846f8fc431d9c0831cb97945879">UHSD_OTA_EVT_EXCEPTION_OCCURED</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga62ebe91278000bb7beee52d0cf367cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice通知设备APP OTA事件。 SD_SDK =&gt; DEVAPP  <a href="group__grp__uhsdfota.html#ga62ebe91278000bb7beee52d0cf367cce">更多...</a><br /></td></tr>
+<tr class="separator:ga62ebe91278000bb7beee52d0cf367cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga112d41f6fec5bb519e1205f6ea1b0cd7" id="r_ga112d41f6fec5bb519e1205f6ea1b0cd7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga112d41f6fec5bb519e1205f6ea1b0cd7">UHSD_OTA_REQ_RESULT_E</a> { <a class="el" href="group__grp__uhsdfota.html#gga112d41f6fec5bb519e1205f6ea1b0cd7ab0871295502452575c9a3127210186b4">UHSD_OTA_REQ_RESULT_NOT_ALLOW</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga112d41f6fec5bb519e1205f6ea1b0cd7aa6a3374914f3280b2c089852ba145e75">UHSD_OTA_REQ_RESULT_LATER</a>
+, <a class="el" href="group__grp__uhsdfota.html#gga112d41f6fec5bb519e1205f6ea1b0cd7aadcd7868d33981eab1f7dd15686f3e68">UHSD_OTA_REQ_RESULT_ALLOW</a>
+ }</td></tr>
+<tr class="memdesc:ga112d41f6fec5bb519e1205f6ea1b0cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求结果通知类型。 uhsd_ota_notify_req_result_t  <a href="group__grp__uhsdfota.html#ga112d41f6fec5bb519e1205f6ea1b0cd7">更多...</a><br /></td></tr>
+<tr class="separator:ga112d41f6fec5bb519e1205f6ea1b0cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7beee17c9b1e741e7dcb4e9ce4e6bd4c" id="r_ga7beee17c9b1e741e7dcb4e9ce4e6bd4c"><td class="memItemLeft" align="right" valign="top"><a id="ga7beee17c9b1e741e7dcb4e9ce4e6bd4c" name="ga7beee17c9b1e741e7dcb4e9ce4e6bd4c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga7beee17c9b1e741e7dcb4e9ce4e6bd4c">UHSD_OTA_UPGRADE_STATUS_E</a> { <b>UHSD_OTA_UPGRADE_STATUS_IDLE_NO_DOWNLOAD</b> = 0x01
+, <b>UHSD_OTA_UPGRADE_STATUS_IDLE_DOWNLOADING</b> = 0x02
+, <b>UHSD_OTA_UPGRADE_STATUS_ALLOW</b> = 0x03
+ }</td></tr>
+<tr class="memdesc:ga7beee17c9b1e741e7dcb4e9ce4e6bd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ota升级状态定义 <br /></td></tr>
+<tr class="separator:ga7beee17c9b1e741e7dcb4e9ce4e6bd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga123b7631142cfaa8a4a30f533ac8627a" id="r_ga123b7631142cfaa8a4a30f533ac8627a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga123b7631142cfaa8a4a30f533ac8627a">uhsd_ota_evt_register</a> (<a class="el" href="group__grp__uhsdfota.html#ga2cd17ba27c5586e70f692b522b8814ed">uhsd_ota_evt_func_cb</a> func_cb, void *userdata)</td></tr>
+<tr class="memdesc:ga123b7631142cfaa8a4a30f533ac8627a"><td class="mdescLeft">&#160;</td><td class="mdescRight">OTA事件注册函数。  <br /></td></tr>
+<tr class="separator:ga123b7631142cfaa8a4a30f533ac8627a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12aff091947a0e1dedd0e4a49fce35b1" id="r_ga12aff091947a0e1dedd0e4a49fce35b1"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga12aff091947a0e1dedd0e4a49fce35b1">uhsd_ota_operation_set</a> (<a class="el" href="struct__uhsd__operation__.html">uhsd_ota_operation_t</a> opt, void *def_param)</td></tr>
+<tr class="memdesc:ga12aff091947a0e1dedd0e4a49fce35b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SmartDevice操作接口设置。  <br /></td></tr>
+<tr class="separator:ga12aff091947a0e1dedd0e4a49fce35b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53edfdbafdcbc68b6ce0fade34bcb9bb" id="r_ga53edfdbafdcbc68b6ce0fade34bcb9bb"><td class="memItemLeft" align="right" valign="top">UHSD_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga53edfdbafdcbc68b6ce0fade34bcb9bb">uhsd_ota_notify_req_result</a> (<a class="el" href="group__grp__uhsdfota.html#ga112d41f6fec5bb519e1205f6ea1b0cd7">UHSD_OTA_REQ_RESULT_E</a> result)</td></tr>
+<tr class="memdesc:ga53edfdbafdcbc68b6ce0fade34bcb9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知SDK升级请求结果  <br /></td></tr>
+<tr class="separator:ga53edfdbafdcbc68b6ce0fade34bcb9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ca0d365e2643c32faec734d8f368ba9" id="r_ga2ca0d365e2643c32faec734d8f368ba9"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga2ca0d365e2643c32faec734d8f368ba9">uhsd_ota_version_qry</a> (ota_version_qry_cb qry, uhsd_void *user_data)</td></tr>
+<tr class="memdesc:ga2ca0d365e2643c32faec734d8f368ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询可升级的版本信息  <br /></td></tr>
+<tr class="separator:ga2ca0d365e2643c32faec734d8f368ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga575f0e53b5b59e8edb82896dcc5b8dae" id="r_ga575f0e53b5b59e8edb82896dcc5b8dae"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga575f0e53b5b59e8edb82896dcc5b8dae">uhsd_ota_notify_start</a> (uhsd_u32 upgrade_sn)</td></tr>
+<tr class="memdesc:ga575f0e53b5b59e8edb82896dcc5b8dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知SDK升级开始升级  <br /></td></tr>
+<tr class="separator:ga575f0e53b5b59e8edb82896dcc5b8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad781326371528591a06259ccbda73112" id="r_gad781326371528591a06259ccbda73112"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#gad781326371528591a06259ccbda73112">uhsd_ota_download_section_firm</a> (uhsd_u32 upgrade_sn, uhsd_u32 offset, uhsd_u32 len)</td></tr>
+<tr class="memdesc:gad781326371528591a06259ccbda73112"><td class="mdescLeft">&#160;</td><td class="mdescRight">分段固件下载  <br /></td></tr>
+<tr class="separator:gad781326371528591a06259ccbda73112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga107f7a8d0211c5484b4560a42c76edb0" id="r_ga107f7a8d0211c5484b4560a42c76edb0"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga107f7a8d0211c5484b4560a42c76edb0">uhsd_ota_upgrade_status_rpt</a> (uhsd_u32 upgrade_sn, <a class="el" href="group__grp__uhsdfota.html#ga7beee17c9b1e741e7dcb4e9ce4e6bd4c">UHSD_OTA_UPGRADE_STATUS_E</a> status, uhsd_bool download_complete)</td></tr>
+<tr class="memdesc:ga107f7a8d0211c5484b4560a42c76edb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ota升级状态上报  <br /></td></tr>
+<tr class="separator:ga107f7a8d0211c5484b4560a42c76edb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18512ceecb4a2d6c207a626f04423dff" id="r_ga18512ceecb4a2d6c207a626f04423dff"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga18512ceecb4a2d6c207a626f04423dff">uhsd_ota_notify_stop</a> (uhsd_u32 upgrade_sn, uhsd_s32 error)</td></tr>
+<tr class="memdesc:ga18512ceecb4a2d6c207a626f04423dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知SDK结束整个升级流程  <br /></td></tr>
+<tr class="separator:ga18512ceecb4a2d6c207a626f04423dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09220012cb6ba200dce2a922d5cd805d" id="r_ga09220012cb6ba200dce2a922d5cd805d"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga09220012cb6ba200dce2a922d5cd805d">uhsd_ota_get_online_whole_base_info</a> (uhsd_u8 *buff, uhsd_u16 len, <a class="el" href="group__grp__uhsdfota.html#gac8637fda45ffe546e7747e22f5324b9d">uhsd_ota_online_whole_base_info_t</a> *base_info)</td></tr>
+<tr class="memdesc:ga09220012cb6ba200dce2a922d5cd805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">在线打包格式包基本信息获取  <br /></td></tr>
+<tr class="separator:ga09220012cb6ba200dce2a922d5cd805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4499987ceafe09e91b99c36ab9bc57b6" id="r_ga4499987ceafe09e91b99c36ab9bc57b6"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga4499987ceafe09e91b99c36ab9bc57b6">uhsd_ota_get_online_whole_desc_info</a> (uhsd_u8 *buff, uhsd_u16 len, <a class="el" href="structuhsd__ota__online__whole__desc__info.html">uhsd_ota_online_whole_desc_info_t</a> *desc_info)</td></tr>
+<tr class="memdesc:ga4499987ceafe09e91b99c36ab9bc57b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">在线打包格式固件描述信息  <br /></td></tr>
+<tr class="separator:ga4499987ceafe09e91b99c36ab9bc57b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea30c00c19d3fe5910642323e9e0a695" id="r_gaea30c00c19d3fe5910642323e9e0a695"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#gaea30c00c19d3fe5910642323e9e0a695">uhsd_ota_get_online_sub_firm_info</a> (uhsd_u8 *buff, uhsd_u16 len, <a class="el" href="group__grp__uhsdfota.html#gac8637fda45ffe546e7747e22f5324b9d">uhsd_ota_online_whole_base_info_t</a> *base_info, <a class="el" href="structuhsd__ota__online__whole__desc__info.html">uhsd_ota_online_whole_desc_info_t</a> *desc_info, <a class="el" href="structuhsd__ota__online__sub__firm__info.html">uhsd_ota_online_sub_firm_info_t</a> sub_desc_list[])</td></tr>
+<tr class="memdesc:gaea30c00c19d3fe5910642323e9e0a695"><td class="mdescLeft">&#160;</td><td class="mdescRight">在线打包格式固件包，子固件描述信息列表  <br /></td></tr>
+<tr class="separator:gaea30c00c19d3fe5910642323e9e0a695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1383407401dd2715b4c793b6a9c9224" id="r_gac1383407401dd2715b4c793b6a9c9224"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_set_ota_download_progress_notify_cb</b> (uhsd_ota_download_progress_notify cb)</td></tr>
+<tr class="memdesc:gac1383407401dd2715b4c793b6a9c9224"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置ota下载进度通知进度回调函数 <br /></td></tr>
+<tr class="separator:gac1383407401dd2715b4c793b6a9c9224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71c8a2e0479252e0441a9bfce8bc2e8f" id="r_ga71c8a2e0479252e0441a9bfce8bc2e8f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhsdfota.html#ga71c8a2e0479252e0441a9bfce8bc2e8f">uhsd_set_ota_download_auto_update</a> (uhsd_s32 is_auto_update)</td></tr>
+<tr class="memdesc:ga71c8a2e0479252e0441a9bfce8bc2e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置ota下载完成后是否自动更新,此接口仅在查询固件 <a class="el" href="structuhsd__ota__version__qry__ack__t.html">uhsd_ota_version_qry_ack_t</a> 中task_type=2为大固件模式下有效  <br /></td></tr>
+<tr class="separator:ga71c8a2e0479252e0441a9bfce8bc2e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1a21df0e8aa4ff62ff86fb7f2d271a6" id="r_gad1a21df0e8aa4ff62ff86fb7f2d271a6"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_ota_big_firm_confirm_update_req</b> (ota_confirm_updae_cb comfirm_cb, uhsd_void *user_data)</td></tr>
+<tr class="separator:gad1a21df0e8aa4ff62ff86fb7f2d271a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_5cb9fdb3d8c24a8c4e926a8a381ecc5b.html">SDK_API</a></li><li class="navelem"><a class="el" href="dir_b32a3c3d114857f3979616932b1ef117.html">include</a></li><li class="navelem"><a class="el" href="uhsd__ota_8h.html">uhsd_ota.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

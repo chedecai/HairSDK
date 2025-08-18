@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 第一部分： 基础信息</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md__2home_2xyw_2build__env_240__esp_2UHOS_2interface_2SDK__API_2README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">第一部分： 基础信息</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md29"></a>name: sample # &lt;必选项&gt; 包名称 （符合C语言变量命名规则），长度少于等于64字节 version: master # &lt;必选项&gt; 组件版本号 description: 组件模板 # &lt;必选项&gt; 建议至少20字以上 type: framework # &lt;必选项&gt; 组件类型，为：solution, kernel, hardware, components</p>
+<p>tag: '' # &lt;必选项&gt; 标签,组件分类，为：common, interface, protocol, language, sdk 缺省值： '' keywords: # &lt;可选项&gt; 关键词，会影响到组件被搜索的效果，合理的关键词很重要</p><ul>
+<li>sample license: Apache license v2.0 # &lt;可选项&gt; 源代码的许可证，要确保所有代码、文件的许可证不冲突。如：MIT，Apache license v2.0，BSD</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md30"></a>
+第二部分：依赖信息</h1>
+<h1><a class="anchor" id="autotoc_md31"></a>
+指定该组件依赖的组件及版本，版本支持条件比较，支持：&gt;=v1.0, &gt;v1.0, ==v1.0, &lt;=v1.0, &lt;v1.0, v1.0</h1>
+<h1><a class="anchor" id="autotoc_md32"></a>
+未指定条件时，默认为 ==，如 v1.0 与 ==v1.0</h1>
+<p>depends: # &lt;可选项&gt; 该组件依赖其他的组件，合理的依赖才能保证组件能编译、使用</p><ul>
+<li>AL_API: master</li>
+<li>log: master</li>
+<li>shell: master</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md33"></a>
+第四部分：编译连接信息</h2>
+<p>build_config: # &lt;可选项&gt; 编译配置项 internal_include:</p><ul>
+<li>source/include # &lt;可选项&gt; 编译时，影响编译器的-I 参数 ,组件内有效 include: # &lt;可选项&gt; 编译时，影响编译器的-I 参数 ,全局有效</li>
+<li>include <br  />
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md34"></a>
+internal_cflag:                          # &lt;可选项&gt; C 编译器所需要要的编译参数，组件内部</h1>
+<ul>
+<li>xxx </li>
+</ul>
+<h1><a class="anchor" id="autotoc_md35"></a>
+cflag_mask: true                         # &lt;可选项&gt;屏蔽全局 cflags 值：true/false</h1>
+<h1><a class="anchor" id="autotoc_md36"></a>
+cflag:                                   # &lt;可选项&gt; C 编译器所需要要的编译参数</h1>
+<h1><a class="anchor" id="autotoc_md37"></a>
+- -march=armv8-m.main+dsp -mthumb -mcmse -mfloat-abi=soft -D__thumb2__ -g -gdwarf-3 -Os</h1>
+<h1><a class="anchor" id="autotoc_md38"></a>
+cxxflag:                                # &lt;可选项&gt; CXX 编译器所需要要的编译参数</h1>
+<h1><a class="anchor" id="autotoc_md39"></a>
+- -mcpu=cortex-m4 -mthumb</h1>
+<h1><a class="anchor" id="autotoc_md40"></a>
+- -mfpu=fpv4-sp-d16</h1>
+<h1><a class="anchor" id="autotoc_md41"></a>
+- -mfloat-abi=hard</h1>
+<h1><a class="anchor" id="autotoc_md42"></a>
+asmflag:                                # &lt;可选项&gt; 汇编器所需要要参数</h1>
+<h1><a class="anchor" id="autotoc_md43"></a>
+- -mcpu=cortex-m4 -mthumb</h1>
+<h1><a class="anchor" id="autotoc_md44"></a>
+- -mfpu=fpv4-sp-d16</h1>
+<h1><a class="anchor" id="autotoc_md45"></a>
+- -mfloat-abi=hard  # MCU_FLAGS</h1>
+<h1><a class="anchor" id="autotoc_md46"></a>
+define:                                  # &lt;可选项&gt; 宏定义, 增加编译器的-D 选项,如：</h1>
+<h1><a class="anchor" id="autotoc_md47"></a>
+&lt;strong&gt;UH_RTOS&lt;/strong&gt;: 1                        #   -DXXX=1</h1>
+<h1><a class="anchor" id="autotoc_md48"></a>
+_NO_DEFINITIONS_IN_HEADER_FILES: 1                     #   -DAAA</h1>
+<p>source_file: # &lt;可选项&gt; 指定参与编译的源代码文件，支持通配符，采用相对路径 normal:</p><ul>
+<li>source/*.c</li>
+</ul>
+<p>#sram: # sram区文件 #eram: ''</p>
+<h2><a class="anchor" id="autotoc_md49"></a>
+第五部分：配置信息</h2>
+<p>def_config: # 组件的可配置项 CONFIG_DEBUG: y </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

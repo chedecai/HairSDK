@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_thread.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__thread_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uh_thread.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uh__thread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef __UH_THREAD_H__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define __UH_THREAD_H__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="uh__types_8h.html">uh_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="uh__time_8h.html">uh_time.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="uh__mutex_8h.html">uh_mutex.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">struct </span>uhos_thread_s;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">typedef</span> <span class="keyword">struct </span>uhos_thread_s *uhos_thread_t;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structuhos__thread__attr.html">   39</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structuhos__thread__attr.html">uhos_thread_attr</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    uhos_u32 stack_size;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    uhos_u16 priority;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    uhos_char *name;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#ga3b6eddf9f15be5ca59830aad461f53ff">   44</a></span>} <a class="code hl_typedef" href="group__grp__uhosos.html#ga3b6eddf9f15be5ca59830aad461f53ff">uhos_thread_attr_t</a>;</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#gabf63c024ef733b495f374c8a37eac3a1">   57</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosos.html#gabf63c024ef733b495f374c8a37eac3a1">uhos_thread_create</a>(uhos_thread_t *thread, <span class="keywordtype">void</span> *(*startroutine)(<span class="keywordtype">void</span> *), <span class="keywordtype">void</span> *arg, <span class="keyword">const</span> <a class="code hl_struct" href="structuhos__thread__attr.html">uhos_thread_attr_t</a> *attr);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#gaf4de18c19c577f1c8caf68f460e4c997">   66</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosos.html#gaf4de18c19c577f1c8caf68f460e4c997">uhos_thread_delete</a>(uhos_thread_t thread);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#gab13263696b2c3231eb23199a48758be1">   73</a></span>uhos_thread_t <a class="code hl_function" href="group__grp__uhosos.html#gab13263696b2c3231eb23199a48758be1">uhos_thread_getid</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#ga9f6a7c253b3d9be0dc41b09addbe124f">   79</a></span>uhos_u64 <a class="code hl_function" href="group__grp__uhosos.html#ga9f6a7c253b3d9be0dc41b09addbe124f">uhos_thread_gettid</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#ga584127b87b412c962bbb1d528d243624">   89</a></span><span class="keyword">const</span> uhos_char *<a class="code hl_function" href="group__grp__uhosos.html#ga584127b87b412c962bbb1d528d243624">uhos_thread_get_name</a>(uhos_thread_t thread);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__grp__uhosos.html#ga9abb6906e9e26077fa57cb04a42b8d9a">   97</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosos.html#ga9abb6906e9e26077fa57cb04a42b8d9a">uhos_thread_sleep</a>(uhos_u32 milliseconds);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// __UH_THREAD_H__</span></div>
+<div class="ttc" id="agroup__grp__uhosos_html_ga3b6eddf9f15be5ca59830aad461f53ff"><div class="ttname"><a href="group__grp__uhosos.html#ga3b6eddf9f15be5ca59830aad461f53ff">uhos_thread_attr_t</a></div><div class="ttdeci">struct uhos_thread_attr uhos_thread_attr_t</div><div class="ttdoc">指定线程的属性。</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_ga584127b87b412c962bbb1d528d243624"><div class="ttname"><a href="group__grp__uhosos.html#ga584127b87b412c962bbb1d528d243624">uhos_thread_get_name</a></div><div class="ttdeci">const uhos_char * uhos_thread_get_name(uhos_thread_t thread)</div><div class="ttdoc">获取内核及其接口中可见的线程名称</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_ga9abb6906e9e26077fa57cb04a42b8d9a"><div class="ttname"><a href="group__grp__uhosos.html#ga9abb6906e9e26077fa57cb04a42b8d9a">uhos_thread_sleep</a></div><div class="ttdeci">uhos_s32 uhos_thread_sleep(uhos_u32 milliseconds)</div><div class="ttdoc">导致调用线程暂停执行，直到指定的实时秒数</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_ga9f6a7c253b3d9be0dc41b09addbe124f"><div class="ttname"><a href="group__grp__uhosos.html#ga9f6a7c253b3d9be0dc41b09addbe124f">uhos_thread_gettid</a></div><div class="ttdeci">uhos_u64 uhos_thread_gettid(void)</div><div class="ttdoc">返回当前线程的tid</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_gab13263696b2c3231eb23199a48758be1"><div class="ttname"><a href="group__grp__uhosos.html#gab13263696b2c3231eb23199a48758be1">uhos_thread_getid</a></div><div class="ttdeci">uhos_thread_t uhos_thread_getid(void)</div><div class="ttdoc">返回当前运行线程的线程ID</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_gabf63c024ef733b495f374c8a37eac3a1"><div class="ttname"><a href="group__grp__uhosos.html#gabf63c024ef733b495f374c8a37eac3a1">uhos_thread_create</a></div><div class="ttdeci">uhos_s32 uhos_thread_create(uhos_thread_t *thread, void *(*startroutine)(void *), void *arg, const uhos_thread_attr_t *attr)</div><div class="ttdoc">线程创建.</div></div>
+<div class="ttc" id="agroup__grp__uhosos_html_gaf4de18c19c577f1c8caf68f460e4c997"><div class="ttname"><a href="group__grp__uhosos.html#gaf4de18c19c577f1c8caf68f460e4c997">uhos_thread_delete</a></div><div class="ttdeci">uhos_s32 uhos_thread_delete(uhos_thread_t thread)</div><div class="ttdoc">终止线程的执行并将其从活动线程中删除</div></div>
+<div class="ttc" id="astructuhos__thread__attr_html"><div class="ttname"><a href="structuhos__thread__attr.html">uhos_thread_attr</a></div><div class="ttdoc">指定线程的属性。</div><div class="ttdef"><b>Definition</b> uh_thread.h:40</div></div>
+<div class="ttc" id="auh__mutex_8h_html"><div class="ttname"><a href="uh__mutex_8h.html">uh_mutex.h</a></div></div>
+<div class="ttc" id="auh__time_8h_html"><div class="ttname"><a href="uh__time_8h.html">uh_time.h</a></div></div>
+<div class="ttc" id="auh__types_8h_html"><div class="ttname"><a href="uh__types_8h.html">uh_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_123ada123df3448aaf3955a16272eb19.html">AL_OS</a></li><li class="navelem"><a class="el" href="uh__thread_8h.html">uh_thread.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

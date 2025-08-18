@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uh_tls.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uh__tls_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">uh_tls.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uh__tls_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef __UH_TLS_H__</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define __UH_TLS_H__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="uh__types_8h.html">uh_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UHOS_TLS_RET_OK = 0,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UHOS_TLS_RET_ERROR = -1,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    UHOS_TLS_RET_WANT_READ = -2,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UHOS_TLS_RET_WANT_WRITE = -3,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} UHOS_TLS_RET_E;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    UHOS_TLS_RSA_WITH_AES_128_CBC_SHA256,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    UHOS_TLS_RSA_WITH_AES_256_CBC_SHA256,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    UHOS_TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    UHOS_TLS_RSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    UHOS_TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    UHOS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    UHOS_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    UHOS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    UHOS_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    UHOS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    UHOS_TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    UHOS_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    UHOS_TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} UHOS_TLS_CIPHERSUITES_E;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#ga8a0f6a7cd88d5dae6bbc97153bd9d73f">   55</a></span>uhos_void *<a class="code hl_function" href="group__grp__uhosse.html#ga8a0f6a7cd88d5dae6bbc97153bd9d73f">uhos_tls_init</a>(uhos_void);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#ga033a9ce1cce44cbadd4b0ec5456279a5">   63</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#ga033a9ce1cce44cbadd4b0ec5456279a5">uhos_tls_uninit</a>(uhos_void *handle);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gabad27a2e95ad45dd1c24d0a52131f6fc">   71</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gabad27a2e95ad45dd1c24d0a52131f6fc">uhos_tls_start</a>(uhos_void *handle);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#ga1606293820213b555be3b76080b0018e">   80</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#ga1606293820213b555be3b76080b0018e">uhos_tls_handshake</a>(uhos_void *handle);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gaa8fbf9b4dda3ee4c3aa7f064b89cf972">   90</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gaa8fbf9b4dda3ee4c3aa7f064b89cf972">uhos_tls_send</a>(uhos_void *handle, <span class="keyword">const</span> uhos_u8 *data, uhos_size_t data_len);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#ga441e448cb3e4deefd91c934b09532d73">  100</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#ga441e448cb3e4deefd91c934b09532d73">uhos_tls_recv</a>(uhos_void *handle, uhos_u8 *data, uhos_size_t data_len);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gaa043f9ecb2c0dd1463838a2130b6e258">  108</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gaa043f9ecb2c0dd1463838a2130b6e258">uhos_tls_get_avail_bytes</a>(uhos_void *tls_handle);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gac595eb86999955252e1964d4650d3ae3">  117</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gac595eb86999955252e1964d4650d3ae3">uhos_tls_set_connected_socket</a>(uhos_void *handle, uhos_s32 socket_fd);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gaff14cb90127080326774505dd97fdda0">  127</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gaff14cb90127080326774505dd97fdda0">uhos_tls_set_ciphersuites</a>(uhos_void *handle, uhos_s32 *ciphersuites, uhos_u32 ciphersuites_count);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#ga8a0abb5f2a387706b90ee8c3e824d0a9">  137</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#ga8a0abb5f2a387706b90ee8c3e824d0a9">uhos_tls_set_ca_cert</a>(uhos_void *handle, <span class="keyword">const</span> uhos_u8 *ca_cert, uhos_size_t ca_cert_len);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gac2629e2ce821347f141366cdf35597b7">  149</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gac2629e2ce821347f141366cdf35597b7">uhos_tls_set_own_cert</a>(uhos_void *handle, <span class="keyword">const</span> uhos_u8 *own_cert, uhos_size_t own_cert_len, <span class="keyword">const</span> uhos_u8 *priv_key, uhos_size_t priv_key_len);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__grp__uhosse.html#gab15414c0831968349a35fa7d84fc696d">  160</a></span>uhos_s32 <a class="code hl_function" href="group__grp__uhosse.html#gab15414c0831968349a35fa7d84fc696d">uhos_tls_get_cert_cn</a>(uhos_u8 *cert_buf, uhos_size_t cert_buf_len, uhos_u8 *cert_cn_buf, uhos_size_t cert_cn_buf_len);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif </span><span class="comment">/*__UH_TLS_H__*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__grp__uhosse_html_ga033a9ce1cce44cbadd4b0ec5456279a5"><div class="ttname"><a href="group__grp__uhosse.html#ga033a9ce1cce44cbadd4b0ec5456279a5">uhos_tls_uninit</a></div><div class="ttdeci">uhos_s32 uhos_tls_uninit(uhos_void *handle)</div><div class="ttdoc">tls反初始化，释放tls所有资源。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_ga1606293820213b555be3b76080b0018e"><div class="ttname"><a href="group__grp__uhosse.html#ga1606293820213b555be3b76080b0018e">uhos_tls_handshake</a></div><div class="ttdeci">uhos_s32 uhos_tls_handshake(uhos_void *handle)</div><div class="ttdoc">tls握手。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_ga441e448cb3e4deefd91c934b09532d73"><div class="ttname"><a href="group__grp__uhosse.html#ga441e448cb3e4deefd91c934b09532d73">uhos_tls_recv</a></div><div class="ttdeci">uhos_s32 uhos_tls_recv(uhos_void *handle, uhos_u8 *data, uhos_size_t data_len)</div><div class="ttdoc">接收tls数据。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_ga8a0abb5f2a387706b90ee8c3e824d0a9"><div class="ttname"><a href="group__grp__uhosse.html#ga8a0abb5f2a387706b90ee8c3e824d0a9">uhos_tls_set_ca_cert</a></div><div class="ttdeci">uhos_s32 uhos_tls_set_ca_cert(uhos_void *handle, const uhos_u8 *ca_cert, uhos_size_t ca_cert_len)</div><div class="ttdoc">设置服务器ca证书。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_ga8a0f6a7cd88d5dae6bbc97153bd9d73f"><div class="ttname"><a href="group__grp__uhosse.html#ga8a0f6a7cd88d5dae6bbc97153bd9d73f">uhos_tls_init</a></div><div class="ttdeci">uhos_void * uhos_tls_init(uhos_void)</div><div class="ttdoc">tls初始化。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gaa043f9ecb2c0dd1463838a2130b6e258"><div class="ttname"><a href="group__grp__uhosse.html#gaa043f9ecb2c0dd1463838a2130b6e258">uhos_tls_get_avail_bytes</a></div><div class="ttdeci">uhos_s32 uhos_tls_get_avail_bytes(uhos_void *tls_handle)</div><div class="ttdoc">获取应用方未读取的数据长度。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gaa8fbf9b4dda3ee4c3aa7f064b89cf972"><div class="ttname"><a href="group__grp__uhosse.html#gaa8fbf9b4dda3ee4c3aa7f064b89cf972">uhos_tls_send</a></div><div class="ttdeci">uhos_s32 uhos_tls_send(uhos_void *handle, const uhos_u8 *data, uhos_size_t data_len)</div><div class="ttdoc">发送tls数据。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gab15414c0831968349a35fa7d84fc696d"><div class="ttname"><a href="group__grp__uhosse.html#gab15414c0831968349a35fa7d84fc696d">uhos_tls_get_cert_cn</a></div><div class="ttdeci">uhos_s32 uhos_tls_get_cert_cn(uhos_u8 *cert_buf, uhos_size_t cert_buf_len, uhos_u8 *cert_cn_buf, uhos_size_t cert_cn_buf_len)</div><div class="ttdoc">获取证书cn。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gabad27a2e95ad45dd1c24d0a52131f6fc"><div class="ttname"><a href="group__grp__uhosse.html#gabad27a2e95ad45dd1c24d0a52131f6fc">uhos_tls_start</a></div><div class="ttdeci">uhos_s32 uhos_tls_start(uhos_void *handle)</div><div class="ttdoc">tls句柄开始适配资源。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gac2629e2ce821347f141366cdf35597b7"><div class="ttname"><a href="group__grp__uhosse.html#gac2629e2ce821347f141366cdf35597b7">uhos_tls_set_own_cert</a></div><div class="ttdeci">uhos_s32 uhos_tls_set_own_cert(uhos_void *handle, const uhos_u8 *own_cert, uhos_size_t own_cert_len, const uhos_u8 *priv_key, uhos_size_t priv_key_len)</div><div class="ttdoc">设置设备证书和私钥。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gac595eb86999955252e1964d4650d3ae3"><div class="ttname"><a href="group__grp__uhosse.html#gac595eb86999955252e1964d4650d3ae3">uhos_tls_set_connected_socket</a></div><div class="ttdeci">uhos_s32 uhos_tls_set_connected_socket(uhos_void *handle, uhos_s32 socket_fd)</div><div class="ttdoc">设置已连接的套接字。</div></div>
+<div class="ttc" id="agroup__grp__uhosse_html_gaff14cb90127080326774505dd97fdda0"><div class="ttname"><a href="group__grp__uhosse.html#gaff14cb90127080326774505dd97fdda0">uhos_tls_set_ciphersuites</a></div><div class="ttdeci">uhos_s32 uhos_tls_set_ciphersuites(uhos_void *handle, uhos_s32 *ciphersuites, uhos_u32 ciphersuites_count)</div><div class="ttdoc">设置加密套件。</div></div>
+<div class="ttc" id="auh__types_8h_html"><div class="ttname"><a href="uh__types_8h.html">uh_types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b31d54d5631803016a26f28213a41162.html">interface</a></li><li class="navelem"><a class="el" href="dir_79197dc21c9ff3c17842eb996443d56f.html">AL_API</a></li><li class="navelem"><a class="el" href="dir_c3e11a7dae9a9f9b22ae8e0d9aaae187.html">include</a></li><li class="navelem"><a class="el" href="dir_c08025a56e219fa437080e0b74eb5eb3.html">AL_SE</a></li><li class="navelem"><a class="el" href="uh__tls_8h.html">uh_tls.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

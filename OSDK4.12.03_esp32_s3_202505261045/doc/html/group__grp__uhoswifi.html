@@ -1,0 +1,2137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: WIFI适配接口定义</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhoswifi.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">WIFI适配接口定义</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__wifi_8h" id="r_uh__wifi_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__wifi_8h.html">uh_wifi.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpromisc__frame__info__t.html">promisc_frame_info_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__ieee80211__frame.html">uhos_ieee80211_frame</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structap__list__api__t.html">ap_list_api_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuh__wifi__scan__item.html">uh_wifi_scan_item</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__custom__ie.html">wifi_custom_ie</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__fuzzy__match.html">wifi_fuzzy_match</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga2d965b5f18126703f8ba1737b35bb76e" id="r_ga2d965b5f18126703f8ba1737b35bb76e"><td class="memItemLeft" align="right" valign="top"><a id="ga2d965b5f18126703f8ba1737b35bb76e" name="ga2d965b5f18126703f8ba1737b35bb76e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NEED_TO_OPTIMALIZE</b></td></tr>
+<tr class="separator:ga2d965b5f18126703f8ba1737b35bb76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06328a44e4875f7a973d84c529e2027d" id="r_ga06328a44e4875f7a973d84c529e2027d"><td class="memItemLeft" align="right" valign="top"><a id="ga06328a44e4875f7a973d84c529e2027d" name="ga06328a44e4875f7a973d84c529e2027d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_MODE_AP</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga06328a44e4875f7a973d84c529e2027d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae377eb1ee07cd740fe4ea1c9b7adc035" id="r_gae377eb1ee07cd740fe4ea1c9b7adc035"><td class="memItemLeft" align="right" valign="top"><a id="gae377eb1ee07cd740fe4ea1c9b7adc035" name="gae377eb1ee07cd740fe4ea1c9b7adc035"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_MODE_STA</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gae377eb1ee07cd740fe4ea1c9b7adc035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90a99a9fa67989a2aae2da3a36262a30" id="r_ga90a99a9fa67989a2aae2da3a36262a30"><td class="memItemLeft" align="right" valign="top"><a id="ga90a99a9fa67989a2aae2da3a36262a30" name="ga90a99a9fa67989a2aae2da3a36262a30"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_MODE_AP_STA</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ga90a99a9fa67989a2aae2da3a36262a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfd743ea9f427c258573cc3e0742bcb3" id="r_gabfd743ea9f427c258573cc3e0742bcb3"><td class="memItemLeft" align="right" valign="top"><a id="gabfd743ea9f427c258573cc3e0742bcb3" name="gabfd743ea9f427c258573cc3e0742bcb3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_AUTH_NONE</b>&#160;&#160;&#160;0x0</td></tr>
+<tr class="separator:gabfd743ea9f427c258573cc3e0742bcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1038fef0368f486c8c37e7dee73bfcd" id="r_gac1038fef0368f486c8c37e7dee73bfcd"><td class="memItemLeft" align="right" valign="top"><a id="gac1038fef0368f486c8c37e7dee73bfcd" name="gac1038fef0368f486c8c37e7dee73bfcd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_AUTH_WPA_PSK</b>&#160;&#160;&#160;0x1</td></tr>
+<tr class="separator:gac1038fef0368f486c8c37e7dee73bfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac60b0fa46590602b8ecdded9e5f47f29" id="r_gac60b0fa46590602b8ecdded9e5f47f29"><td class="memItemLeft" align="right" valign="top"><a id="gac60b0fa46590602b8ecdded9e5f47f29" name="gac60b0fa46590602b8ecdded9e5f47f29"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_AUTH_WPA2_PSK</b>&#160;&#160;&#160;0x2</td></tr>
+<tr class="separator:gac60b0fa46590602b8ecdded9e5f47f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33ed5b4b4110ac69f5fe81705a6805d4" id="r_ga33ed5b4b4110ac69f5fe81705a6805d4"><td class="memItemLeft" align="right" valign="top"><a id="ga33ed5b4b4110ac69f5fe81705a6805d4" name="ga33ed5b4b4110ac69f5fe81705a6805d4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_AUTH_WPA3_SAE</b>&#160;&#160;&#160;0x4</td></tr>
+<tr class="separator:ga33ed5b4b4110ac69f5fe81705a6805d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8df734a7c20b0c98cbdc551d5a0f8720" id="r_ga8df734a7c20b0c98cbdc551d5a0f8720"><td class="memItemLeft" align="right" valign="top"><a id="ga8df734a7c20b0c98cbdc551d5a0f8720" name="ga8df734a7c20b0c98cbdc551d5a0f8720"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_AUTH_MASK</b>&#160;&#160;&#160;0xFFFF</td></tr>
+<tr class="separator:ga8df734a7c20b0c98cbdc551d5a0f8720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8d4fde8d90b089e7f703f2ed474a376" id="r_gad8d4fde8d90b089e7f703f2ed474a376"><td class="memItemLeft" align="right" valign="top"><a id="gad8d4fde8d90b089e7f703f2ed474a376" name="gad8d4fde8d90b089e7f703f2ed474a376"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_CIPHER_NONE</b>&#160;&#160;&#160;0x00000</td></tr>
+<tr class="separator:gad8d4fde8d90b089e7f703f2ed474a376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab02330a853b24ddab13c61eeab529162" id="r_gab02330a853b24ddab13c61eeab529162"><td class="memItemLeft" align="right" valign="top"><a id="gab02330a853b24ddab13c61eeab529162" name="gab02330a853b24ddab13c61eeab529162"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_CIPHER_TKIP</b>&#160;&#160;&#160;0x10000</td></tr>
+<tr class="separator:gab02330a853b24ddab13c61eeab529162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bd541eb558fddb2d8ba4d876f4efdd6" id="r_ga5bd541eb558fddb2d8ba4d876f4efdd6"><td class="memItemLeft" align="right" valign="top"><a id="ga5bd541eb558fddb2d8ba4d876f4efdd6" name="ga5bd541eb558fddb2d8ba4d876f4efdd6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_CIPHER_CCMP</b>&#160;&#160;&#160;0x20000</td></tr>
+<tr class="separator:ga5bd541eb558fddb2d8ba4d876f4efdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43ba9dd70912b2ae23798f1a6ccf7423" id="r_ga43ba9dd70912b2ae23798f1a6ccf7423"><td class="memItemLeft" align="right" valign="top"><a id="ga43ba9dd70912b2ae23798f1a6ccf7423" name="ga43ba9dd70912b2ae23798f1a6ccf7423"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_CIPHER_WEP</b>&#160;&#160;&#160;0x40000</td></tr>
+<tr class="separator:ga43ba9dd70912b2ae23798f1a6ccf7423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dcdc6d34409927a3cbba0d403b5a72e" id="r_ga3dcdc6d34409927a3cbba0d403b5a72e"><td class="memItemLeft" align="right" valign="top"><a id="ga3dcdc6d34409927a3cbba0d403b5a72e" name="ga3dcdc6d34409927a3cbba0d403b5a72e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_ENCRYPT_CIPHER_MASK</b>&#160;&#160;&#160;0xFFFF0000</td></tr>
+<tr class="separator:ga3dcdc6d34409927a3cbba0d403b5a72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96ca392a55dc981ffeeef44f8b3e00e9" id="r_ga96ca392a55dc981ffeeef44f8b3e00e9"><td class="memItemLeft" align="right" valign="top"><a id="ga96ca392a55dc981ffeeef44f8b3e00e9" name="ga96ca392a55dc981ffeeef44f8b3e00e9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga96ca392a55dc981ffeeef44f8b3e00e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga466da6f68db8d4a4f8c00213a96920a8" id="r_ga466da6f68db8d4a4f8c00213a96920a8"><td class="memItemLeft" align="right" valign="top"><a id="ga466da6f68db8d4a4f8c00213a96920a8" name="ga466da6f68db8d4a4f8c00213a96920a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_UP</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga466da6f68db8d4a4f8c00213a96920a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fa72087a4dbaefb7a817b26a58ba963" id="r_ga6fa72087a4dbaefb7a817b26a58ba963"><td class="memItemLeft" align="right" valign="top"><a id="ga6fa72087a4dbaefb7a817b26a58ba963" name="ga6fa72087a4dbaefb7a817b26a58ba963"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_EXT_CHANNEL_NONE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga6fa72087a4dbaefb7a817b26a58ba963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5eca8bb10ba983e2c03fd213b294dbeb" id="r_ga5eca8bb10ba983e2c03fd213b294dbeb"><td class="memItemLeft" align="right" valign="top"><a id="ga5eca8bb10ba983e2c03fd213b294dbeb" name="ga5eca8bb10ba983e2c03fd213b294dbeb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_EXT_CHANNEL_ABOVE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga5eca8bb10ba983e2c03fd213b294dbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7f9996ecddb40d3faa6b892f37edff9" id="r_gaf7f9996ecddb40d3faa6b892f37edff9"><td class="memItemLeft" align="right" valign="top"><a id="gaf7f9996ecddb40d3faa6b892f37edff9" name="gaf7f9996ecddb40d3faa6b892f37edff9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_EXT_CHANNEL_BELOW</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gaf7f9996ecddb40d3faa6b892f37edff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga674b4eb758173230d94c183eb6540cb6" id="r_ga674b4eb758173230d94c183eb6540cb6"><td class="memItemLeft" align="right" valign="top"><a id="ga674b4eb758173230d94c183eb6540cb6" name="ga674b4eb758173230d94c183eb6540cb6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_EXT_CHANNEL_KEEP</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ga674b4eb758173230d94c183eb6540cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6391dabec156d7a3f7c86d8c01773a0" id="r_gaa6391dabec156d7a3f7c86d8c01773a0"><td class="memItemLeft" align="right" valign="top"><a id="gaa6391dabec156d7a3f7c86d8c01773a0" name="gaa6391dabec156d7a3f7c86d8c01773a0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_UNDEF</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gaa6391dabec156d7a3f7c86d8c01773a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c7aa89e78b34c042086a72847cd71d3" id="r_ga3c7aa89e78b34c042086a72847cd71d3"><td class="memItemLeft" align="right" valign="top"><a id="ga3c7aa89e78b34c042086a72847cd71d3" name="ga3c7aa89e78b34c042086a72847cd71d3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_TIMEOUT</b>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:ga3c7aa89e78b34c042086a72847cd71d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa878b1d75048b401a2271a0279ef276c" id="r_gaa878b1d75048b401a2271a0279ef276c"><td class="memItemLeft" align="right" valign="top"><a id="gaa878b1d75048b401a2271a0279ef276c" name="gaa878b1d75048b401a2271a0279ef276c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_CONNECTIVITY_FAIL</b>&#160;&#160;&#160;-2</td></tr>
+<tr class="separator:gaa878b1d75048b401a2271a0279ef276c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20fd16b50c64ddbdf6eb0ccbc5c64383" id="r_ga20fd16b50c64ddbdf6eb0ccbc5c64383"><td class="memItemLeft" align="right" valign="top"><a id="ga20fd16b50c64ddbdf6eb0ccbc5c64383" name="ga20fd16b50c64ddbdf6eb0ccbc5c64383"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_AP_PAPA_CHANGE</b>&#160;&#160;&#160;-3</td></tr>
+<tr class="separator:ga20fd16b50c64ddbdf6eb0ccbc5c64383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96b1ebfd1cb9c83382f4f64ea53dd792" id="r_ga96b1ebfd1cb9c83382f4f64ea53dd792"><td class="memItemLeft" align="right" valign="top"><a id="ga96b1ebfd1cb9c83382f4f64ea53dd792" name="ga96b1ebfd1cb9c83382f4f64ea53dd792"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_AP_RESTART</b>&#160;&#160;&#160;-4</td></tr>
+<tr class="separator:ga96b1ebfd1cb9c83382f4f64ea53dd792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32df5d4d7ab5dc8e10d096eb05f9b712" id="r_ga32df5d4d7ab5dc8e10d096eb05f9b712"><td class="memItemLeft" align="right" valign="top"><a id="ga32df5d4d7ab5dc8e10d096eb05f9b712" name="ga32df5d4d7ab5dc8e10d096eb05f9b712"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_AP_DISCONNECT</b>&#160;&#160;&#160;-10</td></tr>
+<tr class="separator:ga32df5d4d7ab5dc8e10d096eb05f9b712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70d1602b42574a5bf36365b283cf0e54" id="r_ga70d1602b42574a5bf36365b283cf0e54"><td class="memItemLeft" align="right" valign="top"><a id="ga70d1602b42574a5bf36365b283cf0e54" name="ga70d1602b42574a5bf36365b283cf0e54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_DOWN_AP_DISCONNECT_MAX</b>&#160;&#160;&#160;-(10 + 66) /*def in 802.11, total error code 66*/</td></tr>
+<tr class="separator:ga70d1602b42574a5bf36365b283cf0e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d9f91dcf664f0f2fd30b47d46a67b5e" id="r_ga2d9f91dcf664f0f2fd30b47d46a67b5e"><td class="memItemLeft" align="right" valign="top"><a id="ga2d9f91dcf664f0f2fd30b47d46a67b5e" name="ga2d9f91dcf664f0f2fd30b47d46a67b5e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_OK</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga2d9f91dcf664f0f2fd30b47d46a67b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbed6aa2edcef05c493ddd3c56a1a3e7" id="r_gacbed6aa2edcef05c493ddd3c56a1a3e7"><td class="memItemLeft" align="right" valign="top"><a id="gacbed6aa2edcef05c493ddd3c56a1a3e7" name="gacbed6aa2edcef05c493ddd3c56a1a3e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_ERR_GENERAL</b>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="separator:gacbed6aa2edcef05c493ddd3c56a1a3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea309196a2665b984617c16fb4361b67" id="r_gaea309196a2665b984617c16fb4361b67"><td class="memItemLeft" align="right" valign="top"><a id="gaea309196a2665b984617c16fb4361b67" name="gaea309196a2665b984617c16fb4361b67"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_ERR_NONE_NETWORK</b>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="separator:gaea309196a2665b984617c16fb4361b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b93a1f79fb2b70d89a4589e3cd05532" id="r_ga7b93a1f79fb2b70d89a4589e3cd05532"><td class="memItemLeft" align="right" valign="top"><a id="ga7b93a1f79fb2b70d89a4589e3cd05532" name="ga7b93a1f79fb2b70d89a4589e3cd05532"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_ERR_CONNECT_FAIL</b>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="separator:ga7b93a1f79fb2b70d89a4589e3cd05532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga989b99b4fddc1e812c9d85dbd291fd8c" id="r_ga989b99b4fddc1e812c9d85dbd291fd8c"><td class="memItemLeft" align="right" valign="top"><a id="ga989b99b4fddc1e812c9d85dbd291fd8c" name="ga989b99b4fddc1e812c9d85dbd291fd8c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_ERR_AUTH_FAIL</b>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="separator:ga989b99b4fddc1e812c9d85dbd291fd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35ea72727f7a79caae22b3c63f22ab54" id="r_ga35ea72727f7a79caae22b3c63f22ab54"><td class="memItemLeft" align="right" valign="top"><a id="ga35ea72727f7a79caae22b3c63f22ab54" name="ga35ea72727f7a79caae22b3c63f22ab54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_NET_CFG_ERR_MAYBE_AUTH_FAIL</b>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="separator:ga35ea72727f7a79caae22b3c63f22ab54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5f5161fa6495c7b1ec071cb76d12e3a" id="r_gab5f5161fa6495c7b1ec071cb76d12e3a"><td class="memItemLeft" align="right" valign="top"><a id="gab5f5161fa6495c7b1ec071cb76d12e3a" name="gab5f5161fa6495c7b1ec071cb76d12e3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_CUSTOM_IE_TRANS_BEACON</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gab5f5161fa6495c7b1ec071cb76d12e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad652c8f3adf8373702c34c0b2ac7bbeb" id="r_gad652c8f3adf8373702c34c0b2ac7bbeb"><td class="memItemLeft" align="right" valign="top"><a id="gad652c8f3adf8373702c34c0b2ac7bbeb" name="gad652c8f3adf8373702c34c0b2ac7bbeb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_CUSTOM_IE_TRANS_PROBE_REQ</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gad652c8f3adf8373702c34c0b2ac7bbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf66f0edef30291884c31b5e1fa3c6e34" id="r_gaf66f0edef30291884c31b5e1fa3c6e34"><td class="memItemLeft" align="right" valign="top"><a id="gaf66f0edef30291884c31b5e1fa3c6e34" name="gaf66f0edef30291884c31b5e1fa3c6e34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_CUSTOM_IE_TRANS_PROBE_RSP</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:gaf66f0edef30291884c31b5e1fa3c6e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga203b982b5a711c0ec6d162ecd47b1203" id="r_ga203b982b5a711c0ec6d162ecd47b1203"><td class="memItemLeft" align="right" valign="top"><a id="ga203b982b5a711c0ec6d162ecd47b1203" name="ga203b982b5a711c0ec6d162ecd47b1203"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_CUSTOM_IE_INFO_MAX_LEN</b>&#160;&#160;&#160;(255)</td></tr>
+<tr class="separator:ga203b982b5a711c0ec6d162ecd47b1203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga3937c0d5c4273f881dcd2d6bb038e2ea" id="r_ga3937c0d5c4273f881dcd2d6bb038e2ea"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a>) (uhos_u8 *frame, uhos_s32 length, <a class="el" href="structpromisc__frame__info__t.html">promisc_frame_info_t</a> *info)</td></tr>
+<tr class="memdesc:ga3937c0d5c4273f881dcd2d6bb038e2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">混杂模式下报文接收接口。  <br /></td></tr>
+<tr class="separator:ga3937c0d5c4273f881dcd2d6bb038e2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga305e4b0236f48fb93a182edc197f6a0b" id="r_ga305e4b0236f48fb93a182edc197f6a0b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a>) (void *param)</td></tr>
+<tr class="memdesc:ga305e4b0236f48fb93a182edc197f6a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描完成后的回调通知。  <br /></td></tr>
+<tr class="separator:ga305e4b0236f48fb93a182edc197f6a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5be29266fe14208195db61321a74268e" id="r_ga5be29266fe14208195db61321a74268e"><td class="memItemLeft" align="right" valign="top"><a id="ga5be29266fe14208195db61321a74268e" name="ga5be29266fe14208195db61321a74268e"></a>
+typedef struct <a class="el" href="structuh__wifi__scan__item.html">uh_wifi_scan_item</a>&#160;</td><td class="memItemRight" valign="bottom"><b>uh_wifi_scan_item_t</b></td></tr>
+<tr class="separator:ga5be29266fe14208195db61321a74268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc1b34a2ca94dffecda6954aecbc86d3" id="r_gabc1b34a2ca94dffecda6954aecbc86d3"><td class="memItemLeft" align="right" valign="top"><a id="gabc1b34a2ca94dffecda6954aecbc86d3" name="gabc1b34a2ca94dffecda6954aecbc86d3"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uh_wifi_scan_results_cb</b>) (<a class="el" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a> *results, int len, void *param)</td></tr>
+<tr class="separator:gabc1b34a2ca94dffecda6954aecbc86d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6f69ba336f623d592905bf67f4b45b9" id="r_gaf6f69ba336f623d592905bf67f4b45b9"><td class="memItemLeft" align="right" valign="top">typedef uhos_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a>) (uhos_u8 status, uhos_s32 extra_error)</td></tr>
+<tr class="memdesc:gaf6f69ba336f623d592905bf67f4b45b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI状态变化通知。  <br /></td></tr>
+<tr class="separator:gaf6f69ba336f623d592905bf67f4b45b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac4c7ad4d8cdc39a748bee039b7b77d1" id="r_gaac4c7ad4d8cdc39a748bee039b7b77d1"><td class="memItemLeft" align="right" valign="top"><a id="gaac4c7ad4d8cdc39a748bee039b7b77d1" name="gaac4c7ad4d8cdc39a748bee039b7b77d1"></a>
+typedef struct <a class="el" href="structwifi__custom__ie.html">wifi_custom_ie</a>&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_custom_ie_t</b></td></tr>
+<tr class="separator:gaac4c7ad4d8cdc39a748bee039b7b77d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf935098b0eaeac10c00cda987a0f7dc" id="r_gacf935098b0eaeac10c00cda987a0f7dc"><td class="memItemLeft" align="right" valign="top"><a id="gacf935098b0eaeac10c00cda987a0f7dc" name="gacf935098b0eaeac10c00cda987a0f7dc"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_frame_cb_func</b>) (uhos_u8 *frame, uhos_s32 length, void *param)</td></tr>
+<tr class="separator:gacf935098b0eaeac10c00cda987a0f7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a9324ab158c15fed33b82c3e6b40d7b" id="r_ga8a9324ab158c15fed33b82c3e6b40d7b"><td class="memItemLeft" align="right" valign="top"><a id="ga8a9324ab158c15fed33b82c3e6b40d7b" name="ga8a9324ab158c15fed33b82c3e6b40d7b"></a>
+typedef struct <a class="el" href="structwifi__fuzzy__match.html">wifi_fuzzy_match</a>&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_fuzzy_match_t</b></td></tr>
+<tr class="separator:ga8a9324ab158c15fed33b82c3e6b40d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga7568356a2b62f57381b56d27ddc4f8ad" id="r_ga7568356a2b62f57381b56d27ddc4f8ad"><td class="memItemLeft" align="right" valign="top"><a id="ga7568356a2b62f57381b56d27ddc4f8ad" name="ga7568356a2b62f57381b56d27ddc4f8ad"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhos_wifi_optim_level_e</b> { <br />
+&#160;&#160;<b>UHOS_WIFI_OPTIM_OFF</b> = 0
+, <b>UHOS_WIFI_OPTIM_THROUGHPUT_0</b>
+, <b>UHOS_WIFI_OPTIM_THROUGHPUT_1</b>
+, <b>UHOS_WIFI_OPTIM_THROUGHPUT_2</b>
+, <br />
+&#160;&#160;<b>UHOS_WIFI_OPTIM_THROUGHPUT_3</b>
+, <b>UHOS_WIFI_OPTIM_TRY_HARD_0</b>
+, <b>UHOS_WIFI_OPTIM_TRY_HARD_1</b>
+, <b>UHOS_WIFI_OPTIM_TRY_HARD_2</b>
+, <br />
+&#160;&#160;<b>UHOS_WIFI_OPTIM_TRY_HARD_3</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga7568356a2b62f57381b56d27ddc4f8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gae2eb7251a78120c8ab46c2d27ef748cc" id="r_gae2eb7251a78120c8ab46c2d27ef748cc"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gae2eb7251a78120c8ab46c2d27ef748cc">uhos_wifi_power_on</a> (uhos_u8 wifi_mode)</td></tr>
+<tr class="memdesc:gae2eb7251a78120c8ab46c2d27ef748cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI功能打开。WIFI必须支持AP模式和STA模式。  <br /></td></tr>
+<tr class="separator:gae2eb7251a78120c8ab46c2d27ef748cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd8c8bd4e27486eaf5c7219a153d787c" id="r_gacd8c8bd4e27486eaf5c7219a153d787c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gacd8c8bd4e27486eaf5c7219a153d787c">uhos_wifi_power_off</a> (uhos_u8 mode)</td></tr>
+<tr class="memdesc:gacd8c8bd4e27486eaf5c7219a153d787c"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI功能关闭。  <br /></td></tr>
+<tr class="separator:gacd8c8bd4e27486eaf5c7219a153d787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5de7c925830ea4c76d8242fc7cc79193" id="r_ga5de7c925830ea4c76d8242fc7cc79193"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga5de7c925830ea4c76d8242fc7cc79193">uhos_wifi_is_on</a> (void)</td></tr>
+<tr class="memdesc:ga5de7c925830ea4c76d8242fc7cc79193"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI功能是否打开。  <br /></td></tr>
+<tr class="separator:ga5de7c925830ea4c76d8242fc7cc79193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f982f2554dd7d0ddb36de7e8286e1f2" id="r_ga7f982f2554dd7d0ddb36de7e8286e1f2"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga7f982f2554dd7d0ddb36de7e8286e1f2">uhos_wifi_disconnect</a> (void)</td></tr>
+<tr class="memdesc:ga7f982f2554dd7d0ddb36de7e8286e1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开WIFI连接。  <br /></td></tr>
+<tr class="separator:ga7f982f2554dd7d0ddb36de7e8286e1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f15bf1b855fe6f1eb97438bb74b0d15" id="r_ga9f15bf1b855fe6f1eb97438bb74b0d15"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga9f15bf1b855fe6f1eb97438bb74b0d15">uhos_wifi_country_set</a> (uhos_char *country_code)</td></tr>
+<tr class="memdesc:ga9f15bf1b855fe6f1eb97438bb74b0d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置WIFI区域。不同区域支持的信道不同，需要根据区域设置所支持的信道。  <br /></td></tr>
+<tr class="separator:ga9f15bf1b855fe6f1eb97438bb74b0d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa79b4afea8fd5d7de54ca48e99a67491" id="r_gaa79b4afea8fd5d7de54ca48e99a67491"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaa79b4afea8fd5d7de54ca48e99a67491">uhos_wifi_sniffer_enhance</a> (uhos_s32 enable, <a class="el" href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a> *info)</td></tr>
+<tr class="memdesc:gaa79b4afea8fd5d7de54ca48e99a67491"><td class="mdescLeft">&#160;</td><td class="mdescRight">锁定信道后，增加混杂模式下该目标AP收取转发报文能力。  <br /></td></tr>
+<tr class="separator:gaa79b4afea8fd5d7de54ca48e99a67491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad62c05cd1e49e8753946c59b49cce46b" id="r_gad62c05cd1e49e8753946c59b49cce46b"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gad62c05cd1e49e8753946c59b49cce46b">uhos_wifi_sniffer_start</a> (<a class="el" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a> cb)</td></tr>
+<tr class="memdesc:gad62c05cd1e49e8753946c59b49cce46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入WIFI Promiscuous模式。  <br /></td></tr>
+<tr class="separator:gad62c05cd1e49e8753946c59b49cce46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f522f685a49558496a5a9a8034c6117" id="r_ga8f522f685a49558496a5a9a8034c6117"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga8f522f685a49558496a5a9a8034c6117">uhos_wifi_sniffer_stop</a> (void)</td></tr>
+<tr class="memdesc:ga8f522f685a49558496a5a9a8034c6117"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出WIFI promiscuous模式。  <br /></td></tr>
+<tr class="separator:ga8f522f685a49558496a5a9a8034c6117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2cf7f6d82c87fe5543ca466562c653" id="r_ga5a2cf7f6d82c87fe5543ca466562c653"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga5a2cf7f6d82c87fe5543ca466562c653">uhos_wifi_channel_set</a> (uhos_u16 channel)</td></tr>
+<tr class="memdesc:ga5a2cf7f6d82c87fe5543ca466562c653"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置WIFI信道。  <br /></td></tr>
+<tr class="separator:ga5a2cf7f6d82c87fe5543ca466562c653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66f6f500ab74fdfc7c334aaf3197366a" id="r_ga66f6f500ab74fdfc7c334aaf3197366a"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga66f6f500ab74fdfc7c334aaf3197366a">uhos_wifi_channel_get</a> (uhos_u16 *channel)</td></tr>
+<tr class="memdesc:ga66f6f500ab74fdfc7c334aaf3197366a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取WIFI信道。  <br /></td></tr>
+<tr class="separator:ga66f6f500ab74fdfc7c334aaf3197366a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b587a307d9ccc7555daa0479b492c76" id="r_ga6b587a307d9ccc7555daa0479b492c76"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga6b587a307d9ccc7555daa0479b492c76">uhos_wifi_sniffer_channel_set</a> (uhos_u16 channel, uhos_s32 ext_channel)</td></tr>
+<tr class="memdesc:ga6b587a307d9ccc7555daa0479b492c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置WIFI扩展信道。  <br /></td></tr>
+<tr class="separator:ga6b587a307d9ccc7555daa0479b492c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7b8976e94f4f30dc9d801c5b87ccad2" id="r_gab7b8976e94f4f30dc9d801c5b87ccad2"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gab7b8976e94f4f30dc9d801c5b87ccad2">uhos_wifi_scan_start</a> (<a class="el" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a> cb, void *param)</td></tr>
+<tr class="memdesc:gab7b8976e94f4f30dc9d801c5b87ccad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始扫描WIFI AP。  <br /></td></tr>
+<tr class="separator:gab7b8976e94f4f30dc9d801c5b87ccad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23e87d9ad0af98eed3aa4a84d7df48df" id="r_ga23e87d9ad0af98eed3aa4a84d7df48df"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga23e87d9ad0af98eed3aa4a84d7df48df">uhos_wifi_scan_with_ssid_start</a> (const uhos_char *ssid, uhos_u16 ssid_len, <a class="el" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a> cb, void *param)</td></tr>
+<tr class="memdesc:ga23e87d9ad0af98eed3aa4a84d7df48df"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始扫描指定SSID的WIFI AP。  <br /></td></tr>
+<tr class="separator:ga23e87d9ad0af98eed3aa4a84d7df48df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5639604b7701ace97cbc864b472b7e4" id="r_gab5639604b7701ace97cbc864b472b7e4"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gab5639604b7701ace97cbc864b472b7e4">uhos_wifi_scan_stop</a> (void)</td></tr>
+<tr class="memdesc:gab5639604b7701ace97cbc864b472b7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止扫描WIFI AP。  <br /></td></tr>
+<tr class="separator:gab5639604b7701ace97cbc864b472b7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36270a2543fc8df1c2a6709e2194cbef" id="r_ga36270a2543fc8df1c2a6709e2194cbef"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga36270a2543fc8df1c2a6709e2194cbef">uhos_wifi_scan_general</a> (unsigned char *ssid, int ssid_len, unsigned short *channels, unsigned char *bssid, uh_wifi_scan_results_cb cb, void *param)</td></tr>
+<tr class="memdesc:ga36270a2543fc8df1c2a6709e2194cbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始扫描指定SSID的WIFI AP。  <br /></td></tr>
+<tr class="separator:ga36270a2543fc8df1c2a6709e2194cbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee1eda8bcbe3242fb6df4ca926542f8a" id="r_gaee1eda8bcbe3242fb6df4ca926542f8a"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaee1eda8bcbe3242fb6df4ca926542f8a">uhos_wifi_ap_list_get</a> (uhos_u8 *ap_number, <a class="el" href="structap__list__api__t.html">ap_list_api_t</a> *list)</td></tr>
+<tr class="memdesc:gaee1eda8bcbe3242fb6df4ca926542f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询WIFI AP列表。  <br /></td></tr>
+<tr class="separator:gaee1eda8bcbe3242fb6df4ca926542f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae03b301978915329d4326124580894f2" id="r_gae03b301978915329d4326124580894f2"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gae03b301978915329d4326124580894f2">uhos_wifi_ps_enable</a> (void)</td></tr>
+<tr class="memdesc:gae03b301978915329d4326124580894f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">使能WIFI省电模式。  <br /></td></tr>
+<tr class="separator:gae03b301978915329d4326124580894f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8eb83d9d213eb1c4531933955c08bd5" id="r_gae8eb83d9d213eb1c4531933955c08bd5"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gae8eb83d9d213eb1c4531933955c08bd5">uhos_wifi_ps_disable</a> (void)</td></tr>
+<tr class="memdesc:gae8eb83d9d213eb1c4531933955c08bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭WIFI省电模式。  <br /></td></tr>
+<tr class="separator:gae8eb83d9d213eb1c4531933955c08bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga317840990ee2a2ddf89084e8f47afa3e" id="r_ga317840990ee2a2ddf89084e8f47afa3e"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga317840990ee2a2ddf89084e8f47afa3e">uhos_wifi_status_get</a> (uhos_u8 *status, uhos_s8 *wifi_strength)</td></tr>
+<tr class="memdesc:ga317840990ee2a2ddf89084e8f47afa3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询WIFI状态。  <br /></td></tr>
+<tr class="separator:ga317840990ee2a2ddf89084e8f47afa3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2205cdaec16d1d571e2d8989ada1431" id="r_gab2205cdaec16d1d571e2d8989ada1431"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gab2205cdaec16d1d571e2d8989ada1431">uhos_wifi_snr_get</a> (uhos_u8 *snr)</td></tr>
+<tr class="memdesc:gab2205cdaec16d1d571e2d8989ada1431"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取WIFI信噪比。  <br /></td></tr>
+<tr class="separator:gab2205cdaec16d1d571e2d8989ada1431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae8f73e1c84e07500eb7fa6b4cd3e963" id="r_gaae8f73e1c84e07500eb7fa6b4cd3e963"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaae8f73e1c84e07500eb7fa6b4cd3e963">uhos_wifi_set_status_callback</a> (<a class="el" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a> callback)</td></tr>
+<tr class="memdesc:gaae8f73e1c84e07500eb7fa6b4cd3e963"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置Wi-Fi连接状态变化通知回调。  <br /></td></tr>
+<tr class="separator:gaae8f73e1c84e07500eb7fa6b4cd3e963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae372557640891b9da64f86597c16132b" id="r_gae372557640891b9da64f86597c16132b"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gae372557640891b9da64f86597c16132b">uhos_wifi_mac_get</a> (uhos_u8 *mac)</td></tr>
+<tr class="memdesc:gae372557640891b9da64f86597c16132b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取WIFI MAC。  <br /></td></tr>
+<tr class="separator:gae372557640891b9da64f86597c16132b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21e7861cd8641791fd87ea61301bcbe1" id="r_ga21e7861cd8641791fd87ea61301bcbe1"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga21e7861cd8641791fd87ea61301bcbe1">uhos_wifi_network_set</a> (uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_char *wifi_key, uhos_u16 channel, uhos_u32 encryption)</td></tr>
+<tr class="memdesc:ga21e7861cd8641791fd87ea61301bcbe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动WIFI网络连接。  <br /></td></tr>
+<tr class="separator:ga21e7861cd8641791fd87ea61301bcbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7a2000f85ed16f8912bd0780e5e2652" id="r_gaf7a2000f85ed16f8912bd0780e5e2652"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaf7a2000f85ed16f8912bd0780e5e2652">uhos_wifi_network_get</a> (uhos_u8 wifi_mode, uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid)</td></tr>
+<tr class="memdesc:gaf7a2000f85ed16f8912bd0780e5e2652"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询WIFI网络信息。  <br /></td></tr>
+<tr class="separator:gaf7a2000f85ed16f8912bd0780e5e2652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0aa1a173d3fb1dec3347b1c6c29585c" id="r_gae0aa1a173d3fb1dec3347b1c6c29585c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gae0aa1a173d3fb1dec3347b1c6c29585c">uhos_wifi_custom_ie_add</a> (uhos_u8 *ie_info, uhos_u16 trans_type)</td></tr>
+<tr class="memdesc:gae0aa1a173d3fb1dec3347b1c6c29585c"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI管理帧中增加自定义IE。  <br /></td></tr>
+<tr class="separator:gae0aa1a173d3fb1dec3347b1c6c29585c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70c3cce3362d85fd93537ea34bb10c03" id="r_ga70c3cce3362d85fd93537ea34bb10c03"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga70c3cce3362d85fd93537ea34bb10c03">uhos_wifi_custom_ie_del</a> (uhos_s32 index)</td></tr>
+<tr class="memdesc:ga70c3cce3362d85fd93537ea34bb10c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">WIFI管理帧中删除自定义IE。  <br /></td></tr>
+<tr class="separator:ga70c3cce3362d85fd93537ea34bb10c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85655d02e3ed2904ef95b2290f82f4db" id="r_ga85655d02e3ed2904ef95b2290f82f4db"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga85655d02e3ed2904ef95b2290f82f4db">uhos_wifi_get_bssid</a> (uhos_u8 *bssid, uhos_u16 *bssid_len)</td></tr>
+<tr class="memdesc:ga85655d02e3ed2904ef95b2290f82f4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取BSSID。  <br /></td></tr>
+<tr class="separator:ga85655d02e3ed2904ef95b2290f82f4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga532fe585be3a3c28811c717577a7419c" id="r_ga532fe585be3a3c28811c717577a7419c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga532fe585be3a3c28811c717577a7419c">uhos_wifi_set_rx_frame</a> (uhos_s32 enable, wifi_frame_cb_func cb, void *param)</td></tr>
+<tr class="memdesc:ga532fe585be3a3c28811c717577a7419c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置802.11帧接收回调。  <br /></td></tr>
+<tr class="separator:ga532fe585be3a3c28811c717577a7419c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a7f7a6b2fdfbafb3df936b03c79dd23" id="r_ga0a7f7a6b2fdfbafb3df936b03c79dd23"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga0a7f7a6b2fdfbafb3df936b03c79dd23">uhos_wifi_tx_frame</a> (uhos_u8 *frame, uhos_s32 length)</td></tr>
+<tr class="memdesc:ga0a7f7a6b2fdfbafb3df936b03c79dd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送802.11帧。  <br /></td></tr>
+<tr class="separator:ga0a7f7a6b2fdfbafb3df936b03c79dd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac015f53d3642980255a9225483a5a5a" id="r_gaac015f53d3642980255a9225483a5a5a"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gaac015f53d3642980255a9225483a5a5a">uhos_wifi_set_poor_signal_optim_level</a> (uhos_wifi_optim_level_e level)</td></tr>
+<tr class="memdesc:gaac015f53d3642980255a9225483a5a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置弱网优化级别；  <br /></td></tr>
+<tr class="separator:gaac015f53d3642980255a9225483a5a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eefc834ceba6d52e7b9dbfd14d5bcd5" id="r_ga2eefc834ceba6d52e7b9dbfd14d5bcd5"><td class="memItemLeft" align="right" valign="top">uhos_wifi_optim_level_e&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga2eefc834ceba6d52e7b9dbfd14d5bcd5">uhos_wifi_get_poor_signal_optim_level</a> (void)</td></tr>
+<tr class="memdesc:ga2eefc834ceba6d52e7b9dbfd14d5bcd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取弱网优化级别；  <br /></td></tr>
+<tr class="separator:ga2eefc834ceba6d52e7b9dbfd14d5bcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc97282aa92843efcd883cb32e352320" id="r_gabc97282aa92843efcd883cb32e352320"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gabc97282aa92843efcd883cb32e352320">uhos_wifi_get_max_tx_power</a> (uhos_s32 *max_txpower)</td></tr>
+<tr class="memdesc:gabc97282aa92843efcd883cb32e352320"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取安全发射功率；  <br /></td></tr>
+<tr class="separator:gabc97282aa92843efcd883cb32e352320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c5b4e2f68cde50ad3b21a555c5a65f7" id="r_ga9c5b4e2f68cde50ad3b21a555c5a65f7"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga9c5b4e2f68cde50ad3b21a555c5a65f7">uhos_wifi_set_tx_power_offset</a> (uhos_s32 offset)</td></tr>
+<tr class="memdesc:ga9c5b4e2f68cde50ad3b21a555c5a65f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置基于校准功率的发射功率调整值；  <br /></td></tr>
+<tr class="separator:ga9c5b4e2f68cde50ad3b21a555c5a65f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c23b318a8cc060c29db8872a67ddac3" id="r_ga5c23b318a8cc060c29db8872a67ddac3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga5c23b318a8cc060c29db8872a67ddac3">uhos_wifi_get_network_and_bssid_check</a> (uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid)</td></tr>
+<tr class="memdesc:ga5c23b318a8cc060c29db8872a67ddac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据ssid获取该路由器的通道、加密方式和bssid  <br /></td></tr>
+<tr class="separator:ga5c23b318a8cc060c29db8872a67ddac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f4b278bd4a1becdf098a730a6a77b51" id="r_ga6f4b278bd4a1becdf098a730a6a77b51"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga6f4b278bd4a1becdf098a730a6a77b51">uhos_wifi_set_scan</a> (uhos_u16 *channel_list, uhos_u8 len)</td></tr>
+<tr class="memdesc:ga6f4b278bd4a1becdf098a730a6a77b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动AP扫描  <br /></td></tr>
+<tr class="separator:ga6f4b278bd4a1becdf098a730a6a77b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c1295f285782e76b9420894f22d35fb" id="r_ga6c1295f285782e76b9420894f22d35fb"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga6c1295f285782e76b9420894f22d35fb">uhos_wifi_get_scan</a> (<a class="el" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a> *result, uhos_u16 *result_len)</td></tr>
+<tr class="memdesc:ga6c1295f285782e76b9420894f22d35fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取AP扫描结果。  <br /></td></tr>
+<tr class="separator:ga6c1295f285782e76b9420894f22d35fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf025bf75d58dc22b2d57262e3e66ab3" id="r_gabf025bf75d58dc22b2d57262e3e66ab3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#gabf025bf75d58dc22b2d57262e3e66ab3">uhos_wifi_set_scan_with_ssid</a> (const uhos_u8 *ssid, uhos_u16 ssid_len)</td></tr>
+<tr class="memdesc:gabf025bf75d58dc22b2d57262e3e66ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动指定SSID的AP扫描。  <br /></td></tr>
+<tr class="separator:gabf025bf75d58dc22b2d57262e3e66ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31eb2d5fe78ed73e6fc930daaf900ebe" id="r_ga31eb2d5fe78ed73e6fc930daaf900ebe"><td class="memItemLeft" align="right" valign="top">uhos_u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga31eb2d5fe78ed73e6fc930daaf900ebe">uhos_wifi_security_to_encryption</a> (uhos_u32 security)</td></tr>
+<tr class="memdesc:ga31eb2d5fe78ed73e6fc930daaf900ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">加密算法转换为加密方式  <br /></td></tr>
+<tr class="separator:ga31eb2d5fe78ed73e6fc930daaf900ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c73e94f72ccbfab02af32d60072cb19" id="r_ga6c73e94f72ccbfab02af32d60072cb19"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhoswifi.html#ga6c73e94f72ccbfab02af32d60072cb19">uhos_wifi_get_network_for_dual_freq</a> (uhos_char *wifi_ssid, uhos_u16 *channel, uhos_u32 *encryption, uhos_u8 *bssid, uhos_u8 enable_fuzzy_matching, <a class="el" href="structwifi__fuzzy__match.html">wifi_fuzzy_match_t</a> *fuzzy_match_wifi)</td></tr>
+<tr class="memdesc:ga6c73e94f72ccbfab02af32d60072cb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果开启模糊匹配功能获得模糊匹配的路由器信息，如果ssid有5G关键字获取相对应的非5G ssid  <br /></td></tr>
+<tr class="separator:ga6c73e94f72ccbfab02af32d60072cb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga3937c0d5c4273f881dcd2d6bb038e2ea" name="ga3937c0d5c4273f881dcd2d6bb038e2ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3937c0d5c4273f881dcd2d6bb038e2ea">&#9670;&#160;</a></span>promisc_cb_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">promisc_cb_func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>混杂模式下报文接收接口。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>802.11帧，包含帧头和帧体。 </td></tr>
+    <tr><td class="paramname">length</td><td>802.11帧长度。 </td></tr>
+    <tr><td class="paramname">info</td><td>报文附加信息。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>N/A。 </dd></dl>
+
+</div>
+</div>
+<a id="gaf6f69ba336f623d592905bf67f4b45b9" name="gaf6f69ba336f623d592905bf67f4b45b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6f69ba336f623d592905bf67f4b45b9">&#9670;&#160;</a></span>uhos_wifi_status_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uhos_s32(* uhos_wifi_status_callback) (uhos_u8 status, uhos_s32 extra_error)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WIFI状态变化通知。 </p>
+<dl class="section note"><dt>注解</dt><dd>当WIFI状态发生变化（UP变化为DOWN或者DOWN变化为UP）时，通过此回调接口通知调用者。 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>WIFI状态WIFI_DOWN/WIFI_UP。 </td></tr>
+    <tr><td class="paramname">extra_error</td><td>WIFI_FOWN时的附加错误码 WIFI_DOWN_XXX </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga305e4b0236f48fb93a182edc197f6a0b" name="ga305e4b0236f48fb93a182edc197f6a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga305e4b0236f48fb93a182edc197f6a0b">&#9670;&#160;</a></span>wifi_scan_cb_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wifi_scan_cb_func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>扫描完成后的回调通知。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>用户参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>N/A。 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaee1eda8bcbe3242fb6df4ca926542f8a" name="gaee1eda8bcbe3242fb6df4ca926542f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee1eda8bcbe3242fb6df4ca926542f8a">&#9670;&#160;</a></span>uhos_wifi_ap_list_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_ap_list_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>ap_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structap__list__api__t.html">ap_list_api_t</a> *&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询WIFI AP列表。 </p>
+<dl class="section note"><dt>注解</dt><dd>此接口是同步接口，自扫描AP开始需在10秒以内获得。扫描的AP列表需按照信号强度由高到低排序。 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ap_number</td><td>作为输入，表示list能存储的最大AP数量；作为输出，表示实际扫描到的AP数量。 </td></tr>
+    <tr><td class="paramname">list，扫描到的AP列表。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga66f6f500ab74fdfc7c334aaf3197366a" name="ga66f6f500ab74fdfc7c334aaf3197366a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66f6f500ab74fdfc7c334aaf3197366a">&#9670;&#160;</a></span>uhos_wifi_channel_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_channel_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取WIFI信道。 </p>
+<p>获取信道信息。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>信道指针，返回参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga5a2cf7f6d82c87fe5543ca466562c653" name="ga5a2cf7f6d82c87fe5543ca466562c653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2cf7f6d82c87fe5543ca466562c653">&#9670;&#160;</a></span>uhos_wifi_channel_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_channel_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置WIFI信道。 </p>
+<p>当WIFI工作在AP模式时，设置AP的工作信道。当WIFI工作在Promiscuous模式时，设置sniffer的监听信道。其他模式，此设置不生效。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>WIFI工作信道（2.4GHZ），1-14，最大信道与WIFI区域相关，可能是11、13或者14。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga9f15bf1b855fe6f1eb97438bb74b0d15" name="ga9f15bf1b855fe6f1eb97438bb74b0d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f15bf1b855fe6f1eb97438bb74b0d15">&#9670;&#160;</a></span>uhos_wifi_country_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_country_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>country_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置WIFI区域。不同区域支持的信道不同，需要根据区域设置所支持的信道。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">country_code</td><td>区域码。可以设置的区域码包括：中国“CN”、北美“US”、欧洲“EU”和日本“JP”。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gae0aa1a173d3fb1dec3347b1c6c29585c" name="gae0aa1a173d3fb1dec3347b1c6c29585c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0aa1a173d3fb1dec3347b1c6c29585c">&#9670;&#160;</a></span>uhos_wifi_custom_ie_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_custom_ie_add </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>ie_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>trans_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WIFI管理帧中增加自定义IE。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ie_info</td><td>IE信息，802.11定义的IE TLV格式 wifi_custom_ie_t </td></tr>
+    <tr><td class="paramname">trans_type</td><td>管理帧类型，按bit表示，WIFI_CUSTOM_IE_TRANS_XXX。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回索引，用于删除；失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga70c3cce3362d85fd93537ea34bb10c03" name="ga70c3cce3362d85fd93537ea34bb10c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga70c3cce3362d85fd93537ea34bb10c03">&#9670;&#160;</a></span>uhos_wifi_custom_ie_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_custom_ie_del </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WIFI管理帧中删除自定义IE。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>增加自定义IE返回的索引。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga7f982f2554dd7d0ddb36de7e8286e1f2" name="ga7f982f2554dd7d0ddb36de7e8286e1f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f982f2554dd7d0ddb36de7e8286e1f2">&#9670;&#160;</a></span>uhos_wifi_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_disconnect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>断开WIFI连接。 </p>
+<p>如果是STA模式，取消当前正在进行的连接或者断开已经存在的连接；如果是AP模式，断开当前所有连接。断开WIFI连接后，不能自动再进行新的连接。 </p><dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga85655d02e3ed2904ef95b2290f82f4db" name="ga85655d02e3ed2904ef95b2290f82f4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85655d02e3ed2904ef95b2290f82f4db">&#9670;&#160;</a></span>uhos_wifi_get_bssid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_get_bssid </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>bssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>bssid_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取BSSID。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bssid</td><td>如果已经连接到AP，返回AP的BSSID；否则返回全0。 </td></tr>
+    <tr><td class="paramname">bssid_len</td><td>BSSID长度，当前固定返回6。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gabc97282aa92843efcd883cb32e352320" name="gabc97282aa92843efcd883cb32e352320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc97282aa92843efcd883cb32e352320">&#9670;&#160;</a></span>uhos_wifi_get_max_tx_power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_get_max_tx_power </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32 *&#160;</td>
+          <td class="paramname"><em>max_txpower</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取安全发射功率； </p>
+<p>获取模组的发射功率； </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_txpower</td><td>模组的安全发射功率，单位0.01dB； </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga5c23b318a8cc060c29db8872a67ddac3" name="ga5c23b318a8cc060c29db8872a67ddac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c23b318a8cc060c29db8872a67ddac3">&#9670;&#160;</a></span>uhos_wifi_get_network_and_bssid_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_get_network_and_bssid_check </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>wifi_ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32 *&#160;</td>
+          <td class="paramname"><em>encryption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>bssid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据ssid获取该路由器的通道、加密方式和bssid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_ssid</td><td>入参，路由器的ssid </td></tr>
+    <tr><td class="paramname">channel</td><td>scan后获取的该路由器通道 </td></tr>
+    <tr><td class="paramname">encryption</td><td>scan后获取的该路由器加密方式 </td></tr>
+    <tr><td class="paramname">bssid</td><td>scan后获取的该路由器的bssid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga6c73e94f72ccbfab02af32d60072cb19" name="ga6c73e94f72ccbfab02af32d60072cb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c73e94f72ccbfab02af32d60072cb19">&#9670;&#160;</a></span>uhos_wifi_get_network_for_dual_freq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_get_network_for_dual_freq </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>wifi_ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32 *&#160;</td>
+          <td class="paramname"><em>encryption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>bssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>enable_fuzzy_matching</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structwifi__fuzzy__match.html">wifi_fuzzy_match_t</a> *&#160;</td>
+          <td class="paramname"><em>fuzzy_match_wifi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>如果开启模糊匹配功能获得模糊匹配的路由器信息，如果ssid有5G关键字获取相对应的非5G ssid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_ssid</td><td>输入输出参数，如果有5G关键字返回非5G路由器ssid </td></tr>
+    <tr><td class="paramname">channel</td><td>新获取的路由器通道 </td></tr>
+    <tr><td class="paramname">encryption</td><td>新获取的路由器加密方式 </td></tr>
+    <tr><td class="paramname">bssid</td><td>新获取路由器的bssid </td></tr>
+    <tr><td class="paramname">enable_fuzzy_matching</td><td>是否开启模糊匹配 1 开启 0 不开启 </td></tr>
+    <tr><td class="paramname">fuzzy_match_wifi</td><td>出参，模糊匹配后的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga2eefc834ceba6d52e7b9dbfd14d5bcd5" name="ga2eefc834ceba6d52e7b9dbfd14d5bcd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2eefc834ceba6d52e7b9dbfd14d5bcd5">&#9670;&#160;</a></span>uhos_wifi_get_poor_signal_optim_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_wifi_optim_level_e uhos_wifi_get_poor_signal_optim_level </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取弱网优化级别； </p>
+<p>获取当前设置的弱网优化级别； </p><dl class="section return"><dt>返回</dt><dd>返回当前的弱网优化级别。 </dd></dl>
+
+</div>
+</div>
+<a id="ga6c1295f285782e76b9420894f22d35fb" name="ga6c1295f285782e76b9420894f22d35fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c1295f285782e76b9420894f22d35fb">&#9670;&#160;</a></span>uhos_wifi_get_scan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_get_scan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structuh__wifi__scan__item.html">uh_wifi_scan_item_t</a> *&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>result_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取AP扫描结果。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>AP扫描结果wifi_scan_item_t列表 </td></tr>
+    <tr><td class="paramname">result_len</td><td>AP扫描数量，输入输出，输入表示列表的最大数量，输出表示列表的实际数量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功返回0，失败返回-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga5de7c925830ea4c76d8242fc7cc79193" name="ga5de7c925830ea4c76d8242fc7cc79193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5de7c925830ea4c76d8242fc7cc79193">&#9670;&#160;</a></span>uhos_wifi_is_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_is_on </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WIFI功能是否打开。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>return 成功返回0，失败返回-1。 </p>
+
+</div>
+</div>
+<a id="gae372557640891b9da64f86597c16132b" name="gae372557640891b9da64f86597c16132b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae372557640891b9da64f86597c16132b">&#9670;&#160;</a></span>uhos_wifi_mac_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_wifi_mac_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取WIFI MAC。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mac</td><td>6字节MAC地址。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gaf7a2000f85ed16f8912bd0780e5e2652" name="gaf7a2000f85ed16f8912bd0780e5e2652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7a2000f85ed16f8912bd0780e5e2652">&#9670;&#160;</a></span>uhos_wifi_network_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_network_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>wifi_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>wifi_ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32 *&#160;</td>
+          <td class="paramname"><em>encryption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>bssid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询WIFI网络信息。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_mode</td><td>WIFI工作模式，WIFI_MODE_STA。 </td></tr>
+    <tr><td class="paramname">wifi_ssid</td><td>SSID，最长32字节。 </td></tr>
+    <tr><td class="paramname">wifi_key</td><td>passphrase，最长64字节。 </td></tr>
+    <tr><td class="paramname">channel</td><td>AP信道。WIFI_MODE_STA模式可以为0，表示未指定信道。 </td></tr>
+    <tr><td class="paramname">encryption，加密方式。WIFI_ENCRYPT_AUTH_XXX和WIFI_ENCRYPT_CIPHER_XXX。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga21e7861cd8641791fd87ea61301bcbe1" name="ga21e7861cd8641791fd87ea61301bcbe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21e7861cd8641791fd87ea61301bcbe1">&#9670;&#160;</a></span>uhos_wifi_network_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_network_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>wifi_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>wifi_ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>wifi_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>encryption</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动WIFI网络连接。 </p>
+<dl class="section note"><dt>注解</dt><dd>此接口是同步接口，超时时间为15秒。 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_mode</td><td>WIFI工作模式，WIFI_MODE_AP/WIFI_MODE_STA。 </td></tr>
+    <tr><td class="paramname">wifi_ssid</td><td>SSID，最长32字节。 </td></tr>
+    <tr><td class="paramname">wifi_key</td><td>passphrase，最长64字节。 </td></tr>
+    <tr><td class="paramname">channel</td><td>AP信道。WIFI_MODE_STA模式可以为0，表示未指定信道。 </td></tr>
+    <tr><td class="paramname">encryption，加密方式。WIFI_ENCRYPT_AUTH_XXX和WIFI_ENCRYPT_CIPHER_XXX。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回错误码。 </dd></dl>
+
+</div>
+</div>
+<a id="gacd8c8bd4e27486eaf5c7219a153d787c" name="gacd8c8bd4e27486eaf5c7219a153d787c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd8c8bd4e27486eaf5c7219a153d787c">&#9670;&#160;</a></span>uhos_wifi_power_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_power_off </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WIFI功能关闭。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>0 断开wifi 1 卸载wifi功能（BLE存在时不能设置1） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gae2eb7251a78120c8ab46c2d27ef748cc" name="gae2eb7251a78120c8ab46c2d27ef748cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2eb7251a78120c8ab46c2d27ef748cc">&#9670;&#160;</a></span>uhos_wifi_power_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_power_on </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>wifi_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WIFI功能打开。WIFI必须支持AP模式和STA模式。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_mode</td><td>WIFI工作模式，WIFI_MODE_XXX。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gae8eb83d9d213eb1c4531933955c08bd5" name="gae8eb83d9d213eb1c4531933955c08bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8eb83d9d213eb1c4531933955c08bd5">&#9670;&#160;</a></span>uhos_wifi_ps_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_ps_disable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭WIFI省电模式。 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gae03b301978915329d4326124580894f2" name="gae03b301978915329d4326124580894f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae03b301978915329d4326124580894f2">&#9670;&#160;</a></span>uhos_wifi_ps_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_ps_enable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使能WIFI省电模式。 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga36270a2543fc8df1c2a6709e2194cbef" name="ga36270a2543fc8df1c2a6709e2194cbef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36270a2543fc8df1c2a6709e2194cbef">&#9670;&#160;</a></span>uhos_wifi_scan_general()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_scan_general </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ssid_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short *&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>bssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uh_wifi_scan_results_cb&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开始扫描指定SSID的WIFI AP。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ssid</td><td>待扫描的SSID，NULL表示通配。 </td></tr>
+    <tr><td class="paramname">ssid_len</td><td>待扫描的SSID长度。 </td></tr>
+    <tr><td class="paramname">channels</td><td>扫描的信道列表，以 0 结尾的信道数组，NULL表示所有支持的信道。 </td></tr>
+    <tr><td class="paramname">bssid</td><td>带扫描的设备BSSID，NULL表示不对bssid做过滤。 </td></tr>
+    <tr><td class="paramname">cb</td><td>扫描完成后的回调通知。可以设置为NULL。 </td></tr>
+    <tr><td class="paramname">param</td><td>回调接口的用户参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gab7b8976e94f4f30dc9d801c5b87ccad2" name="gab7b8976e94f4f30dc9d801c5b87ccad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7b8976e94f4f30dc9d801c5b87ccad2">&#9670;&#160;</a></span>uhos_wifi_scan_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_scan_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开始扫描WIFI AP。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>扫描完成后的回调通知。可以设置为NULL。 </td></tr>
+    <tr><td class="paramname">param</td><td>回调接口的用户参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gab5639604b7701ace97cbc864b472b7e4" name="gab5639604b7701ace97cbc864b472b7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5639604b7701ace97cbc864b472b7e4">&#9670;&#160;</a></span>uhos_wifi_scan_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_scan_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止扫描WIFI AP。 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga23e87d9ad0af98eed3aa4a84d7df48df" name="ga23e87d9ad0af98eed3aa4a84d7df48df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23e87d9ad0af98eed3aa4a84d7df48df">&#9670;&#160;</a></span>uhos_wifi_scan_with_ssid_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_scan_with_ssid_start </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>ssid_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__grp__uhoswifi.html#ga305e4b0236f48fb93a182edc197f6a0b">wifi_scan_cb_func</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开始扫描指定SSID的WIFI AP。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ssid</td><td>待扫描的SSID。 </td></tr>
+    <tr><td class="paramname">ssid_len</td><td>待扫描的SSID长度。 </td></tr>
+    <tr><td class="paramname">cb</td><td>扫描完成后的回调通知。可以设置为NULL。 </td></tr>
+    <tr><td class="paramname">param</td><td>回调接口的用户参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga31eb2d5fe78ed73e6fc930daaf900ebe" name="ga31eb2d5fe78ed73e6fc930daaf900ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31eb2d5fe78ed73e6fc930daaf900ebe">&#9670;&#160;</a></span>uhos_wifi_security_to_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_u32 uhos_wifi_security_to_encryption </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>security</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加密算法转换为加密方式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">security</td><td>加密算法： WIFI_WEP_ENABLED WIFI_TKIP_ENABLED WIFI_CCMP_ENABLED WIFI_SHARED_ENABLED WIFI_WPA_SECURITY WIFI_WPA2_SECURITY WIFI_WPS_ENABLED </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_u32 加密方式 WIFI_ENCRYPT_CIPHER_WEP WIFI_ENCRYPT_CIPHER_TKIP WIFI_ENCRYPT_CIPHER_CCMP WIFI_ENCRYPT_AUTH_WPA_PSK WIFI_ENCRYPT_AUTH_WPA2_PSK </dd></dl>
+
+</div>
+</div>
+<a id="gaac015f53d3642980255a9225483a5a5a" name="gaac015f53d3642980255a9225483a5a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac015f53d3642980255a9225483a5a5a">&#9670;&#160;</a></span>uhos_wifi_set_poor_signal_optim_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_set_poor_signal_optim_level </td>
+          <td>(</td>
+          <td class="paramtype">uhos_wifi_optim_level_e&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置弱网优化级别； </p>
+<p>设置弱网优化级别； </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>设置的若绾优化级别； </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga532fe585be3a3c28811c717577a7419c" name="ga532fe585be3a3c28811c717577a7419c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga532fe585be3a3c28811c717577a7419c">&#9670;&#160;</a></span>uhos_wifi_set_rx_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_set_rx_frame </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>enable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wifi_frame_cb_func&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置802.11帧接收回调。 </p>
+<p>802.11帧主要包括beacon帧和probe response帧。目前仅支持在STA模式下，接收所连接AP发出的帧。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>使能或者禁止接收802.11帧回调。 </td></tr>
+    <tr><td class="paramname">cb</td><td>收到帧的回调通知。设置为NULL表示不需要管理帧回调。 </td></tr>
+    <tr><td class="paramname">param</td><td>回调接口的用户参数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga6f4b278bd4a1becdf098a730a6a77b51" name="ga6f4b278bd4a1becdf098a730a6a77b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f4b278bd4a1becdf098a730a6a77b51">&#9670;&#160;</a></span>uhos_wifi_set_scan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_set_scan </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16 *&#160;</td>
+          <td class="paramname"><em>channel_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动AP扫描 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel_list</td><td>指定信道列表，NULL表示所有信道。 </td></tr>
+    <tr><td class="paramname">len</td><td>信道列表数量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功返回0，失败返回-1 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>AP扫描结果通过uhos_wifi_get_scan获取。 </dd></dl>
+
+</div>
+</div>
+<a id="gabf025bf75d58dc22b2d57262e3e66ab3" name="gabf025bf75d58dc22b2d57262e3e66ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf025bf75d58dc22b2d57262e3e66ab3">&#9670;&#160;</a></span>uhos_wifi_set_scan_with_ssid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_set_scan_with_ssid </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>ssid_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动指定SSID的AP扫描。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ssid</td><td>SSID。 </td></tr>
+    <tr><td class="paramname">ssid_len</td><td>SSID长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功返回0，失败返回-1 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>AP扫描结果通过uhos_wifi_get_scan获取。。 </dd></dl>
+
+</div>
+</div>
+<a id="gaae8f73e1c84e07500eb7fa6b4cd3e963" name="gaae8f73e1c84e07500eb7fa6b4cd3e963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae8f73e1c84e07500eb7fa6b4cd3e963">&#9670;&#160;</a></span>uhos_wifi_set_status_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_wifi_set_status_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhoswifi.html#gaf6f69ba336f623d592905bf67f4b45b9">uhos_wifi_status_callback</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置Wi-Fi连接状态变化通知回调。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>回调函数，设置为 NULL 时将清除回调。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga9c5b4e2f68cde50ad3b21a555c5a65f7" name="ga9c5b4e2f68cde50ad3b21a555c5a65f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c5b4e2f68cde50ad3b21a555c5a65f7">&#9670;&#160;</a></span>uhos_wifi_set_tx_power_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_set_tx_power_offset </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置基于校准功率的发射功率调整值； </p>
+<p>设置基于校准功率的发射功率调整值； </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>基于校准功率的发射功率调整值，单位100dB； </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga6b587a307d9ccc7555daa0479b492c76" name="ga6b587a307d9ccc7555daa0479b492c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b587a307d9ccc7555daa0479b492c76">&#9670;&#160;</a></span>uhos_wifi_sniffer_channel_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_sniffer_channel_set </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u16&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>ext_channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置WIFI扩展信道。 </p>
+<p>用于40MHz信道的设置。当WIFI工作在Promiscuous模式时，设置sniffer的监听信道。其他模式，此设置不生效。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>WIFI工作信道（2.4GHZ），1-14，最大信道与WIFI区域相关，可能是11、13或者14。 </td></tr>
+    <tr><td class="paramname">ext_channel</td><td>WIFI_EXT_CHANNEL_XXX。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gaa79b4afea8fd5d7de54ca48e99a67491" name="gaa79b4afea8fd5d7de54ca48e99a67491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa79b4afea8fd5d7de54ca48e99a67491">&#9670;&#160;</a></span>uhos_wifi_sniffer_enhance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_sniffer_enhance </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>enable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpromisc__enhance__info__t.html">promisc_enhance_info_t</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>锁定信道后，增加混杂模式下该目标AP收取转发报文能力。 </p>
+<p>WIFI需支持Promiscuous模式（在所设定的监听信道内）。在Promiscuous模式下，会根据目标AP信息，通过RSSI增加调节底层收包增益以提高收包效率。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>使能参数；开启设定为1；关闭设定为0。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gad62c05cd1e49e8753946c59b49cce46b" name="gad62c05cd1e49e8753946c59b49cce46b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad62c05cd1e49e8753946c59b49cce46b">&#9670;&#160;</a></span>uhos_wifi_sniffer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_sniffer_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhoswifi.html#ga3937c0d5c4273f881dcd2d6bb038e2ea">promisc_cb_func</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>进入WIFI Promiscuous模式。 </p>
+<p>WIFI需支持Promiscuous模式（在所设定的监听信道内）。在Promiscuous模式下，需要将所有嗅探到的正确的WIFI数据包进行回调处理。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>混杂模式下报文接收接口。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga8f522f685a49558496a5a9a8034c6117" name="ga8f522f685a49558496a5a9a8034c6117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f522f685a49558496a5a9a8034c6117">&#9670;&#160;</a></span>uhos_wifi_sniffer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_sniffer_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>退出WIFI promiscuous模式。 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gab2205cdaec16d1d571e2d8989ada1431" name="gab2205cdaec16d1d571e2d8989ada1431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2205cdaec16d1d571e2d8989ada1431">&#9670;&#160;</a></span>uhos_wifi_snr_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_snr_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>snr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取WIFI信噪比。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">snr，当前所连接AP的信噪比。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga317840990ee2a2ddf89084e8f47afa3e" name="ga317840990ee2a2ddf89084e8f47afa3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga317840990ee2a2ddf89084e8f47afa3e">&#9670;&#160;</a></span>uhos_wifi_status_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_wifi_status_get </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s8 *&#160;</td>
+          <td class="paramname"><em>wifi_strength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询WIFI状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>WIFI状态WIFI_DOWN/WIFI_UP。 </td></tr>
+    <tr><td class="paramname">wifi_strength，当前所连接AP的信号强度，-96-0。如果status是WIFI_DOWN，则wifi_strength等于0。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga0a7f7a6b2fdfbafb3df936b03c79dd23" name="ga0a7f7a6b2fdfbafb3df936b03c79dd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a7f7a6b2fdfbafb3df936b03c79dd23">&#9670;&#160;</a></span>uhos_wifi_tx_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_wifi_tx_frame </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送802.11帧。 </p>
+<p>802.11帧主要包括probe request帧。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>802.11帧。 </td></tr>
+    <tr><td class="paramname">length</td><td>802.11帧长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

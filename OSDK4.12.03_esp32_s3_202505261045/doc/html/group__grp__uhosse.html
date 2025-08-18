@@ -1,0 +1,1145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: 安全适配接口定义</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhosse.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">安全适配接口定义</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__crypt_8h" id="r_uh__crypt_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__crypt_8h.html">uh_crypt.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__se_8h" id="r_uh__se_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__se_8h.html">uh_se.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__tls_8h" id="r_uh__tls_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__tls_8h.html">uh_tls.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__verify_8h" id="r_uh__verify_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__verify_8h.html">uh_verify.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga7e82b64d36638f42e920bea8e3bc8a38" id="r_ga7e82b64d36638f42e920bea8e3bc8a38"><td class="memItemLeft" align="right" valign="top"><a id="ga7e82b64d36638f42e920bea8e3bc8a38" name="ga7e82b64d36638f42e920bea8e3bc8a38"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_AES_CRYPT_E</b> { <b>UHOS_AES_DECRYPT</b> = 0
+, <b>UHOS_AES_ENCRYPT</b> = 1
+ }</td></tr>
+<tr class="separator:ga7e82b64d36638f42e920bea8e3bc8a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff01a58944185aa310c4bfe3b852061f" id="r_gaff01a58944185aa310c4bfe3b852061f"><td class="memItemLeft" align="right" valign="top"><a id="gaff01a58944185aa310c4bfe3b852061f" name="gaff01a58944185aa310c4bfe3b852061f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_TLS_RET_E</b> { <b>UHOS_TLS_RET_OK</b> = 0
+, <b>UHOS_TLS_RET_ERROR</b> = -1
+, <b>UHOS_TLS_RET_WANT_READ</b> = -2
+, <b>UHOS_TLS_RET_WANT_WRITE</b> = -3
+ }</td></tr>
+<tr class="separator:gaff01a58944185aa310c4bfe3b852061f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba3504dd9422c923f1c503198c1f3bc6" id="r_gaba3504dd9422c923f1c503198c1f3bc6"><td class="memItemLeft" align="right" valign="top"><a id="gaba3504dd9422c923f1c503198c1f3bc6" name="gaba3504dd9422c923f1c503198c1f3bc6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_TLS_CIPHERSUITES_E</b> { <br />
+&#160;&#160;<b>UHOS_TLS_RSA_WITH_AES_128_CBC_SHA256</b>
+, <b>UHOS_TLS_RSA_WITH_AES_256_CBC_SHA256</b>
+, <b>UHOS_TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</b>
+, <b>UHOS_TLS_RSA_WITH_AES_256_GCM_SHA384</b>
+, <br />
+&#160;&#160;<b>UHOS_TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</b>
+, <b>UHOS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</b>
+, <b>UHOS_TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384</b>
+, <b>UHOS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</b>
+, <br />
+&#160;&#160;<b>UHOS_TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384</b>
+, <b>UHOS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</b>
+, <b>UHOS_TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384</b>
+, <b>UHOS_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</b>
+, <br />
+&#160;&#160;<b>UHOS_TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384</b>
+<br />
+ }</td></tr>
+<tr class="separator:gaba3504dd9422c923f1c503198c1f3bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ed0463ae1c6da408fd6d55234e88588" id="r_ga2ed0463ae1c6da408fd6d55234e88588"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> { <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588add81d12cfc44db5597a146933747144c">UHOS_MD_NONE</a> = 0
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a50560b1c7e37e45e2a159aa6ffdec73d">UHOS_MD_MD2</a> = 1
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a49fd798e2b6c4f60e89347b2b7a24272">UHOS_MD_MD4</a> = 2
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a540eb61d3dbdb69c54c06795db795a3f">UHOS_MD_MD5</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a1ab75f2e25f1691c5647a487189ed2bb">UHOS_MD_SHA1</a> = 4
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588abbbbdfeab2316ac8b93a5adf97b267ad">UHOS_MD_SHA224</a> = 5
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a46135f62121bf972e17d236eb4212d16">UHOS_MD_SHA256</a> = 6
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588aa18325222e683853c5a088e893d824ea">UHOS_MD_SHA384</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588adeab3ffc066cb61db9a3ac848441945a">UHOS_MD_SHA512</a> = 8
+, <a class="el" href="group__grp__uhosse.html#gga2ed0463ae1c6da408fd6d55234e88588a10ba103cc04a2e0d69f602763903b4c2">UHOS_MD_RIPEMD160</a> = 9
+<br />
+ }</td></tr>
+<tr class="separator:ga2ed0463ae1c6da408fd6d55234e88588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga97535b4b6308264fe22b94e8e76d2e97" id="r_ga97535b4b6308264fe22b94e8e76d2e97"><td class="memItemLeft" align="right" valign="top">uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga97535b4b6308264fe22b94e8e76d2e97">uhos_aes_init</a> (uhos_void)</td></tr>
+<tr class="memdesc:ga97535b4b6308264fe22b94e8e76d2e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">aes初始化。  <br /></td></tr>
+<tr class="separator:ga97535b4b6308264fe22b94e8e76d2e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73ae15052debefe2efebc8afbb937d32" id="r_ga73ae15052debefe2efebc8afbb937d32"><td class="memItemLeft" align="right" valign="top">uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga73ae15052debefe2efebc8afbb937d32">uhos_aes_free</a> (uhos_void *ctx)</td></tr>
+<tr class="memdesc:ga73ae15052debefe2efebc8afbb937d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">aes反初始化。  <br /></td></tr>
+<tr class="separator:ga73ae15052debefe2efebc8afbb937d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bbd9fccc8d2f75fa78648f68aadbf94" id="r_ga6bbd9fccc8d2f75fa78648f68aadbf94"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga6bbd9fccc8d2f75fa78648f68aadbf94">uhos_aes_setkey_dec</a> (uhos_void *ctx, const uhos_u8 *key, uhos_u32 keybits)</td></tr>
+<tr class="memdesc:ga6bbd9fccc8d2f75fa78648f68aadbf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置aes解密秘钥。  <br /></td></tr>
+<tr class="separator:ga6bbd9fccc8d2f75fa78648f68aadbf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e3a78cebd48b6689ea92a70238df2fe" id="r_ga7e3a78cebd48b6689ea92a70238df2fe"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga7e3a78cebd48b6689ea92a70238df2fe">uhos_aes_setkey_enc</a> (uhos_void *ctx, const uhos_u8 *key, uhos_u32 keybits)</td></tr>
+<tr class="memdesc:ga7e3a78cebd48b6689ea92a70238df2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置aes加密秘钥。  <br /></td></tr>
+<tr class="separator:ga7e3a78cebd48b6689ea92a70238df2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4391a2566889ee8a3148f2f1b8ce2122" id="r_ga4391a2566889ee8a3148f2f1b8ce2122"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga4391a2566889ee8a3148f2f1b8ce2122">uhos_aes_crypt_cbc</a> (uhos_void *ctx, UHOS_AES_CRYPT_E crypt_mode, uhos_size_t length, uhos_u8 iv[16], const uhos_u8 *input, uhos_u8 *output)</td></tr>
+<tr class="memdesc:ga4391a2566889ee8a3148f2f1b8ce2122"><td class="mdescLeft">&#160;</td><td class="mdescRight">aes加解密数据。  <br /></td></tr>
+<tr class="separator:ga4391a2566889ee8a3148f2f1b8ce2122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a0f6a7cd88d5dae6bbc97153bd9d73f" id="r_ga8a0f6a7cd88d5dae6bbc97153bd9d73f"><td class="memItemLeft" align="right" valign="top">uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga8a0f6a7cd88d5dae6bbc97153bd9d73f">uhos_tls_init</a> (uhos_void)</td></tr>
+<tr class="memdesc:ga8a0f6a7cd88d5dae6bbc97153bd9d73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">tls初始化。  <br /></td></tr>
+<tr class="separator:ga8a0f6a7cd88d5dae6bbc97153bd9d73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga033a9ce1cce44cbadd4b0ec5456279a5" id="r_ga033a9ce1cce44cbadd4b0ec5456279a5"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga033a9ce1cce44cbadd4b0ec5456279a5">uhos_tls_uninit</a> (uhos_void *handle)</td></tr>
+<tr class="memdesc:ga033a9ce1cce44cbadd4b0ec5456279a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">tls反初始化，释放tls所有资源。  <br /></td></tr>
+<tr class="separator:ga033a9ce1cce44cbadd4b0ec5456279a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabad27a2e95ad45dd1c24d0a52131f6fc" id="r_gabad27a2e95ad45dd1c24d0a52131f6fc"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gabad27a2e95ad45dd1c24d0a52131f6fc">uhos_tls_start</a> (uhos_void *handle)</td></tr>
+<tr class="memdesc:gabad27a2e95ad45dd1c24d0a52131f6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">tls句柄开始适配资源。  <br /></td></tr>
+<tr class="separator:gabad27a2e95ad45dd1c24d0a52131f6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1606293820213b555be3b76080b0018e" id="r_ga1606293820213b555be3b76080b0018e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga1606293820213b555be3b76080b0018e">uhos_tls_handshake</a> (uhos_void *handle)</td></tr>
+<tr class="memdesc:ga1606293820213b555be3b76080b0018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">tls握手。  <br /></td></tr>
+<tr class="separator:ga1606293820213b555be3b76080b0018e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8fbf9b4dda3ee4c3aa7f064b89cf972" id="r_gaa8fbf9b4dda3ee4c3aa7f064b89cf972"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gaa8fbf9b4dda3ee4c3aa7f064b89cf972">uhos_tls_send</a> (uhos_void *handle, const uhos_u8 *data, uhos_size_t data_len)</td></tr>
+<tr class="memdesc:gaa8fbf9b4dda3ee4c3aa7f064b89cf972"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送tls数据。  <br /></td></tr>
+<tr class="separator:gaa8fbf9b4dda3ee4c3aa7f064b89cf972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga441e448cb3e4deefd91c934b09532d73" id="r_ga441e448cb3e4deefd91c934b09532d73"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga441e448cb3e4deefd91c934b09532d73">uhos_tls_recv</a> (uhos_void *handle, uhos_u8 *data, uhos_size_t data_len)</td></tr>
+<tr class="memdesc:ga441e448cb3e4deefd91c934b09532d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收tls数据。  <br /></td></tr>
+<tr class="separator:ga441e448cb3e4deefd91c934b09532d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa043f9ecb2c0dd1463838a2130b6e258" id="r_gaa043f9ecb2c0dd1463838a2130b6e258"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gaa043f9ecb2c0dd1463838a2130b6e258">uhos_tls_get_avail_bytes</a> (uhos_void *tls_handle)</td></tr>
+<tr class="memdesc:gaa043f9ecb2c0dd1463838a2130b6e258"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取应用方未读取的数据长度。  <br /></td></tr>
+<tr class="separator:gaa043f9ecb2c0dd1463838a2130b6e258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac595eb86999955252e1964d4650d3ae3" id="r_gac595eb86999955252e1964d4650d3ae3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gac595eb86999955252e1964d4650d3ae3">uhos_tls_set_connected_socket</a> (uhos_void *handle, uhos_s32 socket_fd)</td></tr>
+<tr class="memdesc:gac595eb86999955252e1964d4650d3ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置已连接的套接字。  <br /></td></tr>
+<tr class="separator:gac595eb86999955252e1964d4650d3ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff14cb90127080326774505dd97fdda0" id="r_gaff14cb90127080326774505dd97fdda0"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gaff14cb90127080326774505dd97fdda0">uhos_tls_set_ciphersuites</a> (uhos_void *handle, uhos_s32 *ciphersuites, uhos_u32 ciphersuites_count)</td></tr>
+<tr class="memdesc:gaff14cb90127080326774505dd97fdda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置加密套件。  <br /></td></tr>
+<tr class="separator:gaff14cb90127080326774505dd97fdda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a0abb5f2a387706b90ee8c3e824d0a9" id="r_ga8a0abb5f2a387706b90ee8c3e824d0a9"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga8a0abb5f2a387706b90ee8c3e824d0a9">uhos_tls_set_ca_cert</a> (uhos_void *handle, const uhos_u8 *ca_cert, uhos_size_t ca_cert_len)</td></tr>
+<tr class="memdesc:ga8a0abb5f2a387706b90ee8c3e824d0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置服务器ca证书。  <br /></td></tr>
+<tr class="separator:ga8a0abb5f2a387706b90ee8c3e824d0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2629e2ce821347f141366cdf35597b7" id="r_gac2629e2ce821347f141366cdf35597b7"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gac2629e2ce821347f141366cdf35597b7">uhos_tls_set_own_cert</a> (uhos_void *handle, const uhos_u8 *own_cert, uhos_size_t own_cert_len, const uhos_u8 *priv_key, uhos_size_t priv_key_len)</td></tr>
+<tr class="memdesc:gac2629e2ce821347f141366cdf35597b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置设备证书和私钥。  <br /></td></tr>
+<tr class="separator:gac2629e2ce821347f141366cdf35597b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab15414c0831968349a35fa7d84fc696d" id="r_gab15414c0831968349a35fa7d84fc696d"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gab15414c0831968349a35fa7d84fc696d">uhos_tls_get_cert_cn</a> (uhos_u8 *cert_buf, uhos_size_t cert_buf_len, uhos_u8 *cert_cn_buf, uhos_size_t cert_cn_buf_len)</td></tr>
+<tr class="memdesc:gab15414c0831968349a35fa7d84fc696d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取证书cn。  <br /></td></tr>
+<tr class="separator:gab15414c0831968349a35fa7d84fc696d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7fe07f026cfabc759190b0c85f81d308" id="r_ga7fe07f026cfabc759190b0c85f81d308"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga7fe07f026cfabc759190b0c85f81d308">uhos_md_init</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type)</td></tr>
+<tr class="memdesc:ga7fe07f026cfabc759190b0c85f81d308"><td class="mdescLeft">&#160;</td><td class="mdescRight">md初始化。  <br /></td></tr>
+<tr class="separator:ga7fe07f026cfabc759190b0c85f81d308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03903120da7b020fd04ac8ab5a90dcb2" id="r_ga03903120da7b020fd04ac8ab5a90dcb2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga03903120da7b020fd04ac8ab5a90dcb2">uhos_md_update</a> (uhos_void *md_ctx, uhos_u8 *buf, uhos_size_t len)</td></tr>
+<tr class="memdesc:ga03903120da7b020fd04ac8ab5a90dcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据算法类型加密数据段，数据可以分段式加密。  <br /></td></tr>
+<tr class="separator:ga03903120da7b020fd04ac8ab5a90dcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac031c05e0afdbabbad05d6fde60d9558" id="r_gac031c05e0afdbabbad05d6fde60d9558"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gac031c05e0afdbabbad05d6fde60d9558">uhos_md_get_size</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type)</td></tr>
+<tr class="memdesc:gac031c05e0afdbabbad05d6fde60d9558"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据加密算法获取加密后的数据长度。  <br /></td></tr>
+<tr class="separator:gac031c05e0afdbabbad05d6fde60d9558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaaf137a5c650b2992940199c9c6b0908" id="r_gaaaf137a5c650b2992940199c9c6b0908"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#gaaaf137a5c650b2992940199c9c6b0908">uhos_md_finish</a> (uhos_void *md_ctx, uhos_u8 *output)</td></tr>
+<tr class="memdesc:gaaaf137a5c650b2992940199c9c6b0908"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放md句柄并输出加密后的数据。  <br /></td></tr>
+<tr class="separator:gaaaf137a5c650b2992940199c9c6b0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3928dc3fb06119ee25aef8de0790fa4f" id="r_ga3928dc3fb06119ee25aef8de0790fa4f"><td class="memItemLeft" align="right" valign="top">UHSD_API uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosse.html#ga3928dc3fb06119ee25aef8de0790fa4f">uhos_md_hmac</a> (<a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a> md_type, const uhos_u8 *key, uhos_size_t keylen, const uhos_u8 *input, uhos_size_t ilen, uhos_u8 *output)</td></tr>
+<tr class="memdesc:ga3928dc3fb06119ee25aef8de0790fa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算通用HMAC  <br /></td></tr>
+<tr class="separator:ga3928dc3fb06119ee25aef8de0790fa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2021, Haier.Co, Ltd.</dd>
+<dd>
+Copyright (c) 2023, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga2ed0463ae1c6da408fd6d55234e88588" name="ga2ed0463ae1c6da408fd6d55234e88588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ed0463ae1c6da408fd6d55234e88588">&#9670;&#160;</a></span>UHOS_MD_TYPE_E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588add81d12cfc44db5597a146933747144c" name="gga2ed0463ae1c6da408fd6d55234e88588add81d12cfc44db5597a146933747144c"></a>UHOS_MD_NONE&#160;</td><td class="fielddoc"><p>None. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a50560b1c7e37e45e2a159aa6ffdec73d" name="gga2ed0463ae1c6da408fd6d55234e88588a50560b1c7e37e45e2a159aa6ffdec73d"></a>UHOS_MD_MD2&#160;</td><td class="fielddoc"><p>The MD2 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a49fd798e2b6c4f60e89347b2b7a24272" name="gga2ed0463ae1c6da408fd6d55234e88588a49fd798e2b6c4f60e89347b2b7a24272"></a>UHOS_MD_MD4&#160;</td><td class="fielddoc"><p>The MD4 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a540eb61d3dbdb69c54c06795db795a3f" name="gga2ed0463ae1c6da408fd6d55234e88588a540eb61d3dbdb69c54c06795db795a3f"></a>UHOS_MD_MD5&#160;</td><td class="fielddoc"><p>The MD5 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a1ab75f2e25f1691c5647a487189ed2bb" name="gga2ed0463ae1c6da408fd6d55234e88588a1ab75f2e25f1691c5647a487189ed2bb"></a>UHOS_MD_SHA1&#160;</td><td class="fielddoc"><p>The SHA-1 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588abbbbdfeab2316ac8b93a5adf97b267ad" name="gga2ed0463ae1c6da408fd6d55234e88588abbbbdfeab2316ac8b93a5adf97b267ad"></a>UHOS_MD_SHA224&#160;</td><td class="fielddoc"><p>The SHA-224 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a46135f62121bf972e17d236eb4212d16" name="gga2ed0463ae1c6da408fd6d55234e88588a46135f62121bf972e17d236eb4212d16"></a>UHOS_MD_SHA256&#160;</td><td class="fielddoc"><p>The SHA-256 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588aa18325222e683853c5a088e893d824ea" name="gga2ed0463ae1c6da408fd6d55234e88588aa18325222e683853c5a088e893d824ea"></a>UHOS_MD_SHA384&#160;</td><td class="fielddoc"><p>The SHA-384 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588adeab3ffc066cb61db9a3ac848441945a" name="gga2ed0463ae1c6da408fd6d55234e88588adeab3ffc066cb61db9a3ac848441945a"></a>UHOS_MD_SHA512&#160;</td><td class="fielddoc"><p>The SHA-512 message digest. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2ed0463ae1c6da408fd6d55234e88588a10ba103cc04a2e0d69f602763903b4c2" name="gga2ed0463ae1c6da408fd6d55234e88588a10ba103cc04a2e0d69f602763903b4c2"></a>UHOS_MD_RIPEMD160&#160;</td><td class="fielddoc"><p>The RIPEMD-160 message digest. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga4391a2566889ee8a3148f2f1b8ce2122" name="ga4391a2566889ee8a3148f2f1b8ce2122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4391a2566889ee8a3148f2f1b8ce2122">&#9670;&#160;</a></span>uhos_aes_crypt_cbc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_aes_crypt_cbc </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UHOS_AES_CRYPT_E&#160;</td>
+          <td class="paramname"><em>crypt_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8&#160;</td>
+          <td class="paramname"><em>iv</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>aes加解密数据。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>aes句柄。 </td></tr>
+    <tr><td class="paramname">mode</td><td>加解密模式。 UHOS_AES_DECRYPT：解密模式。 UHOS_AES_ENCRYPT：加密模式。 </td></tr>
+    <tr><td class="paramname">length</td><td>数据长度。 </td></tr>
+    <tr><td class="paramname">iv</td><td>初始化向量(使用后更新)。 </td></tr>
+    <tr><td class="paramname">input</td><td>加解密之前的数据。 </td></tr>
+    <tr><td class="paramname">output</td><td>加解密之后的数据。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga73ae15052debefe2efebc8afbb937d32" name="ga73ae15052debefe2efebc8afbb937d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73ae15052debefe2efebc8afbb937d32">&#9670;&#160;</a></span>uhos_aes_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void uhos_aes_free </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>aes反初始化。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>aes句柄。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="ga97535b4b6308264fe22b94e8e76d2e97" name="ga97535b4b6308264fe22b94e8e76d2e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97535b4b6308264fe22b94e8e76d2e97">&#9670;&#160;</a></span>uhos_aes_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void * uhos_aes_init </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>aes初始化。 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回aes句柄，失败返回NULL。 </dd></dl>
+
+</div>
+</div>
+<a id="ga6bbd9fccc8d2f75fa78648f68aadbf94" name="ga6bbd9fccc8d2f75fa78648f68aadbf94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bbd9fccc8d2f75fa78648f68aadbf94">&#9670;&#160;</a></span>uhos_aes_setkey_dec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_aes_setkey_dec </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>keybits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置aes解密秘钥。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>aes句柄。 </td></tr>
+    <tr><td class="paramname">key</td><td>秘钥buffer。 </td></tr>
+    <tr><td class="paramname">keybits</td><td>秘钥bit位数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga7e3a78cebd48b6689ea92a70238df2fe" name="ga7e3a78cebd48b6689ea92a70238df2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e3a78cebd48b6689ea92a70238df2fe">&#9670;&#160;</a></span>uhos_aes_setkey_enc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_aes_setkey_enc </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>keybits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置aes加密秘钥。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>aes句柄。 </td></tr>
+    <tr><td class="paramname">key</td><td>秘钥buffer。 </td></tr>
+    <tr><td class="paramname">keybits</td><td>秘钥bit位数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gaaaf137a5c650b2992940199c9c6b0908" name="gaaaf137a5c650b2992940199c9c6b0908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaaf137a5c650b2992940199c9c6b0908">&#9670;&#160;</a></span>uhos_md_finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void uhos_md_finish </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>md_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放md句柄并输出加密后的数据。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md_ctx</td><td>md句柄。 </td></tr>
+    <tr><td class="paramname">output</td><td>加密后的数据。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无。 </dd></dl>
+
+</div>
+</div>
+<a id="gac031c05e0afdbabbad05d6fde60d9558" name="gac031c05e0afdbabbad05d6fde60d9558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac031c05e0afdbabbad05d6fde60d9558">&#9670;&#160;</a></span>uhos_md_get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_md_get_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a>&#160;</td>
+          <td class="paramname"><em>md_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据加密算法获取加密后的数据长度。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md_type</td><td>md加密类型。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回数据长度，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga3928dc3fb06119ee25aef8de0790fa4f" name="ga3928dc3fb06119ee25aef8de0790fa4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3928dc3fb06119ee25aef8de0790fa4f">&#9670;&#160;</a></span>uhos_md_hmac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_s32 uhos_md_hmac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a>&#160;</td>
+          <td class="paramname"><em>md_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>keylen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>ilen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算通用HMAC </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md_type</td><td>Algorithm type (UHOS_MD_TYPE_E) UHOS_MD_NONE, UHOS_MD_MD2, UHOS_MD_MD4, UHOS_MD_MD5, UHOS_MD_SHA1, UHOS_MD_SHA224, UHOS_MD_SHA256, UHOS_MD_SHA384, UHOS_MD_SHA512, UHOS_MD_RIPEMD160。 </td></tr>
+    <tr><td class="paramname">key</td><td>HMAC secret key </td></tr>
+    <tr><td class="paramname">keylen</td><td>HMAC key的字节长度 </td></tr>
+    <tr><td class="paramname">input</td><td>输入缓存指针 </td></tr>
+    <tr><td class="paramname">ilen</td><td>输入数据长度 </td></tr>
+    <tr><td class="paramname">output</td><td>Generic HMAC结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0 成功, -0x5100 参数校验失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga7fe07f026cfabc759190b0c85f81d308" name="ga7fe07f026cfabc759190b0c85f81d308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7fe07f026cfabc759190b0c85f81d308">&#9670;&#160;</a></span>uhos_md_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void * uhos_md_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__grp__uhosse.html#ga2ed0463ae1c6da408fd6d55234e88588">UHOS_MD_TYPE_E</a>&#160;</td>
+          <td class="paramname"><em>md_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>md初始化。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md_type</td><td>算法类型。 UHOS_MD_NONE, UHOS_MD_MD2, UHOS_MD_MD4, UHOS_MD_MD5, UHOS_MD_SHA1, UHOS_MD_SHA224, UHOS_MD_SHA256, UHOS_MD_SHA384, UHOS_MD_SHA512, UHOS_MD_RIPEMD160 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回md句柄，失败返回NULL。 </dd></dl>
+
+</div>
+</div>
+<a id="ga03903120da7b020fd04ac8ab5a90dcb2" name="ga03903120da7b020fd04ac8ab5a90dcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03903120da7b020fd04ac8ab5a90dcb2">&#9670;&#160;</a></span>uhos_md_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UHSD_API uhos_void uhos_md_update </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>md_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据算法类型加密数据段，数据可以分段式加密。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md_ctx</td><td>md句柄。 </td></tr>
+    <tr><td class="paramname">buf</td><td>加密数据段。 </td></tr>
+    <tr><td class="paramname">len</td><td>数据段长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gaa043f9ecb2c0dd1463838a2130b6e258" name="gaa043f9ecb2c0dd1463838a2130b6e258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa043f9ecb2c0dd1463838a2130b6e258">&#9670;&#160;</a></span>uhos_tls_get_avail_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_get_avail_bytes </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>tls_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取应用方未读取的数据长度。 </p>
+<p>每次读数据tls库会读取特定长度的数据，但是如果应用方读数据小于该长度，可通过该接口获取未读数据长度。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>未读取的数据长度。 </dd></dl>
+
+</div>
+</div>
+<a id="gab15414c0831968349a35fa7d84fc696d" name="gab15414c0831968349a35fa7d84fc696d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab15414c0831968349a35fa7d84fc696d">&#9670;&#160;</a></span>uhos_tls_get_cert_cn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_get_cert_cn </td>
+          <td>(</td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>cert_buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>cert_buf_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>cert_cn_buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>cert_cn_buf_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取证书cn。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cert_buf</td><td>证书buffer。 </td></tr>
+    <tr><td class="paramname">cert_buf_len</td><td>证书长度。 </td></tr>
+    <tr><td class="paramname">cert_cn_buf</td><td>证书cn buffer。 </td></tr>
+    <tr><td class="paramname">cert_cn_buf_len</td><td>证书cn buffer长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga1606293820213b555be3b76080b0018e" name="ga1606293820213b555be3b76080b0018e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1606293820213b555be3b76080b0018e">&#9670;&#160;</a></span>uhos_tls_handshake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_handshake </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tls握手。 </p>
+<p>由于网络等原因，可能需要多次握手。 握手期间返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE，并非握手失败，只是网络io没有数据可读或可写，需要再次握手。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1，继续握手返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE。 </dd></dl>
+
+</div>
+</div>
+<a id="ga8a0f6a7cd88d5dae6bbc97153bd9d73f" name="ga8a0f6a7cd88d5dae6bbc97153bd9d73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a0f6a7cd88d5dae6bbc97153bd9d73f">&#9670;&#160;</a></span>uhos_tls_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void * uhos_tls_init </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tls初始化。 </p>
+<p>初始化成功后应用方拿到一个句柄，设置、握手、收发数据都使用该句柄。 </p><dl class="section return"><dt>返回</dt><dd>成功返回tls句柄，失败返回NULL。 </dd></dl>
+
+</div>
+</div>
+<a id="ga441e448cb3e4deefd91c934b09532d73" name="ga441e448cb3e4deefd91c934b09532d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga441e448cb3e4deefd91c934b09532d73">&#9670;&#160;</a></span>uhos_tls_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_recv </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u8 *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收tls数据。 </p>
+<p>期间返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE，只是网络io没有数据可读或可写，需要再次接收。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">data</td><td>数据buffer。 </td></tr>
+    <tr><td class="paramname">data_len</td><td>数据长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回&gt;0，失败返回-1，连接断开返回0，继续发送返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE。 </dd></dl>
+
+</div>
+</div>
+<a id="gaa8fbf9b4dda3ee4c3aa7f064b89cf972" name="gaa8fbf9b4dda3ee4c3aa7f064b89cf972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8fbf9b4dda3ee4c3aa7f064b89cf972">&#9670;&#160;</a></span>uhos_tls_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_send </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送tls数据。 </p>
+<p>期间返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE，只是网络io没有数据可读或可写，需要再次发送。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">data</td><td>数据buffer。 </td></tr>
+    <tr><td class="paramname">data_len</td><td>数据长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回&gt;0，失败返回-1，继续发送返回UHOS_TLS_RET_WANT_READ或UHOS_TLS_RET_WANT_WRITE。 </dd></dl>
+
+</div>
+</div>
+<a id="ga8a0abb5f2a387706b90ee8c3e824d0a9" name="ga8a0abb5f2a387706b90ee8c3e824d0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a0abb5f2a387706b90ee8c3e824d0a9">&#9670;&#160;</a></span>uhos_tls_set_ca_cert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_set_ca_cert </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>ca_cert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>ca_cert_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置服务器ca证书。 </p>
+<p>如果是多个证书，将多个证书放到一个buffer里面。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">ca_cert</td><td>ca证书buffer。 </td></tr>
+    <tr><td class="paramname">ca_cert_len</td><td>ca证书buffer长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gaff14cb90127080326774505dd97fdda0" name="gaff14cb90127080326774505dd97fdda0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff14cb90127080326774505dd97fdda0">&#9670;&#160;</a></span>uhos_tls_set_ciphersuites()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_set_ciphersuites </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32 *&#160;</td>
+          <td class="paramname"><em>ciphersuites</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>ciphersuites_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置加密套件。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">ciphersuite</td><td>加密套件数组，设置值请见UHOS_TLS_CIPHERSUITES_E。 </td></tr>
+    <tr><td class="paramname">ciphersuite_count</td><td>加密套件个数，数组长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gac595eb86999955252e1964d4650d3ae3" name="gac595eb86999955252e1964d4650d3ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac595eb86999955252e1964d4650d3ae3">&#9670;&#160;</a></span>uhos_tls_set_connected_socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_set_connected_socket </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>socket_fd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置已连接的套接字。 </p>
+<p>tls库不会直接连接服务器，需要应用方连接服务器成功后设置fd给tls库用于数据收发。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">socket_fd</td><td>已连接的套接字。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gac2629e2ce821347f141366cdf35597b7" name="gac2629e2ce821347f141366cdf35597b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2629e2ce821347f141366cdf35597b7">&#9670;&#160;</a></span>uhos_tls_set_own_cert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_set_own_cert </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>own_cert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>own_cert_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_u8 *&#160;</td>
+          <td class="paramname"><em>priv_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_size_t&#160;</td>
+          <td class="paramname"><em>priv_key_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置设备证书和私钥。 </p>
+<p>用于双向认证，服务器校验客户端身份。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+    <tr><td class="paramname">own_cert</td><td>客户端证书buffer。 </td></tr>
+    <tr><td class="paramname">own_cert_len</td><td>客户端证书长度。 </td></tr>
+    <tr><td class="paramname">priv_key</td><td>客户端私钥buffer。 </td></tr>
+    <tr><td class="paramname">priv_key_len</td><td>客户端私钥长度。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="gabad27a2e95ad45dd1c24d0a52131f6fc" name="gabad27a2e95ad45dd1c24d0a52131f6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabad27a2e95ad45dd1c24d0a52131f6fc">&#9670;&#160;</a></span>uhos_tls_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_start </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tls句柄开始适配资源。 </p>
+<p>调用该函数之后，tls的配置才开始生效，set接口只是传入设置值。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+<a id="ga033a9ce1cce44cbadd4b0ec5456279a5" name="ga033a9ce1cce44cbadd4b0ec5456279a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga033a9ce1cce44cbadd4b0ec5456279a5">&#9670;&#160;</a></span>uhos_tls_uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_tls_uninit </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tls反初始化，释放tls所有资源。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>tls句柄。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回0，失败返回-1。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

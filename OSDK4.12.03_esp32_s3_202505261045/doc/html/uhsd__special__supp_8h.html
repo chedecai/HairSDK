@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: uhsd_special_supp.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('uhsd__special__supp_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">uhsd_special_supp.h 文件参考<div class="ingroups"><a class="el" href="group__grp__special__supp.html">消息推送接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uhsd__types_8h_source.html">uhsd_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uhsd_8h_source.html">uhsd.h</a>&quot;</code><br />
+</div>
+<p><a href="uhsd__special__supp_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gacbc9d4d45bac73a89b6f106a0be45c8c" id="r_gacbc9d4d45bac73a89b6f106a0be45c8c"><td class="memItemLeft" align="right" valign="top">
+typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_dev_epp_transparent_down_cb</b>) (uhsd_devHandle devHandle, uhsd_s32 req_sn, uhsd_u8 *data, uhsd_u16 data_len, const uhsd_u8 *traceId)</td></tr>
+<tr class="separator:gacbc9d4d45bac73a89b6f106a0be45c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab59066300bf0f0936ab3ad3f3c780713" id="r_gab59066300bf0f0936ab3ad3f3c780713"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#gab59066300bf0f0936ab3ad3f3c780713">uhsd_dev_epp_transparent_rpt_cb</a>) (uhsd_s32 devHandle, uhsd_s32 src_devHdl, uhsd_char *op_name, uhsd_char *epp_data, uhsd_u32 epp_data_len)</td></tr>
+<tr class="memdesc:gab59066300bf0f0936ab3ad3f3c780713"><td class="mdescLeft">&#160;</td><td class="mdescRight">底板设备E++数据回调通知，SDK收到源设备上报数据后触发该回调，开发者实现。  <br /></td></tr>
+<tr class="separator:gab59066300bf0f0936ab3ad3f3c780713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga858736b4b6732c430f11021c146d48e1" id="r_ga858736b4b6732c430f11021c146d48e1"><td class="memItemLeft" align="right" valign="top">typedef uhsd_s32(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#ga858736b4b6732c430f11021c146d48e1">uhsd_dev_epp_transparent_rsp_cb</a>) (uhsd_s32 devHandle, uhsd_s32 src_devHdl, uhsd_u32 req_sn, uhsd_char *epp_data, uhsd_u32 epp_data_len, const uhsd_char *traceId)</td></tr>
+<tr class="memdesc:ga858736b4b6732c430f11021c146d48e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">底板设备E++数据回调通知，SDK收到源设备应答数据后触发该回调，开发者实现。  <br /></td></tr>
+<tr class="separator:ga858736b4b6732c430f11021c146d48e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga362ecb033a9b0cc047aa8ad3544b2700" id="r_ga362ecb033a9b0cc047aa8ad3544b2700"><td class="memItemLeft" align="right" valign="top"><a id="ga362ecb033a9b0cc047aa8ad3544b2700" name="ga362ecb033a9b0cc047aa8ad3544b2700"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_dev_event_t</b> { <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_POWER_ON</b>
+, <b>UHSD_DEV_EVENT_CLR_CONF</b>
+, <b>UHSD_DEV_EVENT_ENTER_SOFTAP</b>
+, <b>UHSD_DEV_EVENT_ENTER_SMARTLINK</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_ENTER_SMARTAP</b>
+, <b>UHSD_DEV_EVENT_ENTER_WORK</b>
+, <b>UHSD_DEV_EVENT_TEST_MODE</b>
+, <b>UHSD_DEV_EVENT_FAIL</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_DEV_OK</b>
+, <b>UHSD_DEV_EVENT_LOWPOWER_STAT_CHANGE</b>
+, <b>UHSD_DEV_EVENT_ENTER_LOWPOWER</b>
+, <b>UHSD_DEV_EVENT_EXIT_LOWPOWER</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_ENTER_CONFIG</b>
+, <b>UHSD_DEV_EVENT_EXIT_CONFIG</b>
+, <b>UHSD_DEV_EVENT_ONLINE</b>
+, <b>UHSD_DEV_EVENT_OFFLINE</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_MCS_URL_INFO_NOTIFY</b>
+, <b>UHSD_DEV_EVENT_DEV_OFFLINE_REASON</b>
+, <b>UHSD_DEV_EVENT_EPP_RESET</b>
+, <b>UHSD_DEV_EVENT_EPP_UPGRADING</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_EPP_UPGRADE_FINISHED</b>
+, <b>UHSD_DEV_EVENT_CLOUD_READY</b>
+, <b>UHSD_DEV_EVENT_CLOUD_UNREADY</b>
+, <b>UHSD_DEV_EVENT_BLE_READY</b>
+, <br />
+&#160;&#160;<b>UHSD_DEV_EVENT_BLE_UNREADY</b>
+<br />
+ }</td></tr>
+<tr class="separator:ga362ecb033a9b0cc047aa8ad3544b2700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga996e4fe0b923aa476ec52e3f609e0437" id="r_ga996e4fe0b923aa476ec52e3f609e0437"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#ga996e4fe0b923aa476ec52e3f609e0437">uhsd_dev_set_device_epp_transparent_down_cb</a> (uhsd_dev_epp_transparent_down_cb cb)</td></tr>
+<tr class="memdesc:ga996e4fe0b923aa476ec52e3f609e0437"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置透传数据回调  <br /></td></tr>
+<tr class="separator:ga996e4fe0b923aa476ec52e3f609e0437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac48a6685ce2ab85bf7c3739b061af89a" id="r_gac48a6685ce2ab85bf7c3739b061af89a"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#gac48a6685ce2ab85bf7c3739b061af89a">uhsd_dev_device_epp_transparent_up</a> (uhsd_devHandle devHandle, uhsd_s32 req_sn, uhsd_u8 *data, uhsd_s32 data_len, const uhsd_s32 result, const uhsd_u8 *traceId)</td></tr>
+<tr class="memdesc:gac48a6685ce2ab85bf7c3739b061af89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">透传数据上行  <br /></td></tr>
+<tr class="separator:gac48a6685ce2ab85bf7c3739b061af89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48e1b95917809f74e4f81062551b305d" id="r_ga48e1b95917809f74e4f81062551b305d"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#ga48e1b95917809f74e4f81062551b305d">uhsd_dev_module_ota_set</a> (uhsd_moduleHandle moduleHandle, uhsd_s32 enable)</td></tr>
+<tr class="memdesc:ga48e1b95917809f74e4f81062551b305d"><td class="mdescLeft">&#160;</td><td class="mdescRight">模组升级设置  <br /></td></tr>
+<tr class="separator:ga48e1b95917809f74e4f81062551b305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6934c3550c11210aa64e5c1b443fc3d" id="r_gab6934c3550c11210aa64e5c1b443fc3d"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_dev_up_notify</b> (uhsd_devHandle devHandle, uhsd_dev_event_t evt)</td></tr>
+<tr class="separator:gab6934c3550c11210aa64e5c1b443fc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga242086ccb1ee45c3c0ecb35d139525b8" id="r_ga242086ccb1ee45c3c0ecb35d139525b8"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#ga242086ccb1ee45c3c0ecb35d139525b8">uhsd_ota_restore_upgrade</a> (const uhsd_u8 *items, uhsd_u32 items_len)</td></tr>
+<tr class="memdesc:ga242086ccb1ee45c3c0ecb35d139525b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复ota升级  <br /></td></tr>
+<tr class="separator:ga242086ccb1ee45c3c0ecb35d139525b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf51867702fa0999df7f2a7c09d27714" id="r_gaaf51867702fa0999df7f2a7c09d27714"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_void&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_restore_config_data</b> (uhsd_char *wifi_ssid, uhsd_u16 ssid_len, uhsd_char *wifi_key, uhsd_u16 key_len)</td></tr>
+<tr class="separator:gaaf51867702fa0999df7f2a7c09d27714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42bf0a3c36d4162a95c91b6b44583920" id="r_ga42bf0a3c36d4162a95c91b6b44583920"><td class="memItemLeft" align="right" valign="top">
+UHSD_API void&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_free_pairs</b> (<a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *pairs, uhsd_u8 pairs_num)</td></tr>
+<tr class="separator:ga42bf0a3c36d4162a95c91b6b44583920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d4e8d26d27c2cbd07fbd7038efc6125" id="r_ga0d4e8d26d27c2cbd07fbd7038efc6125"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_pairs_to_epp</b> (uhsd_char *op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> *pairs, uhsd_u8 pairs_num, uhsd_u8 **epp, uhsd_u16 *epp_len)</td></tr>
+<tr class="separator:ga0d4e8d26d27c2cbd07fbd7038efc6125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34139bf9ee9ba1d03ec8936c61e3558a" id="r_ga34139bf9ee9ba1d03ec8936c61e3558a"><td class="memItemLeft" align="right" valign="top">
+UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><b>uhsd_epp_to_pairs</b> (uhsd_u8 *epp, uhsd_u16 epp_len, uhsd_char **op_name, <a class="el" href="structuhsd__dev__pair__t.html">uhsd_dev_pair_t</a> **pairs, uhsd_s32 *pairs_num)</td></tr>
+<tr class="separator:ga34139bf9ee9ba1d03ec8936c61e3558a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf658a7e32ba27ed28a6a3e972ecb0dce" id="r_gaf658a7e32ba27ed28a6a3e972ecb0dce"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#gaf658a7e32ba27ed28a6a3e972ecb0dce">uhsd_dev_device_epp_binary_transparent_req</a> (uhsd_devHandle devHandle, uhsd_devHandle dst_devHdl, uhsd_u32 req_sn, const uhsd_char *epp_data, const uhsd_u32 epp_data_len, const uhsd_char *traceId)</td></tr>
+<tr class="memdesc:gaf658a7e32ba27ed28a6a3e972ecb0dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">epp 二进制数据,向目标设备请求数据  <br /></td></tr>
+<tr class="separator:gaf658a7e32ba27ed28a6a3e972ecb0dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae218c87675725e6254a08ec36d94b0a2" id="r_gae218c87675725e6254a08ec36d94b0a2"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#gae218c87675725e6254a08ec36d94b0a2">uhsd_dev_set_device_epp_transparent_rpt_cb</a> (<a class="el" href="group__grp__special__supp.html#gab59066300bf0f0936ab3ad3f3c780713">uhsd_dev_epp_transparent_rpt_cb</a> cb)</td></tr>
+<tr class="memdesc:gae218c87675725e6254a08ec36d94b0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置epp透传数据回调, 可以回调透传源设备的上报数据  <br /></td></tr>
+<tr class="separator:gae218c87675725e6254a08ec36d94b0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f4f142b8eae91322cd132c522788491" id="r_ga2f4f142b8eae91322cd132c522788491"><td class="memItemLeft" align="right" valign="top">UHSD_API uhsd_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__special__supp.html#ga2f4f142b8eae91322cd132c522788491">uhsd_dev_set_device_epp_transparent_rsp_cb</a> (<a class="el" href="group__grp__special__supp.html#ga858736b4b6732c430f11021c146d48e1">uhsd_dev_epp_transparent_rsp_cb</a> cb)</td></tr>
+<tr class="memdesc:ga2f4f142b8eae91322cd132c522788491"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置epp透传数据回调, 可以回调透传源设备的应答数据  <br /></td></tr>
+<tr class="separator:ga2f4f142b8eae91322cd132c522788491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_056ec8f0377ddc4293192cbc6b19c99c.html">services</a></li><li class="navelem"><a class="el" href="dir_43bff6f0ec60e8d12d43432801828ddd.html">api_wrapper</a></li><li class="navelem"><a class="el" href="dir_071433b930a847baed715068aa3aed91.html">include</a></li><li class="navelem"><a class="el" href="uhsd__special__supp_8h.html">uhsd_special_supp.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['security_0',['security',['../structuhsd__dev__config__wifi__scan__info__st.html#a3dd76312ed042ac2a45846f759458a8c',1,'uhsd_dev_config_wifi_scan_info_st::security'],['../structuh__wifi__scan__item.html#a4a08b32e7657b48fa2bf3430d8e4751e',1,'uh_wifi_scan_item::security']]],
+  ['serviceuuid_5fnum_1',['serviceuuid_num',['../structuhepp__ble__adv__scan__passthrough__rules__t.html#aebfe9cd105a48bb3cbd557b3afca6504',1,'uhepp_ble_adv_scan_passthrough_rules_t::serviceUUID_num'],['../structuhsd__ble__adv__scan__passthrough__rules__t.html#af63726f6cbfc4f69bdecf26ae47c9902',1,'uhsd_ble_adv_scan_passthrough_rules_t::serviceUUID_num']]],
+  ['smart_5fboard_5fsupp_2',['smart_board_supp',['../structuhepp__info__t.html#a24fa8142fab8629792c48db482207ae3',1,'uhepp_info_t']]],
+  ['sn_3',['sn',['../structuhsd__msgpush__voice__param__t.html#acee4d2c803581c122a83321449b816f6',1,'uhsd_msgpush_voice_param_t']]],
+  ['soft_5fid_4',['soft_id',['../structuhsd__ota__online__sub__firm__info.html#a98eead8ec76441a8499bfa4804dd7ada',1,'uhsd_ota_online_sub_firm_info']]],
+  ['soft_5fversion_5',['soft_version',['../structuhsd__ota__online__sub__firm__info.html#a2c642bca4c79be7e82ec8ccccaa5480d',1,'uhsd_ota_online_sub_firm_info']]],
+  ['somebody_6',['somebody',['../structuhepp__net__radar__status__info__t.html#a26e3cf8e3024bba22d64936f64b303be',1,'uhepp_net_radar_status_info_t']]],
+  ['ssid_7',['ssid',['../structuh__wifi__scan__item.html#a7720b458de5e92b4aa23ccb090969f00',1,'uh_wifi_scan_item::ssid'],['../structuhsd__dev__config__wifi__scan__info__st.html#a17defd87ba89e9ad0d17e678c2268edd',1,'uhsd_dev_config_wifi_scan_info_st::ssid']]],
+  ['ssid_5flen_8',['ssid_len',['../structuh__wifi__scan__item.html#a5253f09775f520d2b6a4c0de53f2c810',1,'uh_wifi_scan_item::ssid_len'],['../structuhsd__dev__config__wifi__scan__info__st.html#abd960dd1ac8063df93153001d30f35b2',1,'uhsd_dev_config_wifi_scan_info_st::ssid_len']]],
+  ['status_9',['status',['../structuhepp__net__radar__status__info__t.html#a1139ae95325ea44e1f4de281929f0126',1,'uhepp_net_radar_status_info_t']]],
+  ['style_10',['style',['../structuhsd__msgpush__voice__param__t.html#a9dfbeade53176f3730675614a3d72487',1,'uhsd_msgpush_voice_param_t']]],
+  ['sub_5fdesc_5faddr_11',['sub_desc_addr',['../structuhsd__ota__online__whole__desc__info.html#ae6e8f096938cbec81c687f1462004578',1,'uhsd_ota_online_whole_desc_info']]],
+  ['sub_5fdesc_5fcrc_12',['sub_desc_crc',['../structuhsd__ota__online__whole__desc__info.html#aa68be80b8d6da9b0203c050c3ac3f202',1,'uhsd_ota_online_whole_desc_info']]],
+  ['sub_5fdesc_5fsize_13',['sub_desc_size',['../structuhsd__ota__online__whole__desc__info.html#ac92825e4ae006ac7fb67b290787332a6',1,'uhsd_ota_online_whole_desc_info']]],
+  ['sub_5ffirm_5fcount_14',['sub_firm_count',['../structuhsd__ota__online__whole__desc__info.html#aeb42f72a70d4f20db7cd50ef2d21f31f',1,'uhsd_ota_online_whole_desc_info']]],
+  ['summary_15',['summary',['../structuhsd__ota__online__whole__base__info.html#afbc70d7a7622ef91aa0c459eeeecf108',1,'uhsd_ota_online_whole_base_info::summary'],['../structuhsd__ota__online__sub__firm__info.html#afbc70d7a7622ef91aa0c459eeeecf108',1,'uhsd_ota_online_sub_firm_info::summary']]],
+  ['sw_5fver_16',['sw_ver',['../structuhepp__info__t.html#a26204611419ff5adf033da1f4a9946aa',1,'uhepp_info_t']]]
+];

@@ -1,0 +1,1365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UHomeOS SDK 接口及适配说明: Grp_uhosfs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UHomeOS SDK 接口及适配说明<span id="projectnumber">&#160;4.12.03</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__grp__uhosfs.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">文件</a> &#124;
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Grp_uhosfs</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
+文件</h2></td></tr>
+<tr class="memitem:uh__dirent_8h" id="r_uh__dirent_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__dirent_8h.html">uh_dirent.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__fs_8h" id="r_uh__fs_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__fs_8h.html">uh_fs.h</a></td></tr>
+<tr class="memdesc:uh__fs_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">本文件接口是参考linux的posix接口, 每个函数的行为、入参、出参、返回值等都和posix保持一致，只是都加了"UHOS_"或者"uhos_"前缀 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:uh__fs__types_8h" id="r_uh__fs__types_8h"><td class="memItemLeft" align="right" valign="top">文件 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uh__fs__types_8h.html">uh_fs_types.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__stat__t.html">uhos_stat_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__utimbuf__t.html">uhos_utimbuf_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuhos__dirent__t.html">uhos_dirent_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga6eb90b48755fa214e52502f3a93b1941" id="r_ga6eb90b48755fa214e52502f3a93b1941"><td class="memItemLeft" align="right" valign="top"><a id="ga6eb90b48755fa214e52502f3a93b1941" name="ga6eb90b48755fa214e52502f3a93b1941"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_RDONLY</b>&#160;&#160;&#160;00</td></tr>
+<tr class="separator:ga6eb90b48755fa214e52502f3a93b1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bd99d1878f1e1aee15414253170797a" id="r_ga5bd99d1878f1e1aee15414253170797a"><td class="memItemLeft" align="right" valign="top"><a id="ga5bd99d1878f1e1aee15414253170797a" name="ga5bd99d1878f1e1aee15414253170797a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_WRONLY</b>&#160;&#160;&#160;01</td></tr>
+<tr class="separator:ga5bd99d1878f1e1aee15414253170797a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga978b517e7aaf61d859d19beaf1a471bb" id="r_ga978b517e7aaf61d859d19beaf1a471bb"><td class="memItemLeft" align="right" valign="top"><a id="ga978b517e7aaf61d859d19beaf1a471bb" name="ga978b517e7aaf61d859d19beaf1a471bb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_RDWR</b>&#160;&#160;&#160;02</td></tr>
+<tr class="separator:ga978b517e7aaf61d859d19beaf1a471bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga070e4918c372fe5a790e9ba8561dcafb" id="r_ga070e4918c372fe5a790e9ba8561dcafb"><td class="memItemLeft" align="right" valign="top"><a id="ga070e4918c372fe5a790e9ba8561dcafb" name="ga070e4918c372fe5a790e9ba8561dcafb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_ACCMODE</b>&#160;&#160;&#160;00000003</td></tr>
+<tr class="separator:ga070e4918c372fe5a790e9ba8561dcafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e83cb0b62bbeba6e238b780e5dadbab" id="r_ga4e83cb0b62bbeba6e238b780e5dadbab"><td class="memItemLeft" align="right" valign="top"><a id="ga4e83cb0b62bbeba6e238b780e5dadbab" name="ga4e83cb0b62bbeba6e238b780e5dadbab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_CREAT</b>&#160;&#160;&#160;0100</td></tr>
+<tr class="separator:ga4e83cb0b62bbeba6e238b780e5dadbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac02b1ec32d866666d1f7f94ad4b89c4d" id="r_gac02b1ec32d866666d1f7f94ad4b89c4d"><td class="memItemLeft" align="right" valign="top"><a id="gac02b1ec32d866666d1f7f94ad4b89c4d" name="gac02b1ec32d866666d1f7f94ad4b89c4d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_EXCL</b>&#160;&#160;&#160;0200</td></tr>
+<tr class="separator:gac02b1ec32d866666d1f7f94ad4b89c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaea0d5bf608bdf82aa76db57a6495667" id="r_gaaea0d5bf608bdf82aa76db57a6495667"><td class="memItemLeft" align="right" valign="top"><a id="gaaea0d5bf608bdf82aa76db57a6495667" name="gaaea0d5bf608bdf82aa76db57a6495667"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_NOCTTY</b>&#160;&#160;&#160;0400</td></tr>
+<tr class="separator:gaaea0d5bf608bdf82aa76db57a6495667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75b816a93df5fd35028432e2c0bd3b4c" id="r_ga75b816a93df5fd35028432e2c0bd3b4c"><td class="memItemLeft" align="right" valign="top"><a id="ga75b816a93df5fd35028432e2c0bd3b4c" name="ga75b816a93df5fd35028432e2c0bd3b4c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_TRUNC</b>&#160;&#160;&#160;01000</td></tr>
+<tr class="separator:ga75b816a93df5fd35028432e2c0bd3b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab21ceccfb7aebb8ae9c09ab2073524bc" id="r_gab21ceccfb7aebb8ae9c09ab2073524bc"><td class="memItemLeft" align="right" valign="top"><a id="gab21ceccfb7aebb8ae9c09ab2073524bc" name="gab21ceccfb7aebb8ae9c09ab2073524bc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_APPEND</b>&#160;&#160;&#160;02000</td></tr>
+<tr class="separator:gab21ceccfb7aebb8ae9c09ab2073524bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a8b9cd19212cc5fe8167352abae8bf3" id="r_ga4a8b9cd19212cc5fe8167352abae8bf3"><td class="memItemLeft" align="right" valign="top"><a id="ga4a8b9cd19212cc5fe8167352abae8bf3" name="ga4a8b9cd19212cc5fe8167352abae8bf3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_NONBLOCK</b>&#160;&#160;&#160;04000</td></tr>
+<tr class="separator:ga4a8b9cd19212cc5fe8167352abae8bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47038fc903c7b8a2bc2991613bebc6e5" id="r_ga47038fc903c7b8a2bc2991613bebc6e5"><td class="memItemLeft" align="right" valign="top"><a id="ga47038fc903c7b8a2bc2991613bebc6e5" name="ga47038fc903c7b8a2bc2991613bebc6e5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_NDELAY</b>&#160;&#160;&#160;UHOS_O_NONBLOCK</td></tr>
+<tr class="separator:ga47038fc903c7b8a2bc2991613bebc6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga612786b818b30962d7953daa492344d4" id="r_ga612786b818b30962d7953daa492344d4"><td class="memItemLeft" align="right" valign="top"><a id="ga612786b818b30962d7953daa492344d4" name="ga612786b818b30962d7953daa492344d4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_DSYNC</b>&#160;&#160;&#160;010000</td></tr>
+<tr class="separator:ga612786b818b30962d7953daa492344d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac9bca91c12d77241451f42824aa7919" id="r_gaac9bca91c12d77241451f42824aa7919"><td class="memItemLeft" align="right" valign="top"><a id="gaac9bca91c12d77241451f42824aa7919" name="gaac9bca91c12d77241451f42824aa7919"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_ASYNC</b>&#160;&#160;&#160;020000</td></tr>
+<tr class="separator:gaac9bca91c12d77241451f42824aa7919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c6f8a5f46083812ce7b5afe08a30159" id="r_ga9c6f8a5f46083812ce7b5afe08a30159"><td class="memItemLeft" align="right" valign="top"><a id="ga9c6f8a5f46083812ce7b5afe08a30159" name="ga9c6f8a5f46083812ce7b5afe08a30159"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_DIRECT</b>&#160;&#160;&#160;040000</td></tr>
+<tr class="separator:ga9c6f8a5f46083812ce7b5afe08a30159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c1d05ad10c44c89297de43150199ec0" id="r_ga5c1d05ad10c44c89297de43150199ec0"><td class="memItemLeft" align="right" valign="top"><a id="ga5c1d05ad10c44c89297de43150199ec0" name="ga5c1d05ad10c44c89297de43150199ec0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_LARGEFILE</b>&#160;&#160;&#160;0100000</td></tr>
+<tr class="separator:ga5c1d05ad10c44c89297de43150199ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05b3b3ced38dbced8116cc3fe8115b74" id="r_ga05b3b3ced38dbced8116cc3fe8115b74"><td class="memItemLeft" align="right" valign="top"><a id="ga05b3b3ced38dbced8116cc3fe8115b74" name="ga05b3b3ced38dbced8116cc3fe8115b74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_DIRECTORY</b>&#160;&#160;&#160;0200000</td></tr>
+<tr class="separator:ga05b3b3ced38dbced8116cc3fe8115b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b754f2cf0a21389ef31fe5d31f905a2" id="r_ga1b754f2cf0a21389ef31fe5d31f905a2"><td class="memItemLeft" align="right" valign="top"><a id="ga1b754f2cf0a21389ef31fe5d31f905a2" name="ga1b754f2cf0a21389ef31fe5d31f905a2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_NOFOLLOW</b>&#160;&#160;&#160;0400000</td></tr>
+<tr class="separator:ga1b754f2cf0a21389ef31fe5d31f905a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92a5db2de4339b279853f0771f75ae39" id="r_ga92a5db2de4339b279853f0771f75ae39"><td class="memItemLeft" align="right" valign="top"><a id="ga92a5db2de4339b279853f0771f75ae39" name="ga92a5db2de4339b279853f0771f75ae39"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_NOATIME</b>&#160;&#160;&#160;01000000</td></tr>
+<tr class="separator:ga92a5db2de4339b279853f0771f75ae39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76769bee0ea95b4e85efb74eaf6d6e5c" id="r_ga76769bee0ea95b4e85efb74eaf6d6e5c"><td class="memItemLeft" align="right" valign="top"><a id="ga76769bee0ea95b4e85efb74eaf6d6e5c" name="ga76769bee0ea95b4e85efb74eaf6d6e5c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_CLOEXEC</b>&#160;&#160;&#160;02000000</td></tr>
+<tr class="separator:ga76769bee0ea95b4e85efb74eaf6d6e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga228f061f0fb6f1ef1441a0e473eec0cb" id="r_ga228f061f0fb6f1ef1441a0e473eec0cb"><td class="memItemLeft" align="right" valign="top"><a id="ga228f061f0fb6f1ef1441a0e473eec0cb" name="ga228f061f0fb6f1ef1441a0e473eec0cb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_SYNC</b>&#160;&#160;&#160;04010000</td></tr>
+<tr class="separator:ga228f061f0fb6f1ef1441a0e473eec0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga225998492000312b9bba1c038695987b" id="r_ga225998492000312b9bba1c038695987b"><td class="memItemLeft" align="right" valign="top"><a id="ga225998492000312b9bba1c038695987b" name="ga225998492000312b9bba1c038695987b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_FSYNC</b>&#160;&#160;&#160;UHOS_O_SYNC</td></tr>
+<tr class="separator:ga225998492000312b9bba1c038695987b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f99df9afc4e4340034c40c9801a41fe" id="r_ga2f99df9afc4e4340034c40c9801a41fe"><td class="memItemLeft" align="right" valign="top"><a id="ga2f99df9afc4e4340034c40c9801a41fe" name="ga2f99df9afc4e4340034c40c9801a41fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_O_PATH</b>&#160;&#160;&#160;010000000</td></tr>
+<tr class="separator:ga2f99df9afc4e4340034c40c9801a41fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b2a103c1c8baba8b8731c4aa2df7768" id="r_ga2b2a103c1c8baba8b8731c4aa2df7768"><td class="memItemLeft" align="right" valign="top"><a id="ga2b2a103c1c8baba8b8731c4aa2df7768" name="ga2b2a103c1c8baba8b8731c4aa2df7768"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEEK_SET</b>&#160;&#160;&#160;0 /* Seek from beginning of file.  */</td></tr>
+<tr class="separator:ga2b2a103c1c8baba8b8731c4aa2df7768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad265bcbcdfbae69d5c36e7e4cfbd9641" id="r_gad265bcbcdfbae69d5c36e7e4cfbd9641"><td class="memItemLeft" align="right" valign="top"><a id="gad265bcbcdfbae69d5c36e7e4cfbd9641" name="gad265bcbcdfbae69d5c36e7e4cfbd9641"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEEK_CUR</b>&#160;&#160;&#160;1 /* Seek from current position.  */</td></tr>
+<tr class="separator:gad265bcbcdfbae69d5c36e7e4cfbd9641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab39384d22865af7f78a478e6f47d5f6d" id="r_gab39384d22865af7f78a478e6f47d5f6d"><td class="memItemLeft" align="right" valign="top"><a id="gab39384d22865af7f78a478e6f47d5f6d" name="gab39384d22865af7f78a478e6f47d5f6d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_SEEK_END</b>&#160;&#160;&#160;2 /* Seek from end of file.  */</td></tr>
+<tr class="separator:gab39384d22865af7f78a478e6f47d5f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaead9c2cc17173194f4665f140822ac62" id="r_gaead9c2cc17173194f4665f140822ac62"><td class="memItemLeft" align="right" valign="top"><a id="gaead9c2cc17173194f4665f140822ac62" name="gaead9c2cc17173194f4665f140822ac62"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_R_OK</b>&#160;&#160;&#160;4 /* Test for read permission.  */</td></tr>
+<tr class="separator:gaead9c2cc17173194f4665f140822ac62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04d64019599c77f19c1cc6deede4ce50" id="r_ga04d64019599c77f19c1cc6deede4ce50"><td class="memItemLeft" align="right" valign="top"><a id="ga04d64019599c77f19c1cc6deede4ce50" name="ga04d64019599c77f19c1cc6deede4ce50"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_W_OK</b>&#160;&#160;&#160;2 /* Test for write permission.  */</td></tr>
+<tr class="separator:ga04d64019599c77f19c1cc6deede4ce50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e426f95ce65e9cb26a9ed5cc9adf241" id="r_ga1e426f95ce65e9cb26a9ed5cc9adf241"><td class="memItemLeft" align="right" valign="top"><a id="ga1e426f95ce65e9cb26a9ed5cc9adf241" name="ga1e426f95ce65e9cb26a9ed5cc9adf241"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_X_OK</b>&#160;&#160;&#160;1 /* Test for execute permission.  */</td></tr>
+<tr class="separator:ga1e426f95ce65e9cb26a9ed5cc9adf241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f14c285828dce10653b56251bfe5c25" id="r_ga3f14c285828dce10653b56251bfe5c25"><td class="memItemLeft" align="right" valign="top"><a id="ga3f14c285828dce10653b56251bfe5c25" name="ga3f14c285828dce10653b56251bfe5c25"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_F_OK</b>&#160;&#160;&#160;0 /* Test for existence.  */</td></tr>
+<tr class="separator:ga3f14c285828dce10653b56251bfe5c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ee7d57fb1fbffe61a406b8d91923a2e" id="r_ga2ee7d57fb1fbffe61a406b8d91923a2e"><td class="memItemLeft" align="right" valign="top"><a id="ga2ee7d57fb1fbffe61a406b8d91923a2e" name="ga2ee7d57fb1fbffe61a406b8d91923a2e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFMT</b>&#160;&#160;&#160;0170000 /* These bits determine file type.  */</td></tr>
+<tr class="separator:ga2ee7d57fb1fbffe61a406b8d91923a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44382880294a7743e290660452048cf2" id="r_ga44382880294a7743e290660452048cf2"><td class="memItemLeft" align="right" valign="top"><a id="ga44382880294a7743e290660452048cf2" name="ga44382880294a7743e290660452048cf2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFSOCK</b>&#160;&#160;&#160;0140000 /* Socket.  */</td></tr>
+<tr class="separator:ga44382880294a7743e290660452048cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3a5911bcb4d8dc024f0a6dd4a9a6713" id="r_gaf3a5911bcb4d8dc024f0a6dd4a9a6713"><td class="memItemLeft" align="right" valign="top"><a id="gaf3a5911bcb4d8dc024f0a6dd4a9a6713" name="gaf3a5911bcb4d8dc024f0a6dd4a9a6713"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFLNK</b>&#160;&#160;&#160;0120000 /* Symbolic link.  */</td></tr>
+<tr class="separator:gaf3a5911bcb4d8dc024f0a6dd4a9a6713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0855ed3897d37707288f51563dd99e9" id="r_gaf0855ed3897d37707288f51563dd99e9"><td class="memItemLeft" align="right" valign="top"><a id="gaf0855ed3897d37707288f51563dd99e9" name="gaf0855ed3897d37707288f51563dd99e9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFREG</b>&#160;&#160;&#160;0100000 /* Regular file.  */</td></tr>
+<tr class="separator:gaf0855ed3897d37707288f51563dd99e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7289d3db7be1f2d266321e5b07f8a2d3" id="r_ga7289d3db7be1f2d266321e5b07f8a2d3"><td class="memItemLeft" align="right" valign="top"><a id="ga7289d3db7be1f2d266321e5b07f8a2d3" name="ga7289d3db7be1f2d266321e5b07f8a2d3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFBLK</b>&#160;&#160;&#160;0060000 /* Block device.  */</td></tr>
+<tr class="separator:ga7289d3db7be1f2d266321e5b07f8a2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40e8d8f2383edd8b5afe3b78c509dee3" id="r_ga40e8d8f2383edd8b5afe3b78c509dee3"><td class="memItemLeft" align="right" valign="top"><a id="ga40e8d8f2383edd8b5afe3b78c509dee3" name="ga40e8d8f2383edd8b5afe3b78c509dee3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFDIR</b>&#160;&#160;&#160;0040000 /* Directory.  */</td></tr>
+<tr class="separator:ga40e8d8f2383edd8b5afe3b78c509dee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf94f22c91b772046c63b839048241f36" id="r_gaf94f22c91b772046c63b839048241f36"><td class="memItemLeft" align="right" valign="top"><a id="gaf94f22c91b772046c63b839048241f36" name="gaf94f22c91b772046c63b839048241f36"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFCHR</b>&#160;&#160;&#160;0020000 /* Character device.  */</td></tr>
+<tr class="separator:gaf94f22c91b772046c63b839048241f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69f8428877c1e59bf5e41a64a5003cd7" id="r_ga69f8428877c1e59bf5e41a64a5003cd7"><td class="memItemLeft" align="right" valign="top"><a id="ga69f8428877c1e59bf5e41a64a5003cd7" name="ga69f8428877c1e59bf5e41a64a5003cd7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_IFIFO</b>&#160;&#160;&#160;0010000 /* FIFO.  */</td></tr>
+<tr class="separator:ga69f8428877c1e59bf5e41a64a5003cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga425d5f29ca6eb6100079a0d1b237ba04" id="r_ga425d5f29ca6eb6100079a0d1b237ba04"><td class="memItemLeft" align="right" valign="top"><a id="ga425d5f29ca6eb6100079a0d1b237ba04" name="ga425d5f29ca6eb6100079a0d1b237ba04"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISTYPE</b>(mode,  mask)&#160;&#160;&#160;(((mode)&amp;UHOS_S_IFMT) == (mask))</td></tr>
+<tr class="separator:ga425d5f29ca6eb6100079a0d1b237ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95c8219ad869c92400848707677ebe02" id="r_ga95c8219ad869c92400848707677ebe02"><td class="memItemLeft" align="right" valign="top"><a id="ga95c8219ad869c92400848707677ebe02" name="ga95c8219ad869c92400848707677ebe02"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISDIR</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFDIR)</td></tr>
+<tr class="separator:ga95c8219ad869c92400848707677ebe02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c4f2345b06311c1218a38c6ed00ab74" id="r_ga7c4f2345b06311c1218a38c6ed00ab74"><td class="memItemLeft" align="right" valign="top"><a id="ga7c4f2345b06311c1218a38c6ed00ab74" name="ga7c4f2345b06311c1218a38c6ed00ab74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISCHR</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFCHR)</td></tr>
+<tr class="separator:ga7c4f2345b06311c1218a38c6ed00ab74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a7038efb3465f18431489bcd2135329" id="r_ga7a7038efb3465f18431489bcd2135329"><td class="memItemLeft" align="right" valign="top"><a id="ga7a7038efb3465f18431489bcd2135329" name="ga7a7038efb3465f18431489bcd2135329"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISBLK</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFBLK)</td></tr>
+<tr class="separator:ga7a7038efb3465f18431489bcd2135329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d16d10661b5c2975bb6c592b1c8b210" id="r_ga7d16d10661b5c2975bb6c592b1c8b210"><td class="memItemLeft" align="right" valign="top"><a id="ga7d16d10661b5c2975bb6c592b1c8b210" name="ga7d16d10661b5c2975bb6c592b1c8b210"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISREG</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFREG)</td></tr>
+<tr class="separator:ga7d16d10661b5c2975bb6c592b1c8b210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga842b9d8f60fbe4944ad01f60602b7983" id="r_ga842b9d8f60fbe4944ad01f60602b7983"><td class="memItemLeft" align="right" valign="top"><a id="ga842b9d8f60fbe4944ad01f60602b7983" name="ga842b9d8f60fbe4944ad01f60602b7983"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISFIFO</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFIFO)</td></tr>
+<tr class="separator:ga842b9d8f60fbe4944ad01f60602b7983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad73e9c7c56e0457949f53bdcdbd5af8d" id="r_gad73e9c7c56e0457949f53bdcdbd5af8d"><td class="memItemLeft" align="right" valign="top"><a id="gad73e9c7c56e0457949f53bdcdbd5af8d" name="gad73e9c7c56e0457949f53bdcdbd5af8d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_S_ISLNK</b>(mode)&#160;&#160;&#160;UHOS_S_ISTYPE((mode), UHOS_S_IFLNK)</td></tr>
+<tr class="separator:gad73e9c7c56e0457949f53bdcdbd5af8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05fde8e7a471210be5c85833da29818d" id="r_ga05fde8e7a471210be5c85833da29818d"><td class="memItemLeft" align="right" valign="top"><a id="ga05fde8e7a471210be5c85833da29818d" name="ga05fde8e7a471210be5c85833da29818d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_F_GETFL</b>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ga05fde8e7a471210be5c85833da29818d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf203c78d487a8b0a036f65978cf368b" id="r_gadf203c78d487a8b0a036f65978cf368b"><td class="memItemLeft" align="right" valign="top"><a id="gadf203c78d487a8b0a036f65978cf368b" name="gadf203c78d487a8b0a036f65978cf368b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UHOS_F_SETFL</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:gadf203c78d487a8b0a036f65978cf368b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gab1629602d015cf368f3758a085437eec" id="r_gab1629602d015cf368f3758a085437eec"><td class="memItemLeft" align="right" valign="top"><a id="gab1629602d015cf368f3758a085437eec" name="gab1629602d015cf368f3758a085437eec"></a>
+typedef uhos_void(*&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_poll_notify_t</b>) (uhos_void *fds, uhos_void *arg)</td></tr>
+<tr class="separator:gab1629602d015cf368f3758a085437eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fc286f234f8975351ec9a04ae99f983" id="r_ga2fc286f234f8975351ec9a04ae99f983"><td class="memItemLeft" align="right" valign="top"><a id="ga2fc286f234f8975351ec9a04ae99f983" name="ga2fc286f234f8975351ec9a04ae99f983"></a>
+typedef struct uhos_dir_s *&#160;</td><td class="memItemRight" valign="bottom"><b>uhos_dir_t</b></td></tr>
+<tr class="separator:ga2fc286f234f8975351ec9a04ae99f983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga487a9c29d5405bb49d305eac9f74361a" id="r_ga487a9c29d5405bb49d305eac9f74361a"><td class="memItemLeft" align="right" valign="top">uhos_dir_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga487a9c29d5405bb49d305eac9f74361a">uhos_opendir</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:ga487a9c29d5405bb49d305eac9f74361a"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开一个目录  <br /></td></tr>
+<tr class="separator:ga487a9c29d5405bb49d305eac9f74361a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7a8562c999f4e0c5bd6da9ecf4b696e" id="r_gad7a8562c999f4e0c5bd6da9ecf4b696e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gad7a8562c999f4e0c5bd6da9ecf4b696e">uhos_closedir</a> (uhos_dir_t *dir)</td></tr>
+<tr class="memdesc:gad7a8562c999f4e0c5bd6da9ecf4b696e"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭目录  <br /></td></tr>
+<tr class="separator:gad7a8562c999f4e0c5bd6da9ecf4b696e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ada496ec4e3e395bcc12966c1a77a71" id="r_ga2ada496ec4e3e395bcc12966c1a77a71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuhos__dirent__t.html">uhos_dirent_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga2ada496ec4e3e395bcc12966c1a77a71">uhos_readdir</a> (uhos_dir_t *dir)</td></tr>
+<tr class="memdesc:ga2ada496ec4e3e395bcc12966c1a77a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取目录的下一个条目  <br /></td></tr>
+<tr class="separator:ga2ada496ec4e3e395bcc12966c1a77a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfbb26c6e3981ba256177ade023d3634" id="r_gacfbb26c6e3981ba256177ade023d3634"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gacfbb26c6e3981ba256177ade023d3634">uhos_mkdir</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:gacfbb26c6e3981ba256177ade023d3634"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建目录  <br /></td></tr>
+<tr class="separator:gacfbb26c6e3981ba256177ade023d3634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee6d25b22175cb17e138cfbd86fd896d" id="r_gaee6d25b22175cb17e138cfbd86fd896d"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gaee6d25b22175cb17e138cfbd86fd896d">uhos_rmdir</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:gaee6d25b22175cb17e138cfbd86fd896d"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除目录  <br /></td></tr>
+<tr class="separator:gaee6d25b22175cb17e138cfbd86fd896d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga744faa521ba9cfbe029ea5353843ffbe" id="r_ga744faa521ba9cfbe029ea5353843ffbe"><td class="memItemLeft" align="right" valign="top">uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga744faa521ba9cfbe029ea5353843ffbe">uhos_rewinddir</a> (uhos_dir_t *dir)</td></tr>
+<tr class="memdesc:ga744faa521ba9cfbe029ea5353843ffbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">将目录流的位置重置为目录的开头  <br /></td></tr>
+<tr class="separator:ga744faa521ba9cfbe029ea5353843ffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65abe040ca899a72130cf5e3e8a976c6" id="r_ga65abe040ca899a72130cf5e3e8a976c6"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga65abe040ca899a72130cf5e3e8a976c6">uhos_telldir</a> (uhos_dir_t *dir)</td></tr>
+<tr class="memdesc:ga65abe040ca899a72130cf5e3e8a976c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取与该目录关联的当前位置  <br /></td></tr>
+<tr class="separator:ga65abe040ca899a72130cf5e3e8a976c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65a1446b57b6b778e7191e7b09804802" id="r_ga65a1446b57b6b778e7191e7b09804802"><td class="memItemLeft" align="right" valign="top">uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga65a1446b57b6b778e7191e7b09804802">uhos_seekdir</a> (uhos_dir_t *dir, uhos_s32 loc)</td></tr>
+<tr class="memdesc:ga65a1446b57b6b778e7191e7b09804802"><td class="mdescLeft">&#160;</td><td class="mdescRight">将目录位置移动到给定位置  <br /></td></tr>
+<tr class="separator:ga65a1446b57b6b778e7191e7b09804802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b714be75d5c8fc8b2135925e0cb0c6c" id="r_ga7b714be75d5c8fc8b2135925e0cb0c6c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga7b714be75d5c8fc8b2135925e0cb0c6c">uhos_chdir</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:ga7b714be75d5c8fc8b2135925e0cb0c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前工作目录的路径名  <br /></td></tr>
+<tr class="separator:ga7b714be75d5c8fc8b2135925e0cb0c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6954f29a0464122857a23da8fe270b4" id="r_gab6954f29a0464122857a23da8fe270b4"><td class="memItemLeft" align="right" valign="top">uhos_char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gab6954f29a0464122857a23da8fe270b4">uhos_getcwd</a> (uhos_char *buf, uhos_u32 size)</td></tr>
+<tr class="memdesc:gab6954f29a0464122857a23da8fe270b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前工作目录的路径名  <br /></td></tr>
+<tr class="separator:gab6954f29a0464122857a23da8fe270b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga974ddd8d1e0867345423fe5b1e4e982e" id="r_ga974ddd8d1e0867345423fe5b1e4e982e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga974ddd8d1e0867345423fe5b1e4e982e">uhos_fs_init</a> (uhos_void)</td></tr>
+<tr class="memdesc:ga974ddd8d1e0867345423fe5b1e4e982e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化文件系统  <br /></td></tr>
+<tr class="separator:ga974ddd8d1e0867345423fe5b1e4e982e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22a3d6a0ab988fd6eb31baeea6b28fc3" id="r_ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga22a3d6a0ab988fd6eb31baeea6b28fc3">uhos_open</a> (const uhos_char *path, uhos_s32 flags)</td></tr>
+<tr class="memdesc:ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开一个文件或者设备  <br /></td></tr>
+<tr class="separator:ga22a3d6a0ab988fd6eb31baeea6b28fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe7536fe03089ea53be19af1ca14d2a8" id="r_gafe7536fe03089ea53be19af1ca14d2a8"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gafe7536fe03089ea53be19af1ca14d2a8">uhos_close</a> (uhos_s32 fd)</td></tr>
+<tr class="memdesc:gafe7536fe03089ea53be19af1ca14d2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭文件或者设备  <br /></td></tr>
+<tr class="separator:gafe7536fe03089ea53be19af1ca14d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecb061ca235f53801d2a238c06dc1742" id="r_gaecb061ca235f53801d2a238c06dc1742"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gaecb061ca235f53801d2a238c06dc1742">uhos_read</a> (uhos_s32 fd, uhos_void *buf, uhos_u32 nbytes)</td></tr>
+<tr class="memdesc:gaecb061ca235f53801d2a238c06dc1742"><td class="mdescLeft">&#160;</td><td class="mdescRight">从fd指向的文件或者设备中读取内容到buf中  <br /></td></tr>
+<tr class="separator:gaecb061ca235f53801d2a238c06dc1742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ededbdaaf7751f6f361c3209442018c" id="r_ga0ededbdaaf7751f6f361c3209442018c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga0ededbdaaf7751f6f361c3209442018c">uhos_write</a> (uhos_s32 fd, const uhos_void *buf, uhos_u32 nbytes)</td></tr>
+<tr class="memdesc:ga0ededbdaaf7751f6f361c3209442018c"><td class="mdescLeft">&#160;</td><td class="mdescRight">向fd指向的文件或者设备写入内容  <br /></td></tr>
+<tr class="separator:ga0ededbdaaf7751f6f361c3209442018c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19b3164abe82a07ec01f1eb34afeffe2" id="r_ga19b3164abe82a07ec01f1eb34afeffe2"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga19b3164abe82a07ec01f1eb34afeffe2">uhos_ioctl</a> (uhos_s32 fd, uhos_s32 cmd,...)</td></tr>
+<tr class="memdesc:ga19b3164abe82a07ec01f1eb34afeffe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO操作, 行为参考posix的ioctl  <br /></td></tr>
+<tr class="separator:ga19b3164abe82a07ec01f1eb34afeffe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e9555364747c652c096393897d7ba5f" id="r_ga8e9555364747c652c096393897d7ba5f"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga8e9555364747c652c096393897d7ba5f">uhos_do_pollfd</a> (uhos_s32 fd, uhos_s32 flag, uhos_poll_notify_t notify, uhos_void *fds, uhos_void *arg)</td></tr>
+<tr class="memdesc:ga8e9555364747c652c096393897d7ba5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">通配符API，用于通过fd执行特定的轮询  <br /></td></tr>
+<tr class="separator:ga8e9555364747c652c096393897d7ba5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb620e615efb2c64ee52909f54e87ec0" id="r_gaeb620e615efb2c64ee52909f54e87ec0"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gaeb620e615efb2c64ee52909f54e87ec0">uhos_lseek</a> (uhos_s32 fd, uhos_s32 offset, uhos_s32 whence)</td></tr>
+<tr class="memdesc:gaeb620e615efb2c64ee52909f54e87ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">将文件位置移动到给定位置的给定偏移量  <br /></td></tr>
+<tr class="separator:gaeb620e615efb2c64ee52909f54e87ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6e92612c61303913297dd06a61bf076" id="r_gab6e92612c61303913297dd06a61bf076"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gab6e92612c61303913297dd06a61bf076">uhos_sync</a> (uhos_s32 fd)</td></tr>
+<tr class="memdesc:gab6e92612c61303913297dd06a61bf076"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新与该文件关联的所有缓冲区  <br /></td></tr>
+<tr class="separator:gab6e92612c61303913297dd06a61bf076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac69dc4873adf54245071a17ee4094338" id="r_gac69dc4873adf54245071a17ee4094338"><td class="memItemLeft" align="right" valign="top">uhos_void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gac69dc4873adf54245071a17ee4094338">uhos_allsync</a> (uhos_void)</td></tr>
+<tr class="memdesc:gac69dc4873adf54245071a17ee4094338"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新内存中更新要写入文件系统的文件系统的所有信息  <br /></td></tr>
+<tr class="separator:gac69dc4873adf54245071a17ee4094338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9cf301aa628bb0712dba9bd8671ac385" id="r_ga9cf301aa628bb0712dba9bd8671ac385"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga9cf301aa628bb0712dba9bd8671ac385">uhos_stat</a> (const uhos_char *path, <a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *st)</td></tr>
+<tr class="memdesc:ga9cf301aa628bb0712dba9bd8671ac385"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件信息存储在st中  <br /></td></tr>
+<tr class="separator:ga9cf301aa628bb0712dba9bd8671ac385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18e008d2694f2a887a057236b4ce302c" id="r_ga18e008d2694f2a887a057236b4ce302c"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga18e008d2694f2a887a057236b4ce302c">uhos_fstat</a> (uhos_s32 fd, <a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *st)</td></tr>
+<tr class="memdesc:ga18e008d2694f2a887a057236b4ce302c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取文件信息存储在st中  <br /></td></tr>
+<tr class="separator:ga18e008d2694f2a887a057236b4ce302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac580106153861825ff71f72ca2a153" id="r_ga1ac580106153861825ff71f72ca2a153"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga1ac580106153861825ff71f72ca2a153">uhos_link</a> (const uhos_char *oldpath, const uhos_char *newpath)</td></tr>
+<tr class="memdesc:ga1ac580106153861825ff71f72ca2a153"><td class="mdescLeft">&#160;</td><td class="mdescRight">为一个文件创建一个新的链接  <br /></td></tr>
+<tr class="separator:ga1ac580106153861825ff71f72ca2a153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5bbbb6fa6fda1be7144b8225fc2426b" id="r_gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#gac5bbbb6fa6fda1be7144b8225fc2426b">uhos_unlink</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一个文件  <br /></td></tr>
+<tr class="separator:gac5bbbb6fa6fda1be7144b8225fc2426b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d4dfd5e073846c37443acbbe972ee19" id="r_ga4d4dfd5e073846c37443acbbe972ee19"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga4d4dfd5e073846c37443acbbe972ee19">uhos_remove</a> (const uhos_char *path)</td></tr>
+<tr class="memdesc:ga4d4dfd5e073846c37443acbbe972ee19"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一个文件或目录  <br /></td></tr>
+<tr class="separator:ga4d4dfd5e073846c37443acbbe972ee19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30249814495728e244ac1849e2570ffb" id="r_ga30249814495728e244ac1849e2570ffb"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga30249814495728e244ac1849e2570ffb">uhos_rename</a> (const uhos_char *oldpath, const uhos_char *newpath)</td></tr>
+<tr class="memdesc:ga30249814495728e244ac1849e2570ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">重命名文件  <br /></td></tr>
+<tr class="separator:ga30249814495728e244ac1849e2570ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ea5162270bffad263f4f6d9c4905e6e" id="r_ga9ea5162270bffad263f4f6d9c4905e6e"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga9ea5162270bffad263f4f6d9c4905e6e">uhos_access</a> (const uhos_char *path, uhos_s32 amode)</td></tr>
+<tr class="memdesc:ga9ea5162270bffad263f4f6d9c4905e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取访问信息  <br /></td></tr>
+<tr class="separator:ga9ea5162270bffad263f4f6d9c4905e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f66c66c7d1c2ac192885446c83bc0d3" id="r_ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga8f66c66c7d1c2ac192885446c83bc0d3">uhos_fcntl</a> (uhos_s32 fd, uhos_s32 cmd,...)</td></tr>
+<tr class="memdesc:ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作文件描述符  <br /></td></tr>
+<tr class="separator:ga8f66c66c7d1c2ac192885446c83bc0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97a2eca1e07640fd1de2a60a7272b3c5" id="r_ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="memItemLeft" align="right" valign="top">uhos_s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__grp__uhosfs.html#ga97a2eca1e07640fd1de2a60a7272b3c5">uhos_utime</a> (const uhos_char *path, const <a class="el" href="structuhos__utimbuf__t.html">uhos_utimbuf_t</a> *times)</td></tr>
+<tr class="memdesc:ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文件的访问和修改时间  <br /></td></tr>
+<tr class="separator:ga97a2eca1e07640fd1de2a60a7272b3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2023, Haier.Co, Ltd. </dd></dl>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga9ea5162270bffad263f4f6d9c4905e6e" name="ga9ea5162270bffad263f4f6d9c4905e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ea5162270bffad263f4f6d9c4905e6e">&#9670;&#160;</a></span>uhos_access()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_access </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>amode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取访问信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">amode</td><td>方式, 参考uh_fs_types.h中相关定义 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gac69dc4873adf54245071a17ee4094338" name="gac69dc4873adf54245071a17ee4094338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac69dc4873adf54245071a17ee4094338">&#9670;&#160;</a></span>uhos_allsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void uhos_allsync </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>刷新内存中更新要写入文件系统的文件系统的所有信息 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_void </dd></dl>
+
+</div>
+</div>
+<a id="ga7b714be75d5c8fc8b2135925e0cb0c6c" name="ga7b714be75d5c8fc8b2135925e0cb0c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b714be75d5c8fc8b2135925e0cb0c6c">&#9670;&#160;</a></span>uhos_chdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_chdir </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置当前工作目录的路径名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>待操作目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gafe7536fe03089ea53be19af1ca14d2a8" name="gafe7536fe03089ea53be19af1ca14d2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe7536fe03089ea53be19af1ca14d2a8">&#9670;&#160;</a></span>uhos_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_close </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭文件或者设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>待操作对象的描述符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gad7a8562c999f4e0c5bd6da9ecf4b696e" name="gad7a8562c999f4e0c5bd6da9ecf4b696e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7a8562c999f4e0c5bd6da9ecf4b696e">&#9670;&#160;</a></span>uhos_closedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_closedir </td>
+          <td>(</td>
+          <td class="paramtype">uhos_dir_t *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>待关闭目录 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga8e9555364747c652c096393897d7ba5f" name="ga8e9555364747c652c096393897d7ba5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e9555364747c652c096393897d7ba5f">&#9670;&#160;</a></span>uhos_do_pollfd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_do_pollfd </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_poll_notify_t&#160;</td>
+          <td class="paramname"><em>notify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>fds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通配符API，用于通过fd执行特定的轮询 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>轮询的标志 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">notify</td><td>通知回调函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fds</td><td>指向pollfd数组的指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arg</td><td>轮询的参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga8f66c66c7d1c2ac192885446c83bc0d3" name="ga8f66c66c7d1c2ac192885446c83bc0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f66c66c7d1c2ac192885446c83bc0d3">&#9670;&#160;</a></span>uhos_fcntl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_fcntl </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>操作文件描述符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>命令, 参考uh_fs_types.h中相关定义 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>cmd的参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 失败返回负值; 当cmd=UHOS_F_GETFL时, 成功则返回一个&gt;=0的文件状态标记, 其他cmd若成功返回0 </dd></dl>
+
+</div>
+</div>
+<a id="ga974ddd8d1e0867345423fe5b1e4e982e" name="ga974ddd8d1e0867345423fe5b1e4e982e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga974ddd8d1e0867345423fe5b1e4e982e">&#9670;&#160;</a></span>uhos_fs_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_fs_init </td>
+          <td>(</td>
+          <td class="paramtype">uhos_void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化文件系统 </p>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga18e008d2694f2a887a057236b4ce302c" name="ga18e008d2694f2a887a057236b4ce302c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18e008d2694f2a887a057236b4ce302c">&#9670;&#160;</a></span>uhos_fstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_fstat </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *&#160;</td>
+          <td class="paramname"><em>st</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取文件信息存储在st中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">st</td><td>待存储信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gab6954f29a0464122857a23da8fe270b4" name="gab6954f29a0464122857a23da8fe270b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6954f29a0464122857a23da8fe270b4">&#9670;&#160;</a></span>uhos_getcwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_char * uhos_getcwd </td>
+          <td>(</td>
+          <td class="paramtype">uhos_char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前工作目录的路径名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>用于保存当前工作目录的缓冲区 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>缓冲区的大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_char* 成功返回路径名(与buf内容相同), 失败则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="ga19b3164abe82a07ec01f1eb34afeffe2" name="ga19b3164abe82a07ec01f1eb34afeffe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19b3164abe82a07ec01f1eb34afeffe2">&#9670;&#160;</a></span>uhos_ioctl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_ioctl </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IO操作, 行为参考posix的ioctl </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>命令 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arg</td><td>cmd的参数, 不同的cmd不同的含义 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 不同的cmd不同的含义 </dd></dl>
+
+</div>
+</div>
+<a id="ga1ac580106153861825ff71f72ca2a153" name="ga1ac580106153861825ff71f72ca2a153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ac580106153861825ff71f72ca2a153">&#9670;&#160;</a></span>uhos_link()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_link </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>oldpath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>newpath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为一个文件创建一个新的链接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">oldpath</td><td>旧文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newpath</td><td>新文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gaeb620e615efb2c64ee52909f54e87ec0" name="gaeb620e615efb2c64ee52909f54e87ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb620e615efb2c64ee52909f54e87ec0">&#9670;&#160;</a></span>uhos_lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_lseek </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将文件位置移动到给定位置的给定偏移量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>目标偏移量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>给定位置, UHOS_SEEK_XXX, 参考uh_fs_types.h中相关定义 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回新的偏移量, 失败则返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gacfbb26c6e3981ba256177ade023d3634" name="gacfbb26c6e3981ba256177ade023d3634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfbb26c6e3981ba256177ade023d3634">&#9670;&#160;</a></span>uhos_mkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga22a3d6a0ab988fd6eb31baeea6b28fc3" name="ga22a3d6a0ab988fd6eb31baeea6b28fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22a3d6a0ab988fd6eb31baeea6b28fc3">&#9670;&#160;</a></span>uhos_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_open </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开一个文件或者设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>待打开对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>打开方式, 比如UHOS_O_RDWR、UHOS_O_CREAT等, 参考uh_fs_types.h里的相关定义 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 返回文件描述符, &gt;=0表示成功, &lt;0表示失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga487a9c29d5405bb49d305eac9f74361a" name="ga487a9c29d5405bb49d305eac9f74361a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga487a9c29d5405bb49d305eac9f74361a">&#9670;&#160;</a></span>uhos_opendir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_dir_t * uhos_opendir </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开一个目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>目录 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_dir_t* 成功则返回目录流指针对象, 失败则返回NULL </dd></dl>
+
+</div>
+</div>
+<a id="gaecb061ca235f53801d2a238c06dc1742" name="gaecb061ca235f53801d2a238c06dc1742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecb061ca235f53801d2a238c06dc1742">&#9670;&#160;</a></span>uhos_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_read </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>nbytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从fd指向的文件或者设备中读取内容到buf中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>存放内容的缓冲区 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>计划读取的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 &gt;0表示读取的字节数, =0表示已经到了文件末尾, &lt;0表示错误 </dd></dl>
+
+</div>
+</div>
+<a id="ga2ada496ec4e3e395bcc12966c1a77a71" name="ga2ada496ec4e3e395bcc12966c1a77a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ada496ec4e3e395bcc12966c1a77a71">&#9670;&#160;</a></span>uhos_readdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structuhos__dirent__t.html">uhos_dirent_t</a> * uhos_readdir </td>
+          <td>(</td>
+          <td class="paramtype">uhos_dir_t *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取目录的下一个条目 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>待读取的目录 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_dirent_t* 返回一个条目对象, 如果返回NULL表示没有了 </dd></dl>
+
+</div>
+</div>
+<a id="ga4d4dfd5e073846c37443acbbe972ee19" name="ga4d4dfd5e073846c37443acbbe972ee19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d4dfd5e073846c37443acbbe972ee19">&#9670;&#160;</a></span>uhos_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_remove </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除一个文件或目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga30249814495728e244ac1849e2570ffb" name="ga30249814495728e244ac1849e2570ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30249814495728e244ac1849e2570ffb">&#9670;&#160;</a></span>uhos_rename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_rename </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>oldpath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>newpath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重命名文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">oldpath</td><td>旧名字 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newpath</td><td>新名字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga744faa521ba9cfbe029ea5353843ffbe" name="ga744faa521ba9cfbe029ea5353843ffbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga744faa521ba9cfbe029ea5353843ffbe">&#9670;&#160;</a></span>uhos_rewinddir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void uhos_rewinddir </td>
+          <td>(</td>
+          <td class="paramtype">uhos_dir_t *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将目录流的位置重置为目录的开头 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>待操作目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_void </dd></dl>
+
+</div>
+</div>
+<a id="gaee6d25b22175cb17e138cfbd86fd896d" name="gaee6d25b22175cb17e138cfbd86fd896d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee6d25b22175cb17e138cfbd86fd896d">&#9670;&#160;</a></span>uhos_rmdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_rmdir </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>待操作目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga65a1446b57b6b778e7191e7b09804802" name="ga65a1446b57b6b778e7191e7b09804802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65a1446b57b6b778e7191e7b09804802">&#9670;&#160;</a></span>uhos_seekdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_void uhos_seekdir </td>
+          <td>(</td>
+          <td class="paramtype">uhos_dir_t *&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>loc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将目录位置移动到给定位置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>要查找的目录的指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td>目录的位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_void </dd></dl>
+
+</div>
+</div>
+<a id="ga9cf301aa628bb0712dba9bd8671ac385" name="ga9cf301aa628bb0712dba9bd8671ac385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9cf301aa628bb0712dba9bd8671ac385">&#9670;&#160;</a></span>uhos_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_stat </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structuhos__stat__t.html">uhos_stat_t</a> *&#160;</td>
+          <td class="paramname"><em>st</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取文件信息存储在st中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件名 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">st</td><td>待存储信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gab6e92612c61303913297dd06a61bf076" name="gab6e92612c61303913297dd06a61bf076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6e92612c61303913297dd06a61bf076">&#9670;&#160;</a></span>uhos_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_sync </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>刷新与该文件关联的所有缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga65abe040ca899a72130cf5e3e8a976c6" name="ga65abe040ca899a72130cf5e3e8a976c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65abe040ca899a72130cf5e3e8a976c6">&#9670;&#160;</a></span>uhos_telldir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_telldir </td>
+          <td>(</td>
+          <td class="paramtype">uhos_dir_t *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取与该目录关联的当前位置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>待操作目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回当前位置, 如果失败则返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="gac5bbbb6fa6fda1be7144b8225fc2426b" name="gac5bbbb6fa6fda1be7144b8225fc2426b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5bbbb6fa6fda1be7144b8225fc2426b">&#9670;&#160;</a></span>uhos_unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_unlink </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除一个文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功则返回0, 失败返回负值 </dd></dl>
+
+</div>
+</div>
+<a id="ga97a2eca1e07640fd1de2a60a7272b3c5" name="ga97a2eca1e07640fd1de2a60a7272b3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97a2eca1e07640fd1de2a60a7272b3c5">&#9670;&#160;</a></span>uhos_utime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_utime </td>
+          <td>(</td>
+          <td class="paramtype">const uhos_char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structuhos__utimbuf__t.html">uhos_utimbuf_t</a> *&#160;</td>
+          <td class="paramname"><em>times</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置文件的访问和修改时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">times</td><td>时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 </dd></dl>
+
+</div>
+</div>
+<a id="ga0ededbdaaf7751f6f361c3209442018c" name="ga0ededbdaaf7751f6f361c3209442018c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ededbdaaf7751f6f361c3209442018c">&#9670;&#160;</a></span>uhos_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uhos_s32 uhos_write </td>
+          <td>(</td>
+          <td class="paramtype">uhos_s32&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uhos_void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uhos_u32&#160;</td>
+          <td class="paramname"><em>nbytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向fd指向的文件或者设备写入内容 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>描述符 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>待写入内容 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>计划写入的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uhos_s32 成功写入的字节数, 负值表示失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
