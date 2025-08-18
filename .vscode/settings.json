@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "bit": "c",
+        "compare": "c",
+        "limits": "c",
+        "new": "c",
+        "cstdlib": "c",
+        "uh_types.h": "c",
+        "uh_ble.h": "c"
+    }
+}

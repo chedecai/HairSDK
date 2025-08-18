@@ -50,6 +50,9 @@ extern ble_adv_param_t ble_adv_param[APP_MAX_ADV_IDX];
 #define UHOS_BLE_ADV_RPT_BUF_NUM            20                  //<! 广播上报事件缓存数组大小
 #define UHOS_BLE_MAC_REVERSE_ENABLE         1
 
+#define UHOS_BLE_MAX_ADV_DATA_LEN                    31                  //<! 广播数据最大长度
+#define UHOS_BLE_MAX_SCAN_RSP_DATA_LEN               31                  //<! 扫描响应数据最大长度
+
 /**************************************************************************************************/
 /*                                        内部数据类型定义                                        */
 /**************************************************************************************************/
@@ -103,8 +106,8 @@ typedef struct uhos_ble_pal_gap_ctl
     uhos_u8                        adv_idx;                     //<! 广播索引，可连接/不可连接共2组
     uhos_u8                        adv_flag;                    //<! 广播标志；1-开启，0-关闭
     uhos_ble_gap_adv_param_t       adv_param;                   //<! 广播参数
-    app_ble_adv_data_t             adv_data;                    //<! 广播数据， 需要实现
-    app_ble_scan_data_t            scan_rsp_data;               //<! 扫描响应数据， 需要实现
+    uhos_ble_pal_gap_adv_data_t             adv_data;                    //<! 广播数据， 需要实现
+    uhos_ble_pal_gap_scan_rsp_data_t            scan_rsp_data;               //<! 扫描响应数据， 需要实现
     uhos_ble_pal_gap_adv_rpt_ctl_t adv_rpt_ctl;                 //<! 广播上报事件控制块
     uhos_u16                       conn_handle;                 //<! 连接句柄
     uhos_u16                       conn_flag;                   //<! 连接标志；1-连接，0-断开
@@ -113,6 +116,29 @@ typedef struct uhos_ble_pal_gap_ctl
 
 } uhos_ble_pal_gap_ctl_t;
 
+/**
+ * @struct GAP层的广播数据结构体     
+ */
+typedef struct uhos_ble_pal_gap_adv_data
+{
+    uhos_u8 raw_adv_data[UHOS_BLE_MAX_ADV_DATA_LEN];
+    uhos_u8 adv_data_len;
+
+    esp_ble_adv_data_t adv_data;
+
+} uhos_ble_pal_gap_adv_data_t;
+
+/**
+ * @struct GAP层的扫描响应数据结构体     
+ */
+typedef struct uhos_ble_pal_gap_scan_rsp_data
+{
+    uhos_u8 raw_scan_rsp_data[UHOS_BLE_MAX_SCAN_RSP_DATA_LEN];
+    uhos_u8 scan_rsp_data_len;
+
+    esp_ble_adv_data_t scan_rsp_data;
+
+} uhos_ble_pal_gap_scan_rsp_data_t;
 
 /**************************************************************************************************/
 /*                                        全局(静态)变量                                          */
@@ -217,7 +243,7 @@ static uhos_s32 uhos_ble_pal_gap_adv_rpt_get(uhos_ble_gap_evt_param_t *item)
  * @param[in]   adv_ind     广播上报指示数据
  * @param[in]   rsp_ind     广播扫描响应指示数据（未使用）
  */
-static void uhos_ble_pal_gap_scan_cb(void *adv_ind, void *rsp_ind)
+static void uhos_ble_pal_gap_scan_cb(void *adv_ind, void *rsp_ind) //这个函数 需要适配SOC，修改撤销或者合并
 {
     uhos_ble_gap_evt_param_t         evt_param      = {0};
     esp_ble_gap_cb_param_t *adv_report_src = UHOS_NULL;
@@ -225,31 +251,37 @@ static void uhos_ble_pal_gap_scan_cb(void *adv_ind, void *rsp_ind)
 
     // 获取广播上报信息
     adv_report_src = (esp_ble_gap_cb_param_t *)adv_ind;
-    type           = adv_report_src->scan_rst.search_evt & ESP_GAP_BLE_SCAN_RESULT_EVT;
+    type           = adv_report_src->scan_rst.search_evt & ESP_GAP_SEARCH_INQ_RES_EVT;
 
     // 生成广播上报事件
     uhos_libc_memcpy(&evt_param.report.peer_addr,
                      adv_report_src->scan_rst.bda,
                      ESP_BD_ADDR_LEN);
 
+#if UHOS_BLE_MAC_REVERSE_ENABLE
     uhos_ble_mac_reverse(&evt_param.report.peer_addr, ESP_BD_ADDR_LEN);
+#endif
 
     evt_param.report.addr_type = adv_report_src->scan_rst.ble_addr_type;
 
-    if (type == ESP_GAP_BLE_SCAN_RESULT_EVT)
+    if (type == ESP_GAP_SEARCH_INQ_RES_EVT)
     {
-        evt_param.report.adv_type = ADV_DATA;
+        if(adv_report_src->scan_rst.adv_data_len > 0)
+        {
+            evt_param.report.adv_type = ADV_DATA;
+            evt_param.report.data_len = adv_report_src->scan_rst.adv_data_len;
+            uhos_libc_memcpy(evt_param.report.data, adv_report_src->scan_rst.ble_adv, adv_report_src->scan_rst.adv_data_len);
+        }
+        else if(adv_report_src->scan_rst.scan_rsp_len > 0)
+        {
+            evt_param.report.adv_type = SCAN_RSP_DATA;
+            evt_param.report.data_len = adv_report_src->scan_rst.scan_rsp_len;    
+            uhos_libc_memcpy(evt_param.report.data, adv_report_src->scan_rst.ble_adv+adv_report_src->scan_rst.adv_data_len, adv_report_src->scan_rst.scan_rsp_len);        
+        }
     }
-    else
-    {
-        evt_param.report.adv_type = SCAN_RSP_DATA;
-    }
 
-    evt_param.report.rssi     = adv_report_src->scan_rst.rssi;
-    evt_param.report.data_len = adv_report_src->scan_rst.adv_data_len;
-
-    uhos_libc_memcpy(evt_param.report.data, adv_report_src->scan_rst.ble_adv, adv_report_src->scan_rst.adv_data_len);
-
+    evt_param.report.rssi = adv_report_src->scan_rst.rssi;
+    
     // 将广播上报事件放入缓存
     uhos_ble_pal_gap_adv_rpt_add(&evt_param);
 
@@ -266,25 +298,33 @@ static uhos_ble_status_t uhos_ble_pal_gap_set_white_list(
     uhos_ble_pal_gap_white_list_op_t      op,
     const uhos_ble_pal_white_list_addr_t *address)
 {
+    esp_ble_wl_addr_type_t wl_addr_type;
+
     if (false == app_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
     }
 
+    /**地址类型 */
+    if(address->type == UHOS_BLE_ADDRESS_TYPE_PUBLIC)
+    {
+        wl_addr_type = BLE_WL_ADDR_TYPE_PUBLIC;
+    }
+    else
+    {
+        wl_addr_type = BLE_WL_ADDR_TYPE_RANDOM;
+    }
+
     switch (op)
     {
         case UHOS_BLE_GAP_WHITE_LIST_ADD:
         {
-            uint16_t          retval;
-            struct sonata_gap_bdaddr addr;
+            int          retval;
 
-            addr.addr_type = address->type;
-            uhos_libc_memcpy(addr.addr.addr, address->addr, 6);
+            retval = esp_ble_gap_update_whitelist(true, address.addr, wl_addr_type);
 
-            retval = app_ble_set_add_whilte_list(1, &addr);
-
-            if (API_SUCCESS != retval)
+            if (ESP_OK  != retval)
             {
                 UHOS_LOGE("ble white list add fail, 0x%4x", retval);
                 return UHOS_BLE_ERROR;
@@ -295,15 +335,11 @@ static uhos_ble_status_t uhos_ble_pal_gap_set_white_list(
 
         case UHOS_BLE_GAP_WHITE_LIST_DEL:
         {
-            uint16_t          retval;
-            struct sonata_gap_bdaddr addr;
+            int          retval;
 
-            addr.addr_type = address->type;
-            uhos_libc_memcpy(addr.addr.addr, address->addr, 6);
+            retval  = esp_ble_gap_update_whitelist(false, address.addr, wl_addr_type);
 
-            retval  = app_ble_set_del_whilte_list(1,&addr);
-
-            if (API_SUCCESS != retval)
+            if (ESP_OK  != retval)
             {
                 UHOS_LOGE("ble white list del fail, 0x%4x", retval);
                 return UHOS_BLE_ERROR;
@@ -314,9 +350,9 @@ static uhos_ble_status_t uhos_ble_pal_gap_set_white_list(
 
         case UHOS_BLE_GAP_WHITE_LIST_CLEAR:
         {
-            uint16_t retval = app_ble_set_clear_whilte_list();
+            int retval = esp_ble_gap_clear_whitelist();
 
-            if (API_SUCCESS != retval)
+            if (ESP_OK != retval)
             {
                 UHOS_LOGE("ble white list clear fail, 0x%4x", retval);
                 return UHOS_BLE_ERROR;
@@ -523,8 +559,9 @@ void uhos_ble_pal_gap_stack_cb(app_ble_stack_event_t event, app_ble_stack_event_
             uhos_libc_memcpy(evt_param.connect.peer_addr,
                              param->conn_param.connect_ind.peer_addr.addr,
                              SONATA_GAP_BD_ADDR_LEN);
-
+#if UHOS_BLE_MAC_REVERSE_ENABLE
             uhos_ble_mac_reverse(evt_param.connect.peer_addr, SONATA_GAP_BD_ADDR_LEN);
+#endif
 
 #if 0
             uhos_ble_pal_gap_connected_evt_handle(&evt_param);
@@ -563,8 +600,9 @@ void uhos_ble_pal_gap_stack_cb(app_ble_stack_event_t event, app_ble_stack_event_
             uhos_libc_memcpy(&evt_param.connect.peer_addr,
                              param->conn_param.connect_ind.peer_addr.addr,
                              SONATA_GAP_BD_ADDR_LEN);
-
+#if UHOS_BLE_MAC_REVERSE_ENABLE
             uhos_ble_mac_reverse(&evt_param.connect.peer_addr, SONATA_GAP_BD_ADDR_LEN);
+#endif
             g_uhos_ble_pal_gap_user_cb(UHOS_BLE_GAP_EVT_CONNECTED, &evt_param);
 
             break;
@@ -718,8 +756,8 @@ uhos_ble_status_t uhos_ble_gap_adv_data_set(
     uhos_u8        srdlen)
 {
     // 局部变量
-    app_ble_adv_data_t  *adv_data_ptr      = &g_uhos_ble_pal_gap_ctl.adv_data;
-    app_ble_scan_data_t *scan_rsp_data_ptr = &g_uhos_ble_pal_gap_ctl.scan_rsp_data;
+    uhos_ble_pal_gap_adv_data_t  *adv_data_ptr      = &g_uhos_ble_pal_gap_ctl.adv_data;
+    uhos_ble_pal_gap_scan_rsp_data_t *scan_rsp_data_ptr = &g_uhos_ble_pal_gap_ctl.scan_rsp_data;
     uhos_u8              adv_idx           = g_uhos_ble_pal_gap_ctl.adv_idx;
 
     // 输入参数检查
@@ -730,15 +768,15 @@ uhos_ble_status_t uhos_ble_gap_adv_data_set(
     }
 
     // 拷贝广播数据（去除头3个字节）  
-    adv_data_ptr->ble_advdataLen  = dlen - 3;
-    uhos_libc_memcpy(adv_data_ptr->ble_advdata, p_data + 3, dlen - 3);
+    adv_data_ptr->adv_data_len  = dlen;
+    uhos_libc_memcpy(adv_data_ptr->raw_adv_data, p_data, dlen);
 
     // 拷贝扫描响应数据（如果有）
-    scan_rsp_data_ptr->ble_respdataLen = srdlen;
+    scan_rsp_data_ptr->scan_rsp_data_len = srdlen;
 
     if (0 != srdlen)
     {
-        uhos_libc_memcpy(scan_rsp_data_ptr->ble_respdata, p_sr_data, srdlen);
+        uhos_libc_memcpy(scan_rsp_data_ptr->raw_scan_rsp_data, p_sr_data, srdlen);
     }
 #if 0
     // 广播数据已经生效，则需要重新启动广播
@@ -1063,7 +1101,9 @@ uhos_ble_status_t uhos_ble_gap_connect(
                      &conn_param.peer_addr,
                      SONATA_GAP_BD_ADDR_LEN);
 
+#if UHOS_BLE_MAC_REVERSE_ENABLE
     uhos_ble_mac_reverse(app_hal_connect_param.peer_addr.addr.addr, SONATA_GAP_BD_ADDR_LEN);
+#endif
 
     if (app_hal_connect_param.peer_addr.addr_type == UHOS_BLE_ADDRESS_TYPE_PUBLIC)
     {
@@ -1126,7 +1166,9 @@ uhos_ble_status_t uhos_ble_gap_white_list_add(uhos_u8 *mac)
     address.type = UHOS_BLE_ADDRESS_TYPE_PUBLIC;
     uhos_libc_memcpy(address.addr, mac, 6);
 
+#if UHOS_BLE_MAC_REVERSE_ENABLE
     uhos_ble_mac_reverse(address.addr, 6);
+#endif
 
     return uhos_ble_pal_gap_set_white_list(UHOS_BLE_GAP_WHITE_LIST_ADD, &address);
 }
@@ -1154,7 +1196,9 @@ uhos_ble_status_t uhos_ble_gap_white_list_remove(uhos_u8 *mac)
     address.type = UHOS_BLE_ADDRESS_TYPE_PUBLIC;
     uhos_libc_memcpy(address.addr, mac, 6);
 
+#if UHOS_BLE_MAC_REVERSE_ENABLE
     uhos_ble_mac_reverse(address.addr, 6);
+#endif
 
     return uhos_ble_pal_gap_set_white_list(UHOS_BLE_GAP_WHITE_LIST_DEL, &address);
 }
