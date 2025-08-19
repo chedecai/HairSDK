@@ -53,6 +53,8 @@ extern ble_adv_param_t ble_adv_param[APP_MAX_ADV_IDX];
 #define UHOS_BLE_MAX_ADV_DATA_LEN                    31                  //<! 广播数据最大长度
 #define UHOS_BLE_MAX_SCAN_RSP_DATA_LEN               31                  //<! 扫描响应数据最大长度
 
+#define UHOS_BLE_HANDLE_CONNECT_NUM                5
+
 /**************************************************************************************************/
 /*                                        内部数据类型定义                                        */
 /**************************************************************************************************/
@@ -146,6 +148,10 @@ typedef struct uhos_ble_pal_gap_scan_rsp_data
 uhos_ble_pal_gap_ctl_t g_uhos_ble_pal_gap_ctl     = {0};        //<! GAP层全局控制数据
 uhos_ble_gap_cb_t      g_uhos_ble_pal_gap_user_cb = UHOS_NULL;  //<! GAP层应用设置的回调函数   
 
+esp_gatt_if_t esp32_gatts_if = ESP_GATT_IF_NONE;
+esp_gatt_if_t esp32_gattc_if = ESP_GATT_IF_NONE;
+
+static struct gatts_connect_evt_param g_uhos_ble_connect[UHOS_BLE_HANDLE_CONNECT_NUM];
 
 /**************************************************************************************************/
 /*                                          内部函数原型                                          */
@@ -237,7 +243,6 @@ static uhos_s32 uhos_ble_pal_gap_adv_rpt_get(uhos_ble_gap_evt_param_t *item)
     return (1);
 }
 
-
 /**
  * @brief       GAP扫描事件的回调函数实现，用于生成广播上报事件，并进行缓存
  * @param[in]   adv_ind     广播上报指示数据
@@ -300,7 +305,7 @@ static uhos_ble_status_t uhos_ble_pal_gap_set_white_list(
 {
     esp_ble_wl_addr_type_t wl_addr_type;
 
-    if (false == app_ble_is_inited())
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
@@ -458,229 +463,51 @@ static uhos_ble_status_t uhos_ble_pal_gap_connected_evt_handle(uhos_ble_gap_evt_
 }
 #endif
 
-/**
- * @brief       协议栈事件回调函数的实现
- * @param[in]   event   回调事件
- * @param[in]   param   回调参数
- * @return      无
- */
-void uhos_ble_pal_gap_stack_cb(app_ble_stack_event_t event, app_ble_stack_event_param_t *param)
-{
-    uhos_ble_pal_gap_ctl_t *gap_ctl = &g_uhos_ble_pal_gap_ctl;
-
-    switch (event)
-    {
-        // 协议栈就绪
-        case APP_BLE_STACK_EVENT_STACK_READY:
-        {
-            UHOS_LOGI("ble stack ready");
-            break;
-        }
-
-        // 协议栈失败
-        case APP_BLE_STACK_EVENT_STACK_FAIL:
-        {
-            UHOS_LOGE("ble stack failed");
-            break;
-        }
-
-        // 广播开启
-        case APP_BLE_STACK_EVENT_ADV_ON:
-        {
-            UHOS_LOGI("ble adv on");
-            gap_ctl->adv_flag = 1;
-            break;
-        }
-
-        // 广播关闭
-        case APP_BLE_STACK_EVENT_ADV_OFF:
-        {
-            UHOS_LOGI("ble adv off");
-            gap_ctl->adv_flag = 0;
-            break;
-        }
-
-        // 断连
-        case APP_BLE_STACK_EVENT_DISCONNECTED:
-        {
-            if (UHOS_NULL == param)
-            {
-                UHOS_LOGE("ble disconn cb exit");
-                return;
-            }
-
-            UHOS_LOGI("ble disconn");
-
-            uhos_ble_gap_evt_param_t evt_param;
-
-            evt_param.conn_handle = uhos_ble_pal_conn_id_switch(param->disconnect.conidx,
-                                                                  UHOS_BLE_CONNECT_SWITCH_MODE_INC);
-            evt_param.disconnect.reason = param->disconnect.reason;
-
-            if ((1 == gap_ctl->conn_flag) && (gap_ctl->conn_handle == evt_param.conn_handle))
-            {
-                uhos_ble_pal_gap_disconn_evt_handle(&evt_param);
-            }
-            else
-            {
-                if (g_uhos_ble_pal_gap_user_cb)
-                {
-                    g_uhos_ble_pal_gap_user_cb(UHOS_BLE_GAP_EVT_DISCONNET, &evt_param);
-                }
-            }
-
-            break;
-        }
-
-        // 外围设备已连接
-        case APP_BLE_STACK_EVENT_PERIPHERAL_CONNECTED:
-        {
-            uhos_ble_gap_evt_param_t evt_param;
-
-            if (UHOS_NULL == param)
-            {
-                UHOS_LOGE("ble peripheral conn cb exit");
-                return;
-            }
-
-            UHOS_LOGI("ble peripheral conn");
-
-            evt_param.conn_handle = uhos_ble_pal_conn_id_switch(param->conn_param.conidx,
-                                                            UHOS_BLE_CONNECT_SWITCH_MODE_INC);
-            
-            evt_param.connect.conn_param.conn_sup_timeout  = param->conn_param.connect_ind.sup_to;
-            evt_param.connect.conn_param.min_conn_interval = param->conn_param.connect_ind.con_interval;
-            evt_param.connect.conn_param.max_conn_interval = param->conn_param.connect_ind.con_interval;
-            evt_param.connect.conn_param.slave_latency     = param->conn_param.connect_ind.con_latency;
-
-            evt_param.connect.role = UHOS_BLE_GAP_PERIPHERAL;
-            evt_param.connect.type = param->conn_param.connect_ind.peer_addr_type;
-
-            uhos_libc_memcpy(evt_param.connect.peer_addr,
-                             param->conn_param.connect_ind.peer_addr.addr,
-                             SONATA_GAP_BD_ADDR_LEN);
-#if UHOS_BLE_MAC_REVERSE_ENABLE
-            uhos_ble_mac_reverse(evt_param.connect.peer_addr, SONATA_GAP_BD_ADDR_LEN);
-#endif
-
-#if 0
-            uhos_ble_pal_gap_connected_evt_handle(&evt_param);
-#else
-            g_uhos_ble_pal_gap_user_cb(UHOS_BLE_GAP_EVT_CONNECTED, &evt_param);
-
-#endif
-
-            break;
-        }
-
-        // 中心设备已连接
-        case APP_BLE_STACK_EVENT_CENTRAL_CONNECTED:
-        {
-            if ((NULL == param) || (UHOS_NULL == g_uhos_ble_pal_gap_user_cb))
-            {
-                UHOS_LOGE("ble central conn cb exit");
-                return;
-            }
-
-            UHOS_LOGI("ble central conn");
-
-            uhos_ble_gap_evt_param_t evt_param;
-
-            evt_param.conn_handle = uhos_ble_pal_conn_id_switch(param->conn_param.conidx,
-                                                              UHOS_BLE_CONNECT_SWITCH_MODE_INC);
-
-            evt_param.connect.conn_param.conn_sup_timeout  = param->conn_param.connect_ind.sup_to;
-            evt_param.connect.conn_param.min_conn_interval = param->conn_param.connect_ind.con_interval;
-            evt_param.connect.conn_param.max_conn_interval = param->conn_param.connect_ind.con_interval;
-            evt_param.connect.conn_param.slave_latency     = param->conn_param.connect_ind.con_latency;
-
-            evt_param.connect.role = UHOS_BLE_GAP_CENTRAL;
-            evt_param.connect.type = param->conn_param.connect_ind.peer_addr_type;
-
-            uhos_libc_memcpy(&evt_param.connect.peer_addr,
-                             param->conn_param.connect_ind.peer_addr.addr,
-                             SONATA_GAP_BD_ADDR_LEN);
-#if UHOS_BLE_MAC_REVERSE_ENABLE
-            uhos_ble_mac_reverse(&evt_param.connect.peer_addr, SONATA_GAP_BD_ADDR_LEN);
-#endif
-            g_uhos_ble_pal_gap_user_cb(UHOS_BLE_GAP_EVT_CONNECTED, &evt_param);
-
-            break;
-        }
-
-        // 扫描启动
-        case APP_BLE_STACK_EVENT_SCAN_ON:
-        {
-            UHOS_LOGI("ble scan on");
-            break;
-        }
-
-        // 扫描停止
-        case APP_BLE_STACK_EVENT_SCAN_OFF:
-        {
-            UHOS_LOGI("ble scan off");
-            break;
-        }
-
-        // 广播启动（不可连接）
-        case APP_BLE_STACK_EVENT_NONCONN_ADV_ON:
-        {
-            UHOS_LOGI("ble non conn adv on");
-            break;
-        }
-
-        // 广播停止（不可连接）
-        case APP_BLE_STACK_EVENT_NONCONN_ADV_OFF:
-        {
-            UHOS_LOGI("ble non conn adv off");
-            break;
-        }
-
-        // 连接更新
-        case APP_BLE_STACK_EVENT_CONNECTE_UPDATE:
-        {
-            if ((NULL == param) || (UHOS_NULL == g_uhos_ble_pal_gap_user_cb))
-            {
-                UHOS_LOGE("ble conn update cb exit");
-                return;
-            }
-
-            UHOS_LOGI("ble conn update");
-
-            uhos_ble_gap_evt_param_t evt_param;
-
-            evt_param.conn_handle = uhos_ble_pal_conn_id_switch(param->conn_param.conidx,
-                                                                  UHOS_BLE_CONNECT_SWITCH_MODE_INC);
-            
-            evt_param.update_conn.conn_param.conn_sup_timeout  = param->update_conn.sup_to;
-            evt_param.update_conn.conn_param.min_conn_interval = param->update_conn.con_interval;
-            evt_param.update_conn.conn_param.max_conn_interval = param->update_conn.con_interval;
-            evt_param.update_conn.conn_param.slave_latency     = param->update_conn.con_latency;
-            
-            g_uhos_ble_pal_gap_user_cb(UHOS_BLE_GAP_EVT_CONN_PARAM_UPDATED, &evt_param);
-
-            break;
-        }
-
-        default:
-        {
-            UHOS_LOGW("ble stack ev %d no handler", event);
-            break;
-        }
-    }
-
-    return;
-}
-
-
 /**************************************************************************************************/
 /*                                          全局函数实现                                          */
 /**************************************************************************************************/
+/**
+ * @brief  gap回调函数
+ */
+static void uhos_ble_pal_gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
+{
+    switch (event) {
+#ifdef CONFIG_SET_RAW_ADV_DATA
+    case ESP_GAP_BLE_ADV_DATA_RAW_SET_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_ADV_DATA_RAW_SET_COMPLETE_EVT");
+        break;
+    case ESP_GAP_BLE_SCAN_RSP_DATA_RAW_SET_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_SCAN_RSP_DATA_RAW_SET_COMPLETE_EVT");
+        break;
+#else
+    case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT");
+        break;
+    case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT");
+        break;
+#endif
+    case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_ADV_START_COMPLETE_EVT");
+        break;
+    case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT");
+        break;
+    case ESP_GAP_BLE_UPDATE_CONN_PARAMS_EVT:
+        UHOS_LOGE("ESP_GAP_BLE_UPDATE_CONN_PARAMS_EVT");
+        break;
+    default:
+        break;
+    }
+}
+
 /**
  * @brief       GAP层初始化
  */
 void uhos_ble_pal_gap_init(void)
 {
+    esp_err_t ret;
+
     uhos_libc_memset(&g_uhos_ble_pal_gap_ctl, 0, sizeof(uhos_ble_pal_gap_ctl_t));
 
     // 默认使用可连接广播的索引
@@ -693,9 +520,12 @@ void uhos_ble_pal_gap_init(void)
     }
 
     // 设置协议栈回调函数
-    ble_set_callback(uhos_ble_pal_gap_stack_cb);
-
-    return;
+    ret = esp_ble_gap_register_callback(uhos_ble_pal_gap_event_handler);
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_register_callback, error code = %x", ret);
+        return UHOS_BLE_ERROR;
+    }
+    return UHOS_BLE_SUCCESS;
 }
 
 /**
@@ -704,8 +534,14 @@ void uhos_ble_pal_gap_init(void)
  */
 void uhos_ble_pal_gap_deinit(void)
 {
-    ble_set_callback(UHOS_NULL);
-    return;
+    esp_err_t ret;
+
+    ret = esp_ble_gap_register_callback(UHOS_NULL);
+    if (ret){
+        UHOS_LOGE("uhos_ble_pal_gap_deinit fail, error code = %x", ret);
+        return UHOS_BLE_ERROR;
+    }
+    return UHOS_BLE_SUCCESS;
 }
 
 /**
@@ -778,15 +614,22 @@ uhos_ble_status_t uhos_ble_gap_adv_data_set(
     {
         uhos_libc_memcpy(scan_rsp_data_ptr->raw_scan_rsp_data, p_sr_data, srdlen);
     }
-#if 0
+
+#if 1
     // 广播数据已经生效，则需要重新启动广播
-    if (app_get_adv_status(adv_idx))
-    {
-        // 注意：这个接口也会检查广播状态
-        app_ble_advertising_start(adv_idx, adv_data_ptr, scan_rsp_data_ptr);
+    // if (app_get_adv_status(adv_idx))
+    // {
+    //     // 注意：这个接口也会检查广播状态
+    //     app_ble_advertising_start(adv_idx, adv_data_ptr, scan_rsp_data_ptr);
+    // }
+
+    esp_err_t ret = esp_ble_gap_config_adv_data_raw(adv_data_ptr->raw_adv_data, adv_data_ptr->adv_data_len);
+    if (ret){
+         UHOS_LOGE("config raw adv data failed, error code = %x ", ret);
     }
+
 #endif
-    return UHOS_BLE_SUCCESS;
+    return ret == 0 ? UHOS_BLE_SUCCESS : UHOS_BLE_ERROR;
 }
 
 /**
@@ -797,80 +640,108 @@ uhos_ble_status_t uhos_ble_gap_adv_data_set(
 uhos_ble_status_t uhos_ble_gap_adv_start(uhos_ble_gap_adv_param_t *p_adv_param)
 {
     // 局部变量
-    app_ble_adv_data_t  *adv_data_ptr      = &g_uhos_ble_pal_gap_ctl.adv_data;
-    app_ble_scan_data_t *scan_rsp_data_ptr = &g_uhos_ble_pal_gap_ctl.scan_rsp_data;
-    uhos_u8             *adv_idx_ptr       = &g_uhos_ble_pal_gap_ctl.adv_idx;
+    uhos_ble_pal_gap_adv_data_t  *adv_data_ptr      = &g_uhos_ble_pal_gap_ctl.adv_data;
+    uhos_ble_pal_gap_scan_rsp_data_t *scan_rsp_data_ptr = &g_uhos_ble_pal_gap_ctl.scan_rsp_data;
+    //uhos_u8             *adv_idx_ptr       = &g_uhos_ble_pal_gap_ctl.adv_idx;
+
+    esp_ble_adv_params_t adv_params = {
+        .adv_int_min        = 0x20,
+        .adv_int_max        = 0x40,
+        .adv_type           = ADV_TYPE_IND,
+        .own_addr_type      = BLE_ADDR_TYPE_PUBLIC,
+        //.peer_addr            =
+        //.peer_addr_type       =
+        .channel_map        = ADV_CHNL_ALL,
+        .adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY,
+    };
 
     // 依据广播类型配置广播参数属性
     if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_UNDIRECTED)
     {
-        *adv_idx_ptr                     = APP_CONN_ADV_IDX;
-        ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_UNDIR_CONN_MASK;
+        //*adv_idx_ptr                     = APP_CONN_ADV_IDX;
+        //ble_adv_param[*adv_idx_ptr].prop = ADV_TYPE_IND;
+        adv_params.adv_type = ADV_TYPE_IND;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_NON_CONNECTABLE_UNDIRECTED)
     {
-        *adv_idx_ptr                     = APP_NON_CONN_ADV_IDX;
-        ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
+        // *adv_idx_ptr                     = APP_NON_CONN_ADV_IDX;
+        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
+        adv_params.adv_type = ADV_TYPE_NONCONN_IND;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_HDC)
     {
-       *adv_idx_ptr = APP_CONN_ADV_IDX;
-       ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_HDC_MASK;
+       //*adv_idx_ptr = APP_CONN_ADV_IDX;
+       //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_HDC_MASK;
+       adv_params.adv_type = ADV_TYPE_DIRECT_IND_HIGH;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_LDC)
     {
-        *adv_idx_ptr = APP_CONN_ADV_IDX;
-        ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_LDC_MASK;
+        //*adv_idx_ptr = APP_CONN_ADV_IDX;
+        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_LDC_MASK;
+        adv_params.adv_type = ADV_TYPE_DIRECT_IND_LOW;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_SCANNABLE_UNDIRECTED)
     {
-        *adv_idx_ptr = APP_NON_CONN_ADV_IDX;
-        ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
+        //*adv_idx_ptr = APP_NON_CONN_ADV_IDX;
+        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
+        adv_params.adv_type = ADV_TYPE_SCAN_IND;
     }
     else
     {
-       *adv_idx_ptr = APP_NON_CONN_ADV_IDX;
-       ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_NON_SCAN_MASK;
+       //*adv_idx_ptr = APP_NON_CONN_ADV_IDX;
+       //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_NON_SCAN_MASK;
+       adv_params.adv_type = ADV_TYPE_IND;
     }
 
     // 设置地址类型
     if (p_adv_param->direct_addr_type == UHOS_BLE_ADDRESS_TYPE_RANDOM)
     {
-       ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR;
+       //ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR;
+       adv_params.own_addr_type = BLE_ADDR_TYPE_RANDOM;
     }
     else
     {
-       ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR; 
+       //ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR; 
+       adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
     }
 
     // 设置广播间隔
-    ble_adv_param[*adv_idx_ptr].advertising_interval_min = p_adv_param->adv_interval_min;
-    ble_adv_param[*adv_idx_ptr].advertising_interval_max = p_adv_param->adv_interval_max;
+    // ble_adv_param[*adv_idx_ptr].advertising_interval_min = p_adv_param->adv_interval_min;
+    // ble_adv_param[*adv_idx_ptr].advertising_interval_max = p_adv_param->adv_interval_max;
+    adv_params.adv_int_min = p_adv_param->adv_interval_min;
+    adv_params.adv_int_max = p_adv_param->adv_interval_max;
 
     // 设置广播通道
-    ble_adv_param[*adv_idx_ptr].advertising_channel_map = 0x1 | 0x2 | 0x4;
+    //ble_adv_param[*adv_idx_ptr].advertising_channel_map = 0x1 | 0x2 | 0x4;
+    adv_params.channel_map = ADV_CHNL_ALL;
 
     if (p_adv_param->ch_mask.ch_37_off)
     {
         //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x1;
+        adv_params.channel_map &= ~ADV_CHNL_37;
     }
 
     if (p_adv_param->ch_mask.ch_38_off)
     {
         //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x2;
+        adv_params.channel_map &= ~ADV_CHNL_38;
     }
 
     if (p_adv_param->ch_mask.ch_39_off)
     {
         //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x4;
+        adv_params.channel_map &= ~ADV_CHNL_39;
     }
 
-    UHOS_LOGD("adv channel map is 0x%02x", ble_adv_param[*adv_idx_ptr].advertising_channel_map);
+    UHOS_LOGD("adv channel map is 0x%02x", adv_params.channel_map);
 
     // 开启广播
-    app_ble_advertising_start(*adv_idx_ptr, adv_data_ptr, scan_rsp_data_ptr);
-
-    return UHOS_BLE_SUCCESS;
+    esp_err_t ret = esp_ble_gap_start_advertising(&adv_params);
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_start_advertising failed, error code = %x ", ret);
+    }
+    
+    return ret == 0 ? UHOS_BLE_SUCCESS : UHOS_BLE_ERROR;
 }
 
 /**
@@ -924,24 +795,27 @@ uhos_ble_status_t uhos_ble_gap_adv_stop(void)
 {
     uhos_u8 adv_idx = g_uhos_ble_pal_gap_ctl.adv_idx;
 
-    app_ble_advertising_stop(adv_idx);
+    esp_err_t ret = esp_ble_gap_stop_advertising();
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_stop_advertising failed, error code = %x ", ret);
+    }
     
-    return UHOS_BLE_SUCCESS;
+    return ret == 0 ? UHOS_BLE_SUCCESS : UHOS_BLE_ERROR;
 }
 
 /**
  * @brief       关闭广播
- * @author      李诗龙
+ * @author      陈德才
  * @return      uhos_ble_status_t 执行结果
  */
 uhos_ble_status_t uhos_ble_gap_non_connectable_stop(void)
 {
-    uhos_u16 res     = 0;
-    uhos_u8  adv_idx = APP_NON_CONN_ADV_IDX;
-    // 关闭不可连接广播
-    res = app_ble_advertising_stop(adv_idx);
+    esp_err_t ret = esp_ble_gap_stop_advertising();
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_stop_advertising failed, error code = %x ", ret);
+    }
 
-    return res == 0 ? UHOS_BLE_SUCCESS : UHOS_BLE_ERROR;
+    return ret == 0 ? UHOS_BLE_SUCCESS : UHOS_BLE_ERROR;
 }
 
 /**
@@ -952,42 +826,54 @@ uhos_ble_status_t uhos_ble_gap_non_connectable_stop(void)
  */
 uhos_ble_status_t uhos_ble_gap_scan_start(uhos_ble_gap_scan_type_t scan_type, uhos_ble_gap_scan_param_t scan_param)
 {
-    app_ble_scan_param_t hal_scan_param = {0};
+    esp_err_t ret = 0;
 
-    if (false == app_ble_is_inited())
+    esp_ble_scan_params_t ble_scan_params = {
+        .scan_type              = BLE_SCAN_TYPE_ACTIVE,
+        .own_addr_type          = BLE_ADDR_TYPE_PUBLIC,
+        .scan_filter_policy     = BLE_SCAN_FILTER_ALLOW_ALL,
+        .scan_interval          = 0x50,
+        .scan_window            = 0x30,
+        .scan_duplicate         = BLE_SCAN_DUPLICATE_DISABLE
+    };
+
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
     }
 
-    hal_scan_param.scan_param.prop |= SONATA_GAP_SCAN_PROP_PHY_1M_BIT;
-    hal_scan_param.own_addr_type    = SONATA_GAP_STATIC_ADDR;
-
-    if (UHOS_BLE_SCAN_TYPE_ACTIVE == scan_type)
+    if(scan_type == UHOS_BLE_GAP_SCAN_TYPE_ACTIVE)
     {
-        hal_scan_param.scan_param.prop |= SONATA_GAP_SCAN_PROP_ACTIVE_1M_BIT;
+        hal_scan_param.scan_type = BLE_SCAN_TYPE_ACTIVE;
     }
-
-    hal_scan_param.scan_param.dup_filt_pol =SONATA_GAP_DUP_FILT_DIS;
-
-    if (app_ble_get_whilte_list_count())
+    else if(scan_type == UHOS_BLE_GAP_SCAN_TYPE_PASSIVE)
     {
-        hal_scan_param.scan_param.type = SONATA_GAP_SCAN_TYPE_SEL_OBSERVER;
+        hal_scan_param.scan_type = BLE_SCAN_TYPE_PASSIVE;
     }
     else
     {
-        hal_scan_param.scan_param.type = SONATA_GAP_SCAN_TYPE_OBSERVER;
+        UHOS_LOGE("scan type invalid");
+        return UHOS_BLE_ERROR;
     }
 
-    scan_param.scan_interval = 0x002f;
-    scan_param.scan_window   = 0x001c;
-    
-    hal_scan_param.scan_param.scan_param_1m.scan_intv = scan_param.scan_interval;
-    hal_scan_param.scan_param.scan_param_1m.scan_wd   = scan_param.scan_window;
-    hal_scan_param.scan_param.period = 0;
+    hal_scan_param.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
+    hal_scan_param.scan_filter_policy = BLE_SCAN_FILTER_ALLOW_ALL;
+    hal_scan_param.scan_interval = scan_param.scan_interval;
+    hal_scan_param.scan_window = scan_param.scan_window;
+    hal_scan_param.scan_duplicate = BLE_SCAN_DUPLICATE_DISABLE;
 
-    app_gap_set_scan_cb(uhos_ble_pal_gap_scan_cb);
-    app_ble_start_scan_with_param(&hal_scan_param);
+    ret = esp_ble_gap_set_scan_params(&ble_scan_params);
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_set_scan_params failed, error code = %x ", ret);
+        return UHOS_BLE_ERROR;
+    }
+
+    ret = esp_ble_gap_start_scanning();
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_start_scanning failed, error code = %x ", ret);
+        return UHOS_BLE_ERROR;
+    }
 
     return UHOS_BLE_SUCCESS;
 }
@@ -998,16 +884,43 @@ uhos_ble_status_t uhos_ble_gap_scan_start(uhos_ble_gap_scan_type_t scan_type, uh
  */
 uhos_ble_status_t uhos_ble_gap_scan_stop(void)
 {
-    if (false == app_ble_is_inited())
+    esp_err_t ret = 0;
+
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
     }
 
-    app_ble_stop_scanning();
-    app_gap_set_scan_cb(UHOS_NULL);
+    ret = esp_ble_gap_stop_scanning();
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_stop_scanning failed, error code = %x ", ret);
+        return UHOS_BLE_ERROR;
+    }
 
     return UHOS_BLE_SUCCESS;
+}
+
+/**
+ * @brief       获取已有连接
+ * @param[in]   conn_handle 连接句柄
+ * @param[in]   address 对端设备地址
+ * @return      uhos_ble_status_t 执行结果
+ */
+void uhos_ble_gap_find_connect(uhos_u16 conn_handle, uhos_ble_addr_t remote_bda)
+{
+    uhos_ble_addr_t tmp = {0};
+
+    for (int index = 0; index < UHOS_BLE_HANDLE_CONNECT_NUM; ++index) {
+        if (0 != uhos_libc_memcmp(tmp, g_uhos_ble_connect[index].remote_bda, sizeof(uhos_ble_addr_t)) &&
+            conn_handle == g_uhos_ble_connect[index].conn_id) {
+
+            memcpy(remote_bda, g_uhos_ble_connect[index].remote_bda, sizeof(uhos_ble_addr_t));
+            return;
+        }
+    }
+
+    uhos_libc_memcpy(remote_bda, tmp, sizeof(esp_bd_addr_t));
 }
 
 /**
@@ -1021,23 +934,18 @@ uhos_ble_status_t uhos_ble_gap_update_conn_params(
     uhos_u16                  conn_handle,
     uhos_ble_gap_conn_param_t conn_params)
 {
-        
-    uhos_u16 conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret = 0;
+    esp_ble_conn_update_params_t params = {0};
+    
+    uhos_ble_gap_find_connect(conn_handle, params.bda);
+    params.latency = conn_params.slave_latency;
+    params.max_int = conn_params.max_conn_interval;    // max_int = 0x20*1.25ms = 40ms
+    params.min_int = conn_params.max_conn_interval;    // min_int = 0x10*1.25ms = 20ms
+    params.timeout = conn_params.conn_sup_timeout;    // timeout = 400*10ms = 4000ms
 
-    conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-    retval = sonata_ble_gap_update_connection_params(conidx,
-                                                     0,
-                                                     conn_params.min_conn_interval,
-                                                     conn_params.max_conn_interval,
-                                                     conn_params.slave_latency,
-                                                     conn_params.conn_sup_timeout,
-                                                     0xFFFF,
-                                                     0xFFFF);
-
-    if (API_SUCCESS != retval)
-    {
-        UHOS_LOGE("ble update conn params failed 0x%4x", retval);
+    ret = esp_ble_gap_update_conn_params(&params);
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_update_conn_params failed, error code = %x ", ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -1051,21 +959,14 @@ uhos_ble_status_t uhos_ble_gap_update_conn_params(
  */
 uhos_ble_status_t uhos_ble_gap_disconnect(uhos_u16 conn_handle)
 {
-    uhos_u16 conidx = 0;
+    esp_err_t ret = 0;
+    esp_bd_addr_t address;
 
-    conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-
-    if (conidx < APP_MAX_CON_IDX)
-    {
-        app_ble_disconnect(conidx);
-    }
-    else
-    {
-        #if ( !defined(CFG_BLE_NO_CENTRAL) )
-
-        app_ble_stop_initiating(); // maybe not!!!
-        #endif
-        
+    uhos_ble_gap_find_connect(conn_handle, address);
+    ret = esp_ble_gap_disconnect(address);
+    if (ret){
+        UHOS_LOGE("esp_ble_gap_disconnect failed, error code = %x ", ret);
+        return UHOS_BLE_ERROR;
     }
 
     return UHOS_BLE_SUCCESS;
@@ -1081,40 +982,22 @@ uhos_ble_status_t uhos_ble_gap_connect(
     uhos_ble_gap_scan_param_t scan_param,
     uhos_ble_gap_connect_t    conn_param)
 {
-    sonata_gap_init_param_t app_hal_connect_param = {0};
-
-    app_hal_connect_param.type = SONATA_GAP_INIT_TYPE_DIRECT_CONN_EST;
-    app_hal_connect_param.prop = SONATA_GAP_INIT_PROP_1M_BIT ;
-    app_hal_connect_param.conn_to = 0;
-    app_hal_connect_param.peer_addr.addr_type = SONATA_GAP_STATIC_ADDR;
-
-    app_hal_connect_param.scan_param_1m.scan_intv      = 0x0200;
-    app_hal_connect_param.scan_param_1m.scan_wd        = 0x0100;
-    app_hal_connect_param.conn_param_1m.conn_intv_min  = 0x0028;
-    app_hal_connect_param.conn_param_1m.conn_intv_max  = 0x0028;
-    app_hal_connect_param.conn_param_1m.conn_latency   = 0;
-    app_hal_connect_param.conn_param_1m.supervision_to = 0x02BC;
-    app_hal_connect_param.conn_param_1m.ce_len_min     = 0x0008;
-    app_hal_connect_param.conn_param_1m.ce_len_max     = 0x0008;
-
-    uhos_libc_memcpy(app_hal_connect_param.peer_addr.addr.addr,
-                     &conn_param.peer_addr,
-                     SONATA_GAP_BD_ADDR_LEN);
+    esp_err_t ret = 0;
+    esp_bd_addr_t remote_bda;
+    
+    uhos_libc_memcpy(remote_bda, uhos_ble_gap_connect_t.remote_addr.addr.addr, ESP_BD_ADDR_LEN);
 
 #if UHOS_BLE_MAC_REVERSE_ENABLE
-    uhos_ble_mac_reverse(app_hal_connect_param.peer_addr.addr.addr, SONATA_GAP_BD_ADDR_LEN);
+    uhos_ble_mac_reverse(app_hal_connect_param.peer_addr.addr.addr, ESP_BD_ADDR_LEN);
 #endif
 
-    if (app_hal_connect_param.peer_addr.addr_type == UHOS_BLE_ADDRESS_TYPE_PUBLIC)
-    {
-        app_hal_connect_param.peer_addr.addr_type = SONATA_GAP_STATIC_ADDR;
-    }
-    else 
-    {
-        app_hal_connect_param.peer_addr.addr_type = SONATA_GAP_STATIC_ADDR;
+    ret = esp_ble_gattc_open(esp32_gattc_if, remote_bda, BLE_ADDR_TYPE_PUBLIC, true);
+    if (ret){
+        UHOS_LOGE("esp_ble_gattc_open failed, error code = %x ", ret);
+        return UHOS_BLE_ERROR;
     }
 
-    return app_ble_connect(&app_hal_connect_param);
+    return UHOS_BLE_SUCCESS;
 }
 
 /**
@@ -1123,7 +1006,7 @@ uhos_ble_status_t uhos_ble_gap_connect(
  */
 uhos_ble_status_t uhos_ble_gap_cancel_connection(void)
 {
-    app_ble_stop_initiating();
+    // app_ble_stop_initiating();
     return UHOS_BLE_SUCCESS;
 }
 
@@ -1137,9 +1020,15 @@ uhos_ble_status_t uhos_ble_gap_cancel_connection(void)
  */
 uhos_ble_status_t uhos_ble_gap_callback_register(uhos_ble_gap_cb_t cb)
 {
-    g_uhos_ble_pal_gap_user_cb = cb;
-    ble_set_callback(uhos_ble_pal_gap_stack_cb);
+    esp_err_t ret;
 
+    g_uhos_ble_pal_gap_user_cb = cb;
+
+    ret = esp_ble_gap_register_callback(uhos_ble_pal_gap_event_handler);
+    if (ret){
+        UHOS_LOGE("gap register error, error code = %x", ret);
+        return UHOS_BLE_ERROR;
+    }
     return UHOS_BLE_SUCCESS;
 }
 
@@ -1152,7 +1041,7 @@ uhos_ble_status_t uhos_ble_gap_white_list_add(uhos_u8 *mac)
 {
     uhos_ble_pal_white_list_addr_t address;
 
-    if (false == app_ble_is_inited())
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
@@ -1182,7 +1071,7 @@ uhos_ble_status_t uhos_ble_gap_white_list_remove(uhos_u8 *mac)
 {
     uhos_ble_pal_white_list_addr_t address;
 
-    if (false == app_ble_is_inited())
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;
@@ -1209,7 +1098,7 @@ uhos_ble_status_t uhos_ble_gap_white_list_remove(uhos_u8 *mac)
  */
 uhos_ble_status_t uhos_ble_gap_white_list_clear(void)
 {
-    if (false == app_ble_is_inited())
+    if (false == uhos_ble_is_inited())
     {
         UHOS_LOGW("ble not inited");
         return UHOS_BLE_ERROR;

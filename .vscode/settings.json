@@ -6,6 +6,16 @@
         "new": "c",
         "cstdlib": "c",
         "uh_types.h": "c",
-        "uh_ble.h": "c"
+        "uh_ble.h": "c",
+        "uh_osal.h": "c",
+        "ctype.h": "c",
+        "string.h": "c",
+        "cstdarg": "c",
+        "stdio.h": "c",
+        "uh_libc.h": "c",
+        "typeinfo": "c",
+        "type_traits": "c",
+        "uh_log.h": "c",
+        "uh_ble_common.h": "c"
     }
 }
