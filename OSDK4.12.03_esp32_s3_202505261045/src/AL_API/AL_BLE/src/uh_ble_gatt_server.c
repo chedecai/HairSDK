@@ -422,21 +422,25 @@ uhos_ble_status_t uhos_ble_gatts_notify_or_indicate(
     uhos_u8 *p_value,
     uhos_u16 len)
 {
-    uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-    uhos_u16 handler = 0;
-    uhos_u16 att_offset = 0;
-    int      start_handler = srv_handle;
+    // uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
+    // uhos_u16 handler = 0;
+    // uhos_u16 att_offset = 0;
+    // int      start_handler = srv_handle;
 
-    handler    = start_handler >> 8;
-    att_offset = (char_value_handle & 0xFF);
+    // handler    = start_handler >> 8;
+    // att_offset = (char_value_handle & 0xFF);
 
     if (offset == 0)
     {
-        app_ble_gatt_data_send_notify((uhos_u8)conidx, handler, att_offset, len, p_value);
+        //app_ble_gatt_data_send_notify((uhos_u8)conidx, handler, att_offset, len, p_value);
+        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+                                        len, p_value, false);
     }
     else
     {
-        app_ble_gatt_data_send_indicate((uhos_u8)conidx, handler, att_offset, len, p_value);
+        //app_ble_gatt_data_send_indicate((uhos_u8)conidx, handler, att_offset, len, p_value);
+        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+                                        len, p_value, true);
     }
 
     return UHOS_BLE_SUCCESS;
