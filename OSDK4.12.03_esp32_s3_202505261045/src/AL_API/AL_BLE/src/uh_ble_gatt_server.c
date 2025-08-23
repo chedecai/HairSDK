@@ -630,6 +630,17 @@ uhos_ble_status_t uhos_ble_gatts_callback_register(uhos_ble_gatts_cb_t cb)
 }
 
 /**
+ * @brief       注册GATT层Server端用户侧的free函数，用来free用户侧申请的堆内存
+ *
+ * @param[in]   cb 用户注册的free函数，用来free用户侧malloc的数据
+ * @return      uhos_ble_status_t 执行结果
+ */
+ uhos_ble_status_t uhos_ble_gatts_register_destroy(destroy_func_t destroy)
+ {
+    return UHOS_BLE_SUCCESS;
+ }
+
+/**
  * @brief       设置GATT层Server端的服务框架
  * @param[in]   service_database 服务数据集合
  * @return      uhos_ble_status_t
@@ -709,6 +720,14 @@ uhos_ble_status_t uhos_ble_gatts_notify_or_indicate(
  */
 uhos_ble_status_t uhos_ble_gatts_mtu_default_set(uhos_u16 mtu)
 {
+   esp_err_t ret;
+
+    ret = esp_ble_gatt_set_local_mtu(mtu);
+    if (ret){
+         UHOS_LOGE("esp_ble_gatt_set_local_mtu failed, error code = %x ", ret);
+         return UHOS_BLE_ERROR;
+    }
+
     return UHOS_BLE_SUCCESS;
 }
 
@@ -720,8 +739,8 @@ uhos_ble_status_t uhos_ble_gatts_mtu_default_set(uhos_u16 mtu)
  */
 uhos_ble_status_t uhos_ble_gatts_mtu_get(uhos_u16 conn_handle, uhos_u16 *mtu_size)
 {
-    uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-    *mtu_size = app_ble_get_con_mtu((uhos_u8)conidx);
+    // uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
+    // *mtu_size = app_ble_get_con_mtu((uhos_u8)conidx);
 
     return UHOS_BLE_SUCCESS;
 }
