@@ -8,6 +8,8 @@
         "new": "c",
         "uh_types.h": "c",
         "uh_ble.h": "c",
-        "uh_osal.h": "c"
+        "uh_osal.h": "c",
+        "uh_log.h": "c",
+        "uh_libc.h": "c"
     }
 }
