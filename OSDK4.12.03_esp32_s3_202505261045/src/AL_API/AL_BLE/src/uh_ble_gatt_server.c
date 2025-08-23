@@ -46,9 +46,6 @@
 /**************************************************************************************************/
 /*                                           内部宏定义                                           */
 /**************************************************************************************************/
-/**
- * @brief gatts characteristic
- */
 #define UHOS_BLE_HAL_CHR_BROADCAST          0x01
 #define UHOS_BLE_HAL_CHR_READ               0x02
 #define UHOS_BLE_HAL_CHR_WRITE_WITHOUT_RESP 0x04
@@ -60,6 +57,8 @@
 #define UHOS_BLE_HAL_CHR_PERM_READABLE      0x01
 #define UHOS_BLE_HAL_CHR_PERM_WRITABLE      0x02
 
+#define APP_MAX_SERVICE_NUM                 10
+
 #define UHOS_BLE_HAL_PROFILE_NUM 2
 #define UHOS_BLE_HAL_PROFILE_A_APP_ID 0
 #define UHOS_BLE_HAL_PROFILE_B_APP_ID 1
@@ -69,32 +68,11 @@
 #define GATTS_DESCR_UUID_TEST_A     0x3333
 #define GATTS_NUM_HANDLE_TEST_A     4
 
-#define GATTS_SERVICE_UUID_TEST_B   0x00EE
-#define GATTS_CHAR_UUID_TEST_B      0xEE01
-#define GATTS_DESCR_UUID_TEST_B     0x2222
-#define GATTS_NUM_HANDLE_TEST_B     4
-
-#define TEST_DEVICE_NAME            "ESP_GATTS_DEMO"
-#define TEST_MANUFACTURER_DATA_LEN  17
-
-#define GATTS_DEMO_CHAR_VAL_LEN_MAX 0x40
-
-#define PREPARE_BUF_MAX_SIZE 1024
-
-static uint8_t char1_str[] = {0x11,0x22,0x33};
-static esp_gatt_char_prop_t a_property = 0;
-static esp_gatt_char_prop_t b_property = 0;
-
-static esp_attr_value_t gatts_demo_char1_val =
-{
-    .attr_max_len = GATTS_DEMO_CHAR_VAL_LEN_MAX,
-    .attr_len     = sizeof(char1_str),
-    .attr_value   = char1_str,
+static esp_attr_value_t heart_rate_attr = {
+    .attr_max_len = 2,
+    .attr_len     = sizeof(heart_rate_val),
+    .attr_value   = heart_rate_val,
 };
-
-static uint8_t adv_config_done = 0;
-#define adv_config_flag      (1 << 0)
-#define scan_rsp_config_flag (1 << 1)
 
 /**************************************************************************************************/
 /*                                        内部数据类型定义                                        */
@@ -116,7 +94,6 @@ typedef struct uhos_ble_gatts_profile_inst {
 
 ///Declare the static function
 static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-static void gatts_profile_b_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
 
 static uhos_ble_gatts_profile_inst_t uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_NUM] = {
     [UHOS_BLE_HAL_PROFILE_A_APP_ID] = {
@@ -124,18 +101,10 @@ static uhos_ble_gatts_profile_inst_t uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_N
         .gatts_if = ESP_GATT_IF_NONE,       /* Not get the gatt_if, so initial is ESP_GATT_IF_NONE */
     },
     [UHOS_BLE_HAL_PROFILE_B_APP_ID] = {
-        .gatts_cb = gatts_profile_b_event_handler,                   /* This demo does not implement, similar as profile A */
+        .gatts_cb = NULL,                   /* This demo does not implement, similar as profile A */
         .gatts_if = ESP_GATT_IF_NONE,       /* Not get the gatt_if, so initial is ESP_GATT_IF_NONE */
     },
 };
-
-typedef struct {
-    uint8_t                 *prepare_buf;
-    int                     prepare_len;
-} prepare_type_env_t;
-
-static prepare_type_env_t a_prepare_write_env;
-static prepare_type_env_t b_prepare_write_env;
 
 /**************************************************************************************************/
 /*                                        全局(静态)变量                                          */
@@ -146,196 +115,125 @@ uhos_ble_gatts_cb_t g_uhos_ble_pal_gatts_user_cb = UHOS_NULL;   //<! GATT层用�
 /**************************************************************************************************/
 /*                                          内部函数原型                                          */
 /**************************************************************************************************/
-void example_write_event_env(esp_gatt_if_t gatts_if, prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param);
-void example_exec_write_event_env(prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param);
 
 
 /**************************************************************************************************/
 /*                                          内部函数实现                                          */
 /**************************************************************************************************/
-void example_write_event_env(esp_gatt_if_t gatts_if, prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param){
-    esp_gatt_status_t status = ESP_GATT_OK;
-    if (param->write.need_rsp){
-        if (param->write.is_prep){
-            if (prepare_write_env->prepare_buf == NULL) {
-                prepare_write_env->prepare_buf = (uint8_t *)malloc(PREPARE_BUF_MAX_SIZE*sizeof(uint8_t));
-                prepare_write_env->prepare_len = 0;
-                if (prepare_write_env->prepare_buf == NULL) {
-                    UHOS_LOGE( "Gatt_server prep no mem\n");
-                    status = ESP_GATT_NO_RESOURCES;
-                }
-            } else {
-                if(param->write.offset > PREPARE_BUF_MAX_SIZE) {
-                    status = ESP_GATT_INVALID_OFFSET;
-                } else if ((param->write.offset + param->write.len) > PREPARE_BUF_MAX_SIZE) {
-                    status = ESP_GATT_INVALID_ATTR_LEN;
-                }
-            }
+/**
+ * @brief       向协议栈添加一个服务
+ * @param[in]   p_srv_db    蓝牙服务描述数据
+ * @return      uhos_ble_status_t
+ */
+static uhos_ble_status_t uhos_ble_pal_gatts_add_service(uhos_ble_gatts_srv_db_t *p_srv_db, uhos_u8 id)
+{
+    // uhos_ble_profile_tab[id].gatts_cb = NULL;
+    // uhos_ble_profile_tab[id].gatts_if = ESP_GATT_IF_NONE;
 
-            esp_gatt_rsp_t *gatt_rsp = (esp_gatt_rsp_t *)malloc(sizeof(esp_gatt_rsp_t));
-            gatt_rsp->attr_value.len = param->write.len;
-            gatt_rsp->attr_value.handle = param->write.handle;
-            gatt_rsp->attr_value.offset = param->write.offset;
-            gatt_rsp->attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
-            memcpy(gatt_rsp->attr_value.value, param->write.value, param->write.len);
-            esp_err_t response_err = esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id, status, gatt_rsp);
-            if (response_err != ESP_OK){
-               UHOS_LOGE( "Send response error\n");
-            }
-            free(gatt_rsp);
-            if (status != ESP_GATT_OK){
-                return;
-            }
-            memcpy(prepare_write_env->prepare_buf + param->write.offset,
-                   param->write.value,
-                   param->write.len);
-            prepare_write_env->prepare_len += param->write.len;
+    uhos_ble_profile_tab[id].app_id = id;
 
-        }else{
-            esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id, status, NULL);
-        }
+    // uhos_ble_profile_tab[id].conn_id = id;
+    // uhos_ble_profile_tab[id].service_handle = id;
+
+    if(p_srv_db->srv_type == UHOS_BLE_PRIMARY_SERVICE)
+    {
+        uhos_ble_profile_tab[id].service_id.is_primary = UHOS_TRUE;
     }
+    else if(p_srv_db->srv_type == UHOS_BLE_SECONDARY_SERVICE)
+    {
+        uhos_ble_profile_tab[id].service_id.is_primary = UHOS_FALSE;
+    }
+
+    uhos_ble_profile_tab[id].service_id.id.inst_id = 0x00;
+
+    if(p_srv_db->srv_uuid.type == UHOS_BLE_UUID_TYPE_16)
+    {
+        uhos_ble_profile_tab[id].service_id.id.uuid.len = ESP_UUID_LEN_16;
+        uhos_ble_profile_tab[id].service_id.id.uuid.uuid.uuid16 = p_srv_db->srv_uuid.uuid16;
+    }
+    else if(p_srv_db->srv_uuid.type == UHOS_BLE_UUID_TYPE_128)
+    {
+        uhos_ble_profile_tab[id].service_id.id.uuid.len = ESP_UUID_LEN_128;
+        uhos_libc_memcpy(uhos_ble_profile_tab[id].service_id.id.uuid.uuid.uuid16
+                        ,p_srv_db->srv_uuid.uuid128
+                        ,ESP_UUID_LEN_128);
+    }
+
+    // uhos_ble_profile_tab[id].char_handle = id;
+
+    if(p_srv_db->p_char_db->char_uuid.type == UHOS_BLE_UUID_TYPE_16)
+    {
+        uhos_ble_profile_tab[id].char_uuid.len = ESP_UUID_LEN_16;
+        uhos_ble_profile_tab[id].char_uuid.uuid.uuid16 = p_srv_db->p_char_db->char_uuid.uuid16;
+    }
+    else if(p_srv_db->p_char_db->char_uuid.type == UHOS_BLE_UUID_TYPE_128)
+    {
+        uhos_ble_profile_tab[id].char_uuid.len = ESP_UUID_LEN_128;
+        uhos_libc_memcpy(uhos_ble_profile_tab[id].char_uuid.uuid.uuid16
+                        ,p_srv_db->p_char_db->char_uuid.uuid128
+                        ,ESP_UUID_LEN_128);
+    }
+
+    uhos_ble_profile_tab[id].perm = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_BROADCAST)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_BROADCAST; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_READ)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_READ; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_WRITE_WITHOUT_RESP)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_WRITE_NR; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_WRITE)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_WRITE; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_NOTIFY)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_NOTIFY; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_INDICATE)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_INDICATE; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_AUTH_SIGNED_WRITE)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_AUTH; 
+    }
+    if(p_srv_db->p_char_db->char_property & UHOS_BLE_CHAR_PROP_EXTENDED_PROPERTIES)
+    {
+        uhos_ble_profile_tab[id].property |= ESP_GATT_CHAR_PROP_BIT_EXT_PROP; 
+    }
+
+    // uhos_ble_profile_tab[id].descr_handle = id;
+    // uhos_ble_profile_tab[id].descr_uuid.len = id;
+    // uhos_ble_profile_tab[id].descr_uuid.uuid.uuid16 = id;
 }
 
-void example_exec_write_event_env(prepare_type_env_t *prepare_write_env, esp_ble_gatts_cb_param_t *param){
-    if (param->exec_write.exec_write_flag == ESP_GATT_PREP_WRITE_EXEC){
-        esp_log_buffer_hex("GATTS_TAG", prepare_write_env->prepare_buf, prepare_write_env->prepare_len);
-    }else{
-        UHOS_LOGI("ESP_GATT_PREP_WRITE_CANCEL");
-    }
-    if (prepare_write_env->prepare_buf) {
-        free(prepare_write_env->prepare_buf);
-        prepare_write_env->prepare_buf = NULL;
-    }
-    prepare_write_env->prepare_len = 0;
-}
+static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) 
+{
+    esp_err_t ret;
 
-static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
-    switch (event) {
+    switch (event) 
+    {
     case ESP_GATTS_REG_EVT:
         UHOS_LOGI("REGISTER_APP_EVT, status %d, app_id %d\n", param->reg.status, param->reg.app_id);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id.is_primary = true;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id.id.inst_id = 0x00;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id.id.uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id.id.uuid.uuid.uuid16 = GATTS_SERVICE_UUID_TEST_A;
 
-        esp_err_t set_dev_name_ret = esp_ble_gap_set_device_name(TEST_DEVICE_NAME);
-        if (set_dev_name_ret){
-            UHOS_LOGE("set device name failed, error code = %x", set_dev_name_ret);
-        }
-#ifdef CONFIG_SET_RAW_ADV_DATA
-        esp_err_t raw_adv_ret = esp_ble_gap_config_adv_data_raw(raw_adv_data, sizeof(raw_adv_data));
-        if (raw_adv_ret){
-            UHOS_LOGE("config raw adv data failed, error code = %x ", raw_adv_ret);
-        }
-        adv_config_done |= adv_config_flag;
-        esp_err_t raw_scan_ret = esp_ble_gap_config_scan_rsp_data_raw(raw_scan_rsp_data, sizeof(raw_scan_rsp_data));
-        if (raw_scan_ret){
-           UHOS_LOGE("config raw scan rsp data failed, error code = %x", raw_scan_ret);
-        }
-        adv_config_done |= scan_rsp_config_flag;
-#else
-        //config adv data
-        esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data);
-        if (ret){
-            UHOS_LOGE("config adv data failed, error code = %x", ret);
-        }
-        //adv_config_done |= adv_config_flag;
-        //config scan response data
-        ret = esp_ble_gap_config_adv_data(&scan_rsp_data);
-        if (ret){
-            UHOS_LOGE("config scan response data failed, error code = %x", ret);
-        }
-        //adv_config_done |= scan_rsp_config_flag;
-
-#endif
         esp_ble_gatts_create_service(gatts_if, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id, GATTS_NUM_HANDLE_TEST_A);
         break;
-    case ESP_GATTS_READ_EVT: {
-        UHOS_LOGI("GATT_READ_EVT, conn_id %d, trans_id %d, handle %d\n", param->read.conn_id, param->read.trans_id, param->read.handle);
-        esp_gatt_rsp_t rsp;
-        memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
-        rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 4;
-        rsp.attr_value.value[0] = 0xde;
-        rsp.attr_value.value[1] = 0xed;
-        rsp.attr_value.value[2] = 0xbe;
-        rsp.attr_value.value[3] = 0xef;
-        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
-                                    ESP_GATT_OK, &rsp);
-        break;
-    }
-    case ESP_GATTS_WRITE_EVT: {
-        UHOS_LOGI("GATT_WRITE_EVT, conn_id %d, trans_id %d, handle %d", param->write.conn_id, param->write.trans_id, param->write.handle);
-        if (!param->write.is_prep){
-            UHOS_LOGI("GATT_WRITE_EVT, value len %d, value :", param->write.len);
-            esp_log_buffer_hex("GATTS_TAG", param->write.value, param->write.len);
-            if (uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].descr_handle == param->write.handle && param->write.len == 2){
-                uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
-                if (descr_value == 0x0001){
-                    if (a_property & ESP_GATT_CHAR_PROP_BIT_NOTIFY){
-                        UHOS_LOGI("notify enable");
-                        uint8_t notify_data[15];
-                        for (int i = 0; i < sizeof(notify_data); ++i)
-                        {
-                            notify_data[i] = i%0xff;
-                        }
-                        //the size of notify_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_handle,
-                                                sizeof(notify_data), notify_data, false);
-                    }
-                }else if (descr_value == 0x0002){
-                    if (a_property & ESP_GATT_CHAR_PROP_BIT_INDICATE){
-                        UHOS_LOGI("indicate enable");
-                        uint8_t indicate_data[15];
-                        for (int i = 0; i < sizeof(indicate_data); ++i)
-                        {
-                            indicate_data[i] = i%0xff;
-                        }
-                        //the size of indicate_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_handle,
-                                                sizeof(indicate_data), indicate_data, true);
-                    }
-                }
-                else if (descr_value == 0x0000){
-                    UHOS_LOGI("notify/indicate disable ");
-                }else{
-                    UHOS_LOGE("unknown descr value");
-                    esp_log_buffer_hex("GATTS_TAG", param->write.value, param->write.len);
-                }
-
-            }
-        }
-        example_write_event_env(gatts_if, &a_prepare_write_env, param);
-        break;
-    }
-    case ESP_GATTS_EXEC_WRITE_EVT:
-        UHOS_LOGI("ESP_GATTS_EXEC_WRITE_EVT");
-        esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id, ESP_GATT_OK, NULL);
-        example_exec_write_event_env(&a_prepare_write_env, param);
-        break;
-    case ESP_GATTS_MTU_EVT:
-        UHOS_LOGI("ESP_GATTS_MTU_EVT, MTU %d", param->mtu.mtu);
-        break;
-    case ESP_GATTS_UNREG_EVT:
-        break;
     case ESP_GATTS_CREATE_EVT:
-        UHOS_LOGI( "CREATE_SERVICE_EVT, status %d,  service_handle %d\n", param->create.status, param->create.service_handle);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_handle = param->create.service_handle;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_uuid.uuid.uuid16 = GATTS_CHAR_UUID_TEST_A;
-
-        esp_ble_gatts_start_service(uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_handle);
-        a_property = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
-        esp_err_t add_char_ret = esp_ble_gatts_add_char(uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_handle, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_uuid,
-                                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                                        a_property,
-                                                        &gatts_demo_char1_val, NULL);
-        if (add_char_ret){
-            UHOS_LOGIE"add char failed, error code =%x",add_char_ret);
+        //service has been created, now add characteristic declaration
+        ret = esp_ble_gatts_add_char(gl_profile_tab[HEART_PROFILE_APP_ID].service_handle, &gl_profile_tab[HEART_PROFILE_APP_ID].char_uuid,
+                            ESP_GATT_PERM_READ,
+                            ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_INDICATE,
+                            &heart_rate_attr, NULL);
+        if (ret) {
+            ESP_LOGE(GATTS_TAG, "add char failed, error code = %x", ret);
         }
-        break;
-    case ESP_GATTS_ADD_INCL_SRVC_EVT:
         break;
     case ESP_GATTS_ADD_CHAR_EVT: {
         uint16_t length = 0;
@@ -343,9 +241,7 @@ static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, e
 
         UHOS_LOGI( "ADD_CHAR_EVT, status %d,  attr_handle %d, service_handle %d\n",
                 param->add_char.status, param->add_char.attr_handle, param->add_char.service_handle);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_handle = param->add_char.attr_handle;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].descr_uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
+
         esp_err_t get_attr_ret = esp_ble_gatts_get_attr_value(param->add_char.attr_handle,  &length, &prf_char);
         if (get_attr_ret == ESP_FAIL){
             UHOS_LOGI("ILLEGAL HANDLE");
@@ -379,14 +275,6 @@ static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, e
         esp_ble_conn_update_params_t conn_params = {0};
         memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
         /* For the IOS system, please reference the apple official documents about the ble connection parameters restrictions. */
-        conn_params.latency = 0;
-        conn_params.max_int = 0x20;    // max_int = 0x20*1.25ms = 40ms
-        conn_params.min_int = 0x10;    // min_int = 0x10*1.25ms = 20ms
-        conn_params.timeout = 400;    // timeout = 400*10ms = 4000ms
-        UHOS_LOGI("ESP_GATTS_CONNECT_EVT, conn_id %d, remote %02x:%02x:%02x:%02x:%02x:%02x:",
-                 param->connect.conn_id,
-                 param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2],
-                 param->connect.remote_bda[3], param->connect.remote_bda[4], param->connect.remote_bda[5]);
         uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].conn_id = param->connect.conn_id;
         //start sent the update connection parameters to the peer device.
         esp_ble_gap_update_conn_params(&conn_params);
@@ -394,158 +282,10 @@ static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, e
     }
     case ESP_GATTS_DISCONNECT_EVT:
         UHOS_LOGI("ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x%x", param->disconnect.reason);
-        esp_ble_gap_start_advertising(&adv_params);
         break;
     case ESP_GATTS_CONF_EVT:
         UHOS_LOGI("ESP_GATTS_CONF_EVT, status %d attr_handle %d", param->conf.status, param->conf.handle);
-        if (param->conf.status != ESP_GATT_OK){
-            esp_log_buffer_hex("GATTS_TAG", param->conf.value, param->conf.len);
-        }
         break;
-    case ESP_GATTS_OPEN_EVT:
-    case ESP_GATTS_CANCEL_OPEN_EVT:
-    case ESP_GATTS_CLOSE_EVT:
-    case ESP_GATTS_LISTEN_EVT:
-    case ESP_GATTS_CONGEST_EVT:
-    default:
-        break;
-    }
-}
-
-static void gatts_profile_b_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
-    switch (event) {
-    case ESP_GATTS_REG_EVT:
-        UHOS_LOGI( "REGISTER_APP_EVT, status %d, app_id %d\n", param->reg.status, param->reg.app_id);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_id.is_primary = true;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_id.id.inst_id = 0x00;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_id.id.uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_id.id.uuid.uuid.uuid16 = GATTS_SERVICE_UUID_TEST_B;
-
-        esp_ble_gatts_create_service(gatts_if, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_id, GATTS_NUM_HANDLE_TEST_B);
-        break;
-    case ESP_GATTS_READ_EVT: {
-        UHOS_LOGI( "GATT_READ_EVT, conn_id %d, trans_id %d, handle %d\n", param->read.conn_id, param->read.trans_id, param->read.handle);
-        esp_gatt_rsp_t rsp;
-        memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
-        rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 4;
-        rsp.attr_value.value[0] = 0xde;
-        rsp.attr_value.value[1] = 0xed;
-        rsp.attr_value.value[2] = 0xbe;
-        rsp.attr_value.value[3] = 0xef;
-        esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
-                                    ESP_GATT_OK, &rsp);
-        break;
-    }
-    case ESP_GATTS_WRITE_EVT: {
-        UHOS_LOGI( "GATT_WRITE_EVT, conn_id %d, trans_id %d, handle %d\n", param->write.conn_id, param->write.trans_id, param->write.handle);
-        if (!param->write.is_prep){
-            UHOS_LOGI( "GATT_WRITE_EVT, value len %d, value :", param->write.len);
-            esp_log_buffer_hex(GATTS_TAG, param->write.value, param->write.len);
-            if (uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].descr_handle == param->write.handle && param->write.len == 2){
-                uint16_t descr_value= param->write.value[1]<<8 | param->write.value[0];
-                if (descr_value == 0x0001){
-                    if (b_property & ESP_GATT_CHAR_PROP_BIT_NOTIFY){
-                        UHOS_LOGI( "notify enable");
-                        uint8_t notify_data[15];
-                        for (int i = 0; i < sizeof(notify_data); ++i)
-                        {
-                            notify_data[i] = i%0xff;
-                        }
-                        //the size of notify_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_handle,
-                                                sizeof(notify_data), notify_data, false);
-                    }
-                }else if (descr_value == 0x0002){
-                    if (b_property & ESP_GATT_CHAR_PROP_BIT_INDICATE){
-                        UHOS_LOGI( "indicate enable");
-                        uint8_t indicate_data[15];
-                        for (int i = 0; i < sizeof(indicate_data); ++i)
-                        {
-                            indicate_data[i] = i%0xff;
-                        }
-                        //the size of indicate_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_handle,
-                                                sizeof(indicate_data), indicate_data, true);
-                    }
-                }
-                else if (descr_value == 0x0000){
-                    UHOS_LOGI( "notify/indicate disable ");
-                }else{
-                    UHOS_LOGI("unknown value");
-                }
-
-            }
-        }
-        example_write_event_env(gatts_if, &b_prepare_write_env, param);
-        break;
-    }
-    case ESP_GATTS_EXEC_WRITE_EVT:
-        UHOS_LOGI("ESP_GATTS_EXEC_WRITE_EVT");
-        esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id, ESP_GATT_OK, NULL);
-        example_exec_write_event_env(&b_prepare_write_env, param);
-        break;
-    case ESP_GATTS_MTU_EVT:
-        UHOS_LOGI( "ESP_GATTS_MTU_EVT, MTU %d", param->mtu.mtu);
-        break;
-    case ESP_GATTS_UNREG_EVT:
-        break;
-    case ESP_GATTS_CREATE_EVT:
-        UHOS_LOGI( "CREATE_SERVICE_EVT, status %d,  service_handle %d\n", param->create.status, param->create.service_handle);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_handle = param->create.service_handle;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_uuid.uuid.uuid16 = GATTS_CHAR_UUID_TEST_B;
-
-        esp_ble_gatts_start_service(uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_handle);
-        b_property = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
-        esp_err_t add_char_ret =esp_ble_gatts_add_char( uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_handle, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_uuid,
-                                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                                        b_property,
-                                                        NULL, NULL);
-        if (add_char_ret){
-            UHOS_LOGI("add char failed, error code =%x",add_char_ret);
-        }
-        break;
-    case ESP_GATTS_ADD_INCL_SRVC_EVT:
-        break;
-    case ESP_GATTS_ADD_CHAR_EVT:
-        UHOS_LOGI( "ADD_CHAR_EVT, status %d,  attr_handle %d, service_handle %d\n",
-                 param->add_char.status, param->add_char.attr_handle, param->add_char.service_handle);
-
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].char_handle = param->add_char.attr_handle;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].descr_uuid.len = ESP_UUID_LEN_16;
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
-        esp_ble_gatts_add_char_descr(uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].service_handle, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].descr_uuid,
-                                     ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                     NULL, NULL);
-        break;
-    case ESP_GATTS_ADD_CHAR_DESCR_EVT:
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].descr_handle = param->add_char_descr.attr_handle;
-        UHOS_LOGI( "ADD_DESCR_EVT, status %d, attr_handle %d, service_handle %d\n",
-                 param->add_char_descr.status, param->add_char_descr.attr_handle, param->add_char_descr.service_handle);
-        break;
-    case ESP_GATTS_DELETE_EVT:
-        break;
-    case ESP_GATTS_START_EVT:
-        UHOS_LOGI( "SERVICE_START_EVT, status %d, service_handle %d\n",
-                 param->start.status, param->start.service_handle);
-        break;
-    case ESP_GATTS_STOP_EVT:
-        break;
-    case ESP_GATTS_CONNECT_EVT:
-        UHOS_LOGI( "CONNECT_EVT, conn_id %d, remote %02x:%02x:%02x:%02x:%02x:%02x:",
-                 param->connect.conn_id,
-                 param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2],
-                 param->connect.remote_bda[3], param->connect.remote_bda[4], param->connect.remote_bda[5]);
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_B_APP_ID].conn_id = param->connect.conn_id;
-        break;
-    case ESP_GATTS_CONF_EVT:
-        UHOS_LOGI( "ESP_GATTS_CONF_EVT status %d attr_handle %d", param->conf.status, param->conf.handle);
-        if (param->conf.status != ESP_GATT_OK){
-            esp_log_buffer_hex("GATTS_TAG", param->conf.value, param->conf.len);
-        }
-    break;
-    case ESP_GATTS_DISCONNECT_EVT:
     case ESP_GATTS_OPEN_EVT:
     case ESP_GATTS_CANCEL_OPEN_EVT:
     case ESP_GATTS_CLOSE_EVT:
@@ -663,7 +403,7 @@ uhos_ble_status_t uhos_ble_gatts_service_set(uhos_ble_gatts_db_t *service_databa
     {
 
         p_srv_db = &service_database->p_srv_db[i];
-        status   = uhos_ble_pal_gatts_add_service(p_srv_db);
+        status   = uhos_ble_pal_gatts_add_service(p_srv_db, i);
 
         if (UHOS_BLE_SUCCESS != status)
         {
@@ -693,21 +433,25 @@ uhos_ble_status_t uhos_ble_gatts_notify_or_indicate(
     uhos_u8 *p_value,
     uhos_u16 len)
 {
-    uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-    uhos_u16 handler = 0;
-    uhos_u16 att_offset = 0;
-    int      start_handler = srv_handle;
+    // uhos_u16 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
+    // uhos_u16 handler = 0;
+    // uhos_u16 att_offset = 0;
+    // int      start_handler = srv_handle;
 
-    handler    = start_handler >> 8;
-    att_offset = (char_value_handle & 0xFF);
+    // handler    = start_handler >> 8;
+    // att_offset = (char_value_handle & 0xFF);
 
     if (offset == 0)
     {
-        app_ble_gatt_data_send_notify((uhos_u8)conidx, handler, att_offset, len, p_value);
+        //app_ble_gatt_data_send_notify((uhos_u8)conidx, handler, att_offset, len, p_value);
+        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+                                        len, p_value, false);
     }
     else
     {
-        app_ble_gatt_data_send_indicate((uhos_u8)conidx, handler, att_offset, len, p_value);
+        //app_ble_gatt_data_send_indicate((uhos_u8)conidx, handler, att_offset, len, p_value);
+        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+                                        len, p_value, true);
     }
 
     return UHOS_BLE_SUCCESS;
