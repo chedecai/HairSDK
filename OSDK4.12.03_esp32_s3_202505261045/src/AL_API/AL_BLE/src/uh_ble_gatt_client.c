@@ -432,26 +432,26 @@ uhos_ble_status_t uhos_ble_gattc_primary_service_discover_all(
     uhos_u16 conn_handle,
     void    *req)
 {
-    uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
+    // uhos_u8  conidx = 0;
 
-    // 检查连接状态
-    conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
+    // // 检查连接状态
+    // conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
 
-    if (!app_get_connect_status(conidx))
+    // if (!app_get_connect_status(conidx))
+    // {
+    //     UHOS_LOGE("conn dis 0x%x", conidx);
+    //     return UHOS_BLE_ERROR;
+    // }
+
+    // // 调用协议栈接口
+    // g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
+
+    ret = esp_ble_gattc_search_service(esp_gatt_if_t gattc_if, uint16_t conn_id, esp_bt_uuid_t *filter_uuid);//sonata_ble_gatt_disc_all_svc(conidx);
+
+    if (ret)
     {
-        UHOS_LOGE("conn dis 0x%x", conidx);
-        return UHOS_BLE_ERROR;
-    }
-
-    // 调用协议栈接口
-    g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
-
-    retval = sonata_ble_gatt_disc_all_svc(conidx);
-
-    if (retval != API_SUCCESS)
-    {
-        UHOS_LOGE("primary service discover all fail 0x%4x", retval);
+        UHOS_LOGE("primary service discover all fail 0x%4x", ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -472,7 +472,7 @@ uhos_ble_status_t uhos_ble_gattc_primary_service_discover_by_uuid(
 {
     uhos_u8  conidx   = 0;
     uhos_u8  uuid_len = 0;
-    uhos_u16 retval   = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -496,15 +496,11 @@ uhos_ble_status_t uhos_ble_gattc_primary_service_discover_by_uuid(
     // 通过协议栈接口发现服务
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
 
-    retval = sonata_ble_gatt_disc_svc_by_uuid(conidx,
-                                              handle_range->begin_handle,
-                                              handle_range->end_handle,
-                                              uuid_len,
-                                              p_srv_uuid->uuid128);
+    ret = esp_ble_gattc_search_service(esp_gatt_if_t gattc_if, uint16_t conn_id, esp_bt_uuid_t *filter_uuid);//sonata_ble_gatt_disc_all_svc(conidx);
 
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("primary service discover by uuid fail 0x%4x",retval);
+        UHOS_LOGE("primary service discover by uuid fail 0x%4x",ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -522,7 +518,7 @@ uhos_ble_status_t uhos_ble_gattc_char_discover_of_service(
     uhos_ble_handle_range_t *char_handle_range)
 {
     uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -534,12 +530,10 @@ uhos_ble_status_t uhos_ble_gattc_char_discover_of_service(
     }
 
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP;
-    retval = sonata_ble_gatt_disc_all_characteristic(conidx,
-                                                     char_handle_range->begin_handle,
-                                                     char_handle_range->end_handle);
-    if (API_SUCCESS != retval)
+    ret = esp_ble_gattc_get_all_char(esp_gatt_if_t gattc_if, uint16_t conn_id, uint16_t start_handle, uint16_t end_handle);
+    if (ret)
     {
-        UHOS_LOGE("char discover of service fail 0x%4x",retval);
+        UHOS_LOGE("char discover of service fail 0x%4x",ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -561,7 +555,7 @@ uhos_ble_status_t uhos_ble_gattc_char_discover_by_uuid(
 {
     uhos_u8  conidx   = 0;
     uhos_u8  uuid_len = 0;
-    uhos_u16 retval   = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -585,15 +579,11 @@ uhos_ble_status_t uhos_ble_gattc_char_discover_by_uuid(
     // 调用协议栈接口发现特征
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_BY_UUID_RESP;
 
-    retval  = sonata_ble_gatt_disc_characteristic_by_uuid(conidx,
-                                                          handle_range->begin_handle,
-                                                          handle_range->end_handle,
-                                                          uuid_len,
-                                                          p_char_uuid->uuid128);
+    ret = esp_ble_gattc_get_char_by_uuid(esp_gatt_if_t gattc_if, uint16_t conn_id, uint16_t start_handle, uint16_t end_handle, esp_bt_uuid_t char_uuid);
 
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("gattc char discover by uuid fail 0x%4x", retval);
+        UHOS_LOGE("gattc char discover by uuid fail 0x%4x", ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -612,7 +602,7 @@ uhos_ble_status_t uhos_ble_gattc_clt_cfg_descriptor_discover(
     uhos_ble_handle_range_t *handle_range)
 {
     uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -626,13 +616,11 @@ uhos_ble_status_t uhos_ble_gattc_clt_cfg_descriptor_discover(
     // 调用协议栈接口
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP;
 
-    retval = sonata_ble_gatt_disc_all_descriptor(conidx,
-                                                 handle_range->begin_handle,
-                                                 handle_range->end_handle);
+    ret = esp_ble_gattc_get_all_descr(esp_gatt_if_t gattc_if, uint16_t conn_id, uint16_t char_handle);
 
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("char descriptor discover all fail 0x%4x", retval);
+        UHOS_LOGE("char descriptor discover all fail 0x%4x", ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -650,7 +638,7 @@ uhos_ble_status_t uhos_ble_gattc_read_char_value(
     uhos_u16 char_value_handle)
 {
     uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
 
     // 连接状态检查
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -664,11 +652,11 @@ uhos_ble_status_t uhos_ble_gattc_read_char_value(
     // 调用协议栈接口
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP;
 
-    retval = sonata_ble_gatt_read_by_handle(conidx, char_value_handle);
+    ret = esp_ble_gattc_read_char(esp_gatt_if_t gattc_if, uint16_t conn_id, uint16_t char_handle, esp_gatt_auth_req_t auth_req);
 
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("read char value fail 0x%4x", retval);
+        UHOS_LOGE("read char value fail 0x%4x", ret);
 
         return UHOS_BLE_ERROR;
     }
@@ -690,7 +678,7 @@ uhos_ble_status_t uhos_ble_gattc_read_char_value_by_uuid(
 {
     uhos_u8  conidx   = 0;
     uhos_u8  uuid_len = 0;
-    uhos_u16 retval   = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -714,16 +702,10 @@ uhos_ble_status_t uhos_ble_gattc_read_char_value_by_uuid(
     // 调用协议栈接口
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP;
 
-    retval = sonata_ble_gatt_read_by_uuid(conidx,
-                                          0,
-                                          handle_range->begin_handle,
-                                          handle_range->end_handle,
-                                          uuid_len,
-                                          p_char_uuid->uuid128);
-
-    if (API_SUCCESS != retval)
+    ret = esp_ble_gattc_read_by_type(esp_gatt_if_t gattc_if, uint16_t conn_id, uint16_t start_handle, uint16_t end_handle, esp_bt_uuid_t *uuid, esp_gatt_auth_req_t auth_req);
+    if (ret)
     {
-        UHOS_LOGE("read char value by uuid fail 0x%4x", retval);
+        UHOS_LOGE("read char value by uuid fail 0x%4x", ret);
         return UHOS_BLE_ERROR;
     }
 
