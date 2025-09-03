@@ -32,6 +32,10 @@
 #include "uh_ble.h"
 #include "uh_ble_common.h"
 
+/**************************************************************************************************/
+/*                                          内部函数原型                                          */
+/**************************************************************************************************/
+void uhos_ble_pal_gattc_stack_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_ble_gattc_cb_param_t *param);
 
 /**************************************************************************************************/
 /*                                          外部引用声明                                          */
@@ -41,24 +45,41 @@
 /**************************************************************************************************/
 /*                                           内部宏定义                                           */
 /**************************************************************************************************/
+#define UHOS_BLE_GATTC_MAX_CON_IDX 5
 
+#define UHOS_BLE_GATTC_PROFILE_NUM 1
+#define UHOS_BLE_GATTC_PROFILE_A_APP_ID 0
 
 /**************************************************************************************************/
 /*                                        内部数据类型定义                                        */
 /**************************************************************************************************/
-
+struct gattc_profile_inst {
+    esp_gattc_cb_t gattc_cb;
+    uint16_t gattc_if;
+    uint16_t app_id;
+    uint16_t conn_id;
+    uint16_t service_start_handle;
+    uint16_t service_end_handle;
+    uint16_t char_handle;
+    esp_bd_addr_t remote_bda;
+};
 
 /**************************************************************************************************/
 /*                                        全局(静态)变量                                          */
 /**************************************************************************************************/
-static uhos_u8            g_uhos_ble_pal_gattc_op[APP_MAX_CON_IDX] = {0};
+static uhos_u8            g_uhos_ble_pal_gattc_op[UHOS_BLE_GATTC_MAX_CON_IDX] = {0};
 uhos_ble_gattc_callback_t g_uhos_ble_pal_gattc_user_cb = UHOS_NULL; //<! GATT层用户设置的Client端回调函数
 
+static uhos_u16 gattc_if[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
+static uhos_u16 gattc_conn_id[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
 
-/**************************************************************************************************/
-/*                                          内部函数原型                                          */
-/**************************************************************************************************/
-
+/* One gatt-based profile one app_id and one gattc_if, this array will store the gattc_if returned by ESP_GATTS_REG_EVT */
+static struct gattc_profile_inst gl_profile_tab[UHOS_BLE_GATTC_PROFILE_NUM] = {
+    [UHOS_BLE_GATTC_PROFILE_A_APP_ID] = {
+        .gattc_cb = uhos_ble_pal_gattc_stack_cb,
+        .gattc_if = ESP_GATT_IF_NONE,       /* Not get the gatt_if, so initial is ESP_GATT_IF_NONE */
+    },
+};
 
 /**************************************************************************************************/
 /*                                          内部函数实现                                          */
@@ -69,10 +90,9 @@ uhos_ble_gattc_callback_t g_uhos_ble_pal_gattc_user_cb = UHOS_NULL; //<! GATT层
  * @param[in]   param   回调参数
  * @return      无
  */
-static void uhos_ble_pal_gattc_stack_cb(app_ble_gatt_event_t event, app_ble_gatt_event_param_t *param)
+static void uhos_ble_pal_gattc_stack_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_ble_gattc_cb_param_t *param)
 {
-    uhos_u16 conn_id = 0;
-    uhos_ble_gattc_evt_param_t evt_param = {0};
+    esp_ble_gattc_cb_param_t *p_data = (esp_ble_gattc_cb_param_t *)param;
 
     // 输入参数检查
     if (UHOS_NULL == param)
@@ -88,323 +108,128 @@ static void uhos_ble_pal_gattc_stack_cb(app_ble_gatt_event_t event, app_ble_gatt
         return;
     }
 
-    // 获取连接句柄
-    conn_id = uhos_ble_pal_conn_id_switch(param->dis_svc.conidx, UHOS_BLE_CONNECT_SWITCH_MODE_INC);
-
     // 依据事件类型进行操作
     switch (event)
     {
-        case APP_BLE_GATT_EVENT_DISC_SERVICE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.srv_disc_rsp.primary_srv_range.begin_handle = param->dis_svc.start_hdl;
-            evt_param.srv_disc_rsp.primary_srv_range.end_handle   = param->dis_svc.end_hdl;
-
-            if (UPLUG_BLE_UUID_16_LEN == param->dis_svc.uuid_len)
+        case ESP_GATTC_REG_EVT:  //在 ESP_GATTC_REG_EVT 中保存 gattc_if, 标志着 GATT 客户端应用程序的初始化完成
             {
-                evt_param.srv_disc_rsp.srv_uuid.type = UHOS_BLE_UUID_TYPE_16;
+                UHOS_LOGI("ESP_GATTC_REG_EVT");
             }
-            else
-            {
-                evt_param.srv_disc_rsp.srv_uuid.type = UHOS_BLE_UUID_TYPE_128;
-            }
-
-            uhos_libc_memcpy(evt_param.srv_disc_rsp.srv_uuid.uuid128,
-                             param->dis_svc.uuid,
-                             param->dis_svc.uuid_len);
-
-            evt_param.srv_disc_rsp.succ = 1;
-
-            g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP, &evt_param);
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_DISC_SERVICE_DONE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.common_rsp.succ = true;
-
-            g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_DONE, &evt_param);
-
+        case ESP_GATTC_CONNECT_EVT:
+            {
+                UHOS_LOGI("ESP_GATTC_CONNECT_EVT");
+            }
             break;
-        }
-
-        case APP_BLE_GATT_EVENT_DISC_ALL_CHAR:
-        case APP_BLE_GATT_EVENT_DISC_CCCD:
-        case APP_BLE_GATT_EVENT_CHAR_DISCOVER:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.char_disc_rsp.char_handle       = param->dis_char.attr_hdl;
-            evt_param.char_disc_rsp.char_properties   = param->dis_char.prop;
-            evt_param.char_disc_rsp.char_value_handle = param->dis_char.pointer_hdl;
-
-            if (UPLUG_BLE_UUID_16_LEN == param->dis_char.uuid_len)
+        
+        case ESP_GATTC_OPEN_EVT:
             {
-                evt_param.char_disc_rsp.char_uuid.type = UHOS_BLE_UUID_TYPE_16;
-            }
-            else
-            {
-                evt_param.char_disc_rsp.char_uuid.type = UHOS_BLE_UUID_TYPE_128;
-            }
-
-            uhos_libc_memcpy(evt_param.char_disc_rsp.char_uuid.uuid128,
-                             param->dis_char.uuid,
-                             param->dis_char.uuid_len);
-
-            if ((APP_BLE_GATT_EVENT_CHAR_DISCOVER == event)
-             || (APP_BLE_GATT_EVENT_DISC_ALL_CHAR == event))
-            {
-                if (g_uhos_ble_pal_gattc_op[param->dis_char.conidx] == UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP)
+                if (param->open.status != ESP_GATT_OK)
                 {
-                    g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP, &evt_param);
+                    UHOS_LOGE("open failed, status %d", p_data->open.status);
+                    break;
                 }
-                else
-                {
-                    g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP, &evt_param);
-                }
+                UHOS_LOGI("ESP_GATTC_OPEN_EVT");
             }
-            else
-            {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CCCD_DISCOVER_RESP, &evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_CHAR_DISCOVER_DONE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.common_rsp.succ  = true;
-
-            if (g_uhos_ble_pal_gattc_op[param->dis_char.conidx] == UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_RESP)
+        case ESP_GATTC_DIS_SRVC_CMPL_EVT:
             {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_DONE, &evt_param);
+                UHOS_LOGI("ESP_GATTC_DIS_SRVC_CMPL_EVT");
             }
-            else
-            {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP, &evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_DISC_CHAR_BY_UUID_DONE:
-        {
-            evt_param.conn_handle = conn_id;
-            evt_param.common_rsp.succ = true;
-
-            g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CHAR_DISCOVER_DONE, &evt_param);
-
+        case ESP_GATTC_CFG_MTU_EVT:
+            {
+                UHOS_LOGI("ESP_GATTC_CFG_MTU_EVT");
+            }
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_DISC_DESP:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.char_desc_disc_rsp.char_desc_handle = param->dis_desc.attr_hdl;
-
-            if(param->dis_desc.uuid_len == UPLUG_BLE_UUID_16_LEN)
+        case ESP_GATTC_SEARCH_RES_EVT:
             {
-                evt_param.char_desc_disc_rsp.char_desc_uuid.type = UHOS_BLE_UUID_TYPE_16;
+                UHOS_LOGI("ESP_GATTC_SEARCH_RES_EVT");
             }
-            else
-            {
-                evt_param.char_desc_disc_rsp.char_desc_uuid.type = UHOS_BLE_UUID_TYPE_128;
-            }
-
-            uhos_libc_memcpy(evt_param.char_desc_disc_rsp.char_desc_uuid.uuid128,
-                             param->dis_desc.uuid,
-                             param->dis_desc.uuid_len);
-
-
-            if (g_uhos_ble_pal_gattc_op[param->dis_desc.conidx] == UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP)
-            {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP, &evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_DISC_DESP_DONE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.common_rsp.succ  = true;
-
-            if (g_uhos_ble_pal_gattc_op[param->dis_desc.conidx] == UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_RESP)
+        case ESP_GATTC_SEARCH_CMPL_EVT:
             {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_CHAR_DESC_DISCOVER_DONE, &evt_param);
+                UHOS_LOGI("ESP_GATTC_SEARCH_CMPL_EVT");
             }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_READ_RSP:
-        {
-            bool flag = true;
-
-            evt_param.conn_handle = conn_id;
-
-            if (param->read_rsp.status !=0)
+        case ESP_GATTC_REG_FOR_NOTIFY_EVT:
             {
-                flag = false;
+                UHOS_LOGI("ESP_GATTC_REG_FOR_NOTIFY_EVT");
             }
-
-            if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] != UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP)
-            {
-                return;
-            }
-
-            evt_param.read_char_value_rsp.succ = flag;
-
-            if (flag)
-            {
-                evt_param.read_char_value_rsp.data = param->read_rsp.value;
-                evt_param.read_char_value_rsp.len  = param->read_rsp.length;
-            }
-            else
-            {
-                evt_param.read_char_value_rsp.data = NULL;
-                evt_param.read_char_value_rsp.len  = 0;
-            }
-
-            g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP, &evt_param);
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_READ_CHAR_VALUE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] == UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP)
+        case ESP_GATTC_NOTIFY_EVT:
             {
-                evt_param.read_char_value_rsp.len  = param->read_rsp.length;
-                evt_param.read_char_value_rsp.data = param->read_rsp.value;
-                evt_param.read_char_value_rsp.succ = 1;
-
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_RESP, &evt_param);
+                UHOS_LOGI("ESP_GATTC_NOTIFY_EVT");
             }
-            else if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] == UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP)
-            {
-                evt_param.read_using_uuid_rsp.char_value_handle = param->read_rsp.handle;
-                evt_param.read_using_uuid_rsp.len = param->read_rsp.length;
-                evt_param.read_using_uuid_rsp.data = param->read_rsp.value;
-
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP, &evt_param);
-            }
-            else if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] == UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_BY_UUID_RESP)
-            {
-                evt_param.read_char_value_by_uuid_rsp.char_value_handle = param->read_rsp.handle;
-                evt_param.read_char_value_by_uuid_rsp.len = param->read_rsp.length;
-                evt_param.read_char_value_by_uuid_rsp.data = param->read_rsp.value;
-                evt_param.read_char_value_by_uuid_rsp.succ = true;
-
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_BY_UUID_RESP, &evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_READ_USING_UUID:
-        {
+        case ESP_GATTC_WRITE_DESCR_EVT:
+            {
+                UHOS_LOGI("ESP_GATTC_WRITE_DESCR_EVT");
+            }
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_READ_USING_UUID_DONE:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.common_rsp.succ = true;
-
-            if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] == UHOS_BLE_GATTC_EVT_READ_USING_UUID_RESP)
+        case ESP_GATTC_SRVC_CHG_EVT:
             {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_READ_USING_UUID_DONE, &evt_param);
+                UHOS_LOGI("ESP_GATTC_SRVC_CHG_EVT");
             }
-            else if (g_uhos_ble_pal_gattc_op[param->read_rsp.conidx] == UHOS_BLE_GATTC_EVT_READ_CHAR_VALUE_BY_UUID_RESP)
-            {
-                //g_uhos_ble_pal_gattc_user_cb(UPLUS_BLE_GATTC_EVT_READ_USING_UUID_DONE,&evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_WRITE_RSP:
-        {
-            evt_param.conn_handle = conn_id;
-
-            if (param->write_rsp.status != 0)
+        case ESP_GATTC_WRITE_CHAR_EVT:
             {
-                evt_param.write_rsp.succ = 0;
+                UHOS_LOGI("ESP_GATTC_WRITE_CHAR_EVT");
             }
-            else
-            {
-                evt_param.write_rsp.succ = 1;
-            }
-
-            if (g_uhos_ble_pal_gattc_op[param->write_rsp.conidx] == UHOS_BLE_GATTC_EVT_WRITE_RESP)
-            {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_WRITE_RESP, &evt_param);
-            }
-
             break;
-        }
 
-        case APP_BLE_GATT_EVENT_NOTIFY_IND:
-        case APP_BLE_GATT_EVENT_INDICATE_IND:
-        {
-            evt_param.conn_handle = conn_id;
-
-            evt_param.notification.handle = param->notify_ind.handle;
-            evt_param.notification.len    = param->notify_ind.length;
-            evt_param.notification.pdata  = param->notify_ind.value;
-
-            if (event == APP_BLE_GATT_EVENT_NOTIFY_IND)
+        case ESP_GATTC_DISCONNECT_EVT:
             {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_NOTIFICATION, &evt_param);
+                UHOS_LOGI("ESP_GATTC_DISCONNECT_EVT");
             }
-            else
-            {
-                g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_INDICATION, &evt_param);
-            }
-
             break;
-        }
-
-        case APP_BLE_GATTC_EVT_EXCHANGE_MTU_DONE:
-        {
-
-            evt_param.conn_handle = conn_id;
-
-            evt_param.common_rsp.succ = true;
-
-            g_uhos_ble_pal_gattc_user_cb(UHOS_BLE_GATTC_EVT_EXCHANGE_MTU_DONE, &evt_param);
-
-            break;
-        }
-
-        case APP_BLE_GATT_EVT_RSSI_IND:
-        {
-            //hal_report_gatt_connect(param->rssi_ind.rssi);
-            break;
-        }
-
         default:
-        {
             break;
-        }
     }
 
     return;
 }
 
+static void uhos_ble_pal_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gattc_if, esp_ble_gattc_cb_param_t *param)
+{
+    /* If event is register event, store the gattc_if for each profile */
+    if (event == ESP_GATTC_REG_EVT) 
+    {
+        if (param->reg.status == ESP_GATT_OK) 
+        {
+            gl_profile_tab[param->reg.app_id].gattc_if = gattc_if;
+        } 
+        else 
+        {
+            UHOS_LOGI("reg app failed, app_id %04x, status %d", param->reg.app_id, param->reg.status);
+            return;
+        }
+    }
 
+    /* If the gattc_if equal to profile A, call profile A cb handler,
+     * so here call each profile's callback */
+    do {
+        int idx;
+        for (idx = 0; idx < PROFILE_NUM; idx++) {
+            if (gattc_if == ESP_GATT_IF_NONE || /* ESP_GATT_IF_NONE, not specify a certain gatt_if, need to call every profile cb function */
+                    gattc_if == gl_profile_tab[idx].gattc_if) {
+                if (gl_profile_tab[idx].gattc_cb) {
+                    gl_profile_tab[idx].gattc_cb(event, gattc_if, param);
+                }
+            }
+        }
+    } while (0);
+}
 /**************************************************************************************************/
 /*                                          全局函数实现                                          */
 /**************************************************************************************************/
@@ -416,7 +241,6 @@ static void uhos_ble_pal_gattc_stack_cb(app_ble_gatt_event_t event, app_ble_gatt
 uhos_ble_status_t uhos_ble_gattc_callback_register(uhos_ble_gattc_callback_t cb)
 {
     g_uhos_ble_pal_gattc_user_cb = cb;
-    ble_set_gatt_callback(uhos_ble_pal_gattc_stack_cb);
 
     return UHOS_BLE_SUCCESS;
 }
@@ -428,24 +252,22 @@ uhos_ble_status_t uhos_ble_gattc_callback_register(uhos_ble_gattc_callback_t cb)
  * @param[in]   p_srv_uuid      UUID的描述
  * @return      uhos_ble_status_t
  */
-uhos_ble_status_t uhos_ble_gattc_primary_service_discover_all(
-    uhos_u16 conn_handle,
-    void    *req)
+uhos_ble_status_t uhos_ble_gattc_primary_service_discover_all(uhos_u16 conn_handle, void    *req)
 {
     esp_err_t ret;
-    // uhos_u8  conidx = 0;
+    uhos_u8  conidx = 0;
 
-    // // 检查连接状态
-    // conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
+    // 检查连接状态
+    conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
 
-    // if (!app_get_connect_status(conidx))
-    // {
-    //     UHOS_LOGE("conn dis 0x%x", conidx);
-    //     return UHOS_BLE_ERROR;
-    // }
+    if (!app_get_connect_status(conidx))
+    {
+        UHOS_LOGE("conn dis 0x%x", conidx);
+        return UHOS_BLE_ERROR;
+    }
 
-    // // 调用协议栈接口
-    // g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
+    // 调用协议栈接口
+    g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
 
     ret = esp_ble_gattc_search_service(esp_gatt_if_t gattc_if, uint16_t conn_id, esp_bt_uuid_t *filter_uuid);//sonata_ble_gatt_disc_all_svc(conidx);
 
@@ -727,7 +549,7 @@ uhos_ble_status_t uhos_ble_gattc_write_with_rsp(
     uhos_u8  len)
 {
     uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -740,12 +562,19 @@ uhos_ble_status_t uhos_ble_gattc_write_with_rsp(
 
     // 调用协议栈接口
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_WRITE_RESP;
+    ret = esp_ble_gattc_write_char(
+        esp_gatt_if_t gattc_if,
+        uint16_t conn_id,
+        uint16_t handle,
+        uint16_t value_len,
+        uint8_t *value,
+        ESP_GATT_WRITE_TYPE_RSP,
+        ESP_GATT_AUTH_REQ_NONE
+    );
 
-    retval = sonata_ble_gatt_write(conidx,handle, 0, 0, len, p_value);
-
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("gattc write with rsp fail 0x%4x", retval);
+        UHOS_LOGE("gattc write with rsp fail 0x%4x", ret);
         // uh_ble_asr_gattc_optimize(0);
 
         return UHOS_BLE_ERROR;
@@ -769,7 +598,7 @@ uhos_ble_status_t uhos_ble_gattc_write_without_rsp(
     uhos_u16 len)
 {
     uhos_u8  conidx = 0;
-    uhos_u16 retval = 0;
+    esp_err_t ret;
 
     // 检查连接状态
     conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
@@ -781,11 +610,19 @@ uhos_ble_status_t uhos_ble_gattc_write_without_rsp(
     }
 
     // 调用协议栈接口
-    retval = sonata_ble_gatt_write_no_response(conidx, char_value_handle, 0, 0, len, p_value);
+    ret = esp_ble_gattc_write_char(
+        esp_gatt_if_t gattc_if,
+        uint16_t conn_id,
+        uint16_t handle,
+        uint16_t value_len,
+        uint8_t *value,
+        ESP_GATT_WRITE_TYPE_NO_RSP,
+        ESP_GATT_AUTH_REQ_NONE
+    );
 
-    if (API_SUCCESS != retval)
+    if (ret)
     {
-        UHOS_LOGE("gattc write with rsp fail 0x%4x", retval);
+        UHOS_LOGE("gattc write with rsp fail 0x%4x", ret);
         return UHOS_BLE_ERROR;
     }
 
@@ -813,6 +650,7 @@ uhos_ble_status_t uhos_ble_gattc_exchange_mtu(
     uhos_u16 conn_handle,
     uhos_u16 mtu)
 {
+    esp_err_t ret;
     uhos_u8 conidx = uhos_ble_pal_conn_id_switch(conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
 
     if(!app_get_connect_status(conidx))
@@ -822,10 +660,11 @@ uhos_ble_status_t uhos_ble_gattc_exchange_mtu(
         return UHOS_BLE_ERROR;
     }
 
-    uhos_u16 retval = sonata_ble_gatt_exchange_mtu(conidx);
-    if(retval != API_SUCCESS)
+    ret = esp_ble_gattc_send_mtu_req(esp_gatt_if_t gattc_if, uint16_t conn_id);
+    
+    if(ret)
     {
-        UHOS_LOGW("exchange mtu fail 0x%4x\r\n", retval);
+        UHOS_LOGW("exchange mtu fail 0x%4x\r\n", ret);
         return UHOS_BLE_ERROR;
     }
     return UHOS_BLE_SUCCESS;
