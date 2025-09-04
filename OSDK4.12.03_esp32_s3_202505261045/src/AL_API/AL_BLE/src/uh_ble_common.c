@@ -116,6 +116,7 @@ uhos_ble_status_t uhos_ble_address_get(uhos_ble_addr_t mac)
 uhos_ble_status_t uhos_ble_enable(void)
 {
     esp_err_t ret;
+    uhos_ble_status_t retval = UHOS_BLE_SUCCESS;
 	esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
 
 	/* classic bt resource release */
@@ -152,33 +153,24 @@ uhos_ble_status_t uhos_ble_enable(void)
 		return UHOS_BLE_ERROR;
 	}
 
-    ret = esp_ble_gatts_register_callback(NULL);
-    if (ret) {
-        UHOS_LOGE("gatts register error, error code = %x", ret);
+    retval = uhos_ble_gattc_init();
+    if(retval)
+    {
+        UHOS_LOGE("uhos_ble_gattc_init error, error code = %x", ret);
         return UHOS_BLE_ERROR;
     }
 
-    ret = esp_ble_gattc_register_callback(NULL);
-    if (ret) {
-        UHOS_LOGE("gattc register error, error code = %x", ret);
+    retval = uhos_ble_pal_gatts_init();
+    if(retval)
+    {
+        UHOS_LOGE("uhos_ble_pal_gatts_init error, error code = %x", ret);
         return UHOS_BLE_ERROR;
     }
 
-    ret = esp_ble_gap_register_callback(NULL);
-    if (ret) {
-        UHOS_LOGE("gap register error, error code = %x", ret);
-        return UHOS_BLE_ERROR;
-    }
-
-    ret = esp_ble_gatts_app_register(0);
-    if (ret) {
-        UHOS_LOGE("gatts app register error, error code = %x", ret);
-        return UHOS_BLE_ERROR;
-    }
-
-    ret = esp_ble_gattc_app_register(0);
-    if (ret) {
-        UHOS_LOGE("gattc app register error, error code = %x", ret);
+    retval = uhos_ble_pal_gap_init();
+    if(retval)
+    {
+        UHOS_LOGE("uhos_ble_pal_gap_init error, error code = %x", ret);
         return UHOS_BLE_ERROR;
     }
 

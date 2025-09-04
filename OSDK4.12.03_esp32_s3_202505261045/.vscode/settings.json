@@ -13,6 +13,9 @@
         "uh_libc.h": "c",
         "uh_ble_common.h": "c",
         "uh_ble_daemon.h": "c",
-        "uh_ble_gap.h": "c"
+        "uh_ble_gap.h": "c",
+        "stdbool.h": "c",
+        "uh_ble_gatt_client.h": "c",
+        "uh_ble_gatt_server.h": "c"
     }
 }

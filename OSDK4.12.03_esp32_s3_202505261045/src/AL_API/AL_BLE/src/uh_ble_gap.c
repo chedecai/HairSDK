@@ -41,7 +41,6 @@
 /**************************************************************************************************/
 /*                                          外部引用声明                                          */
 /**************************************************************************************************/
-extern ble_adv_param_t ble_adv_param[APP_MAX_ADV_IDX];
 
 
 /**************************************************************************************************/
@@ -423,46 +422,6 @@ static uhos_ble_status_t uhos_ble_pal_gap_disconn_evt_handle(uhos_ble_gap_evt_pa
     return UHOS_BLE_SUCCESS;
 }
 
-#if 0
-/**
- * @brief       连接事件的处理实现
- * @param[in]   param   事件参数
- * @return      uhos_ble_status_t
- */
-static uhos_ble_status_t uhos_ble_pal_gap_connected_evt_handle(uhos_ble_gap_evt_param_t *param)
-{
-    uhos_ble_pal_gap_ctl_t *gap_ctl = &g_uhos_ble_pal_gap_ctl;
-    uhos_u16            conidx  = 0;
-
-    // 检查是否已经处于连接状态
-    if (gap_ctl->conn_flag)
-    {
-        UHOS_LOGW("ble already connected");
-        return UHOS_BLE_ERROR;
-    }
-
-    // 更新连接相关数据
-    gap_ctl->conn_flag = 1;
-    gap_ctl->conn_handle = param->conn_handle;
-
-    uhos_libc_memset(&gap_ctl->conn_info, 0, sizeof(uhos_ble_pal_gap_conn_info_t));
-    uhos_libc_memcpy(&gap_ctl->conn_info, &param->connect, sizeof(uhos_ble_pal_gap_conn_info_t));
-
-    // hal_need_report_connect = 1;
-
-    // 配置协议栈
-    conidx = uhos_ble_pal_conn_id_switch(param->conn_handle, UHOS_BLE_CONNECT_SWITCH_MODE_DEC);
-
-    sonata_api_app_timer_set((conidx + APP_INTERVAL_TIMER_OFFSET), 50);
-    sonata_api_app_timer_active(conidx + APP_INTERVAL_TIMER_OFFSET);
-
-    // 获取对端的MTU值
-    uhos_ble_gatts_mtu_get(gap_ctl->conn_handle, &gap_ctl->peer_mtu);
-
-    return UHOS_BLE_SUCCESS;
-}
-#endif
-
 /**************************************************************************************************/
 /*                                          全局函数实现                                          */
 /**************************************************************************************************/
@@ -504,7 +463,7 @@ static void uhos_ble_pal_gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble
 /**
  * @brief       GAP层初始化
  */
-void uhos_ble_pal_gap_init(void)
+uhos_ble_status_t uhos_ble_pal_gap_init(void)
 {
     esp_err_t ret;
 
@@ -658,78 +617,58 @@ uhos_ble_status_t uhos_ble_gap_adv_start(uhos_ble_gap_adv_param_t *p_adv_param)
     // 依据广播类型配置广播参数属性
     if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_UNDIRECTED)
     {
-        //*adv_idx_ptr                     = APP_CONN_ADV_IDX;
-        //ble_adv_param[*adv_idx_ptr].prop = ADV_TYPE_IND;
         adv_params.adv_type = ADV_TYPE_IND;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_NON_CONNECTABLE_UNDIRECTED)
     {
-        // *adv_idx_ptr                     = APP_NON_CONN_ADV_IDX;
-        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
         adv_params.adv_type = ADV_TYPE_NONCONN_IND;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_HDC)
     {
-       //*adv_idx_ptr = APP_CONN_ADV_IDX;
-       //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_HDC_MASK;
        adv_params.adv_type = ADV_TYPE_DIRECT_IND_HIGH;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_CONNECTABLE_DIRECTED_LDC)
     {
-        //*adv_idx_ptr = APP_CONN_ADV_IDX;
-        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_DIR_CONN_LDC_MASK;
         adv_params.adv_type = ADV_TYPE_DIRECT_IND_LOW;
     }
     else if (p_adv_param->adv_type == UHOS_BLE_ADV_TYPE_SCANNABLE_UNDIRECTED)
     {
-        //*adv_idx_ptr = APP_NON_CONN_ADV_IDX;
-        //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_SCAN_MASK;
         adv_params.adv_type = ADV_TYPE_SCAN_IND;
     }
     else
     {
-       //*adv_idx_ptr = APP_NON_CONN_ADV_IDX;
-       //ble_adv_param[*adv_idx_ptr].prop = SONATA_GAP_ADV_PROP_NON_CONN_NON_SCAN_MASK;
        adv_params.adv_type = ADV_TYPE_IND;
     }
 
     // 设置地址类型
     if (p_adv_param->direct_addr_type == UHOS_BLE_ADDRESS_TYPE_RANDOM)
     {
-       //ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR;
        adv_params.own_addr_type = BLE_ADDR_TYPE_RANDOM;
     }
     else
     {
-       //ble_adv_param[*adv_idx_ptr].own_address_type = SONATA_GAP_STATIC_ADDR; 
        adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
     }
 
     // 设置广播间隔
-    // ble_adv_param[*adv_idx_ptr].advertising_interval_min = p_adv_param->adv_interval_min;
-    // ble_adv_param[*adv_idx_ptr].advertising_interval_max = p_adv_param->adv_interval_max;
     adv_params.adv_int_min = p_adv_param->adv_interval_min;
     adv_params.adv_int_max = p_adv_param->adv_interval_max;
 
     // 设置广播通道
-    //ble_adv_param[*adv_idx_ptr].advertising_channel_map = 0x1 | 0x2 | 0x4;
     adv_params.channel_map = ADV_CHNL_ALL;
 
     if (p_adv_param->ch_mask.ch_37_off)
     {
-        //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x1;
         adv_params.channel_map &= ~ADV_CHNL_37;
     }
 
     if (p_adv_param->ch_mask.ch_38_off)
     {
-        //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x2;
         adv_params.channel_map &= ~ADV_CHNL_38;
     }
 
     if (p_adv_param->ch_mask.ch_39_off)
     {
-        //ble_adv_param[*adv_idx_ptr].advertising_channel_map &= ~0x4;
         adv_params.channel_map &= ~ADV_CHNL_39;
     }
 
@@ -1024,11 +963,6 @@ uhos_ble_status_t uhos_ble_gap_callback_register(uhos_ble_gap_cb_t cb)
 
     g_uhos_ble_pal_gap_user_cb = cb;
 
-    ret = esp_ble_gap_register_callback(uhos_ble_pal_gap_event_handler);
-    if (ret){
-        UHOS_LOGE("gap register error, error code = %x", ret);
-        return UHOS_BLE_ERROR;
-    }
     return UHOS_BLE_SUCCESS;
 }
 

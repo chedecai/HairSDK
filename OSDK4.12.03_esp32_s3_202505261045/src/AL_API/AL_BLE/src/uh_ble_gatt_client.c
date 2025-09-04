@@ -17,12 +17,17 @@
 /**************************************************************************************************/
 /*                           #include (依次为标准头文件、非标准头文件)                            */
 /**************************************************************************************************/
-#include "arch.h"
-// #include "gap.h"
-#include "sonata_gap_api.h"
-#include "sonata_gatt_api.h"
-#include "sonata_utils_api.h"
-#include "app.h"
+#include "esp_mac.h"
+#include "esp_bt.h"
+#include "esp_gap_ble_api.h"
+#include "esp_gatts_api.h"
+#include "esp_gattc_api.h"
+#include "esp_gatt_defs.h"
+#include "esp_bt_defs.h"
+#include "esp_bt_main.h"
+#include "esp_gatt_common_api.h"
+#include "esp_bt_device.h"
+#include "esp_system.h"
 
 #include "uh_types.h"
 #include "uh_libc.h"
@@ -70,8 +75,8 @@ struct gattc_profile_inst {
 static uhos_u8            g_uhos_ble_pal_gattc_op[UHOS_BLE_GATTC_MAX_CON_IDX] = {0};
 uhos_ble_gattc_callback_t g_uhos_ble_pal_gattc_user_cb = UHOS_NULL; //<! GATT层用户设置的Client端回调函数
 
-static uhos_u16 gattc_if[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
-static uhos_u16 gattc_conn_id[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
+static uhos_u16 g_uhos_ble_gattc_if[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
+static uhos_u16 g_uhos_ble_gattc_conn_id[UHOS_BLE_GATTC_MAX_CON_IDX] = {0,};
 
 /* One gatt-based profile one app_id and one gattc_if, this array will store the gattc_if returned by ESP_GATTS_REG_EVT */
 static struct gattc_profile_inst gl_profile_tab[UHOS_BLE_GATTC_PROFILE_NUM] = {
@@ -119,7 +124,11 @@ static void uhos_ble_pal_gattc_stack_cb(esp_gattc_cb_event_t event, esp_gatt_if_
 
         case ESP_GATTC_CONNECT_EVT:
             {
-                UHOS_LOGI("ESP_GATTC_CONNECT_EVT");
+                UHOS_LOGI("ESP_GATTC_CONNECT_EVT, conn_id %d, if %d", p_data->connect.conn_id, gattc_if);
+                gl_profile_tab[UHOS_BLE_GATTC_PROFILE_A_APP_ID].conn_id = p_data->connect.conn_id;
+
+                g_uhos_ble_gattc_if[UHOS_BLE_GATTC_PROFILE_A_APP_ID] = gattc_if;
+                g_uhos_ble_gattc_conn_id[UHOS_BLE_GATTC_PROFILE_A_APP_ID] = p_data->connect.conn_id;
             }
             break;
         
@@ -220,7 +229,7 @@ static void uhos_ble_pal_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gatt
      * so here call each profile's callback */
     do {
         int idx;
-        for (idx = 0; idx < PROFILE_NUM; idx++) {
+        for (idx = 0; idx < UHOS_BLE_GATTC_PROFILE_NUM; idx++) {
             if (gattc_if == ESP_GATT_IF_NONE || /* ESP_GATT_IF_NONE, not specify a certain gatt_if, need to call every profile cb function */
                     gattc_if == gl_profile_tab[idx].gattc_if) {
                 if (gl_profile_tab[idx].gattc_cb) {
@@ -233,6 +242,28 @@ static void uhos_ble_pal_gattc_cb(esp_gattc_cb_event_t event, esp_gatt_if_t gatt
 /**************************************************************************************************/
 /*                                          全局函数实现                                          */
 /**************************************************************************************************/
+/**
+ * @brief       GATT层Client端初始化
+ */
+uhos_ble_status_t uhos_ble_gattc_init(void)
+{
+    esp_err_t ret;
+
+    ret = esp_ble_gattc_register_callback(uhos_ble_pal_gattc_cb);
+    if (ret) {
+        UHOS_LOGE("gattc register error, error code = %x", ret);
+        return UHOS_BLE_ERROR;
+    }
+
+    ret = esp_ble_gattc_app_register(UHOS_BLE_GATTC_PROFILE_A_APP_ID);
+    if (ret) {
+        UHOS_LOGE("gattc app register error, error code = %x", ret);
+        return UHOS_BLE_ERROR;
+    }
+
+    return UHOS_BLE_SUCCESS;
+}
+
 /**
  * @brief       注册GATT层client端用户回调函数
  * @param[in]   cb  用户回调函数
@@ -269,7 +300,7 @@ uhos_ble_status_t uhos_ble_gattc_primary_service_discover_all(uhos_u16 conn_hand
     // 调用协议栈接口
     g_uhos_ble_pal_gattc_op[conidx] = UHOS_BLE_GATTC_EVT_PRIMARY_SERVICE_DISCOVER_RESP;
 
-    ret = esp_ble_gattc_search_service(esp_gatt_if_t gattc_if, uint16_t conn_id, esp_bt_uuid_t *filter_uuid);//sonata_ble_gatt_disc_all_svc(conidx);
+    ret = esp_ble_gattc_search_service(esp_gatt_if_t gattc_if, uint16_t conn_id, esp_bt_uuid_t *filter_uuid);
 
     if (ret)
     {

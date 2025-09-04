@@ -59,9 +59,8 @@
 
 #define APP_MAX_SERVICE_NUM                 10
 
-#define UHOS_BLE_HAL_PROFILE_NUM 2
+#define UHOS_BLE_HAL_PROFILE_NUM 1
 #define UHOS_BLE_HAL_PROFILE_A_APP_ID 0
-#define UHOS_BLE_HAL_PROFILE_B_APP_ID 1
 
 #define GATTS_SERVICE_UUID_TEST_A   0x00FF
 #define GATTS_CHAR_UUID_TEST_A      0xFF01
@@ -98,10 +97,6 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
 static uhos_ble_gatts_profile_inst_t uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_NUM] = {
     [UHOS_BLE_HAL_PROFILE_A_APP_ID] = {
         .gatts_cb = gatts_profile_a_event_handler,
-        .gatts_if = ESP_GATT_IF_NONE,       /* Not get the gatt_if, so initial is ESP_GATT_IF_NONE */
-    },
-    [UHOS_BLE_HAL_PROFILE_B_APP_ID] = {
-        .gatts_cb = NULL,                   /* This demo does not implement, similar as profile A */
         .gatts_if = ESP_GATT_IF_NONE,       /* Not get the gatt_if, so initial is ESP_GATT_IF_NONE */
     },
 };
@@ -221,70 +216,54 @@ static void uhos_ble_gatts_profile_a_event_handler(esp_gatts_cb_event_t event, e
     switch (event) 
     {
     case ESP_GATTS_REG_EVT:
-        UHOS_LOGI("REGISTER_APP_EVT, status %d, app_id %d\n", param->reg.status, param->reg.app_id);
-
-        esp_ble_gatts_create_service(gatts_if, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_id, GATTS_NUM_HANDLE_TEST_A);
+        {
+            UHOS_LOGI("ESP_GATTS_REG_EVT, status %d, app_id %d\n", param->reg.status, param->reg.app_id);
+        }
         break;
     case ESP_GATTS_CREATE_EVT:
-        //service has been created, now add characteristic declaration
-        ret = esp_ble_gatts_add_char(gl_profile_tab[HEART_PROFILE_APP_ID].service_handle, &gl_profile_tab[HEART_PROFILE_APP_ID].char_uuid,
-                            ESP_GATT_PERM_READ,
-                            ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_INDICATE,
-                            &heart_rate_attr, NULL);
-        if (ret) {
-            ESP_LOGE(GATTS_TAG, "add char failed, error code = %x", ret);
+        {
+            UHOS_LOGI("ESP_GATTS_CREATE_EVT");
         }
         break;
-    case ESP_GATTS_ADD_CHAR_EVT: {
-        uint16_t length = 0;
-        const uint8_t *prf_char;
-
-        UHOS_LOGI( "ADD_CHAR_EVT, status %d,  attr_handle %d, service_handle %d\n",
-                param->add_char.status, param->add_char.attr_handle, param->add_char.service_handle);
-
-        esp_err_t get_attr_ret = esp_ble_gatts_get_attr_value(param->add_char.attr_handle,  &length, &prf_char);
-        if (get_attr_ret == ESP_FAIL){
-            UHOS_LOGI("ILLEGAL HANDLE");
-        }
-
-        UHOS_LOGI( "the gatts demo char length = %x\n", length);
-        for(int i = 0; i < length; i++){
-            UHOS_LOGI("prf_char[%x] =%x\n",i,prf_char[i]);
-        }
-        esp_err_t add_descr_ret = esp_ble_gatts_add_char_descr(uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].service_handle, &uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].descr_uuid,
-                                                                ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE, NULL, NULL);
-        if (add_descr_ret){
-            UHOS_LOGI("add char descr failed, error code =%x", add_descr_ret);
+    case ESP_GATTS_ADD_CHAR_EVT: 
+        {
+            UHOS_LOGI("ESP_GATTS_ADD_CHAR_EVT");
         }
         break;
-    }
     case ESP_GATTS_ADD_CHAR_DESCR_EVT:
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].descr_handle = param->add_char_descr.attr_handle;
-        UHOS_LOGI("ADD_DESCR_EVT, status %d, attr_handle %d, service_handle %d\n",
-                 param->add_char_descr.status, param->add_char_descr.attr_handle, param->add_char_descr.service_handle);
+        {
+            UHOS_LOGI("ESP_GATTS_ADD_CHAR_DESCR_EVT");
+        }
         break;
     case ESP_GATTS_DELETE_EVT:
+        {
+            UHOS_LOGI("ESP_GATTS_DELETE_EVT");
+        }
         break;
     case ESP_GATTS_START_EVT:
-        UHOS_LOGI("SERVICE_START_EVT, status %d, service_handle %d\n",
-                 param->start.status, param->start.service_handle);
+        {
+            UHOS_LOGI("ESP_GATTS_START_EVT");
+        }
         break;
     case ESP_GATTS_STOP_EVT:
+        {
+            UHOS_LOGI("ESP_GATTS_STOP_EVT");
+        }
         break;
-    case ESP_GATTS_CONNECT_EVT: {
-        esp_ble_conn_update_params_t conn_params = {0};
-        memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
-        /* For the IOS system, please reference the apple official documents about the ble connection parameters restrictions. */
-        uhos_ble_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].conn_id = param->connect.conn_id;
-        //start sent the update connection parameters to the peer device.
-        esp_ble_gap_update_conn_params(&conn_params);
+    case ESP_GATTS_CONNECT_EVT: 
+        {
+            UHOS_LOGI("ESP_GATTS_CONNECT_EVT");
+        }
         break;
-    }
     case ESP_GATTS_DISCONNECT_EVT:
-        UHOS_LOGI("ESP_GATTS_DISCONNECT_EVT, disconnect reason 0x%x", param->disconnect.reason);
+        {
+            UHOS_LOGI("ESP_GATTS_DISCONNECT_EVT");
+        }
         break;
     case ESP_GATTS_CONF_EVT:
-        UHOS_LOGI("ESP_GATTS_CONF_EVT, status %d attr_handle %d", param->conf.status, param->conf.handle);
+        {
+            UHOS_LOGI("ESP_GATTS_CONF_EVT");
+        }
         break;
     case ESP_GATTS_OPEN_EVT:
     case ESP_GATTS_CANCEL_OPEN_EVT:
@@ -331,7 +310,7 @@ static void uhos_ble_gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if
 /**
  * @brief       GATT层Server端初始化
  */
-void uhos_ble_pal_gatts_init(void)
+uhos_ble_status_t uhos_ble_pal_gatts_init(void)
 {
     esp_err_t ret;
 
@@ -352,9 +331,9 @@ void uhos_ble_pal_gatts_init(void)
 /**
  * @brief       GATT层Server端反初始化，主要时回收相关的资源
  */
-void uhos_ble_pal_gatts_deinit(void)
+uhos_ble_status_t uhos_ble_pal_gatts_deinit(void)
 {
-    return;
+    return UHOS_BLE_SUCCESS;
 }
 
 /**
@@ -443,14 +422,16 @@ uhos_ble_status_t uhos_ble_gatts_notify_or_indicate(
 
     if (offset == 0)
     {
-        //app_ble_gatt_data_send_notify((uhos_u8)conidx, handler, att_offset, len, p_value);
-        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+        esp_ble_gatts_send_indicate(gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].gatts_if, 
+                                        gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].conn_id, 
+                                        gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_handle,
                                         len, p_value, false);
     }
     else
     {
-        //app_ble_gatt_data_send_indicate((uhos_u8)conidx, handler, att_offset, len, p_value);
-        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[HEART_PROFILE_APP_ID].char_handle,
+        esp_ble_gatts_send_indicate(gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].gatts_if, 
+                                        gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].conn_id, 
+                                        gl_profile_tab[UHOS_BLE_HAL_PROFILE_A_APP_ID].char_handle,
                                         len, p_value, true);
     }
 

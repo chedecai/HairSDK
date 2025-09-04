@@ -51,8 +51,8 @@ extern "C" {
 /**************************************************************************************************/
 /*                                         全局函数原型                                           */
 /**************************************************************************************************/
-void uhos_ble_pal_gatts_init(void);
-void uhos_ble_pal_gatts_deinit(void);
+uhos_ble_status_t uhos_ble_pal_gatts_init(void);
+uhos_ble_status_t uhos_ble_pal_gatts_deinit(void);
 
 
 #ifdef __cplusplus
